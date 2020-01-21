@@ -1,48 +1,32 @@
 /* The Modal (background) */
-#nav-modal-closed {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
 #nav-modal-open {
-  display: block;
+  display: block; /*Modal is visible*/
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-#myBtn {
-  background-color: red;
+  background-color: rgba(45, 69, 22 ,0.8); /* Black w/ opacity */
+  padding-top: 50px;
+  text-align: center;
 }
 
 /* Modal Content */
 #nav-modal-content {
-  background-color: #fefefe;
+  background-color: rgb(147, 202, 93);
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 80%; /* Full width */
+  height: 80%; /* Full height */
+  display: inline-block;
 }
 
 /* The Close Button */
 #nav-modal-close {
-  color: #aaaaaa;
+  color: white;
   float: right;
   font-size: 28px;
   font-weight: bold;
@@ -53,4 +37,29 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+
+/*Navbar*/
+#navBarToggler {
+  margin: 10px;
+}
+
+.nav {
+  background-color: rgb(147, 202, 93);
+  list-style-type: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+}
+
+/*Modal*/
+
+#NavModalMenuHeader {
+  font-size: 40px;
 }

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
 import './NavBar.css';
-import $ from "jquery";
 
 class NavBar extends Component {
   constructor(props) {
@@ -14,7 +13,6 @@ class NavBar extends Component {
   }
 
   toggleNavModal() {
-    console.log("toggle initiated")
     if (this.state.isNavModalOpen == "No") {
       this.setState({
         isNavModalOpen: "Yes"
@@ -31,22 +29,23 @@ class NavBar extends Component {
   render() {
 
     function NavModal({isNavModalOpen, toggleNavModal}) {
-      console.log("NavModal initiated")
-      console.log("current state", isNavModalOpen)
       if (isNavModalOpen == "Yes") {
-        console.log("Nav Modal is open")
         return (
           <div id="nav-modal-open">
             <div id="nav-modal-content">
               <span id="nav-modal-close" onClick={toggleNavModal}>&times;</span>
-              <p>Some text in the Modal..</p>
+              <div><span id="NavModalMenuHeader">Navigation Menu</span>
+                <div>Home</div>
+                <div>Services</div>
+                <div>Portfolio</div>
+                <div>Portfolio</div>
+              </div>
             </div>
           </div>
         )
       }
 
       else {
-        console.log("Nav Modal is closed")
         return (
         <div></div>
         )
@@ -55,7 +54,13 @@ class NavBar extends Component {
 
     return(
       <>
-        <button id="myBtn" onClick={this.toggleNavModal}>Open Modal</button>
+        <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#clients">Our Clients</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+        <li><button id="navBarToggler" onClick={this.toggleNavModal}>Open Modal</button></li>
+        </ul>
         <NavModal isNavModalOpen={this.state.isNavModalOpen} toggleNavModal={this.toggleNavModal} />
       </>
     )
