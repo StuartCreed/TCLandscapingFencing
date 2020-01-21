@@ -15,9 +15,17 @@ class NavBar extends Component {
 
   toggleNavModal() {
     console.log("toggle initiated")
-    this.setState({
-      isNavModalOpen: "Yes"
-    });
+    if (this.state.isNavModalOpen == "No") {
+      this.setState({
+        isNavModalOpen: "Yes"
+      });
+    }
+    if (this.state.isNavModalOpen == "Yes") {
+      this.setState({
+        isNavModalOpen: "No"
+      });
+    }
+
   }
 
   render() {
