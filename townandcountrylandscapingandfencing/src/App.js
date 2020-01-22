@@ -1,6 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import NavBar from "./components/NavBar/NavBar"
+import Jumbotron from "./components/Jumbotron/Jumbotron"
 
 class App extends Component {
   constructor(props) {
@@ -12,9 +13,31 @@ class App extends Component {
       <div className="App">
         <>
           <NavBar />
-          <header className="App-header">
-            <h1>Town and Country Landscaping and Fencing</h1>
-          </header>
+          <Jumbotron />
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+          <div>TEST</div>
+
         </>
       </div>
     )

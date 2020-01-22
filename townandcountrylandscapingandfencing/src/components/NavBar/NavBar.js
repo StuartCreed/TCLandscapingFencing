@@ -35,10 +35,10 @@ class NavBar extends Component {
             <div id="nav-modal-content">
               <span id="nav-modal-close" onClick={toggleNavModal}>&times;</span>
               <div><span id="NavModalMenuHeader">Navigation Menu</span>
-                <div>Home</div>
-                <div>Services</div>
-                <div>Portfolio</div>
-                <div>Portfolio</div>
+                <a>Services</a>
+                <a>Portfolio</a>
+                <a>About Us</a>
+                <a>Contact Us</a>
               </div>
             </div>
           </div>
@@ -52,16 +52,41 @@ class NavBar extends Component {
       }
     }
 
+    function ContactBanner() {
+
+      var divStyle = {
+        color: 'white',
+        WebkitTransition: 'all', // note the capital 'W' here
+        msTransition: 'all' // 'ms' is the only lowercase vendor prefix
+      };
+
+      return (
+        <div id="contactBannerContainer">
+          <div id="contactBanner">Contact Us now for a no obligation, FREE QUOTATION! tcland-enquiries@hotmail.co.uk — 07815946340 (Andy) /07870519614 (Richard) </div>
+        </div>
+      )
+    }
+
+    function NavigationBar({toggleNavModal}) {
+      return(
+        <div class="nav">
+          <div id="logo">Town and Country Landscaping and Fencing</div>
+          <a>Services</a>
+          <a>Portfolio</a>
+          <a>About Us</a>
+          <a>Contact Us</a>
+          <button id="navBarToggler" onClick={toggleNavModal}>Open</button>
+        </div>
+      )
+    }
+
     return(
       <>
-        <ul class="nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#clients">Our Clients</a></li>
-        <li><a href="#contact">Contact Us</a></li>
-        <li><button id="navBarToggler" onClick={this.toggleNavModal}>Open Modal</button></li>
-        </ul>
-        <NavModal isNavModalOpen={this.state.isNavModalOpen} toggleNavModal={this.toggleNavModal} />
+        <div id="fixed-bar-container">
+          <NavigationBar toggleNavModal={this.toggleNavModal}/>
+          <ContactBanner />
+          <NavModal isNavModalOpen={this.state.isNavModalOpen} toggleNavModal={this.toggleNavModal} />
+        </div>
       </>
     )
   }
