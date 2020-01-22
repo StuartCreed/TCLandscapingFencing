@@ -14,30 +14,6 @@ class App extends Component {
         <>
           <NavBar />
           <Jumbotron />
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-          <div>TEST</div>
-
         </>
       </div>
     )

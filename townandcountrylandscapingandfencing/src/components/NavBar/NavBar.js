@@ -1,9 +1,11 @@
 import React from 'react';
 import { Component } from 'react';
 import './NavBar.css';
-import PrimaryColour from '../../ColourTheme';
+import ColourTheme from '../../ColourTheme';
+import Button from '@material-ui/core/Button';
+import FormatAlignRightIcon from '@material-ui/icons/FormatAlignRight';
 
-const theme = PrimaryColour;
+const theme = ColourTheme.FirstColour;
 
 class NavBar extends Component {
   constructor(props) {
@@ -82,7 +84,7 @@ class NavBar extends Component {
           <a>Portfolio</a>
           <a>About Us</a>
           <a>Contact Us</a>
-          <button id="navBarToggler" onClick={toggleNavModal}>Open</button>
+          <FormatAlignRightIcon onClick={toggleNavModal}/>
         </div>
       )
     }
