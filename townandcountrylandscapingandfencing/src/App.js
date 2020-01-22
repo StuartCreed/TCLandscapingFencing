@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import NavBar from "./components/NavBar/NavBar"
 import Jumbotron from "./components/Jumbotron/Jumbotron"
-import TemporaryDrawer from './navbar'
+import SwipeableTemporaryDrawer from './navbar'
 
 class App extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class App extends Component {
         <>
           <NavBar />
           <Jumbotron />
-          <TemporaryDrawer />
+          <SwipeableTemporaryDrawer />
         </>
       </div>
     )
