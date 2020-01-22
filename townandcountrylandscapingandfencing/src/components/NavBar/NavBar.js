@@ -1,6 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
 import './NavBar.css';
+import PrimaryColour from '../../ColourTheme';
+
+const theme = PrimaryColour;
 
 class NavBar extends Component {
   constructor(props) {
@@ -54,14 +57,18 @@ class NavBar extends Component {
 
     function ContactBanner() {
 
-      var divStyle = {
-        color: 'white',
-        WebkitTransition: 'all', // note the capital 'W' here
-        msTransition: 'all' // 'ms' is the only lowercase vendor prefix
+      const bannerContainerStyle = {
+        margin: "0",
+        padding: "0",
+        display: "flex",
+        justifyContent: "center",
+        textAlign: "center",
+        width: "100%",
+        backgroundColor: theme,
       };
 
       return (
-        <div id="contactBannerContainer">
+        <div style={bannerContainerStyle}>
           <div id="contactBanner">Contact Us now for a no obligation, FREE QUOTATION! tcland-enquiries@hotmail.co.uk — 07815946340 (Andy) /07870519614 (Richard) </div>
         </div>
       )

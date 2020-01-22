@@ -108,16 +108,6 @@
 
   /*Contact Banner attached to the bottom of the nav*/
 
-  #contactBannerContainer {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    background-color: #44b649;
-  }
-
   #contactBanner {
     display: inline-block;
     font-size: 15px;
