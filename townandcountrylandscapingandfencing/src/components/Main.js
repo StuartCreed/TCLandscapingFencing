@@ -1,6 +1,12 @@
 import React from 'react';
 import { Component } from 'react';
-import Jumbotron from './Jumbotron/Jumbotron';
+import Jumbotron from './Jumbotron/Jumbotron'
+import Box from '@material-ui/core/Box';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Hidden from '@material-ui/core/Hidden';
+import withWidth from '@material-ui/core/withWidth';
+import Typography from '@material-ui/core/Typography';
 
 class Main extends Component {
   constructor(props) {
@@ -9,9 +15,19 @@ class Main extends Component {
     };
   }
 
+
+
   render(){
+
+    const MainMobileView = () => {
+      return <div></div>
+    }
     return(
-      <Jumbotron />
+      <Box >
+        <Hidden smDown>
+          <Jumbotron />
+        </Hidden>
+      </Box>
     )
   }
 }
