@@ -1,8 +1,8 @@
 import React from 'react';
 import { Component } from 'react';
-import NavBar from "./components/NavBar/NavBar"
-import Jumbotron from "./components/Jumbotron/Jumbotron"
-import SwipeableTemporaryDrawer from './navbar'
+
+import NavBar from './components/AppBar';
+import Main from './components/Main';
 
 class App extends Component {
   constructor(props) {
@@ -14,8 +14,8 @@ class App extends Component {
       <div className="App">
         <>
           <NavBar />
-          <Jumbotron />
-          <SwipeableTemporaryDrawer />
+          <Main />
+
         </>
       </div>
     )
