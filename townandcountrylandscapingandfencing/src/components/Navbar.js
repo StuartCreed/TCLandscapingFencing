@@ -1,7 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
 import { AppBar, Toolbar, IconButton, Button } from '@material-ui/core';
-import SwipeableTemporaryDrawer from './SwipeableTemporaryDrawer'
+import SwipeableTemporaryDrawer from './SwipeableTemporaryDrawer';
+import ColourTheme from '../ColourTheme';
+import Container from '@material-ui/core/Container';
 
 class NavBar extends Component {
   constructor(props) {
@@ -12,13 +14,13 @@ class NavBar extends Component {
 
   render(){
     return(
-      <AppBar position="fixed" style={{'backgroundColor':'white'}}>
+      <>
+      <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
         <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu">
-          </IconButton>
           <SwipeableTemporaryDrawer />
         </Toolbar>
       </AppBar>
+      </>
     )
   }
 }

@@ -14,6 +14,9 @@ import WorkIcon from '@material-ui/icons/Work';
 import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
 import PhoneIcon from '@material-ui/icons/Phone';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
+import ColourTheme from '../ColourTheme';
+import DehazeIcon from '@material-ui/icons/Dehaze';
+import PersonIcon from '@material-ui/icons/Person';
 
 const useStyles = makeStyles({
   list: {
@@ -42,22 +45,22 @@ export default function SwipeableTemporaryDrawer() {
     let indexNumber = index.index;
     if (indexNumber === 0) {
       return(
-        <WorkIcon />
+        <WorkIcon style={{"color": ColourTheme.FirstColour}}/>
       )
     }
     if (indexNumber === 1) {
       return(
-        <PhotoCameraIcon   />
+        <PhotoCameraIcon style={{"color": ColourTheme.FirstColour}} />
       )
     }
     if (indexNumber === 2) {
       return(
-        <HelpOutlineIcon/>
+        <PersonIcon  style={{"color": ColourTheme.FirstColour}} />
       )
     }
     if (indexNumber === 3) {
       return(
-        <PhoneIcon />
+        <PhoneIcon style={{"color": ColourTheme.FirstColour}} />
       )
     }
     else {
@@ -103,7 +106,7 @@ export default function SwipeableTemporaryDrawer() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer('left', true)}><FormatAlignLeftIcon/></Button>
+      <Button onClick={toggleDrawer('left', true)}><DehazeIcon style={{"color": ColourTheme.InvertedColour}}/></Button>
       <SwipeableDrawer
         open={state.left}
         onClose={toggleDrawer('left', false)}

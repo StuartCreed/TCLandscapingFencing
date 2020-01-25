@@ -7,6 +7,8 @@ import Paper from '@material-ui/core/Paper';
 import Hidden from '@material-ui/core/Hidden';
 import withWidth from '@material-ui/core/withWidth';
 import Typography from '@material-ui/core/Typography';
+import ColourTheme from '../ColourTheme';
+import { Container, AppBar, Toolbar, IconButton, Button } from '@material-ui/core';
 
 class Main extends Component {
   constructor(props) {
@@ -15,18 +17,14 @@ class Main extends Component {
     };
   }
 
-
-
   render(){
 
-    const MainMobileView = () => {
-      return <div></div>
-    }
     return(
       <Box >
         <Hidden smDown>
           <Jumbotron />
         </Hidden>
+
       </Box>
     )
   }
