@@ -9,6 +9,14 @@ import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
+/*
+
+
+
+
+
+*/
+
 
 class NavBar extends Component {
   constructor(props) {
@@ -18,8 +26,6 @@ class NavBar extends Component {
   }
 
   render(){
-
-
 
     return(
       <>
@@ -38,10 +44,10 @@ class NavBar extends Component {
               <Toolbar>
                 <div style={{'flexGrow': '1'}}>
                   <Grid container spacing={3}>
-                    <Grid xs={3} style={{'textAlign':'center'}}><Button style={{'color': ColourTheme.InvertedColour}}>Home</Button></Grid>
-                    <Grid xs={3} style={{'textAlign':'center'}}><Button style={{'color': ColourTheme.InvertedColour}}>Services</Button></Grid>
-                    <Grid xs={3} style={{'textAlign':'center'}}><Button style={{'color': ColourTheme.InvertedColour}}>About Us</Button></Grid>
-                    <Grid xs={3} style={{'textAlign':'center'}}><Button  style={{'color': ColourTheme.InvertedColour}}>Contact Us</Button></Grid>
+                    <Grid xs={3} style={{'textAlign':'center'}}><Typography  variant="h6" color="inherit" noWrap>Home</Typography></Grid>
+                    <Grid xs={3} style={{'textAlign':'center'}}><Typography  variant="h6" color="inherit" noWrap>Services</Typography></Grid>
+                    <Grid xs={3} style={{'textAlign':'center'}}><Typography  variant="h6" color="inherit" noWrap>About Us</Typography></Grid>
+                    <Grid xs={3} style={{'textAlign':'center'}}><Typography  variant="h6" color="inherit" noWrap>Contact Us</Typography></Grid>
                   </Grid>
                 </div>
               </Toolbar>

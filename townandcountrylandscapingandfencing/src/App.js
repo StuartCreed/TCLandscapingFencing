@@ -1,8 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
 
-import NavBar from './components/NavBar';
+import Navbar from './components/Navbar';
 import Main from './components/Main';
+import SearchAppBar from './components/Navbar2';
 
 class App extends Component {
   constructor(props) {
@@ -13,7 +14,7 @@ class App extends Component {
     return(
       <div className="App">
         <>
-          <NavBar />
+          <Navbar />
           <Main />
         </>
       </div>
