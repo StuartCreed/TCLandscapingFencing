@@ -106,7 +106,7 @@ export default function SwipeableTemporaryDrawer() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer('left', true)}><DehazeIcon style={{"color": ColourTheme.InvertedColour}}/></Button>
+      <Button onClick={toggleDrawer('left', true)}><DehazeIcon style={{"color": ColourTheme.ThirdColour}}/></Button>
       <SwipeableDrawer
         open={state.left}
         onClose={toggleDrawer('left', false)}

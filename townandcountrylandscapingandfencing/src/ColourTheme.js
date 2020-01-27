@@ -2,7 +2,7 @@ const ColourTheme = {
   FirstColour: "#005847",
   SecondColour: "#5C9990",
   ThirdColour: "#fbf579",
-  InvertedColour: "#fbf579"
+  InvertedColour: "#fff"
 }
 
 /*Options as third colour: He has gone for the green and yellow theme
@@ -15,6 +15,11 @@ const ColourTheme = {
 #c53211
 #de493c
 #c1432e
+
+#fff
+#fbf579
+#5C9990
+#005847
 
 */
 
