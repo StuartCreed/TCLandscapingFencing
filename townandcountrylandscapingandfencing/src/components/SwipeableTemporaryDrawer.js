@@ -76,7 +76,7 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(side, false)}
     >
       <List>
-        {['Services', 'Portfolio', 'About Us', 'Contact Us'].map((text, index) => (
+        {['Home', 'Services', 'About Us', 'Contact Us'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon><IconSelector index={index}/></ListItemIcon>
             <ListItemText primary={text} />
