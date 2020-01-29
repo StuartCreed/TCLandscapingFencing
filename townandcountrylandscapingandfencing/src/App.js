@@ -42,7 +42,7 @@ class App extends Component {
     return(
         <>
           <BrowserRouter>
-          <Navbar />
+            <Navbar />
             <Switch location={this.props.location}>
               <Route path='/home' component={HomePage} />
               <Route path='/services' component={ServicesPage} />

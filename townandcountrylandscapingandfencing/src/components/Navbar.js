@@ -37,17 +37,22 @@ export default function Navbar() {
 
           <Hidden mdDown>
             <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
-              <Toolbar style={{'backgroundColor': ColourTheme.ThirdColour}}>
-                <Grid container spacing={3}>
-                </Grid>
-              </Toolbar>
+
+              <Grid container style={{'direction':'row', 'justify':"space-around", "alignItems":"center", 'height':'72px', 'width':'100%', 'backgroundColor': ColourTheme.ThirdColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
+                <Grid xs={2}  ></Grid>
+                <Grid xs={2}  ></Grid>
+                <Grid xs={2}  ></Grid>
+                <Grid xs={2}  ></Grid>
+                <Grid xs={2}  ></Grid>
+                <Grid xs={2}  ></Grid>
+              </Grid>
 
               <Grid container style={{'direction':'row', 'justify':"space-around", "alignItems":"center", 'height':'72px', 'width':'100%', 'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
                 <Grid xs={2}  ></Grid>
-                <Grid xs={2} className={classes.MenuItemGrid}><Link to='/home'><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Home</Typography></Button></Link></Grid>
-                <Grid xs={2} className={classes.MenuItemGrid}><Link to='/services'><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Services</Typography></Button></Link></Grid>
-                <Grid xs={2} className={classes.MenuItemGrid}><Link to='/aboutus'><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>About Us</Typography></Button></Link></Grid>
-                <Grid xs={2} className={classes.MenuItemGrid}><Link to='/contactus'><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Contact Us</Typography></Button></Link></Grid>
+                <Grid xs={2} className={classes.MenuItemGrid}><Link to='/home' style={{"textDecoration": "none"}}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} >Home</Typography></Button></Link></Grid>
+                <Grid xs={2} className={classes.MenuItemGrid}><Link to='/services' style={{"textDecoration": "none"}}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Services</Typography></Button></Link></Grid>
+                <Grid xs={2} className={classes.MenuItemGrid}><Link to='/aboutus' style={{"textDecoration": "none"}}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>About Us</Typography></Button></Link></Grid>
+                <Grid xs={2} className={classes.MenuItemGrid}><Link to='/contactus' style={{"textDecoration": "none"}}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Contact Us</Typography></Button></Link></Grid>
                 <Grid xs={2} ></Grid>
               </Grid>
             </AppBar>
