@@ -1,6 +1,5 @@
 import React from 'react';
 import { Component } from 'react';
-import Jumbotron from './Jumbotron/Jumbotron'
 import Box from '@material-ui/core/Box';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
@@ -20,11 +19,9 @@ class Main extends Component {
   render(){
 
     return(
-      <Box >
-        <Hidden smDown>
-          <Jumbotron />
-        </Hidden>
-      </Box>
+      <Hidden smDown>
+        <div></div>
+      </Hidden>
     )
   }
 }

@@ -35,12 +35,13 @@ export default function Navbar() {
           </Hidden>
 
           <Hidden mdDown>
+            <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
               <Toolbar style={{'backgroundColor': ColourTheme.ThirdColour}}>
                 <Grid container spacing={3}>
                 </Grid>
               </Toolbar>
 
-              <Grid container style={{'marginTop':'-12px','marginBottom':'-12px','direction':'row', 'justify':"space-around", "alignItems":"center", 'height':'72px', 'width':'100%', 'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
+              <Grid container style={{'direction':'row', 'justify':"space-around", "alignItems":"center", 'height':'72px', 'width':'100%', 'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
                 <Grid xs={2}  ></Grid>
                 <Grid xs={2} className={classes.MenuItemGrid}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Home</Typography></Button></Grid>
                 <Grid xs={2} className={classes.MenuItemGrid}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Services</Typography></Button></Grid>
@@ -48,6 +49,7 @@ export default function Navbar() {
                 <Grid xs={2} className={classes.MenuItemGrid}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Contact Us</Typography></Button></Grid>
                 <Grid xs={2} ></Grid>
               </Grid>
+            </AppBar>
 
           </Hidden>
       </>
