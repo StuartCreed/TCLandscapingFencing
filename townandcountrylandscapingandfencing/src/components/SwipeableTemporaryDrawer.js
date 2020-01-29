@@ -18,6 +18,7 @@ import ColourTheme from '../ColourTheme';
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import PersonIcon from '@material-ui/icons/Person';
 import { Link } from 'react-router-dom';
+import HomeIcon from '@material-ui/icons/Home';
 
 const useStyles = makeStyles({
   list: {
@@ -46,12 +47,12 @@ export default function SwipeableTemporaryDrawer() {
     let indexNumber = index.index;
     if (indexNumber === 0) {
       return(
-        <WorkIcon style={{"color": ColourTheme.FirstColour}}/>
+        <HomeIcon style={{"color": ColourTheme.FirstColour}}/>
       )
     }
     if (indexNumber === 1) {
       return(
-        <PhotoCameraIcon style={{"color": ColourTheme.FirstColour}} />
+        <WorkIcon style={{"color": ColourTheme.FirstColour}} />
       )
     }
     if (indexNumber === 2) {
