@@ -1,7 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
 import Navbar from './components/Navbar';
-import Main from './components/Main';
+import Home from './components/Home';
 
 class App extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ class App extends Component {
     return(
         <>
           <Navbar />
-          <Main />
+          <Home />
         </>
     )
   }

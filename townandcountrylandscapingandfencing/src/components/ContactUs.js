@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 import ColourTheme from '../ColourTheme';
 import { Container, AppBar, Toolbar, IconButton, Button } from '@material-ui/core';
 
-class Main extends Component {
+class ContactUs extends Component {
   constructor(props) {
     super(props);
        this.state = {
@@ -20,10 +20,10 @@ class Main extends Component {
 
     return(
       <Hidden smDown>
-        <div></div>
+        <div>Contact Us</div>
       </Hidden>
     )
   }
 }
 
-export default Main
+export default ContactUs
