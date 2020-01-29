@@ -19,9 +19,7 @@ class ContactUs extends Component {
   render(){
 
     return(
-      <Hidden smDown>
-        <div>Contact Us</div>
-      </Hidden>
+      <Box style={{"marginTop":"200px"}}>Contact Us</Box>
     )
   }
 }

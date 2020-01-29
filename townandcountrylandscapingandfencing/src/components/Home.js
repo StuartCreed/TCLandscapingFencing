@@ -19,7 +19,7 @@ class Home extends Component {
   render(){
 
     return(
-        <div>Home</div>
+        <Box style={{"marginTop":"200px"}}>Home</Box>
     )
   }
 }

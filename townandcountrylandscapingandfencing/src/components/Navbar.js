@@ -9,6 +9,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import 'typeface-roboto';
 import { createMuiTheme } from "@material-ui/core/styles";
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
 
@@ -43,10 +44,10 @@ export default function Navbar() {
 
               <Grid container style={{'direction':'row', 'justify':"space-around", "alignItems":"center", 'height':'72px', 'width':'100%', 'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
                 <Grid xs={2}  ></Grid>
-                <Grid xs={2} className={classes.MenuItemGrid}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Home</Typography></Button></Grid>
-                <Grid xs={2} className={classes.MenuItemGrid}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Services</Typography></Button></Grid>
-                <Grid xs={2} className={classes.MenuItemGrid}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>About Us</Typography></Button></Grid>
-                <Grid xs={2} className={classes.MenuItemGrid}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Contact Us</Typography></Button></Grid>
+                <Grid xs={2} className={classes.MenuItemGrid}><Link to='/home'><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Home</Typography></Button></Link></Grid>
+                <Grid xs={2} className={classes.MenuItemGrid}><Link to='/services'><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Services</Typography></Button></Link></Grid>
+                <Grid xs={2} className={classes.MenuItemGrid}><Link to='/aboutus'><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>About Us</Typography></Button></Link></Grid>
+                <Grid xs={2} className={classes.MenuItemGrid}><Link to='/contactus'><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Contact Us</Typography></Button></Link></Grid>
                 <Grid xs={2} ></Grid>
               </Grid>
             </AppBar>

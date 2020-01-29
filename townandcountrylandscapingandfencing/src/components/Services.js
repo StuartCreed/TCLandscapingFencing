@@ -19,9 +19,7 @@ class Services extends Component {
   render(){
 
     return(
-      <Hidden smDown>
-        <div>Services</div>
-      </Hidden>
+      <Box style={{"marginTop":"200px"}}>Services</Box>
     )
   }
 }

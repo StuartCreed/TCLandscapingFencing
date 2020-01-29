@@ -19,9 +19,7 @@ class AboutUs extends Component {
   render(){
 
     return(
-      <Hidden smDown>
-        <div>About Us</div>
-      </Hidden>
+      <Box style={{"marginTop":"200px"}}>About Us</Box>
     )
   }
 }

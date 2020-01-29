@@ -17,6 +17,7 @@ import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import ColourTheme from '../ColourTheme';
 import DehazeIcon from '@material-ui/icons/Dehaze';
 import PersonIcon from '@material-ui/icons/Person';
+import { Link } from 'react-router-dom';
 
 const useStyles = makeStyles({
   list: {
@@ -77,10 +78,12 @@ export default function SwipeableTemporaryDrawer() {
     >
       <List>
         {['Home', 'Services', 'About Us', 'Contact Us'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon><IconSelector index={index}/></ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
+          <Link>
+            <ListItem button key={text}>
+              <ListItemIcon><IconSelector index={index}/></ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItem>
+          </Link>
         ))}
       </List>
     </div>
