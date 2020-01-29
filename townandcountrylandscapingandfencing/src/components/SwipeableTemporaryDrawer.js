@@ -70,6 +70,9 @@ export default function SwipeableTemporaryDrawer() {
   }
 
   const sideList = side => (
+
+
+
     <div
       className={classes.list}
       role="presentation"
@@ -77,14 +80,34 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(side, false)}
     >
       <List>
-        {['Home', 'Services', 'About Us', 'Contact Us'].map((text, index) => (
-          <Link to='/services'>
-            <ListItem button key={text}>
-              <ListItemIcon><IconSelector index={index}/></ListItemIcon>
-              <ListItemText primary={text} />
-            </ListItem>
-          </Link>
-        ))}
+        {
+          <>
+            <Link to='/home'>
+              <ListItem button key="Home">
+                <ListItemIcon><IconSelector index={0}/></ListItemIcon>
+                <ListItemText primary="Home" />
+              </ListItem>
+            </Link>
+            <Link to='/services'>
+              <ListItem button key="Services">
+                <ListItemIcon><IconSelector index={1}/></ListItemIcon>
+                <ListItemText primary="Services" />
+              </ListItem>
+            </Link>
+            <Link to='/aboutus'>
+              <ListItem button key="About Us">
+                <ListItemIcon><IconSelector index={2}/></ListItemIcon>
+                <ListItemText primary="About Us" />
+              </ListItem>
+            </Link>
+            <Link to='/contactus'>
+              <ListItem button key="Contact Us">
+                <ListItemIcon><IconSelector index={3}/></ListItemIcon>
+                <ListItemText primary="About Us" />
+              </ListItem>
+            </Link>
+          </>
+        }
       </List>
     </div>
   );
