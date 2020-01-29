@@ -24,7 +24,6 @@ class Main extends Component {
         <Hidden smDown>
           <Jumbotron />
         </Hidden>
-
       </Box>
     )
   }
