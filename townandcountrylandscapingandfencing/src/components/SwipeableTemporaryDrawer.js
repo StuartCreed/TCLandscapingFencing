@@ -82,28 +82,28 @@ export default function SwipeableTemporaryDrawer() {
       <List>
         {
           <>
-            <Link to='/home'>
+            <Link to='/home' style={{"textDecoration": "none"}}>
               <ListItem button key="Home">
                 <ListItemIcon><IconSelector index={0}/></ListItemIcon>
-                <ListItemText primary="Home" />
+                <ListItemText primary="Home" style={{"color":ColourTheme.FirstColour}} />
               </ListItem>
             </Link>
-            <Link to='/services'>
+            <Link to='/services' style={{"textDecoration": "none"}}>
               <ListItem button key="Services">
                 <ListItemIcon><IconSelector index={1}/></ListItemIcon>
-                <ListItemText primary="Services" />
+                <ListItemText primary="Services" style={{"color":ColourTheme.FirstColour}} />
               </ListItem>
             </Link>
-            <Link to='/aboutus'>
+            <Link to='/aboutus' style={{"textDecoration": "none"}}>
               <ListItem button key="About Us">
                 <ListItemIcon><IconSelector index={2}/></ListItemIcon>
-                <ListItemText primary="About Us" />
+                <ListItemText primary="About Us" style={{"color":ColourTheme.FirstColour}} />
               </ListItem>
             </Link>
-            <Link to='/contactus'>
+            <Link to='/contactus' style={{"textDecoration": "none"}}>
               <ListItem button key="Contact Us">
                 <ListItemIcon><IconSelector index={3}/></ListItemIcon>
-                <ListItemText primary="Contact Us" />
+                <ListItemText primary="Contact Us" style={{"color":ColourTheme.FirstColour}} />
               </ListItem>
             </Link>
           </>
