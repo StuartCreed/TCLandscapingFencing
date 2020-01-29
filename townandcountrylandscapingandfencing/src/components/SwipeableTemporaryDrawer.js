@@ -103,7 +103,7 @@ export default function SwipeableTemporaryDrawer() {
             <Link to='/contactus'>
               <ListItem button key="Contact Us">
                 <ListItemIcon><IconSelector index={3}/></ListItemIcon>
-                <ListItemText primary="About Us" />
+                <ListItemText primary="Contact Us" />
               </ListItem>
             </Link>
           </>
