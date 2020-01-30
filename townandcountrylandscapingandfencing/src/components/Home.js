@@ -8,6 +8,10 @@ import withWidth from '@material-ui/core/withWidth';
 import Typography from '@material-ui/core/Typography';
 import ColourTheme from '../ColourTheme';
 import { Container, AppBar, Toolbar, IconButton, Button } from '@material-ui/core';
+import Logo from './yellowLogo.svg';
+import { ReactSVG } from 'react-svg';
+
+/*<img src={Logo} style={{"fontSize":"100px", "marginTop":"200px"}}/>*/
 
 class Home extends Component {
   constructor(props) {
@@ -17,10 +21,7 @@ class Home extends Component {
   }
 
   render(){
-
-    return(
-        <Box style={{"marginTop":"200px"}}>Home</Box>
-    )
+    return(<Box style={{"marginTop":'200px'}}>Home</Box>)
   }
 }
 

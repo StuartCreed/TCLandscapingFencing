@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
 import Icon from '@material-ui/core/Icon';
-
+import Logo from './yellowLogo.svg';
 
 export default function Navbar() {
 
@@ -30,7 +30,7 @@ export default function Navbar() {
       marginRight: -12,
     },
     imageIcon: {
-    height: '100%'
+      height: '100%'
     },
     iconRoot: {
       textAlign: 'center'
@@ -45,10 +45,10 @@ export default function Navbar() {
             <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
               <Toolbar>
                 <SwipeableTemporaryDrawer />
+                <IconButton>
+                  <img src="yellowLogo.svg" style={{'width':'40px','height':'40px'}} />
+                </IconButton>
                 <section className={classes.rightToolbar}>
-                    <Icon classes={{root: classes.iconRoot}}>
-                      <img className={classes.imageIcon} src="yellowLogo.jpg"/>
-                    </Icon>
                     <IconButton href="mailto:andyferret@hotmail.com"><MailIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                     <IconButton href="tel:+85212345678"><PhoneIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                 </section>
