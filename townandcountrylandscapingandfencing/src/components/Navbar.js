@@ -11,6 +11,8 @@ import 'typeface-roboto';
 import { createMuiTheme } from "@material-ui/core/styles";
 import { Link } from 'react-router-dom';
 import PhoneIcon from '@material-ui/icons/Phone';
+import MailIcon from '@material-ui/icons/Mail';
+import Icon from '@material-ui/core/Icon';
 
 
 export default function Navbar() {
@@ -27,11 +29,13 @@ export default function Navbar() {
       marginLeft: 'auto',
       marginRight: -12,
     },
-    menuButton: {
-      marginRight: 16,
-      marginLeft: -12,
+    imageIcon: {
+    height: '100%'
     },
-  });
+    iconRoot: {
+      textAlign: 'center'
+    }
+    });
 
   const classes = useStyles();
 
@@ -42,8 +46,11 @@ export default function Navbar() {
               <Toolbar>
                 <SwipeableTemporaryDrawer />
                 <section className={classes.rightToolbar}>
+                    <Icon classes={{root: classes.iconRoot}}>
+                      <img className={classes.imageIcon} src="yellowLogo.jpg"/>
+                    </Icon>
+                    <IconButton href="mailto:andyferret@hotmail.com"><MailIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                     <IconButton href="tel:+85212345678"><PhoneIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
-                    <IconButton href="mailto:andyferret@hotmail.com"><PhoneIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                 </section>
               </Toolbar>
             </AppBar>
