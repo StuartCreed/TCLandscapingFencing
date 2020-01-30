@@ -19,6 +19,8 @@ import DehazeIcon from '@material-ui/icons/Dehaze';
 import PersonIcon from '@material-ui/icons/Person';
 import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
+import { IconButton } from '@material-ui/core';
+
 
 const useStyles = makeStyles({
   list: {
@@ -133,7 +135,7 @@ export default function SwipeableTemporaryDrawer() {
 
   return (
     <div>
-      <Button onClick={toggleDrawer('left', true)}><DehazeIcon style={{"color": ColourTheme.ThirdColour}}/></Button>
+      <IconButton onClick={toggleDrawer('left', true)}><DehazeIcon style={{"color": ColourTheme.ThirdColour}}/></IconButton>
       <SwipeableDrawer
         open={state.left}
         onClose={toggleDrawer('left', false)}

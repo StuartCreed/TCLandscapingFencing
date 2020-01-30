@@ -10,6 +10,8 @@ import Typography from '@material-ui/core/Typography';
 import 'typeface-roboto';
 import { createMuiTheme } from "@material-ui/core/styles";
 import { Link } from 'react-router-dom';
+import PhoneIcon from '@material-ui/icons/Phone';
+
 
 export default function Navbar() {
 
@@ -20,7 +22,15 @@ export default function Navbar() {
     },
     MenuItemGrid: {
       textAlign:'center',
-    }
+    },
+    rightToolbar: {
+      marginLeft: 'auto',
+      marginRight: -12,
+    },
+    menuButton: {
+      marginRight: 16,
+      marginLeft: -12,
+    },
   });
 
   const classes = useStyles();
@@ -31,6 +41,10 @@ export default function Navbar() {
             <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
               <Toolbar>
                 <SwipeableTemporaryDrawer />
+                <section className={classes.rightToolbar}>
+                    <IconButton href="tel:+85212345678"><PhoneIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
+                    <IconButton href="mailto:andyferret@hotmail.com"><PhoneIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
+                </section>
               </Toolbar>
             </AppBar>
           </Hidden>
@@ -39,7 +53,6 @@ export default function Navbar() {
             <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
 
               <Grid container style={{'direction':'row', 'justify':"space-around", "alignItems":"center", 'height':'72px', 'width':'100%', 'backgroundColor': ColourTheme.ThirdColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
-                <Grid xs={2}  ></Grid>
                 <Grid xs={2}  ></Grid>
                 <Grid xs={2}  ></Grid>
                 <Grid xs={2}  ></Grid>
