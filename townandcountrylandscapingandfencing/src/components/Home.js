@@ -8,8 +8,6 @@ import withWidth from '@material-ui/core/withWidth';
 import Typography from '@material-ui/core/Typography';
 import ColourTheme from '../ColourTheme';
 import { Container, AppBar, Toolbar, IconButton, Button } from '@material-ui/core';
-import Logo from './yellowLogo.svg';
-import { ReactSVG } from 'react-svg';
 
 /*<img src={Logo} style={{"fontSize":"100px", "marginTop":"200px"}}/>*/
 
