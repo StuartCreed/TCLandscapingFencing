@@ -14,17 +14,6 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
 import Icon from '@material-ui/core/Icon';
 
-/*
-<Grid container style={{'direction':'row', 'justify':"space-around", "alignItems":"center", 'height':'72px', 'width':'100%', 'backgroundColor': ColourTheme.ThirdColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
-  <Grid xs={2}  ><IconButton><img src="greenLogo.svg" style={{'width':'60px','height':'60px'}} /></IconButton></Grid>
-  <Grid xs={2}  ></Grid>
-  <Grid xs={2}  ></Grid>
-  <Grid xs={2}  ></Grid>
-  <Grid xs={2}  ></Grid>
-  <Grid xs={2}  ></Grid>
-</Grid>
-*/
-
 export default function Navbar() {
 
   const useStyles = makeStyles({
@@ -55,7 +44,7 @@ export default function Navbar() {
             <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
               <Toolbar>
                 <SwipeableTemporaryDrawer />
-                <IconButton><img src="greenLogo.svg" style={{'width':'40px','height':'40px'}} /></IconButton>
+                <IconButton><img src="yellowLogo.svg" style={{'width':'40px','height':'40px'}} /></IconButton>
                 <section className={classes.rightToolbar}>
                     <IconButton href="mailto:andyferret@hotmail.com"><MailIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                     <IconButton href="tel:+07815946340"><PhoneIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
@@ -68,7 +57,8 @@ export default function Navbar() {
             <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
 
               <Toolbar style={{'backgroundColor': ColourTheme.FirstColour, "height": "90px"}}>
-                <Link to='/home' style={{"textDecoration": "none"}}><IconButton><img src="greenLogo.svg" style={{'width':'60px','height':'60px'}} /></IconButton></Link>
+                <Link to='/home' style={{"textDecoration": "none"}}><IconButton><img src="yellowLogo.svg" style={{'width':'60px','height':'60px'}} /></IconButton></Link>
+                <Link to='/home' style={{"textDecoration": "none"}}><Button href="tel:+07815946340"><Typography variant="h4" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour}}>Town and Country Landscaping</Typography></ Button></Link>
                 <section className={classes.rightToolbar}>
                     <IconButton href="mailto:andyferret@hotmail.com"><MailIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                     <IconButton href="mailto:andyferret@hotmail.com" style={{"marginRight":"50px"}}><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour}}>andyferret@hotmail.com</Typography></IconButton>
