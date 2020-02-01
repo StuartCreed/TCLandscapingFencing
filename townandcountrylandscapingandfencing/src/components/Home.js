@@ -9,8 +9,6 @@ import Typography from '@material-ui/core/Typography';
 import ColourTheme from '../ColourTheme';
 import { Container, AppBar, Toolbar, IconButton, Button, Grid } from '@material-ui/core';
 
-/*<img src={Logo} style={{"fontSize":"100px", "marginTop":"200px"}}/>*/
-
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -21,15 +19,15 @@ class Home extends Component {
   render(){
     return(
       <>
-      <Hidden mdUp>
+      <Hidden lgUp>
         <Grid container style={{'direction':'row', 'marginTop':'64px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'20px', 'paddingRight':'20px'}}>
-          <Grid xs={12} style={{'backgroundColor':'blue'}} >Home</Grid>
+          <Grid xs={12}>Home</Grid>
         </Grid>
       </Hidden>
 
-      <Hidden only={['sm', 'xs']}>
-        <Grid container style={{'direction':'row', 'marginTop':'160px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'40px', 'paddingRight':'40px'}}>
-          <Grid xs={12} style={{'backgroundColor':'blue'}} >Home</Grid>
+      <Hidden only={['md' ,'sm', 'xs']}>
+        <Grid container style={{'direction':'row', 'marginTop':'140px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'40px', 'paddingRight':'40px'}}>
+          <Grid xs={12} >Home Big Screen</Grid>
         </Grid>
       </Hidden>
       </>

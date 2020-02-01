@@ -13,6 +13,7 @@ import { Link } from 'react-router-dom';
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailIcon from '@material-ui/icons/Mail';
 import Icon from '@material-ui/core/Icon';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 export default function Navbar() {
 
@@ -46,6 +47,7 @@ export default function Navbar() {
                 <SwipeableTemporaryDrawer />
                 <IconButton><img src="yellowLogo.svg" style={{'width':'40px','height':'40px'}} /></IconButton>
                 <section className={classes.rightToolbar}>
+                    <IconButton href="#"><FacebookIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                     <IconButton href="mailto:andyferret@hotmail.com"><MailIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                     <IconButton href="tel:+07815946340"><PhoneIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                 </section>
@@ -61,7 +63,7 @@ export default function Navbar() {
               <Toolbar style={{'backgroundColor': ColourTheme.FirstColour, "height": "90px"}}>
                 <Link to='/home' style={{"textDecoration": "none"}}><IconButton><img src="yellowLogo.svg" style={{'width':'60px','height':'60px'}} /></IconButton></Link>
                 <Link to='/home' style={{"textDecoration": "none"}}>
-                  <Button style={{'width':'600px'}}>
+                  <Button style={{'width':'400px'}}>
                     <Grid container style={{'width':'100% ', 'direction':'column'}}>
                       <Grid xs={12}><Typography variant="h4" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour, "fontFamily": "'Bowlby One SC', cursive", "letterSpacing":"1.5px", 'fontSize':'30px'}}>Town and Country</Typography></Grid>
                       <Grid xs={12}><Typography variant="h4" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour, "fontFamily": "'Bowlby One SC', cursive", "letterSpacing":"1.5px", 'fontSize':'20px'}}>Landscaping and Fencing</Typography></Grid>
@@ -69,6 +71,7 @@ export default function Navbar() {
                   </ Button>
                 </Link>
                 <section className={classes.rightToolbar}>
+                    <IconButton href="#"><FacebookIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                     <IconButton href="mailto:andyferret@hotmail.com"><MailIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                     <IconButton href="mailto:andyferret@hotmail.com" style={{"marginRight":"50px"}}><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour}}>andyferret@hotmail.com</Typography></IconButton>
                     <IconButton href="tel:+07815946340"><PhoneIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
@@ -76,7 +79,7 @@ export default function Navbar() {
                 </section>
               </Toolbar>
 
-              <Grid container style={{'direction':'row', 'justify':"space-around", "alignItems":"center", 'height':'72px', 'width':'100%', 'backgroundColor': ColourTheme.ThirdColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
+              <Grid container style={{'direction':'row', 'justify':"space-around", "alignItems":"center", 'height':'50px', 'width':'100%', 'backgroundColor': ColourTheme.ThirdColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
                 <Grid xs={2}  ></Grid>
                 <Grid xs={2} className={classes.MenuItemGrid}><Link to='/home' style={{"textDecoration": "none"}}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} >Home</Typography></Button></Link></Grid>
                 <Grid xs={2} className={classes.MenuItemGrid}><Link to='/services' style={{"textDecoration": "none"}}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Services</Typography></Button></Link></Grid>
