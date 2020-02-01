@@ -40,7 +40,7 @@ export default function Navbar() {
 
   return(
       <>
-          <Hidden mdUp>
+          <Hidden lgUp>
             <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
               <Toolbar>
                 <SwipeableTemporaryDrawer />
@@ -53,12 +53,21 @@ export default function Navbar() {
             </AppBar>
           </Hidden>
 
-          <Hidden only={['sm', 'xs']}>
+
+
+          <Hidden only={['md' ,'sm', 'xs']}>
             <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
 
               <Toolbar style={{'backgroundColor': ColourTheme.FirstColour, "height": "90px"}}>
                 <Link to='/home' style={{"textDecoration": "none"}}><IconButton><img src="yellowLogo.svg" style={{'width':'60px','height':'60px'}} /></IconButton></Link>
-                <Link to='/home' style={{"textDecoration": "none"}}><Button href="tel:+07815946340"><Typography variant="h4" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour}}>Town and Country Landscaping</Typography></ Button></Link>
+                <Link to='/home' style={{"textDecoration": "none"}}>
+                  <Button style={{'width':'600px'}}>
+                    <Grid container style={{'width':'100% ', 'direction':'column'}}>
+                      <Grid xs={12}><Typography variant="h4" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour, "fontFamily": "'Bowlby One SC', cursive", "letterSpacing":"1.5px", 'fontSize':'30px'}}>Town and Country</Typography></Grid>
+                      <Grid xs={12}><Typography variant="h4" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour, "fontFamily": "'Bowlby One SC', cursive", "letterSpacing":"1.5px", 'fontSize':'20px'}}>Landscaping and Fencing</Typography></Grid>
+                    </Grid>
+                  </ Button>
+                </Link>
                 <section className={classes.rightToolbar}>
                     <IconButton href="mailto:andyferret@hotmail.com"><MailIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                     <IconButton href="mailto:andyferret@hotmail.com" style={{"marginRight":"50px"}}><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour}}>andyferret@hotmail.com</Typography></IconButton>
