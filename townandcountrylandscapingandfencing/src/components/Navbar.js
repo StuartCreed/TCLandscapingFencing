@@ -53,7 +53,7 @@ export default function Navbar() {
             </AppBar>
           </Hidden>
 
-          <Hidden mdDown>
+          <Hidden only={['sm', 'xs']}>
             <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
 
               <Toolbar style={{'backgroundColor': ColourTheme.FirstColour, "height": "90px"}}>

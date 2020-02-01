@@ -22,12 +22,12 @@ class Home extends Component {
     return(
       <>
       <Hidden mdUp>
-        <Grid container style={{'direction':'row', 'marginTop':'64px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'40px', 'paddingRight':'40px'}}>
+        <Grid container style={{'direction':'row', 'marginTop':'64px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'20px', 'paddingRight':'20px'}}>
           <Grid xs={12} style={{'backgroundColor':'blue'}} >Home</Grid>
         </Grid>
       </Hidden>
 
-      <Hidden mdDown>
+      <Hidden only={['sm', 'xs']}>
         <Grid container style={{'direction':'row', 'marginTop':'160px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'40px', 'paddingRight':'40px'}}>
           <Grid xs={12} style={{'backgroundColor':'blue'}} >Home</Grid>
         </Grid>
