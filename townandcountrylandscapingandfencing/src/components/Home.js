@@ -21,7 +21,7 @@ class Home extends Component {
       <>
       <Hidden lgUp>
         <Grid container style={{'direction':'row', 'marginTop':'64px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'20px', 'paddingRight':'20px'}}>
-          <Grid xs={12}>Home</Grid>
+          <Grid xs={12} style={{'justify':"space-around"}}>Home</Grid>
         </Grid>
       </Hidden>
 
