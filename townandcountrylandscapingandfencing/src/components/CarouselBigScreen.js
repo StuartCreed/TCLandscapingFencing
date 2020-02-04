@@ -14,15 +14,15 @@ export default class CarouselBigScreen extends Component {
       infinite
       arrows
       keepDirectionWhenDragging
-      slidesPerPage={2}
+      slidesPerPage={2.5}
       arrowLeft={<ArrowBackIcon name="angle-double-left" style={{'backgroundColor': ColourTheme.FirstColour, 'color':ColourTheme.ThirdColour, 'fontSize':'50px'}} />}
       arrowRight={<ArrowForwardIcon name="angle-double-right" style={{'backgroundColor': ColourTheme.FirstColour, 'color':ColourTheme.ThirdColour, 'fontSize':'50px'}} />}
       addArrowClickHandler
       dots
       >
         <img src="slide.jpg" style={{'height':'500px'}}/>
-        <img src="slide.jpg" style={{'height':'500px'}}/>
-        <img src="slide.jpg" style={{'height':'500px'}}/>
+        <img src="20180406-150030.jpg" style={{'height':'500px'}}/>
+        <img src="20181011-151418.jpg" style={{'height':'500px'}}/>
       </Carousel>
     );
   }
