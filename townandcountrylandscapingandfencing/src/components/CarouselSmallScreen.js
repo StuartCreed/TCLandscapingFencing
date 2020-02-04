@@ -21,9 +21,9 @@ export default class CarouselSmallScreen extends Component {
       addArrowClickHandler
       dots
       >
-        <img src="slide.jpg" style={{'height':'95%', 'width':'90%'}}/>
-        <img src="20180406-150030.jpg" style={{'height':'95%', 'width':'90%'}}/>
-        <img src="20181011-151418.jpg" style={{'height':'95%', 'width':'90%'}}/>
+        <img src="slide.jpg" style={{'height':'100%', 'width':'100%'}}/>
+        <img src="20180406-150030.jpg" style={{'height':'100%', 'width':'100%'}}/>
+        <img src="20181011-151418.jpg" style={{'height':'100%', 'width':'100%'}}/>
       </Carousel>
     );
   }

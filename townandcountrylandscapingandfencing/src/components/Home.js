@@ -25,7 +25,7 @@ class Home extends Component {
       {/*MOBILE VIEW*/}
       <Hidden lgUp>
         <Grid container style={{'direction':'row', 'marginTop':'64px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'20px', 'paddingRight':'20px'}}>
-          <Grid xs={12}>
+          <Grid xs={12} style={{'margin':'10px'}}>
             <CarouselSmallScreen />
           </Grid>
         </Grid>
