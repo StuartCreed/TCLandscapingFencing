@@ -7,7 +7,9 @@ import Hidden from '@material-ui/core/Hidden';
 import withWidth from '@material-ui/core/withWidth';
 import Typography from '@material-ui/core/Typography';
 import ColourTheme from '../ColourTheme';
-import { Container, AppBar, Toolbar, IconButton, Button, Grid } from '@material-ui/core';
+import { Container, AppBar, Toolbar, IconButton, Button, Grid, Card } from '@material-ui/core';
+import CarouselBigScreen from './CarouselBigScreen';
+import CarouselSmallScreen from './CarouselSmallScreen';
 
 class Home extends Component {
   constructor(props) {
@@ -17,18 +19,30 @@ class Home extends Component {
   }
 
   render(){
+
     return(
       <>
+      {/*MOBILE VIEW*/}
       <Hidden lgUp>
         <Grid container style={{'direction':'row', 'marginTop':'64px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'20px', 'paddingRight':'20px'}}>
-          <Grid xs={12} style={{'justify':"space-around"}}>Home</Grid>
+          <Grid xs={12}>
+            <CarouselSmallScreen />
+          </Grid>
         </Grid>
       </Hidden>
 
+      {/*DESKTOP VIEW*/}
       <Hidden only={['md' ,'sm', 'xs']}>
         <Grid container style={{'direction':'row', 'marginTop':'140px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'40px', 'paddingRight':'40px'}}>
-          <Grid xs={12} >Home Big Screen</Grid>
+          <Grid xs={12} >
+            <CarouselBigScreen/>
+          </Grid>
+          <Grid xs={12} >
+            <Card style={{'backgroundColor':'grey', 'padding':'20px'}}>
+            </Card>
+          </Grid>
         </Grid>
+
       </Hidden>
       </>
     )

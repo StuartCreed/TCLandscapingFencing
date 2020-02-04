@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@brainhubeu/react-carousel": "^1.10.48",
     "@material-ui/core": "^4.8.3",
     "@material-ui/icons": "^4.5.1",
     "@testing-library/jest-dom": "^4.2.4",
