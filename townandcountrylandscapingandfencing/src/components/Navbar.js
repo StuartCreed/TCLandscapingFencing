@@ -20,9 +20,9 @@ export default function Navbar() {
   const useStyles = makeStyles({
     MenuItemTypography: {
       color: ColourTheme.FirstColour,
-      fontWeight: 'bold',
+      fontWeight: 'normal',
       fontFamily: "'Bowlby One SC', cursive",
-      letterSpacing: "1.5px"
+      letterSpacing: "0.5px"
     },
     MenuItemGrid: {
       textAlign:'center',
