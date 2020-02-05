@@ -10,6 +10,7 @@ import ColourTheme from '../ColourTheme';
 import { Container, AppBar, Toolbar, IconButton, Button, Grid, Card } from '@material-ui/core';
 import CarouselBigScreen from './CarouselBigScreen';
 import CarouselSmallScreen from './CarouselSmallScreen';
+import FencingCard from './FencingCard';
 
 class Home extends Component {
   constructor(props) {
@@ -24,8 +25,8 @@ class Home extends Component {
       <>
       {/*MOBILE VIEW*/}
       <Hidden lgUp>
-        <Grid container style={{'direction':'row', 'marginTop':'64px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'20px', 'paddingRight':'20px'}}>
-          <Grid xs={12} style={{'margin':'10px'}}>
+        <Grid container style={{'direction':'row', 'marginTop':'64px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
+          <Grid xs={12} style={{'marginTop':'10px'}}>
             <CarouselSmallScreen />
           </Grid>
         </Grid>
@@ -37,9 +38,16 @@ class Home extends Component {
           <Grid xs={12} >
             <CarouselBigScreen/>
           </Grid>
-          <Grid xs={12} >
-            <Card style={{'backgroundColor':'grey', 'padding':'20px'}}>
-            </Card>
+          <Grid xs={12} container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'paddingLeft':'40px', 'paddingRight':'40px', 'marginTop':'20px'}} >
+            <Grid xs={4}>
+              <FencingCard/>
+            </Grid>
+            <Grid xs={4}>
+              <FencingCard/>
+            </Grid>
+            <Grid xs={4}>
+              <FencingCard/>
+            </Grid>
           </Grid>
         </Grid>
 
