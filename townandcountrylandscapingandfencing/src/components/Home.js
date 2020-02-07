@@ -11,19 +11,22 @@ import { Container, AppBar, Toolbar, IconButton, Button, Grid, Card } from '@mat
 import CarouselBigScreen from './CarouselBigScreen';
 import CarouselSmallScreen from './CarouselSmallScreen';
 import FencingCard from './FencingCard';
+import { withRouter } from 'react-router';
+import Navbar from './Navbar';
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-       this.state = {
-    };
-  }
+    constructor(props) {
+      super(props);
+         this.state = {
+      };
+    }
 
   render(){
 
     return(
       <>
       {/*MOBILE VIEW*/}
+      <Navbar page={'Home'}/>
       <Hidden lgUp>
         <Grid container style={{'direction':'row', 'marginTop':'64px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
           <Grid xs={12} style={{'marginTop':'10px'}}>
@@ -57,4 +60,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default Home 
