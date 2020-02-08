@@ -120,6 +120,22 @@ class Navbar extends Component {
       }
     }
 
+    const ContactUsButton = () => {
+
+      if (this.props.page === 'ContactUs') {
+          console.log('first')
+          return (
+          <Grid xs={2} className={classes.MenuItemGrid}><Link to='/contactus' style={{"textDecoration": "none"}}><Button className={classes.MenuItemSelectionSettings}><Typography variant="subtitle1" noWrap className={classes.MenuItemSelectionTypographySettings}>Contact Us</Typography></Button></Link></Grid>
+        )
+      }
+      else {
+        console.log('second')
+          return (
+          <Grid xs={2} className={classes.MenuItemGrid}><Link to='/contactus' style={{"textDecoration": "none"}}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Contact Us</Typography></Button></Link></Grid>
+        )
+      }
+    }
+
     return(
         <>
             {/*MOBILE VIEW*/}
@@ -162,8 +178,8 @@ class Navbar extends Component {
                   <Grid xs={2}  ></Grid>
                   <HomeButton/>
                   <ServicesButton />
-                  <Grid xs={2} className={classes.MenuItemGrid}><Link to='/aboutus' style={{"textDecoration": "none"}}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>About Us</Typography></Button></Link></Grid>
-                  <Grid xs={2} className={classes.MenuItemGrid}><Link to='/contactus' style={{"textDecoration": "none"}}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Contact Us</Typography></Button></Link></Grid>
+                  <AboutUsButton />
+                  <ContactUsButton />
                   <Grid xs={2} ></Grid>
                 </Grid>
               </AppBar>
