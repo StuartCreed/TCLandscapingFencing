@@ -12,13 +12,9 @@ export default class CarouselSmallScreen extends Component {
       <Carousel
       centered
       infinite
-      arrows
       slidesPerPage={1}
       slidesPerScroll={1}
       keepDirectionWhenDragging
-      arrowLeft={<ArrowBackIcon name="angle-double-left" style={{'backgroundColor': ColourTheme.FirstColour, 'color':ColourTheme.ThirdColour, 'fontSize':'30px'}} />}
-      arrowRight={<ArrowForwardIcon name="angle-double-right" style={{'backgroundColor': ColourTheme.FirstColour, 'color':ColourTheme.ThirdColour, 'fontSize':'30px'}} />}
-      addArrowClickHandler
       dots
       >
         <img src="slide.jpg" style={{'height':'100%', 'width':'100%'}}/>

@@ -1,5 +1,8 @@
 const Fonts = {
-  BoldFont: "'Bowlby One SC', cursive"
+  BoldFont: "font-family: 'Oxygen', sans-serif"
 }
+
+/*font-family: 'Open Sans', sans-serif;*/
+
 
 export default Fonts;

@@ -145,7 +145,7 @@ class Navbar extends Component {
                   <SwipeableTemporaryDrawer />
                   <IconButton><img src="yellowLogo.svg" style={{'width':'40px','height':'40px'}} /></IconButton>
                   <section className={classes.rightToolbar}>
-                      <FacebookLinkModal/>0
+                      <FacebookLinkModal/>
                       <IconButton href="mailto:tcland-enquiries@hotmail.co.uk"><MailIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                       <PhoneNumberModal/>
                   </section>
@@ -168,7 +168,7 @@ class Navbar extends Component {
                     </ Button>
                   </Link>
                   <section className={classes.rightToolbar}>
-                      <Button href="mailto:tcland-enquiries@hotmail.co.uk" style={{"marginRight":"50px"}}><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour}}>tcland-enquiries@hotmail.co.uk</Typography></Button>
+                      <Button href="mailto:tcland-enquiries@hotmail.co.uk"><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour}}>tcland-enquiries@hotmail.co.uk</Typography></Button>
                       <FacebookLinkModal/>
                       <PhoneNumberModal/>
                   </section>

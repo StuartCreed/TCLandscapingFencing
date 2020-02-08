@@ -29,7 +29,7 @@ class Home extends Component {
       <Navbar page={'Home'}/>
       <Hidden lgUp>
         <Grid container style={{'direction':'row', 'marginTop':'64px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-          <Grid xs={12} style={{'marginTop':'10px'}}>
+          <Grid xs={12}>
             <CarouselSmallScreen />
           </Grid>
         </Grid>
@@ -37,11 +37,11 @@ class Home extends Component {
 
       {/*DESKTOP VIEW*/}
       <Hidden only={['md' ,'sm', 'xs']}>
-        <Grid container style={{'direction':'row', 'marginTop':'140px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'40px', 'paddingRight':'40px'}}>
+        <Grid container style={{'direction':'row', 'marginTop':'140px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
           <Grid xs={12} >
             <CarouselBigScreen/>
           </Grid>
-          <Grid xs={12} container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'paddingLeft':'40px', 'paddingRight':'40px', 'marginTop':'20px'}} >
+          <Grid xs={12} container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px', 'marginTop':'0px'}} >
             <Grid xs={4}>
               <FencingCard/>
             </Grid>
@@ -60,4 +60,4 @@ class Home extends Component {
   }
 }
 
-export default Home 
+export default Home
