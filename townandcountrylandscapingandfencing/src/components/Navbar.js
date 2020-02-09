@@ -19,6 +19,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import Modal from '@material-ui/core/Modal';
 import PhoneNumberModal from './PhoneNumberModal';
 import FacebookLinkModal from './FacebookLinkModal';
+import MailLinkModal from './MailLinkModal';
 
 /*OLD script
 <Button href="tel:+447815946340"><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour}}>Andy: 07815946340</Typography></Button>
@@ -34,6 +35,14 @@ const styles = theme => ({
     fontWeight: 'normal',
     fontFamily: Fonts.BoldFont,
     letterSpacing: "0.5px"
+  },
+  LogoTypography: {
+    color: ColourTheme.FirstColour,
+    fontWeight: 'normal',
+    fontFamily: Fonts.LogoFont,
+    letterSpacing: "0.5px",
+    color: ColourTheme.ThirdColour,
+
   },
   MenuItemGrid: {
     textAlign:'center',
@@ -162,13 +171,13 @@ class Navbar extends Component {
                   <Link to='/home' style={{"textDecoration": "none"}}>
                     <Button style={{'width':'400px'}}>
                       <Grid container style={{'width':'100% ', 'direction':'column'}}>
-                        <Grid xs={12}><Typography variant="h4" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour, 'fontSize':'30px'}}>Town and Country</Typography></Grid>
-                        <Grid xs={12}><Typography variant="h4" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour, 'fontSize':'20px'}}>Landscaping and Fencing</Typography></Grid>
+                        <Grid xs={12}><Typography variant="h4" noWrap className={classes.LogoTypography} style={{'fontSize':'30px'}}>Town and Country</Typography></Grid>
+                        <Grid xs={12}><Typography variant="h4" noWrap className={classes.LogoTypography} style={{'fontSize':'20px'}}>Landscaping and Fencing</Typography></Grid>
                       </Grid>
                     </ Button>
                   </Link>
                   <section className={classes.rightToolbar}>
-                      <Button href="mailto:tcland-enquiries@hotmail.co.uk"><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour}}>tcland-enquiries@hotmail.co.uk</Typography></Button>
+                      <MailLinkModal/>
                       <FacebookLinkModal/>
                       <PhoneNumberModal/>
                   </section>

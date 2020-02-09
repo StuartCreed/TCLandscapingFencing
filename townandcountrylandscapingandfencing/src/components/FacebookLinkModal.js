@@ -18,9 +18,9 @@ const useStyles = makeStyles(theme => ({
   },
   paper: {
     backgroundColor: ColourTheme.FirstColour,
-    border: '5px solid',
+    border: '3px solid',
     borderColor: ColourTheme.ThirdColour,
-    padding: theme.spacing(2, 4, 3),
+    padding: "20px",
     borderRadius: '10px'
   },
   MenuItemTypography: {
@@ -61,10 +61,10 @@ export default function FacebookLinkModal() {
           <div className={classes.paper}>
             <Grid container style={{'textAlign': 'center'}}>
               <Grid xs={12}>
-                <Button id="transition-modal-description" href="Town-and-Country-Landscaping-and-Fencing-114780373412133/?__tn__=%2Cd%2CP-R&eid=ARBAgBTOcsPMpmdLlHrCOj90rR_-869ufNIQ7Eap8fXKqJSgUv2vfNqquumP6d9qZYxrsQyOujehR59M"><FacebookIcon edge style={{"color": ColourTheme.ThirdColour}} /><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour,'marginLeft':'10px'}}>Andy Creed's Work Facebook</Typography></Button>
+                <Button id="transition-modal-description" href="https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/?__tn__=%2Cd%2CP-R&eid=ARBAgBTOcsPMpmdLlHrCOj90rR_-869ufNIQ7Eap8fXKqJSgUv2vfNqquumP6d9qZYxrsQyOujehR59M"><FacebookIcon edge style={{"color": ColourTheme.ThirdColour, 'marginRight':'20px'}} /><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour,'marginLeft':'10px'}}>Andy Creed's Work Facebook</Typography></Button>
               </Grid>
               <Grid xs={12}>
-                <Button href="https://www.facebook.com/townandcountrywendover/"><FacebookIcon edge style={{"color": ColourTheme.ThirdColour}} /><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour,'marginLeft':'10px'}}>Richard Salewski's Work Facebook</Typography></Button>
+                <Button href="https://www.facebook.com/townandcountrywendover/"><FacebookIcon edge style={{"color": ColourTheme.ThirdColour, 'marginRight':'20px'}} /><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour,'marginLeft':'10px'}}>Richard Salewski's Work Facebook</Typography></Button>
               </Grid>
             </Grid>
           </div>

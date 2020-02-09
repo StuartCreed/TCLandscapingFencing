@@ -7,7 +7,9 @@ import ColourTheme from '../ColourTheme';
 import PhoneIcon from '@material-ui/icons/Phone';
 import { IconButton, Button, Box, Grid } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
+import FacebookIcon from '@material-ui/icons/Facebook';
 import Fonts from '../Fonts';
+import MailIcon from '@material-ui/icons/Mail';
 
 const useStyles = makeStyles(theme => ({
   modal: {
@@ -30,7 +32,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function PhoneNumberModal() {
+export default function MailLinkModal() {
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -44,7 +46,7 @@ export default function PhoneNumberModal() {
 
   return (
     <>
-      <IconButton onClick={handleOpen}><PhoneIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
+      <IconButton onClick={handleOpen}><MailIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
       <Modal
         aria-describedby="transition-modal-description"
         className={classes.modal}
@@ -60,10 +62,7 @@ export default function PhoneNumberModal() {
           <div className={classes.paper}>
             <Grid container style={{'textAlign': 'center'}}>
               <Grid xs={12}>
-                <Button id="transition-modal-description" href="tel:+447815946340"><PhoneIcon edge style={{"color": ColourTheme.ThirdColour, 'marginRight':'20px'}}/><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour}}>Andy Creed: 07815946340</Typography></Button>
-              </Grid>
-              <Grid xs={12}>
-                <Button href="tel:+447870519614"><PhoneIcon edge style={{"color": ColourTheme.ThirdColour, 'marginRight':'20px'}}/><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour}}>Richard Salewski: 07870519614</Typography></Button>
+                <Button href="mailto:tcland-enquiries@hotmail.co.uk"><MailIcon edge style={{"color": ColourTheme.ThirdColour, 'marginRight':'20px'}} /><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>tcland-enquiries@hotmail.co.uk</Typography></Button>
               </Grid>
             </Grid>
           </div>
