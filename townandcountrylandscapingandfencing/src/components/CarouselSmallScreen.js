@@ -7,7 +7,10 @@ import ArrowBackIcon from '@material-ui/icons/ArrowBack';
 import ColourTheme from '../ColourTheme';
 
 export default class CarouselSmallScreen extends Component {
+
   render() {
+
+    const height = '400px';
     return (
       <Carousel
       centered
@@ -17,9 +20,9 @@ export default class CarouselSmallScreen extends Component {
       keepDirectionWhenDragging
       dots
       >
-        <img src="slide.jpg" style={{'height':'100%', 'width':'100%'}}/>
-        <img src="20180406-150030.jpg" style={{'height':'100%', 'width':'100%'}}/>
-        <img src="20181011-151418.jpg" style={{'height':'100%', 'width':'100%'}}/>
+        <img src="slide.jpg" style={{'height':height}}/>
+        <img src="20180406-150030.jpg" style={{'height':height}}/>
+        <img src="20181011-151418.jpg" style={{'height':height}}/>
       </Carousel>
     );
   }

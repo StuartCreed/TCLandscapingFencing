@@ -73,10 +73,6 @@ class Navbar extends Component {
   constructor(props) {
     super(props);
        this.state = {
-         homePageSelected: false,
-         servicesPageSelected: false,
-         aboutUsPageSelected: false,
-         contactUsPageSelected: false,
     };
   }
 
