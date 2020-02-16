@@ -140,7 +140,7 @@ class Navbar extends Component {
               <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
                 <Toolbar>
                   <SwipeableTemporaryDrawer />
-                  <Link to='/home' style={{"textDecoration": "none"}}<IconButton><img src="yellowLogo.svg" style={{'width':'40px','height':'40px'}} /></IconButton></Toolbar>
+                  <Link to='/home' style={{"textDecoration": "none"}}><IconButton><img src="yellowLogo.svg" style={{'width':'40px','height':'40px'}} /></IconButton></Link>
                   <section className={classes.rightToolbar}>
                       <IconButton href="https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/?__tn__=%2Cd%2CP-R&eid=ARBAgBTOcsPMpmdLlHrCOj90rR_-869ufNIQ7Eap8fXKqJSgUv2vfNqquumP6d9qZYxrsQyOujehR59M"><FacebookIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                       <IconButton href="mailto:tcland-enquiries@hotmail.co.uk"><MailIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
