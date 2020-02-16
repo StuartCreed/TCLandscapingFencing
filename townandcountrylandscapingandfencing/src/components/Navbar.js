@@ -18,7 +18,6 @@ import Icon from '@material-ui/core/Icon';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import Modal from '@material-ui/core/Modal';
 import PhoneNumberModal from './PhoneNumberModal';
-import FacebookLinkModal from './FacebookLinkModal';
 import MailLinkModal from './MailLinkModal';
 
 const styles = theme => ({

@@ -31,6 +31,11 @@ class Home extends Component {
       };
     }
 
+  componentDidMount() {
+    var iframe = document.getElementById("facebookIframe");
+    console.log(iframe, "THIS IS THE IFRAME")
+  }
+
   render(){
 
     const { classes } = this.props;
@@ -75,7 +80,7 @@ class Home extends Component {
 
           <Hidden only={['xs', 'sm', 'md']}>
             <Grid item xs={12} lg={3}>
-              <img src="slide.jpg" style={{'width':'100%', 'marginLeft':'20px'}}/>
+              <img src="slide.jpg" style={{'width':'100%', 'marginLeft':'40px'}}/>
             </Grid>
           </Hidden>
 
@@ -89,7 +94,7 @@ class Home extends Component {
         </Grid>
 
       {/*FACEBOOK IFRAMES*/}
-        <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'margin': '70px 0px 70px 0px'}} >
+        <Grid id="facebookIframe" container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'margin': '70px 0px 70px 0px'}} >
           <Grid xs={12}>
             <div style={{'textAlign':'center'}}>
             <Box class="fb-page" data-href="https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/" data-tabs="timeline" data-width="2000px" data-height="800px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/">Town and Country Landscaping and Fencing</a></blockquote></Box>
