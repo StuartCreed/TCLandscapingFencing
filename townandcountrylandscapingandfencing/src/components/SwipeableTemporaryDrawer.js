@@ -16,10 +16,10 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import ColourTheme from '../ColourTheme';
 import DehazeIcon from '@material-ui/icons/Dehaze';
-import PersonIcon from '@material-ui/icons/Person';
 import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 import { IconButton } from '@material-ui/core';
+import ImageIcon from '@material-ui/icons/Image';
 
 
 const useStyles = makeStyles({
@@ -59,7 +59,7 @@ export default function SwipeableTemporaryDrawer() {
     }
     if (indexNumber === 2) {
       return(
-        <PersonIcon  style={{"color": ColourTheme.FirstColour}} />
+        <ImageIcon  style={{"color": ColourTheme.FirstColour}} />
       )
     }
     if (indexNumber === 3) {
