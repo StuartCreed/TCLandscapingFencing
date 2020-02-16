@@ -10,7 +10,6 @@ export default class CarouselSmallScreen extends Component {
 
   render() {
 
-    const height = '400px';
     return (
       <Carousel
       centered
@@ -20,9 +19,9 @@ export default class CarouselSmallScreen extends Component {
       keepDirectionWhenDragging
       dots
       >
-        <img src="slide.jpg" style={{'height':height}}/>
-        <img src="20180406-150030.jpg" style={{'height':height}}/>
-        <img src="20181011-151418.jpg" style={{'height':height}}/>
+        <img src="slide.jpg" style={{'width':'100%'}}/>
+        <img src="20180406-150030.jpg" style={{'width':'100%'}}/>
+        <img src="20181011-151418.jpg" style={{'width':'100%'}}/>
       </Carousel>
     );
   }

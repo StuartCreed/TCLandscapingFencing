@@ -2,7 +2,7 @@ import React from 'react';
 import { Component } from 'react';
 import Home from './components/Home';
 import Services from './components/Services';
-import AboutUs from './components/AboutUs';
+import Portfolio from './components/Portfolio';
 import ContactUs from './components/ContactUs';
 import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route, Redirect } from 'react-router-dom';
@@ -29,9 +29,9 @@ class App extends Component {
       )
     }
 
-    const AboutUsPage = () => {
+    const PortfolioPage = () => {
       return (
-        <AboutUs />
+        <Portfolio />
       )
     }
 
@@ -49,7 +49,7 @@ class App extends Component {
             <Switch location={this.props.location}>
               <Route path='/home' component={HomePage} />
               <Route path='/services' component={ServicesPage} />
-              <Route path='/aboutus' component={AboutUsPage} />
+              <Route path='/portfolio' component={PortfolioPage} />
               <Route path='/contactus' component={ContactUsPage} />
               <Redirect to="/home" />
             </Switch>

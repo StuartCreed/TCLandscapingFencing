@@ -10,7 +10,7 @@ import ColourTheme from '../ColourTheme';
 import { Container, AppBar, Toolbar, IconButton, Button, Grid } from '@material-ui/core';
 import Navbar from './Navbar';
 
-class AboutUs extends Component {
+class Portfolio extends Component {
   constructor(props) {
     super(props);
        this.state = {
@@ -21,16 +21,16 @@ class AboutUs extends Component {
 
     return(
       <>
-      <Navbar page={'AboutUs'}/>
+      <Navbar page={'Portfolio'}/>
       <Hidden lgUp>
         <Grid container style={{'direction':'row', 'marginTop':'64px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'20px', 'paddingRight':'20px'}}>
-          <Grid xs={12}>About Us</Grid>
+          <Grid xs={12}>Portfolio</Grid>
         </Grid>
       </Hidden>
 
       <Hidden only={['md' ,'sm', 'xs']}>
         <Grid container style={{'direction':'row', 'marginTop':'140px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'40px', 'paddingRight':'40px'}}>
-          <Grid xs={12} >About Us Big Screen</Grid>
+          <Grid xs={12} >Portfolio Big Screen</Grid>
         </Grid>
       </Hidden>
       </>
@@ -38,4 +38,4 @@ class AboutUs extends Component {
   }
 }
 
-export default AboutUs
+export default Portfolio

@@ -21,14 +21,6 @@ import PhoneNumberModal from './PhoneNumberModal';
 import FacebookLinkModal from './FacebookLinkModal';
 import MailLinkModal from './MailLinkModal';
 
-/*OLD script
-<Button href="tel:+447815946340"><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour}}>Andy: 07815946340</Typography></Button>
-<IconButton style={{"marginRight":"50px"}} href="https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/?__tn__=%2Cd%2CP-R&eid=ARBAgBTOcsPMpmdLlHrCOj90rR_-869ufNIQ7Eap8fXKqJSgUv2vfNqquumP6d9qZYxrsQyOujehR59M"><FacebookIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
-
-<Button href="tel:+447870519614"><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour}}>Richard: 07870519614</Typography></Button>
-<IconButton href="https://www.facebook.com/townandcountrywendover/"><FacebookIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
-*/
-
 const styles = theme => ({
   MenuItemTypography: {
     color: ColourTheme.FirstColour,
@@ -109,18 +101,18 @@ class Navbar extends Component {
       }
     }
 
-    const AboutUsButton = () => {
+    const PortfolioButton = () => {
 
-      if (this.props.page === 'AboutUs') {
+      if (this.props.page === 'Portfolio') {
           console.log('first')
           return (
-          <Grid xs={2} className={classes.MenuItemGrid}><Link to='/aboutus' style={{"textDecoration": "none"}}><Button className={classes.MenuItemSelectionSettings}><Typography variant="subtitle1" noWrap className={classes.MenuItemSelectionTypographySettings}>About Us</Typography></Button></Link></Grid>
+          <Grid xs={2} className={classes.MenuItemGrid}><Link to='/portfolio' style={{"textDecoration": "none"}}><Button className={classes.MenuItemSelectionSettings}><Typography variant="subtitle1" noWrap className={classes.MenuItemSelectionTypographySettings}>Portfolio</Typography></Button></Link></Grid>
         )
       }
       else {
         console.log('second')
           return (
-          <Grid xs={2} className={classes.MenuItemGrid}><Link to='/aboutus' style={{"textDecoration": "none"}}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>About Us</Typography></Button></Link></Grid>
+          <Grid xs={2} className={classes.MenuItemGrid}><Link to='/portfolio' style={{"textDecoration": "none"}}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Portfolio</Typography></Button></Link></Grid>
         )
       }
     }
@@ -150,7 +142,7 @@ class Navbar extends Component {
                   <SwipeableTemporaryDrawer />
                   <IconButton><img src="yellowLogo.svg" style={{'width':'40px','height':'40px'}} /></IconButton>
                   <section className={classes.rightToolbar}>
-                      <FacebookLinkModal/>
+                      <IconButton href="https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/?__tn__=%2Cd%2CP-R&eid=ARBAgBTOcsPMpmdLlHrCOj90rR_-869ufNIQ7Eap8fXKqJSgUv2vfNqquumP6d9qZYxrsQyOujehR59M"><FacebookIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                       <IconButton href="mailto:tcland-enquiries@hotmail.co.uk"><MailIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                       <PhoneNumberModal/>
                   </section>
@@ -174,7 +166,7 @@ class Navbar extends Component {
                   </Link>
                   <section className={classes.rightToolbar}>
                       <MailLinkModal/>
-                      <FacebookLinkModal/>
+                      <IconButton href="https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/?__tn__=%2Cd%2CP-R&eid=ARBAgBTOcsPMpmdLlHrCOj90rR_-869ufNIQ7Eap8fXKqJSgUv2vfNqquumP6d9qZYxrsQyOujehR59M"><FacebookIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                       <PhoneNumberModal/>
                   </section>
                 </Toolbar>
@@ -183,7 +175,7 @@ class Navbar extends Component {
                   <Grid xs={2}  ></Grid>
                   <HomeButton/>
                   <ServicesButton />
-                  <AboutUsButton />
+                  <PortfolioButton />
                   <ContactUsButton />
                   <Grid xs={2} ></Grid>
                 </Grid>
