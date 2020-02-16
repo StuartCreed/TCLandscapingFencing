@@ -31,11 +31,6 @@ class Home extends Component {
       };
     }
 
-  componentDidMount() {
-    var iframe = document.getElementById("facebookIframe");
-    console.log(iframe, "THIS IS THE IFRAME")
-  }
-
   render(){
 
     const { classes } = this.props;
