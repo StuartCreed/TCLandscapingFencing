@@ -7,7 +7,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import TestImage from '../Photos/20181011-151418.jpg'
+import TestImage from '../Photos/20181011-151418.jpg';
+import ColourTheme from '../ColourTheme';
 
 const useStyles = makeStyles({
   root: {
@@ -17,6 +18,9 @@ const useStyles = makeStyles({
   media: {
     height: 140,
   },
+  ServiceTypeTypography: {
+    color: ColourTheme.FirstColour
+  }
 });
 
 export default function ServicesCard(props) {
@@ -35,7 +39,7 @@ export default function ServicesCard(props) {
             title="Contemplative Reptile"
           />
           <CardContent>
-            <Typography variant="h5" component="h2">
+            <Typography variant="h5" component="h2" className={classes.ServiceTypeTypography}>
               {props.cardService}
             </Typography>
           </CardContent>

@@ -11,6 +11,7 @@ import 'typeface-roboto';
 import { createMuiTheme } from "@material-ui/core/styles";
 import Navbar from './Navbar';
 import ServicesCard from './ServicesCard';
+import Outro from './Outro.js';
 
 const styles = theme => ({
   CardGridStyle: {
@@ -36,31 +37,33 @@ class Services extends Component {
     const Cards = () => {
       return (
         <>
-          <Grid item xs={12} sm={6} md={4} lg={3} className={classes.CardGridStyle}>
+          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
             <ServicesCard cardService={'Fencing'}/>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3} className={classes.CardGridStyle}>
-            <ServicesCard cardService={'Fencing'}/>
+          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Patios'}/>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3} className={classes.CardGridStyle}>
-            <ServicesCard cardService={'Fencing'}/>
+          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Decking'}/>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3} className={classes.CardGridStyle}>
-            <ServicesCard cardService={'Fencing'}/>
+          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Design'}/>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3} className={classes.CardGridStyle}>
-            <ServicesCard cardService={'Fencing'}/>
+          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Pergolas'}/>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3} className={classes.CardGridStyle}>
-            <ServicesCard cardService={'Fencing'}/>
+          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Ponds'}/>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3} className={classes.CardGridStyle}>
-            <ServicesCard cardService={'Fencing'}/>
+          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Resin Bonded Driveways'}/>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={3} className={classes.CardGridStyle}>
-            <ServicesCard cardService={'Fencing'}/>
+          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Block Paving'}/>
           </Grid>
-
+          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Gardening'}/>
+          </Grid>
         </>
       )
     }
@@ -81,6 +84,9 @@ class Services extends Component {
                 <Cards/>
               </Grid>
             </Hidden>
+
+            {/*OUTRO*/}
+            <Outro/>
         </>
       )
   }

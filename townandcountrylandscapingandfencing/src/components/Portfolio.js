@@ -12,6 +12,8 @@ import Navbar from './Navbar';
 import CarouselBigScreen from './CarouselBigScreen';
 import CarouselSmallScreen from './CarouselSmallScreen';
 import Fonts from '../Fonts';
+import Outro from './Outro.js';
+import TestImage from '../Photos/20181011-151418.jpg';
 
 const styles = theme => ({
     PortfolioTitlesTypography: {
@@ -33,16 +35,47 @@ class Portfolio extends Component {
 
     const { classes } = this.props;
 
-    return(
-      <>
-        <Navbar page={'Portfolio'}/>
-
-        {/*FENCING SLIDES*/}
-          {/*MOBILE VIEW*/}
+    const SlideTop = (slideService) => {
+      console.log(slideService.slideService, "THIS IS THE SLIDE SERVICE")
+      return (
+        <>
           <Hidden lgUp>
 
             <Typography variant="h2" className={classes.PortfolioTitlesTypography} style={{'marginTop':'64px'}}>
-              Fencing
+              {slideService.slideService}
+            </Typography>
+
+            <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
+              <Grid xs={12}>
+                <CarouselSmallScreen serviceimage={TestImage}/>
+              </Grid>
+            </Grid>
+          </Hidden>
+
+          <Hidden only={['md' ,'sm', 'xs']}>
+
+            <Typography variant="h2" className={classes.PortfolioTitlesTypography} style={{'marginTop':'140px'}} >
+              {slideService.slideService}
+            </Typography>
+
+            <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
+              <Grid xs={12} >
+                <CarouselBigScreen serviceimage={TestImage}/>
+              </Grid>
+            </Grid>
+          </Hidden>
+        </>
+      )
+    }
+
+    const Slide = (slideService) => {
+      console.log(slideService.slideService, "THIS IS THE SLIDE SERVICE")
+      return (
+        <>
+          <Hidden lgUp>
+
+            <Typography variant="h2" className={classes.PortfolioTitlesTypography}>
+              {slideService.slideService}
             </Typography>
 
             <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
@@ -52,11 +85,10 @@ class Portfolio extends Component {
             </Grid>
           </Hidden>
 
-          {/*DESKTOP VIEW*/}
           <Hidden only={['md' ,'sm', 'xs']}>
 
-            <Typography variant="h2" className={classes.PortfolioTitlesTypography} style={{'marginTop':'140px'}}>
-              Fencing
+            <Typography variant="h2" className={classes.PortfolioTitlesTypography} >
+              {slideService.slideService}
             </Typography>
 
             <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
@@ -65,227 +97,22 @@ class Portfolio extends Component {
               </Grid>
             </Grid>
           </Hidden>
+        </>
+      )
+    }
 
-
-
-          {/*PATIOS SLIDES*/}
-            {/*MOBILE VIEW*/}
-            <Hidden lgUp>
-
-              <Typography variant="h2" className={classes.PortfolioTitlesTypography}>
-                Patios
-              </Typography>
-
-              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-                <Grid xs={12}>
-                  <CarouselSmallScreen />
-                </Grid>
-              </Grid>
-            </Hidden>
-
-            {/*DESKTOP VIEW*/}
-            <Hidden only={['md' ,'sm', 'xs']}>
-
-              <Typography variant="h2" className={classes.PortfolioTitlesTypography} >
-                Patios
-              </Typography>
-
-              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
-                <Grid xs={12} >
-                  <CarouselBigScreen />
-                </Grid>
-              </Grid>
-            </Hidden>
-
-
-
-          {/*DECKING SLIDES*/}
-            {/*MOBILE VIEW*/}
-            <Hidden lgUp>
-              <Typography variant="h2" className={classes.PortfolioTitlesTypography}>
-                Decking
-              </Typography>
-
-              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-                <Grid xs={12}>
-                  <CarouselSmallScreen />
-                </Grid>
-              </Grid>
-            </Hidden>
-
-            {/*DESKTOP VIEW*/}
-            <Hidden only={['md' ,'sm', 'xs']}>
-
-              <Typography variant="h2" className={classes.PortfolioTitlesTypography} >
-                Decking
-              </Typography>
-
-              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
-                <Grid xs={12} >
-                  <CarouselBigScreen />
-                </Grid>
-              </Grid>
-            </Hidden>
-
-
-
-          {/*PERGOLAS SLIDES*/}
-            {/*MOBILE VIEW*/}
-            <Hidden lgUp>
-
-              <Typography variant="h2" className={classes.PortfolioTitlesTypography}>
-                Pergolas
-              </Typography>
-
-              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-                <Grid xs={12}>
-                  <CarouselSmallScreen />
-                </Grid>
-              </Grid>
-            </Hidden>
-
-            {/*DESKTOP VIEW*/}
-            <Hidden only={['md' ,'sm', 'xs']}>
-
-              <Typography variant="h2" className={classes.PortfolioTitlesTypography} >
-                Pergolas
-              </Typography>
-
-              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
-                <Grid xs={12} >
-                  <CarouselBigScreen />
-                </Grid>
-              </Grid>
-            </Hidden>
-
-
-
-          {/*PONDS SLIDES*/}
-            {/*MOBILE VIEW*/}
-            <Hidden lgUp>
-
-              <Typography variant="h2" className={classes.PortfolioTitlesTypography}>
-                Ponds
-              </Typography>
-
-              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-                <Grid xs={12}>
-                  <CarouselSmallScreen />
-                </Grid>
-              </Grid>
-            </Hidden>
-
-            {/*DESKTOP VIEW*/}
-            <Hidden only={['md' ,'sm', 'xs']}>
-
-              <Typography variant="h2" className={classes.PortfolioTitlesTypography} >
-                Ponds
-              </Typography>
-
-              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
-                <Grid xs={12} >
-                  <CarouselBigScreen />
-                </Grid>
-              </Grid>
-            </Hidden>
-
-
-
-
-          {/*RESIN BONDING DRIVEWAYS SLIDES*/}
-            {/*MOBILE VIEW*/}
-            <Hidden lgUp>
-
-              <Typography variant="h2" className={classes.PortfolioTitlesTypography}>
-                Resin Bonded Driveways
-              </Typography>
-
-              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-                <Grid xs={12}>
-                  <CarouselSmallScreen />
-                </Grid>
-              </Grid>
-            </Hidden>
-
-            {/*DESKTOP VIEW*/}
-            <Hidden only={['md' ,'sm', 'xs']}>
-
-              <Typography variant="h2" className={classes.PortfolioTitlesTypography} >
-                Resin Bonded Driveways
-              </Typography>
-
-              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
-                <Grid xs={12} >
-                  <CarouselBigScreen />
-                </Grid>
-              </Grid>
-            </Hidden>
-
-
-
-
-          {/*BLOCK PAVING SLIDES*/}
-            {/*MOBILE VIEW*/}
-            <Hidden lgUp>
-
-              <Typography variant="h2" className={classes.PortfolioTitlesTypography}>
-                Block Paving
-              </Typography>
-
-              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-                <Grid xs={12}>
-                  <CarouselSmallScreen />
-                </Grid>
-              </Grid>
-            </Hidden>
-
-            {/*DESKTOP VIEW*/}
-            <Hidden only={['md' ,'sm', 'xs']}>
-
-              <Typography variant="h2" className={classes.PortfolioTitlesTypography} >
-                Block Paving
-              </Typography>
-
-              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
-                <Grid xs={12} >
-                  <CarouselBigScreen />
-                </Grid>
-              </Grid>
-            </Hidden>
-
-
-
-
-          {/*GARDENING*/}
-            {/*MOBILE VIEW*/}
-            <Hidden lgUp>
-              <Typography variant="h2" className={classes.PortfolioTitlesTypography}>
-                Gardening
-              </Typography>
-
-              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-                <Grid xs={12}>
-                  <CarouselSmallScreen />
-                </Grid>
-              </Grid>
-            </Hidden>
-
-            {/*DESKTOP VIEW*/}
-            <Hidden only={['md' ,'sm', 'xs']}>
-              <Typography variant="h2" className={classes.PortfolioTitlesTypography} >
-                Gardening
-              </Typography>
-
-              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
-                <Grid xs={12} >
-                  <CarouselBigScreen />
-                </Grid>
-              </Grid>
-            </Hidden>
-
-
-
-
+    return(
+      <>
+        <Navbar page={'Portfolio'}/>
+        <SlideTop slideService={"Fencing"}/>
+        <Slide slideService={"Patios"}/>
+        <Slide slideService={"Decking"}/>
+        <Slide slideService={"Pergolas"}/>
+        <Slide slideService={"Ponds"}/>
+        <Slide slideService={"Resin Bonded Driveways"}/>
+        <Slide slideService={"Block Paving"}/>
+        <Slide slideService={"Gardening"}/>
+        <Outro/>
     </>
     )
   }

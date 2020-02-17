@@ -11,9 +11,9 @@ arrowLeft={<ArrowBackIcon name="angle-double-left" style={{'backgroundColor': Co
 arrowRight={<ArrowForwardIcon name="angle-double-right" style={{'backgroundColor': ColourTheme.FirstColour, 'color':ColourTheme.ThirdColour, 'fontSize':'50px'}} />}
 addArrowClickHandler
 */
+export default function CarouselBigScreen(props) {
+    console.log(props,"CAROUSELPROPS")
 
-export default class CarouselBigScreen extends Component {
-  render() {
     return (
       <Carousel
       centered
@@ -27,5 +27,4 @@ export default class CarouselBigScreen extends Component {
         <img src="20181011-151418.jpg" style={{'height':'500px'}}/>
       </Carousel>
     );
-  }
 }

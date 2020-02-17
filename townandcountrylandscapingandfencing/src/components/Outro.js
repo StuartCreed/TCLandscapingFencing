@@ -36,7 +36,7 @@ class Outro extends Component {
 
     return(
         <>
-          <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%'}} >
+          <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'50px'}} >
             <Grid xs={12}>
               <Typography className={classes.OutroStyle}>
                 <div>Town and Country Landscaping and Fencing </div>

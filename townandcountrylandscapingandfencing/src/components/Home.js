@@ -16,6 +16,16 @@ import { withStyles } from '@material-ui/styles';
 import Fonts from '../Fonts';
 import Outro from './Outro.js';
 
+/* FACEBOOK IFRAME - REMOVED AS IT DISAPPEARED ON RERENDER
+  <Grid id="facebookIframe" container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'margin': '70px 0px 70px 0px'}} >
+    <Grid xs={12}>
+      <div style={{'textAlign':'center'}}>
+      <Box class="fb-page" data-href="https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/" data-tabs="timeline" data-width="2000px" data-height="800px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/">Town and Country Landscaping and Fencing</a></blockquote></Box>
+      </div>
+    </Grid>
+  </Grid>
+*/
+
 const styles = theme => ({
     AboutUsTypography: {
       fontFamily: Fonts.BoldFont,
@@ -86,15 +96,6 @@ class Home extends Component {
           </Hidden>
 
 
-        </Grid>
-
-      {/*FACEBOOK IFRAMES*/}
-        <Grid id="facebookIframe" container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'margin': '70px 0px 70px 0px'}} >
-          <Grid xs={12}>
-            <div style={{'textAlign':'center'}}>
-            <Box class="fb-page" data-href="https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/" data-tabs="timeline" data-width="2000px" data-height="800px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/">Town and Country Landscaping and Fencing</a></blockquote></Box>
-            </div>
-          </Grid>
         </Grid>
 
         {/*OUTRO*/}
