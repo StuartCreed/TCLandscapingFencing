@@ -10,10 +10,13 @@ import Typography from '@material-ui/core/Typography';
 import 'typeface-roboto';
 import { createMuiTheme } from "@material-ui/core/styles";
 import Navbar from './Navbar';
-import FencingCard from './FencingCard';
+import ServicesCard from './ServicesCard';
 
 const styles = theme => ({
-  New: {
+  CardGridStyle: {
+    margin: "auto",
+    padding: "40px",
+    textAlign: 'center'
   },
   });
 
@@ -30,36 +33,52 @@ class Services extends Component {
 
     const { classes } = this.props;
 
+    const Cards = () => {
+      return (
+        <>
+          <Grid item xs={12} sm={6} md={4} lg={3} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Fencing'}/>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={3} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Fencing'}/>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={3} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Fencing'}/>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={3} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Fencing'}/>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={3} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Fencing'}/>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={3} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Fencing'}/>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={3} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Fencing'}/>
+          </Grid>
+          <Grid item xs={12} sm={6} md={4} lg={3} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Fencing'}/>
+          </Grid>
+
+        </>
+      )
+    }
+
     return(
         <>
             <Navbar page={'Services'}/>
             {/*MOBILE VIEW*/}
             <Hidden lgUp>
-            <Grid xs={12} container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%'}} >
-              <Grid xs={4}>
-                <FencingCard/>
-              </Grid>
-              <Grid xs={4} style={{'textAlign':'center'}}>
-                <FencingCard/>
-              </Grid>
-              <Grid xs={4} style={{'textAlign':'center'}}>
-                <FencingCard/>
-              </Grid>
+            <Grid xs={12} container style={{'direction':'row', 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'64px', 'padding': '60px'}} >
+              <Cards />
             </Grid>
             </Hidden>
 
             {/*COMPUTER VIEW*/}
             <Hidden only={['md', 'sm', 'xs']}>
-              <Grid xs={12} container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%'}} >
-                <Grid xs={4}>
-                  <FencingCard/>
-                </Grid>
-                <Grid xs={4} style={{'textAlign':'center'}}>
-                  <FencingCard/>
-                </Grid>
-                <Grid xs={4} style={{'textAlign':'center'}}>
-                  <FencingCard/>
-                </Grid>
+              <Grid container style={{'direction':'row', 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'140px', 'padding': '60px'}} >
+                <Cards/>
               </Grid>
             </Hidden>
         </>
