@@ -48,7 +48,6 @@ class Outro extends Component {
               <Typography variant="subtitle2" className={classes.OutroTypographyStyle}>Town and Country Landscaping and Fencing </Typography>
               <img src="OutroLogo.svg" style={{'height':'100px','width':'auto'}}/>
               <Typography variant="subtitle2" className={classes.OutroTypographyStyle}>Business Owners: Andrew Creed and Richard Salewski</Typography>
-              <Typography variant="subtitle2" className={classes.OutroTypographyStyle}>Business Address: 35 New Road, Aston Clinton, Aylesbury, Bucks, HP225JD</Typography>
               <Typography variant="subtitle2" className={classes.OutroTypographyStyle}>
                 <Link to='/home' className={classes.OutroTypographyStyle}>Home</Link>
                 <span>-</span>
