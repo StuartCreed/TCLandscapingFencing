@@ -9,6 +9,9 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import TestImage from '../Photos/20181011-151418.jpg';
 import ColourTheme from '../ColourTheme';
+import { HashLink as Link } from 'react-router-hash-link';
+import Box from '@material-ui/core/Box';
+import {SERVICES} from '../ServicesJSON';
 
 const useStyles = makeStyles({
   root: {
@@ -26,7 +29,8 @@ const useStyles = makeStyles({
 export default function ServicesCard(props) {
   const classes = useStyles();
 
-  const ServicesCard = (cardService) => {
+  const ServicesCard = () => {
+    const pathString = String('/portfolio#') + String(props.cardService.id);
     return (
       <Card className={classes.root}>
         <CardActionArea>
@@ -37,7 +41,7 @@ export default function ServicesCard(props) {
           />
           <CardContent>
             <Typography variant="h5" component="h2" className={classes.ServiceTypeTypography}>
-              {props.cardService}
+              {props.cardService.service}
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
@@ -45,11 +49,20 @@ export default function ServicesCard(props) {
             </Typography>
           </CardContent>
         </CardActionArea>
+        <CardActions>
+          <Link to={pathString} style={{"textDecoration": "none"}}>
+              <Button size="small" color="primary" style={{'margin':'auto'}}>
+                Portfolio
+              </Button>
+          </Link>
+        </CardActions>
       </Card>
     )
   }
 
   return (
-    <ServicesCard cardService={props.cardService}/>
+    <>
+    <ServicesCard/>
+    </>
   );
 }

@@ -1,48 +1,102 @@
 export const SERVICES =
 [
   {
+    id: 0,
     service: "Fencing",
-    text: "",
-    photo: ""
+    ServicePageText: "",
+    servicePagePhoto: "",
+    PorfoliioPagePhotos: {
+      photo1: "",
+      photo2: "",
+      photo3: ""
+     }
   },
   {
+    id: 1,
     service: "Patios",
-    text: "",
-    photo: ""
+    ServicePageText: "",
+    servicePagePhoto: "",
+    PorfoliioPagePhotos: {
+      photo1: "",
+      photo2: "",
+      photo3: ""
+     }
   },
   {
+    id: 2,
     service: "Decking",
-    text: "",
-    photo: ""
+    ServicePageText: "",
+    servicePagePhoto: "",
+    PorfoliioPagePhotos: {
+      photo1: "",
+      photo2: "",
+      photo3: ""
+     }
   },
   {
+    id: 3,
     service: "Design",
-    text: "",
-    photo: ""
+    ServicePageText: "",
+    servicePagePhoto: "",
+    PorfoliioPagePhotos: {
+      photo1: "",
+      photo2: "",
+      photo3: ""
+     }
   },
   {
+    id: 4,
     service: "Pergolas",
-    text: "",
-    photo: ""
+    ServicePageText: "",
+    servicePagePhoto: "",
+    PorfoliioPagePhotos: {
+      photo1: "",
+      photo2: "",
+      photo3: ""
+     }
   },
   {
+    id: 5,
     service: "Ponds",
-    text: "",
-    photo: ""
+    ServicePageText: "",
+    servicePagePhoto: "",
+    PorfoliioPagePhotos: {
+      photo1: "",
+      photo2: "",
+      photo3: ""
+     }
   },
   {
+    id: 6,
     service: "Resin Bonded Driveways",
-    text: "",
-    photo: ""
+    ServicePageText: "",
+    servicePagePhoto: "",
+    PorfoliioPagePhotos: {
+      photo1: "",
+      photo2: "",
+      photo3: ""
+     }
   },
   {
+    id: 7,
     service: "Block Paving",
-    text: "",
-    photo: ""
+    ServicePageText: "",
+    servicePagePhoto: "",
+    PorfoliioPagePhotos: {
+      photo1: "",
+      photo2: "",
+      photo3: ""
+     }
   },
   {
+    id: 8,
     service: "Gardening",
-    text: "",
-    photo: ""
+    ServicePageText: "",
+    servicePagePhoto: "",
+    PorfoliioPagePhotos: {
+      photo1: "",
+      photo2: "",
+      photo3: ""
+     }
   },
 ]

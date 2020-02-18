@@ -11,13 +11,19 @@ import 'typeface-roboto';
 import { createMuiTheme } from "@material-ui/core/styles";
 
 const styles = theme => ({
-  OutroStyle: {
-    fontFamily: Fonts.BoldFont,
-    color: '#d4d4dc',
-    fontSize: '15px',
-    padding: '20px',
-    textAlign: "center",
+  OutroContainerStyle: {
     backgroundColor: '#1d1e22',
+    opacity: 0.9,
+    textAlign:"center",
+    justify: "space-around",
+    height: "100%",
+    width: '100%',
+    margin: '50px 0px 0px 0px'
+  },
+  OutroTypographyStyle: {
+    color: '#d4d4dc',
+    padding: '15px',
+    textAlign: "center",
     opacity: 0.9,
   },
   });
@@ -36,21 +42,13 @@ class Outro extends Component {
 
     return(
         <>
-          <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'50px'}} >
+          <Grid container className={classes.OutroContainerStyle} >
             <Grid xs={12}>
-              <Typography className={classes.OutroStyle}>
-                <div>Town and Country Landscaping and Fencing </div>
-                <div>OUTRO</div>
-                <div>OUTRO</div>
-                <div>OUTRO</div>
-                <div>OUTRO</div>
-                <div>OUTRO</div>
-                <div>OUTRO</div>
-                <div>OUTRO</div>
-                <div>OUTRO</div>
-                <div>OUTRO</div>
-                <div>OUTRO</div>
-              </Typography>
+              <Typography variant="subtitle2" className={classes.OutroTypographyStyle}>Town and Country Landscaping and Fencing </Typography>
+              <img src="OutroLogo.svg" style={{'height':'100px','width':'auto'}}/>
+              <Typography variant="subtitle2" className={classes.OutroTypographyStyle}>Business Owners: Andrew Creed and Richard Salewski</Typography>
+              <Typography variant="subtitle2" className={classes.OutroTypographyStyle}>Business Address: 35 New Road, Aston Clinton, Aylesbury, Bucks, HP225JD</Typography>
+              <Typography variant="subtitle2" className={classes.OutroTypographyStyle}></Typography>
             </Grid>
           </Grid>
         </>
