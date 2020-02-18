@@ -13,10 +13,8 @@ import Fonts from '../Fonts';
 
 const styles = theme => ({
     ContactUsTypography: {
-      color: ColourTheme.ThirdColour,
-      fontWeight: 'normal',
+      color: ColourTheme.FirstColour,
       fontFamily: Fonts.BoldFont,
-      letterSpacing: "0.5px",
     }
   });
 
@@ -34,8 +32,14 @@ class ContactUs extends Component {
     const ContactUsContent = () => {
       return (
         <>
-        <Grid xs={12}>Andrew Creed's Phone Number</Grid>
-        <Button href="tel:+447815946340" style={{'backgroundColor':ColourTheme.FirstColour}}><Typography variant="subtitle1" noWrap className={classes.ContactUsTypography}>Andy: 07815946340</Typography></Button>
+        <Grid xs={6}>
+          <Typography variant="h2" className={classes.ContactUsTypography}>
+            Contact Details
+          </Typography>
+          <Typography variant='subtitle1' className={classes.ContactUsTypography} style={{'marginTop':'20px'}}>
+            YARJUIFSDIUFUISDHFUISDHFUIHSDUIFHUISDHFUISDHFUIHSDUIFHUISDHFUI
+          </Typography>
+        </Grid>
         </>
       )
     }

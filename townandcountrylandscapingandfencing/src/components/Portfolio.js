@@ -89,7 +89,6 @@ class Portfolio extends Component {
 
         {/*OUTRO*/}
         <Outro/>
-        <Box id="BOBMARLEY">BOB MARLEY</Box>
 
     </>
     )

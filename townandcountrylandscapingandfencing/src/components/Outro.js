@@ -9,6 +9,7 @@ import { withStyles } from '@material-ui/styles';
 import Typography from '@material-ui/core/Typography';
 import 'typeface-roboto';
 import { createMuiTheme } from "@material-ui/core/styles";
+import { Link } from 'react-router-dom';
 
 const styles = theme => ({
   OutroContainerStyle: {
@@ -48,7 +49,15 @@ class Outro extends Component {
               <img src="OutroLogo.svg" style={{'height':'100px','width':'auto'}}/>
               <Typography variant="subtitle2" className={classes.OutroTypographyStyle}>Business Owners: Andrew Creed and Richard Salewski</Typography>
               <Typography variant="subtitle2" className={classes.OutroTypographyStyle}>Business Address: 35 New Road, Aston Clinton, Aylesbury, Bucks, HP225JD</Typography>
-              <Typography variant="subtitle2" className={classes.OutroTypographyStyle}></Typography>
+              <Typography variant="subtitle2" className={classes.OutroTypographyStyle}>
+                <Link to='/home' className={classes.OutroTypographyStyle}>Home</Link>
+                <span>-</span>
+                <Link to='/services' className={classes.OutroTypographyStyle}>Services</Link>
+                <span>-</span>
+                <Link to='/portfolio' className={classes.OutroTypographyStyle}>Portfolio</Link>
+                <span>-</span>
+                <Link to='/contactus' className={classes.OutroTypographyStyle}>Contact Us</Link>
+              </Typography>
             </Grid>
           </Grid>
         </>
