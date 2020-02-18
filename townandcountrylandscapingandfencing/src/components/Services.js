@@ -16,7 +16,7 @@ import Outro from './Outro.js';
 const styles = theme => ({
   CardGridStyle: {
     margin: "auto",
-    padding: "40px",
+    padding: "10px",
     textAlign: 'center'
   },
   });
@@ -37,31 +37,31 @@ class Services extends Component {
     const Cards = () => {
       return (
         <>
-          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+          <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
             <ServicesCard cardService={'Fencing'}/>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+          <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
             <ServicesCard cardService={'Patios'}/>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+          <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
             <ServicesCard cardService={'Decking'}/>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+          <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
             <ServicesCard cardService={'Design'}/>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+          <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
             <ServicesCard cardService={'Pergolas'}/>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+          <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
             <ServicesCard cardService={'Ponds'}/>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
-            <ServicesCard cardService={'Resin Bonded Driveways'}/>
+          <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+            <ServicesCard cardService={'Driveways'}/>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+          <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
             <ServicesCard cardService={'Block Paving'}/>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+          <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
             <ServicesCard cardService={'Gardening'}/>
           </Grid>
         </>
@@ -73,14 +73,14 @@ class Services extends Component {
             <Navbar page={'Services'}/>
             {/*MOBILE VIEW*/}
             <Hidden lgUp>
-            <Grid xs={12} container style={{'direction':'row', 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'64px', 'padding': '60px'}} >
+            <Grid xs={12} container style={{'direction':'row', 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'64px', 'padding': '0px'}} >
               <Cards />
             </Grid>
             </Hidden>
 
             {/*COMPUTER VIEW*/}
             <Hidden only={['md', 'sm', 'xs']}>
-              <Grid container style={{'direction':'row', 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'140px', 'padding': '60px'}} >
+              <Grid container style={{'direction':'row', 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'140px', 'padding': '0px'}} >
                 <Cards/>
               </Grid>
             </Hidden>

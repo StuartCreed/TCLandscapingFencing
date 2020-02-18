@@ -42,6 +42,10 @@ export default function ServicesCard(props) {
             <Typography variant="h5" component="h2" className={classes.ServiceTypeTypography}>
               {props.cardService}
             </Typography>
+            <Typography variant="body2" color="textSecondary" component="p">
+              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+              across all continents except Antarctica
+            </Typography>
           </CardContent>
         </CardActionArea>
       </Card>
