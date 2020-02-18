@@ -27,9 +27,6 @@ export default function ServicesCard(props) {
   const classes = useStyles();
 
   const ServicesCard = (cardService) => {
-    if (props.cardService === "Fencing") {
-      let serviceImage = TestImage
-    }
     return (
       <Card className={classes.root}>
         <CardActionArea>

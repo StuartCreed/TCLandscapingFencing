@@ -12,6 +12,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import Navbar from './Navbar';
 import ServicesCard from './ServicesCard';
 import Outro from './Outro.js';
+import {SERVICES} from '../ServicesJSON'
 
 const styles = theme => ({
   CardGridStyle: {
@@ -33,6 +34,17 @@ class Services extends Component {
   render() {
 
     const { classes } = this.props;
+
+    const cardWithJSON = SERVICES.map((item) => {
+      console.log(item.service);
+      console.log(item.text);
+      console.log(item.photo);
+      return (
+        <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+          <ServicesCard cardService={item.service}/>
+        </Grid>
+      )
+    })
 
     const Cards = () => {
       return (
@@ -56,7 +68,7 @@ class Services extends Component {
             <ServicesCard cardService={'Ponds'}/>
           </Grid>
           <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
-            <ServicesCard cardService={'Driveways'}/>
+            <ServicesCard cardService={'Resin Bonded Driveways'}/>
           </Grid>
           <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
             <ServicesCard cardService={'Block Paving'}/>
@@ -64,6 +76,7 @@ class Services extends Component {
           <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
             <ServicesCard cardService={'Gardening'}/>
           </Grid>
+          {cardWithJSON}
         </>
       )
     }
