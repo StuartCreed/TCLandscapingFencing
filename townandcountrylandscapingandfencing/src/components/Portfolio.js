@@ -13,7 +13,6 @@ import CarouselBigScreen from './CarouselBigScreen';
 import CarouselSmallScreen from './CarouselSmallScreen';
 import Fonts from '../Fonts';
 import Outro from './Outro.js';
-import TestImage from '../Photos/20181011-151418.jpg';
 import {SERVICES} from '../ServicesJSON';
 
 const styles = theme => ({
