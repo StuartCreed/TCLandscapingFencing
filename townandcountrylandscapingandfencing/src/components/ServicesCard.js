@@ -7,7 +7,6 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import TestImage from '../Photos/20181011-151418.jpg';
 import ColourTheme from '../ColourTheme';
 import { HashLink as Link } from 'react-router-hash-link';
 import Box from '@material-ui/core/Box';
@@ -36,7 +35,7 @@ export default function ServicesCard(props) {
         <CardActionArea>
           <CardMedia
             className={classes.media}
-            image={TestImage}
+            image="slide.jpg"
             title="Contemplative Reptile"
           />
           <CardContent>
@@ -50,7 +49,7 @@ export default function ServicesCard(props) {
           </CardContent>
         </CardActionArea>
         <CardActions>
-          <Link to={pathString} style={{"textDecoration": "none"}}>
+          <Link to={pathString} style={{"textDecoration": "none", 'margin':'auto'}}>
               <Button size="small" color="primary" style={{'margin':'auto'}}>
                 Portfolio
               </Button>

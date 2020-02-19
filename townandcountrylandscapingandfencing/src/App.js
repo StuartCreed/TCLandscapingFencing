@@ -3,7 +3,7 @@ import { Component } from 'react';
 import Home from './components/Home';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
-import ContactUs from './components/ContactUs';
+import ServiceRadius from './components/ServiceRadius';
 import { BrowserRouter } from 'react-router-dom';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
@@ -35,9 +35,9 @@ class App extends Component {
       )
     }
 
-    const ContactUsPage = () => {
+    const ServiceRadiusPage = () => {
       return (
-        <ContactUs />
+        <ServiceRadius />
       )
     }
 
@@ -50,7 +50,7 @@ class App extends Component {
               <Route path='/home' component={HomePage} />
               <Route path='/services' component={ServicesPage} />
               <Route path='/portfolio' component={PortfolioPage} />
-              <Route path='/contactus' component={ContactUsPage} />
+              <Route path='/serviceradius' component={ServiceRadiusPage} />
               <Redirect to="/home" />
             </Switch>
           </BrowserRouter>

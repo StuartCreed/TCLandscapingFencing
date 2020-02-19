@@ -55,7 +55,7 @@ class Outro extends Component {
                 <span>-</span>
                 <Link to='/portfolio' className={classes.OutroTypographyStyle}>Portfolio</Link>
                 <span>-</span>
-                <Link to='/contactus' className={classes.OutroTypographyStyle}>Contact Us</Link>
+                <Link to='/serviceradius' className={classes.OutroTypographyStyle}>ServiceRadius</Link>
               </Typography>
             </Grid>
           </Grid>

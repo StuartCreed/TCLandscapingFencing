@@ -103,10 +103,10 @@ export default function SwipeableTemporaryDrawer() {
                 <ListItemText primary="Portfolio" style={{"color":ColourTheme.FirstColour}} />
               </ListItem>
             </Link>
-            <Link to='/contactus' style={{"textDecoration": "none"}}>
-              <ListItem button key="Contact Us">
+            <Link to='/serviceradius' style={{"textDecoration": "none"}}>
+              <ListItem button key="Service Radius">
                 <ListItemIcon><IconSelector index={3}/></ListItemIcon>
-                <ListItemText primary="Contact Us" style={{"color":ColourTheme.FirstColour}} />
+                <ListItemText primary="Service Radius" style={{"color":ColourTheme.FirstColour}} />
               </ListItem>
             </Link>
           </>
@@ -123,7 +123,7 @@ export default function SwipeableTemporaryDrawer() {
       onKeyDown={toggleDrawer(side, false)}
     >
       <List>
-        {['Home', 'Services', 'Portfolio', 'Contact Us'].map((text, index) => (
+        {['Home', 'Services', 'Portfolio', 'Service Radius'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
             <ListItemText primary={text} />
