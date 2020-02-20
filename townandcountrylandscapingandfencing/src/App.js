@@ -31,7 +31,7 @@ class App extends Component {
 
     const PortfolioPage = () => {
       return (
-        <Portfolio mobile={'true'} />
+        <Portfolio/>
       )
     }
 

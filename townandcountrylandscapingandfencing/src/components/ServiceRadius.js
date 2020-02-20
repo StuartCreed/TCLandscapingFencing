@@ -41,6 +41,7 @@ const styles = theme => ({
     }
   });
 
+
 class ServiceRadius extends Component {
   constructor(props) {
     super(props);
@@ -54,19 +55,21 @@ class ServiceRadius extends Component {
 
     return(
       <>
-      <Navbar page={'ContactUs'}/>
+      <Navbar page={'ServiceRadius'}/>
+      {/*MOBILE VIEW*/}
       <Hidden lgUp>
         <Grid container style={{'direction':'row', 'marginTop':'64px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
           <Grid item xs={12}>
-            <GoogleMap />
+            <GoogleMap mobile={"true"}/>
           </Grid>
         </Grid>
       </Hidden>
 
+      {/*COMPUTER VIEW*/}
       <Hidden only={['md' ,'sm', 'xs']}>
         <Grid container style={{'direction':'row', 'marginTop':'140px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
           <Grid item xs={12}>
-            <GoogleMap />
+            <GoogleMap mobile={"false"}/>
           </Grid>
         </Grid>
       </Hidden>
