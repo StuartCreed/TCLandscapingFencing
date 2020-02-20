@@ -38,7 +38,15 @@ class Services extends Component {
     const CardWithJSON = SERVICES.map((item) => {
       return (
         <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
-          <ServicesCard cardService={item}/>
+          <ServicesCard cardService={item} mobile={'false'}/>
+        </Grid>
+      )
+    })
+
+    const MobileCardWithJSON = SERVICES.map((item) => {
+      return (
+        <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+          <ServicesCard cardService={item} mobile={'true'} />
         </Grid>
       )
     })
@@ -49,7 +57,7 @@ class Services extends Component {
             {/*MOBILE VIEW*/}
             <Hidden lgUp>
             <Grid xs={12} container style={{'direction':'row', 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'64px', 'padding': '0px'}} >
-              {CardWithJSON}
+              {MobileCardWithJSON}
             </Grid>
             </Hidden>
 

@@ -29,34 +29,71 @@ export default function ServicesCard(props) {
   const classes = useStyles();
 
   const ServicesCard = () => {
-    const pathString = String('/portfolio#') + String(props.cardService.id);
-    return (
-      <Card className={classes.root}>
-        <CardActionArea>
-          <CardMedia
-            className={classes.media}
-            image="slide.jpg"
-            title="Contemplative Reptile"
-          />
-          <CardContent>
-            <Typography variant="h5" component="h2" className={classes.ServiceTypeTypography}>
-              {props.cardService.service}
-            </Typography>
-            <Typography variant="body2" color="textSecondary" component="p">
-              Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-              across all continents except Antarctica
-            </Typography>
-          </CardContent>
-        </CardActionArea>
-        <CardActions>
-          <Link to={pathString} style={{"textDecoration": "none", 'margin':'auto'}}>
-              <Button size="small" color="primary" style={{'margin':'auto'}}>
-                Portfolio
-              </Button>
-          </Link>
-        </CardActions>
-      </Card>
-    )
+    if (props.mobile === 'false') {
+      const pathString = String('/portfolio#') + String(props.cardService.id);
+      return (
+        <>
+        <Card className={classes.root}>
+          <CardActionArea>
+            <CardMedia
+              className={classes.media}
+              image="slide.jpg"
+              title="Contemplative Reptile"
+            />
+            <CardContent>
+              <Typography variant="h5" component="h2" className={classes.ServiceTypeTypography}>
+                {props.cardService.service}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                across all continents except Antarctica
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions>
+            <Link to={pathString} style={{"textDecoration": "none", 'margin':'auto'}}>
+                <Button size="small" color="primary" style={{'margin':'auto'}}>
+                  Portfolio
+                </Button>
+            </Link>
+          </CardActions>
+        </Card>
+        </>
+      )
+    }
+
+    if (props.mobile === 'true') {
+      const pathStringMob = String('/portfolio#') + String(props.cardService.id) + String('mob');
+      return (
+        <>
+        <Card className={classes.root}>
+          <CardActionArea>
+            <CardMedia
+              className={classes.media}
+              image="slide.jpg"
+              title="Contemplative Reptile"
+            />
+            <CardContent>
+              <Typography variant="h5" component="h2" className={classes.ServiceTypeTypography}>
+                {props.cardService.service}
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+                across all continents except Antarctica
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions>
+            <Link to={pathStringMob} style={{"textDecoration": "none", 'margin':'auto'}}>
+                <Button size="small" color="primary" style={{'margin':'auto'}}>
+                  Portfolio
+                </Button>
+            </Link>
+          </CardActions>
+        </Card>
+        </>
+      )
+    }
   }
 
   return (

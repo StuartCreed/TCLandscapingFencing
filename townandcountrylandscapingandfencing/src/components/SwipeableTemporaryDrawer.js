@@ -12,7 +12,6 @@ import MailIcon from '@material-ui/icons/Mail';
 import FormatAlignLeftIcon from '@material-ui/icons/FormatAlignLeft';
 import WorkIcon from '@material-ui/icons/Work';
 import PhotoCameraIcon from '@material-ui/icons/PhotoCamera';
-import PhoneIcon from '@material-ui/icons/Phone';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import ColourTheme from '../ColourTheme';
 import DehazeIcon from '@material-ui/icons/Dehaze';
@@ -20,6 +19,7 @@ import { Link } from 'react-router-dom';
 import HomeIcon from '@material-ui/icons/Home';
 import { IconButton } from '@material-ui/core';
 import ImageIcon from '@material-ui/icons/Image';
+import RoomIcon from '@material-ui/icons/Room';
 
 
 const useStyles = makeStyles({
@@ -64,7 +64,7 @@ export default function SwipeableTemporaryDrawer() {
     }
     if (indexNumber === 3) {
       return(
-        <PhoneIcon style={{"color": ColourTheme.FirstColour}} />
+        <RoomIcon style={{"color": ColourTheme.FirstColour}} />
       )
     }
     else {
