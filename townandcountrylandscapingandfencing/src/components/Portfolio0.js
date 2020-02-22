@@ -9,10 +9,11 @@ import Typography from '@material-ui/core/Typography';
 import ColourTheme from '../ColourTheme';
 import { Container, AppBar, Toolbar, IconButton, Button, Grid } from '@material-ui/core';
 import Navbar from './Navbar';
+import CarouselBigScreen from './CarouselBigScreen';
+import CarouselSmallScreen from './CarouselSmallScreen';
 import Fonts from '../Fonts';
 import Outro from './Outro.js';
 import {SERVICES} from '../ServicesJSON';
-import Carousels from './Carousels';
 
 const styles = theme => ({
     PortfolioTitlesTypography: {
@@ -34,6 +35,38 @@ class Portfolio extends Component {
 
     const { classes } = this.props;
 
+    const SlideWithJSON = SERVICES.map((item) => {
+      return (
+        <>
+          <Hidden lgUp>
+
+            <Typography variant="h2" className={classes.PortfolioTitlesTypography}>
+              {item.service}
+            </Typography>
+
+            <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
+              <Grid xs={12}>
+                <CarouselSmallScreen />
+              </Grid>
+            </Grid>
+          </Hidden>
+
+          <Hidden only={['md' ,'sm', 'xs']}>
+            <div id={item.id}></div>
+            <Typography variant="h2" className={classes.PortfolioTitlesTypography} >
+              {item.service}
+            </Typography>
+
+            <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
+              <Grid xs={12} >
+                <CarouselBigScreen />
+              </Grid>
+            </Grid>
+          </Hidden>
+        </>
+      )
+    })
+
     return(
       <>
         <Navbar page={'Portfolio'}/>
@@ -41,15 +74,15 @@ class Portfolio extends Component {
 
         {/*MOBILE VIEW*/}
         <Hidden lgUp>
-          <Grid container style={{'direction':'row', 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'64px', 'padding': '0px'}} >
-            <Carousels mobile={'true'}/>
+          <Grid xs={12} container style={{'direction':'row', 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'64px', 'padding': '0px'}} >
+          {SlideWithJSON}
           </Grid>
         </Hidden>
 
         {/*COMPUTER VIEW*/}
         <Hidden only={['md', 'sm', 'xs']}>
           <Grid container style={{'direction':'row', 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'140px', 'padding': '0px'}} >
-            <Carousels mobile={'false'}/>
+          {SlideWithJSON}
           </Grid>
         </Hidden>
 
