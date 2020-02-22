@@ -2,7 +2,7 @@ export const OTHER =
 [
   {
     item: "HomePage",
-    HomePageText: "Town and Country Landscaping and Fencing are known for high quality, value for money design. We specialise in paving, drives and fencing, from small town gardens to large country estates. If you are looking for landscaping experts for Buckinghamshire and Hertfordshire, contact us now, for your NO OBLIGATION FREE QUOTATION. We would be happy to hear from you.",
+    HomePageText: "Town and Country Landscaping and Fencing are known for high quality, value for money design. We specialise in paving, drives, fencing, gardening and garden designs from small town gardens to large country estates. If you are looking for landscaping experts for Buckinghamshire and Hertfordshire, contact us now, for your NO OBLIGATION FREE QUOTATION. We would be happy to hear from you.",
     HomePageTitle: "What We Do",
     HomePageWorkerPhoto: "./Photos/Home/1.jpg",
     HomePageCarouselPhotos: {

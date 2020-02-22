@@ -26,77 +26,33 @@ export const SERVICES =
     id: 2,
     service: "Driveways",
     ServicePageText: "Designed and paved to a high standard. Includes resin bonded driveways",
-    servicePagePhoto: "slide.jpg",
+    servicePagePhoto: "./Photos/Driveways/1.jpg",
     PorfoliioPagePhotos: {
-      photo1: "slide.jpg",
-      photo2: "slide.jpg",
-      photo3: "slide.jpg"
+      photo1: "./Photos/Driveways/1.jpg",
+      photo2: "./Photos/Driveways/2.jpg",
+      photo3: "./Photos/Driveways/3.jpg"
      }
   },
   {
     id: 3,
-    service: "Ponds",
-    ServicePageText: "Ponds and water feature installation.",
-    servicePagePhoto: "slide.jpg",
+    service: "Ponds and Pergolas",
+    ServicePageText: "Ponds and water feature installation. We also do Bespoke Pergola design.",
+    servicePagePhoto: "./Photos/Ponds and Pergolas/1.jpg",
     PorfoliioPagePhotos: {
-      photo1: "slide.jpg",
-      photo2: "slide.jpg",
-      photo3: "slide.jpg"
+      photo1: "./Photos/Ponds and Pergolas/1.jpg",
+      photo2: "./Photos/Ponds and Pergolas/2.jpg",
+      photo3: "./Photos/Ponds and Pergolas/3.jpg"
      }
   },
   {
     id: 4,
-    service: "Garden Design",
-    ServicePageText: "Free garden design service and helpful friendly advice.",
-    servicePagePhoto: "slide.jpg",
+    service: "Lawns and Decking",
+    ServicePageText: "We install all types of decking including composite and hardwood. We also provide services for Lawn turfing, levelling and irrigation.",
+    servicePagePhoto: "./Photos/Lawns and Decking/1.jpg",
     PorfoliioPagePhotos: {
-      photo1: "slide.jpg",
-      photo2: "slide.jpg",
-      photo3: "slide.jpg"
-     }
-  },
-  {
-    id: 5,
-    service: "Pergolas",
-    ServicePageText: "Bespoke Pergola design.",
-    servicePagePhoto: "slide.jpg",
-    PorfoliioPagePhotos: {
-      photo1: "slide.jpg",
-      photo2: "slide.jpg",
-      photo3: "slide.jpg"
-     }
-  },
-  {
-    id: 6,
-    service: "Gardening",
-    ServicePageText: "Seasonal tree and hedge pruning. Available for domestic and commercial customers.",
-    servicePagePhoto: "slide.jpg",
-    PorfoliioPagePhotos: {
-      photo1: "slide.jpg",
-      photo2: "slide.jpg",
-      photo3: "slide.jpg"
-     }
-  },
-  {
-    id: 7,
-    service: "Lawns",
-    ServicePageText: "Levelling, turfing and irrigation lawns.",
-    servicePagePhoto: "slide.jpg",
-    PorfoliioPagePhotos: {
-      photo1: "slide.jpg",
-      photo2: "slide.jpg",
-      photo3: "slide.jpg"
-     }
-  },
-  {
-    id: 8,
-    service: "Decking",
-    ServicePageText: "Decking.......",
-    servicePagePhoto: "slide.jpg",
-    PorfoliioPagePhotos: {
-      photo1: "slide.jpg",
-      photo2: "slide.jpg",
-      photo3: "slide.jpg"
+      photo1: "./Photos/Lawns and Decking/1.jpg",
+      photo2: "./Photos/Lawns and Decking/2.jpg",
+      photo3: "./Photos/Lawns and Decking/3.jpg"
      }
   },
 ]
