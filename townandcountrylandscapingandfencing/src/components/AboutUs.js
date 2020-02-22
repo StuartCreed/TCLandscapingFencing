@@ -13,6 +13,7 @@ import Fonts from '../Fonts';
 import { Map, GoogleApiWrapper } from 'google-maps-react';
 import GoogleMap from './GoogleMap';
 import {OTHER} from '../OtherJSON';
+import Outro from './Outro.js';
 /*
 const ContactUsContent = () => {
   return (
@@ -70,15 +71,31 @@ class ServiceRadius extends Component {
           </Hidden>
 
           <Hidden only={['xs', 'sm', 'md']}>
-            <Grid item xs={12} lg={3}>
-              hello
+            <Grid item xs={12} lg={3} style={{'paddingLeft':'30px'}}>
+              <Typography variant="h2" className={classes.AboutUsTypography}>
+                {OTHER[1].ServiceAreaTitle}
+              </Typography>
+              <Typography variant='subtitle1' className={classes.AboutUsTypography} style={{'marginTop':'20px'}}>
+                {OTHER[1].ServiceAreaText}
+              </Typography>
             </Grid>
           </Hidden>
 
-          <Hidden lgUp>
-          <Grid item xs={12} lg={3}>
-            hello
-          </Grid>
+          <Hidden lgUp style>
+            <Hidden lgUp>
+              <Grid item xs={1}></Grid>
+            </Hidden>
+            <Grid item xs={10} lg={3} style={{'marginTop':'40px'}}>
+              <Typography variant="h2" className={classes.AboutUsTypography}>
+                {OTHER[1].ServiceAreaTitle}
+              </Typography>
+              <Typography variant='subtitle1' className={classes.AboutUsTypography} style={{'marginTop':'20px'}}>
+                  {OTHER[1].ServiceAreaText}
+              </Typography>
+            </Grid>
+            <Hidden lgUp>
+              <Grid item xs={1}></Grid>
+            </Hidden>
           </Hidden>
         </>
       )
@@ -91,7 +108,7 @@ class ServiceRadius extends Component {
       {/*MOBILE VIEW*/}
       <Hidden lgUp>
         <Grid container style={{'direction':'row', 'marginTop':'64px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-          <Grid item xs={12}>
+          <Grid item xs={12} style={{'margin':'40px 0px 40px 0px'}}>
             <Grid container>
               <AboutUsHeader />
             </Grid>
@@ -105,7 +122,7 @@ class ServiceRadius extends Component {
       {/*COMPUTER VIEW*/}
       <Hidden only={['md' ,'sm', 'xs']}>
         <Grid container style={{'direction':'row', 'marginTop':'140px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-          <Grid item xs={12}>
+          <Grid item xs={12} style={{'margin':'40px 0px 40px 0px'}}>
             <Grid container>
               <AboutUsHeader />
             </Grid>
@@ -115,6 +132,7 @@ class ServiceRadius extends Component {
           </Grid>
         </Grid>
       </Hidden>
+      <Outro />
       </>
     )
   }
