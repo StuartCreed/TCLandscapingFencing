@@ -86,7 +86,46 @@ class Home extends Component {
             <img src={OTHER[0].HomePageWorkerPhoto} style={{'width':'100%', 'marginTop':'40px'}}/>
           </Grid>
           </Hidden>
+        </Grid>
 
+        {/*CONTACT US*/}
+
+        <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%'}} style={{'marginTop':'40px'}}>
+          <Hidden only={['xs', 'sm', 'md']}>
+            <Grid item lg={2}></Grid>
+            <Grid item lg={4}>
+              <img src={OTHER[0].HomePageWorkerPhoto} style={{'width':'100%'}}/>
+            </Grid>
+            <Grid item lg={1}></Grid>
+            <Grid item lg={3}>
+                <Typography variant="h2" className={classes.AboutUsTypography}>
+                  {OTHER[0].ContactUsTitle}
+                </Typography>
+                <Typography variant='subtitle1' className={classes.AboutUsTypography} style={{'marginTop':'20px'}}>
+                  {OTHER[0].ContactUsText}
+                </Typography>
+            </Grid>
+            <Grid item lg={2}></Grid>
+          </Hidden>
+
+          <Hidden lgUp>
+
+            <Grid item xs={1}></Grid>
+            <Grid item xs={4}>
+              <Typography variant="h2" className={classes.AboutUsTypography}>
+                {OTHER[0].ContactUsTitle}
+              </Typography>
+              <Typography variant='subtitle1' className={classes.AboutUsTypography} style={{'marginTop':'20px'}}>
+                {OTHER[0].ContactUsText}
+              </Typography>
+            </Grid>
+            <Grid item xs={1}></Grid>
+
+            <Grid item xs={5}>
+              <img src={OTHER[0].HomePageWorkerPhoto} style={{'width':'100%', 'marginTop':'40px'}}/>
+            </Grid>
+            <Grid item xs={1}></Grid>
+          </Hidden>
 
         </Grid>
 

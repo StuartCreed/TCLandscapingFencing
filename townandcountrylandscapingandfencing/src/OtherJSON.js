@@ -9,7 +9,9 @@ export const OTHER =
       photo1: "slide.jpg",
       photo2: "slide.jpg",
       photo3: "slide.jpg"
-     }
+    },
+    ContactUsTitle: "Contact Us",
+    ContactUsText: "CONTACT US INFORMATION"
   },
   {
     item: "AboutUsPage",
@@ -18,4 +20,5 @@ export const OTHER =
     ServiceAreaTitle: "Service Area",
     ServiceAreaText: "YARDER YARDER  YARDER YARDER YARDER YARDER YARDER YARDER YARDER YARDER YARDER YARDER YARDER YARDER YARDER YARDER YARDER YARDER"
   },
+
 ]
