@@ -60,7 +60,7 @@ class Home extends Component {
       {/*ABOUT US*/}
         <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%'}} style={{'marginTop':'40px'}}>
           <Grid item xs={1} lg={2}></Grid>
-          <Grid item xs={10} lg={5}>
+          <Grid item xs={10} lg={4}>
               <Typography variant="h2" className={classes.AboutUsTypography}>
                 {OTHER[0].HomePageTitle}
               </Typography>
@@ -73,8 +73,11 @@ class Home extends Component {
           </Hidden>
 
           <Hidden only={['xs', 'sm', 'md']}>
+            <Hidden only={['xs', 'sm', 'md']}>
+              <Grid item xs={1}></Grid>
+            </Hidden>
             <Grid item xs={12} lg={3}>
-              <img src={OTHER[0].HomePageWorkerPhoto} style={{'width':'100%', 'marginLeft':'40px'}}/>
+              <img src={OTHER[0].HomePageWorkerPhoto} style={{'width':'100%'}}/>
             </Grid>
           </Hidden>
 
