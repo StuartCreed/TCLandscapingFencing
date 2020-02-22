@@ -90,6 +90,7 @@ class Home extends Component {
 
         {/*CONTACT US*/}
 
+        {/*DESKTOP VIEW*/}
         <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%'}} style={{'marginTop':'40px'}}>
           <Hidden only={['xs', 'sm', 'md']}>
             <Grid item lg={2}></Grid>
@@ -108,10 +109,11 @@ class Home extends Component {
             <Grid item lg={2}></Grid>
           </Hidden>
 
+          {/*MOBILE VIEW*/}
           <Hidden lgUp>
 
             <Grid item xs={1}></Grid>
-            <Grid item xs={4}>
+            <Grid item xs={10}>
               <Typography variant="h2" className={classes.AboutUsTypography}>
                 {OTHER[0].ContactUsTitle}
               </Typography>
@@ -121,10 +123,9 @@ class Home extends Component {
             </Grid>
             <Grid item xs={1}></Grid>
 
-            <Grid item xs={5}>
+            <Grid item xs={12}>
               <img src={OTHER[0].HomePageWorkerPhoto} style={{'width':'100%', 'marginTop':'40px'}}/>
             </Grid>
-            <Grid item xs={1}></Grid>
           </Hidden>
 
         </Grid>
