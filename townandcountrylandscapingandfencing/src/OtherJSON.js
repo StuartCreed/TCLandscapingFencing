@@ -23,7 +23,7 @@ export const OTHER =
     item: "AboutUsPage",
     CompanyName: "Town and Country Landscaping and Fencing",
     AboutUsTitle: "About Us",
-    AboutUsText: " was founded over 25 years ago by Andy Creed and Richard Salewski. Through hard work and building a reputation for high quality work they have been able to expand into the business into small teams serving Aylesbury and surrounding areas.",
+    AboutUsText: "Town and Country Landscaping and Fencing was founded over 25 years ago by Andy Creed and Richard Salewski. Through hard work and building a reputation for high quality work they have been able to expand into the business into small teams serving Aylesbury and surrounding areas.",
     ServiceAreaTitle: "Service Area",
     ServiceAreaText: "We are based in Aylesbury but are the local experts for Hemel Hempstead, Chesham and Princes Risborough. The red area on the map below is a rough guide to the area which we cover."
   },
