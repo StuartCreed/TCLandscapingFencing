@@ -36,6 +36,28 @@ class Home extends Component {
 
     const { classes } = this.props;
 
+    const ContactUsComponentText = () => {
+      return (
+        <>
+          <Typography variant="h2" className={classes.AboutUsTypography}>
+            {OTHER[0].ContactUsTitle}
+          </Typography>
+          <Typography variant='subtitle1' className={classes.AboutUsTypography} style={{'marginTop':'20px'}}>
+            <b>Andy Creed's Phone Number: </b>{OTHER[0].ContactUsText.AndyPhoneNumber}
+          </Typography>
+          <Typography variant='subtitle1' className={classes.AboutUsTypography}>
+            <b>Richard Salewski's Phone Number: </b>{OTHER[0].ContactUsText.RichardPhoneNumber}
+          </Typography>
+          <Typography variant='subtitle1' className={classes.AboutUsTypography}>
+            <b>Email: </b>{OTHER[0].ContactUsText.Email}
+          </Typography>
+          <Typography variant='subtitle1' className={classes.AboutUsTypography}>
+            <b>Facebook: </b><a href={OTHER[0].ContactUsText.FacebookLink}>Link</a>
+          </Typography>
+        </>
+      )
+    }
+
     return(
       <>
       {/*MOBILE VIEW CAROUSEL*/}
@@ -65,7 +87,7 @@ class Home extends Component {
                 {OTHER[0].HomePageTitle}
               </Typography>
               <Typography variant='subtitle1' className={classes.AboutUsTypography} style={{'marginTop':'20px'}}>
-                {OTHER[0].HomePageText}
+                {OTHER[0].CompanyName}{OTHER[0].HomePageText}
               </Typography>
           </Grid>
           <Hidden lgUp>
@@ -95,16 +117,11 @@ class Home extends Component {
           <Hidden only={['xs', 'sm', 'md']}>
             <Grid item lg={2}></Grid>
             <Grid item lg={4}>
-              <img src={OTHER[0].HomePageWorkerPhoto} style={{'width':'100%'}}/>
+              <img src={OTHER[0].ContactUsPhoto} style={{'width':'100%'}}/>
             </Grid>
             <Grid item lg={1}></Grid>
             <Grid item lg={3}>
-                <Typography variant="h2" className={classes.AboutUsTypography}>
-                  {OTHER[0].ContactUsTitle}
-                </Typography>
-                <Typography variant='subtitle1' className={classes.AboutUsTypography} style={{'marginTop':'20px'}}>
-                  {OTHER[0].ContactUsText}
-                </Typography>
+              <ContactUsComponentText />
             </Grid>
             <Grid item lg={2}></Grid>
           </Hidden>
@@ -114,17 +131,12 @@ class Home extends Component {
 
             <Grid item xs={1}></Grid>
             <Grid item xs={10}>
-              <Typography variant="h2" className={classes.AboutUsTypography}>
-                {OTHER[0].ContactUsTitle}
-              </Typography>
-              <Typography variant='subtitle1' className={classes.AboutUsTypography} style={{'marginTop':'20px'}}>
-                {OTHER[0].ContactUsText}
-              </Typography>
+              <ContactUsComponentText />
             </Grid>
             <Grid item xs={1}></Grid>
 
             <Grid item xs={12}>
-              <img src={OTHER[0].HomePageWorkerPhoto} style={{'width':'100%', 'marginTop':'40px'}}/>
+              <img src={OTHER[0].ContactUsPhoto} style={{'width':'100%', 'marginTop':'40px'}}/>
             </Grid>
           </Hidden>
 
