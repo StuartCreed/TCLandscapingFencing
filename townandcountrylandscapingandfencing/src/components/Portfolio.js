@@ -11,7 +11,6 @@ import { Container, AppBar, Toolbar, IconButton, Button, Grid } from '@material-
 import Navbar from './Navbar';
 import Fonts from '../Fonts';
 import Outro from './Outro.js';
-import {SERVICES} from '../ServicesJSON';
 import Carousels from './Carousels';
 
 const styles = theme => ({

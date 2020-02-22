@@ -22,9 +22,9 @@ export default function CarouselBigScreen(props) {
       slidesPerPage={3}
       dots
       >
-        <img src="slide.jpg" style={{'height':'500px'}}/>
-        <img src="20180406-150030.jpg" style={{'height':'500px'}}/>
-        <img src="20181011-151418.jpg" style={{'height':'500px'}}/>
+        <img src={props.photo1} style={{'height':'500px'}}/>
+        <img src={props.photo2} style={{'height':'500px'}}/>
+        <img src={props.photo3} style={{'height':'500px'}}/>
       </Carousel>
     );
 }

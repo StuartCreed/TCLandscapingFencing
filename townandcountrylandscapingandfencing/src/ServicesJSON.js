@@ -3,100 +3,100 @@ export const SERVICES =
   {
     id: 0,
     service: "Fencing",
-    ServicePageText: "",
-    servicePagePhoto: "",
+    ServicePageText: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    servicePagePhoto: "slide.jpg",
     PorfoliioPagePhotos: {
-      photo1: "",
-      photo2: "",
-      photo3: ""
+      photo1: "slide.jpg",
+      photo2: "slide.jpg",
+      photo3: "slide.jpg"
      }
   },
   {
     id: 1,
     service: "Patios",
-    ServicePageText: "",
-    servicePagePhoto: "",
+    ServicePageText: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    servicePagePhoto: "slide.jpg",
     PorfoliioPagePhotos: {
-      photo1: "",
-      photo2: "",
-      photo3: ""
+      photo1: "slide.jpg",
+      photo2: "slide.jpg",
+      photo3: "slide.jpg"
      }
   },
   {
     id: 2,
     service: "Decking",
-    ServicePageText: "",
-    servicePagePhoto: "",
+    ServicePageText: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    servicePagePhoto: "slide.jpg",
     PorfoliioPagePhotos: {
-      photo1: "",
-      photo2: "",
-      photo3: ""
+      photo1: "slide.jpg",
+      photo2: "slide.jpg",
+      photo3: "slide.jpg"
      }
   },
   {
     id: 3,
     service: "Design",
-    ServicePageText: "",
-    servicePagePhoto: "",
+    ServicePageText: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    servicePagePhoto: "slide.jpg",
     PorfoliioPagePhotos: {
-      photo1: "",
-      photo2: "",
-      photo3: ""
+      photo1: "slide.jpg",
+      photo2: "slide.jpg",
+      photo3: "slide.jpg"
      }
   },
   {
     id: 4,
     service: "Pergolas",
-    ServicePageText: "",
-    servicePagePhoto: "",
+    ServicePageText: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    servicePagePhoto: "slide.jpg",
     PorfoliioPagePhotos: {
-      photo1: "",
-      photo2: "",
-      photo3: ""
+      photo1: "slide.jpg",
+      photo2: "slide.jpg",
+      photo3: "slide.jpg"
      }
   },
   {
     id: 5,
     service: "Ponds",
-    ServicePageText: "",
-    servicePagePhoto: "",
+    ServicePageText: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    servicePagePhoto: "slide.jpg",
     PorfoliioPagePhotos: {
-      photo1: "",
-      photo2: "",
-      photo3: ""
+      photo1: "slide.jpg",
+      photo2: "slide.jpg",
+      photo3: "slide.jpg"
      }
   },
   {
     id: 6,
     service: "Resin Bonded Driveways",
-    ServicePageText: "",
-    servicePagePhoto: "",
+    ServicePageText: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    servicePagePhoto: "slide.jpg",
     PorfoliioPagePhotos: {
-      photo1: "",
-      photo2: "",
-      photo3: ""
+      photo1: "slide.jpg",
+      photo2: "slide.jpg",
+      photo3: "slide.jpg"
      }
   },
   {
     id: 7,
     service: "Block Paving",
-    ServicePageText: "",
-    servicePagePhoto: "",
+    ServicePageText: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    servicePagePhoto: "slide.jpg",
     PorfoliioPagePhotos: {
-      photo1: "",
-      photo2: "",
-      photo3: ""
+      photo1: "slide.jpg",
+      photo2: "slide.jpg",
+      photo3: "slide.jpg"
      }
   },
   {
     id: 8,
     service: "Gardening",
-    ServicePageText: "",
-    servicePagePhoto: "",
+    ServicePageText: "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
+    servicePagePhoto: "slide.jpg",
     PorfoliioPagePhotos: {
-      photo1: "",
-      photo2: "",
-      photo3: ""
+      photo1: "slide.jpg",
+      photo2: "slide.jpg",
+      photo3: "slide.jpg"
      }
   },
 ]

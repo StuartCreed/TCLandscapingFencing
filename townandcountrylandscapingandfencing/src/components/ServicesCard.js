@@ -10,7 +10,6 @@ import Typography from '@material-ui/core/Typography';
 import ColourTheme from '../ColourTheme';
 import { HashLink as Link } from 'react-router-hash-link';
 import Box from '@material-ui/core/Box';
-import {SERVICES} from '../ServicesJSON';
 
 const useStyles = makeStyles({
   root: {
@@ -28,25 +27,24 @@ const useStyles = makeStyles({
 export default function ServicesCard(props) {
   const classes = useStyles();
 
-  const ServicesCard = () => {
+  const ServicesCardComponent = (item) => {
     if (props.mobile === 'false') {
-      const pathString = String('/portfolio#') + String(props.cardService.id);
+      const pathString = String('/portfolio#') + String(item.item.id);
       return (
         <>
         <Card className={classes.root}>
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image="slide.jpg"
-              title="Contemplative Reptile"
+              image={item.item.servicePagePhoto}
+              title={item.item.service}
             />
             <CardContent>
               <Typography variant="h5" component="h2" className={classes.ServiceTypeTypography}>
-                {props.cardService.service}
+                {item.item.service}
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                across all continents except Antarctica
+                {item.item.ServicePageText}
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -63,23 +61,22 @@ export default function ServicesCard(props) {
     }
 
     if (props.mobile === 'true') {
-      const pathStringMob = String('/portfolio#') + String(props.cardService.id) + String('mob');
+      const pathStringMob = String('/portfolio#') + String(item.item.id) + String('mob');
       return (
         <>
         <Card className={classes.root}>
           <CardActionArea>
             <CardMedia
               className={classes.media}
-              image="slide.jpg"
-              title="Contemplative Reptile"
+              image={item.item.servicePagePhoto}
+              title={item.item.service}
             />
             <CardContent>
               <Typography variant="h5" component="h2" className={classes.ServiceTypeTypography}>
-                {props.cardService.service}
+                {item.item.service}
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
-                Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                across all continents except Antarctica
+                {item.item.ServicePageText}
               </Typography>
             </CardContent>
           </CardActionArea>
@@ -98,7 +95,7 @@ export default function ServicesCard(props) {
 
   return (
     <>
-    <ServicesCard/>
+    <ServicesCardComponent item={props.cardService}/>
     </>
   );
 }

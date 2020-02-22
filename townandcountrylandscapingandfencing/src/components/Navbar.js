@@ -116,18 +116,18 @@ class Navbar extends Component {
       }
     }
 
-    const ServiceRadiusButton = () => {
+    const AboutUsButton = () => {
 
-      if (this.props.page === 'ServiceRadius') {
+      if (this.props.page === 'AboutUs') {
           console.log('first')
           return (
-          <Grid xs={2} className={classes.MenuItemGrid}><Link to='/serviceradius' style={{"textDecoration": "none"}}><Button className={classes.MenuItemSelectionSettings}><Typography variant="subtitle1" noWrap className={classes.MenuItemSelectionTypographySettings}>Service Radius</Typography></Button></Link></Grid>
+          <Grid xs={2} className={classes.MenuItemGrid}><Link to='/aboutus' style={{"textDecoration": "none"}}><Button className={classes.MenuItemSelectionSettings}><Typography variant="subtitle1" noWrap className={classes.MenuItemSelectionTypographySettings}>About Us</Typography></Button></Link></Grid>
         )
       }
       else {
         console.log('second')
           return (
-          <Grid xs={2} className={classes.MenuItemGrid}><Link to='/serviceradius' style={{"textDecoration": "none"}}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>Service Radius</Typography></Button></Link></Grid>
+          <Grid xs={2} className={classes.MenuItemGrid}><Link to='/aboutus' style={{"textDecoration": "none"}}><Button><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>About Us</Typography></Button></Link></Grid>
         )
       }
     }
@@ -175,7 +175,7 @@ class Navbar extends Component {
                   <HomeButton/>
                   <ServicesButton />
                   <PortfolioButton />
-                  <ServiceRadiusButton />
+                  <AboutUsButton />
                   <Grid xs={2} ></Grid>
                 </Grid>
               </AppBar>

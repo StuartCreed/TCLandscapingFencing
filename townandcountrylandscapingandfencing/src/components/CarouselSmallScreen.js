@@ -8,6 +8,12 @@ import ColourTheme from '../ColourTheme';
 
 export default class CarouselSmallScreen extends Component {
 
+  constructor(props) {
+    super(props);
+       this.state = {
+    };
+  }
+
   render() {
 
     return (
@@ -19,9 +25,9 @@ export default class CarouselSmallScreen extends Component {
       keepDirectionWhenDragging
       dots
       >
-        <img src="slide.jpg" style={{'width':'100%'}}/>
-        <img src="20180406-150030.jpg" style={{'width':'100%'}}/>
-        <img src="20181011-151418.jpg" style={{'width':'100%'}}/>
+        <img src={this.props.photo1} style={{'width':'100%'}}/>
+        <img src={this.props.photo2} style={{'width':'100%'}}/>
+        <img src={this.props.photo3} style={{'width':'100%'}}/>
       </Carousel>
     );
   }

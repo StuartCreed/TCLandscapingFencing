@@ -47,7 +47,7 @@ class Carousels extends Component {
 
             <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
               <Grid xs={12}>
-                <CarouselSmallScreen />
+                <CarouselSmallScreen photo1={SERVICES[0].PorfoliioPagePhotos.photo1} photo2={SERVICES[0].PorfoliioPagePhotos.photo2} photo3={SERVICES[0].PorfoliioPagePhotos.photo3} />
               </Grid>
             </Grid>
           </Hidden>
@@ -61,7 +61,7 @@ class Carousels extends Component {
 
             <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
               <Grid xs={12} >
-                <CarouselBigScreen />
+                <CarouselBigScreen photo1={SERVICES[0].PorfoliioPagePhotos.photo1} photo2={SERVICES[0].PorfoliioPagePhotos.photo2} photo3={SERVICES[0].PorfoliioPagePhotos.photo3} />
               </Grid>
             </Grid>
           </Hidden>
