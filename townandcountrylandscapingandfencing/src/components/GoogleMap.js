@@ -39,7 +39,7 @@ class GoogleMapWrapper extends Component {
       <div className={this.props.mobile === "true"? classes.MapStylesMobile : classes.MapStyles}>
         <GoogleMap
           bootstrapURLKeys={{ key: 'AIzaSyAiOPSvsBYhY28VmvJhQr6i-onTs7edJ-o' }}
-          defaultZoom={window.innerWidth > 792? zoom :11}
+          defaultZoom={window.innerWidth > 792? zoom :10}
           defaultCenter={latlng}
           onGoogleApiLoaded={({map, maps}) =>
             new maps.Circle({
@@ -50,14 +50,14 @@ class GoogleMapWrapper extends Component {
               fillOpacity: 0.3,
               map,
               center: latlng,
-              radius: 8500,
+              radius: 15000,
             })}
         />
       </div>
     );
 
     return(
-          <Map latlng={{lat: 51.802, lng: -0.721}} zoom={12}/>
+          <Map latlng={{lat: 51.802, lng: -0.721}} zoom={11}/>
       )
   }
 }
