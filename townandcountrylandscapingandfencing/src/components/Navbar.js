@@ -19,6 +19,7 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import Modal from '@material-ui/core/Modal';
 import PhoneNumberModal from './PhoneNumberModal';
 import MailLinkModal from './MailLinkModal';
+import {OTHER} from '../OtherJSON';
 
 const styles = theme => ({
   MenuItemTypography: {
@@ -141,7 +142,7 @@ class Navbar extends Component {
                   <SwipeableTemporaryDrawer />
                   <Link to='/home' style={{"textDecoration": "none"}}><IconButton><img src="yellowLogo.svg" style={{'width':'40px','height':'40px'}} /></IconButton></Link>
                   <section className={classes.rightToolbar}>
-                      <IconButton href="https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/?__tn__=%2Cd%2CP-R&eid=ARBAgBTOcsPMpmdLlHrCOj90rR_-869ufNIQ7Eap8fXKqJSgUv2vfNqquumP6d9qZYxrsQyOujehR59M"><FacebookIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
+                      <IconButton href={OTHER[0].ContactUsText.FacebookLink}><FacebookIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                       <IconButton href="mailto:tcland-enquiries@hotmail.co.uk"><MailIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                       <PhoneNumberModal/>
                   </section>
@@ -165,7 +166,7 @@ class Navbar extends Component {
                   </Link>
                   <section className={classes.rightToolbar}>
                       <MailLinkModal/>
-                      <IconButton href="https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/?__tn__=%2Cd%2CP-R&eid=ARBAgBTOcsPMpmdLlHrCOj90rR_-869ufNIQ7Eap8fXKqJSgUv2vfNqquumP6d9qZYxrsQyOujehR59M"><FacebookIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
+                      <IconButton href={OTHER[0].ContactUsText.FacebookLink}><FacebookIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                       <PhoneNumberModal/>
                   </section>
                 </Toolbar>

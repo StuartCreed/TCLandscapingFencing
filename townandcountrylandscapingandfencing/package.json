@@ -1,6 +1,7 @@
 {
   "name": "townandcountrylandscapingandfencing",
   "version": "0.1.0",
+  "homepage": "http://www.tc-landscaping.co.uk/",
   "private": true,
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.10.48",

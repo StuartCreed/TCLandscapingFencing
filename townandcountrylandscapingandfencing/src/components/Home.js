@@ -17,6 +17,7 @@ import Fonts from '../Fonts';
 import Outro from './Outro.js';
 import {OTHER} from '../OtherJSON';
 
+
 const styles = theme => ({
     AboutUsTypography: {
       fontFamily: Fonts.BoldFont,

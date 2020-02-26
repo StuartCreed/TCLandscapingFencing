@@ -15,7 +15,7 @@ export const OTHER =
       AndyPhoneNumber: '07815946340',
       RichardPhoneNumber: '07870519614',
       Email: 'tcland-enquiries@hotmail.co.uk',
-      FacebookLink: 'https://www.facebook.com/Town-and-Country-Landscaping-and-Fencing-114780373412133/?__tn__=%2Cd%2CP-R&eid=ARBAgBTOcsPMpmdLlHrCOj90rR_-869ufNIQ7Eap8fXKqJSgUv2vfNqquumP6d9qZYxrsQyOujehR59M'
+      FacebookLink: 'https://www.facebook.com/townandcountrybucks'
     },
     ContactUsPhoto: "./Photos/Home/2.jpg"
   },
