@@ -12,6 +12,7 @@ import { createMuiTheme } from "@material-ui/core/styles";
 import {SERVICES} from '../ServicesJSON';
 import CarouselBigScreen from './CarouselBigScreen';
 import CarouselSmallScreen from './CarouselSmallScreen';
+import Comment from './Comment';
 
 const styles = theme => ({
   PortfolioTitlesTypography: {
@@ -62,6 +63,11 @@ class Carousels extends Component {
             <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
               <Grid xs={12} >
                 <CarouselBigScreen photos={SERVICES[item.id].PorfoliioPagePhotos} photo1={SERVICES[item.id].PorfoliioPagePhotos.photo1} photo2={SERVICES[item.id].PorfoliioPagePhotos.photo2} photo3={SERVICES[item.id].PorfoliioPagePhotos.photo3} />
+              </Grid>
+
+              {/*ENSURE THIS IS ADDED TO THE MOBILE VIEW TOO!*/}
+              <Grid xs={12}>
+                <Comment/>
               </Grid>
             </Grid>
           </Hidden>
