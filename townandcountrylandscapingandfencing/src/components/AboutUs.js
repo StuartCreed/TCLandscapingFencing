@@ -14,22 +14,6 @@ import { Map, GoogleApiWrapper } from 'google-maps-react';
 import GoogleMap from './GoogleMap';
 import {OTHER} from '../OtherJSON';
 import Outro from './Outro.js';
-/*
-const ContactUsContent = () => {
-  return (
-    <>
-    <Grid item xs={6}>
-      <Typography variant="h2" className={classes.ContactUsTypography}>
-        Contact Details
-      </Typography>
-      <Typography variant='subtitle1' className={classes.ContactUsTypography} style={{'marginTop':'20px'}}>
-        Information......
-      </Typography>
-    </Grid>
-    </>
-  )
-}
-*/
 
 const styles = theme => ({
     AboutUsTypography: {

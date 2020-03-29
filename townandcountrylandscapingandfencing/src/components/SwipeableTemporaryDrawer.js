@@ -21,7 +21,6 @@ import { IconButton } from '@material-ui/core';
 import ImageIcon from '@material-ui/icons/Image';
 import RoomIcon from '@material-ui/icons/Room';
 
-
 const useStyles = makeStyles({
   list: {
     width: 250,
@@ -135,7 +134,9 @@ export default function SwipeableTemporaryDrawer() {
 
   return (
     <div>
-      <IconButton onClick={toggleDrawer('left', true)}><DehazeIcon style={{"color": ColourTheme.ThirdColour}}/></IconButton>
+      <IconButton onClick={toggleDrawer('left', true)}>
+        <DehazeIcon style={{"color": ColourTheme.ThirdColour}}/>
+      </IconButton>
       <SwipeableDrawer
         open={state.left}
         onClose={toggleDrawer('left', false)}

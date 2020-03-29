@@ -6,7 +6,7 @@ const ColourTheme = {
   OutroColour: "#1d1e22"
 }
 
-/*Options as third colour: He has gone for the green and yellow theme
+/*Other Colour Options:
 
 #DCC7AA
 #c89666
@@ -16,7 +16,6 @@ const ColourTheme = {
 #c53211
 #de493c
 #c1432e
-
 #fff
 #fbf579
 #5C9990
