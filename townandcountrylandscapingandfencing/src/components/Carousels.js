@@ -50,6 +50,9 @@ class Carousels extends Component {
               <Grid xs={12}>
                 <CarouselSmallScreen photos={SERVICES[item.id].PorfoliioPagePhotos} photo1={SERVICES[item.id].PorfoliioPagePhotos.photo1} photo2={SERVICES[item.id].PorfoliioPagePhotos.photo2} photo3={SERVICES[item.id].PorfoliioPagePhotos.photo3} />
               </Grid>
+              <Grid xs={12}>
+                <Comment/>
+              </Grid>
             </Grid>
           </Hidden>
 
@@ -64,8 +67,6 @@ class Carousels extends Component {
               <Grid xs={12} >
                 <CarouselBigScreen photos={SERVICES[item.id].PorfoliioPagePhotos} photo1={SERVICES[item.id].PorfoliioPagePhotos.photo1} photo2={SERVICES[item.id].PorfoliioPagePhotos.photo2} photo3={SERVICES[item.id].PorfoliioPagePhotos.photo3} />
               </Grid>
-
-              {/*ENSURE THIS IS ADDED TO THE MOBILE VIEW TOO!*/}
               <Grid xs={12}>
                 <Comment/>
               </Grid>

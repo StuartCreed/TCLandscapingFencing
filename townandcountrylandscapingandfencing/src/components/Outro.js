@@ -1,33 +1,52 @@
 import React from 'react';
 import { Component } from 'react';
-import ColourTheme from '../ColourTheme';
 import Fonts from '../Fonts';
 import Container from '@material-ui/core/Container';
-import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/styles';
 import Typography from '@material-ui/core/Typography';
-import 'typeface-roboto';
-import { createMuiTheme } from "@material-ui/core/styles";
 import { Link } from 'react-router-dom';
+import ColourTheme from '../ColourTheme';
 
 const styles = theme => ({
   OutroContainerStyle: {
-    backgroundColor: '#1d1e22',
-    opacity: 0.9,
-    textAlign:"center",
+    backgroundColor: ColourTheme.OutroColour,
     justify: "space-around",
+    textAlign:"center",
     height: "100%",
     width: '100%',
-    margin: '50px 0px 0px 0px'
+    margin: '50px 0px 0px 0px',
+    padding: '30px'
   },
-  OutroTypographyStyle: {
-    color: '#d4d4dc',
+  OutroTypographyLogoStyle: {
+    color: ColourTheme.InvertedColour,
+    textAlign: "center",
+    fontFamily: Fonts.LogoFont,
+  },
+  OutroTypographyMedium: {
+    color: ColourTheme.InvertedColour,
     padding: '15px',
     textAlign: "center",
-    opacity: 0.9,
+    fontFamily: Fonts.OutroFont,
+    fontWeight: 'bold',
+    fontSize: '17px'
   },
-  });
+  OutroTypographySmaller: {
+    color: ColourTheme.InvertedColour,
+    padding: '15px',
+    textAlign: "center",
+    fontFamily: Fonts.OutroFont,
+    fontWeight: 'bold',
+    fontSize: '14px'
+  },
+  OutroTypographySmallerWithoutPadding: {
+    color: ColourTheme.InvertedColour,
+    textAlign: "center",
+    fontFamily: Fonts.OutroFont,
+    fontWeight: 'bold',
+    fontSize: '14px'
+  }
+});
 
 class Outro extends Component {
 
@@ -45,17 +64,18 @@ class Outro extends Component {
         <>
           <Grid container className={classes.OutroContainerStyle} >
             <Grid xs={12}>
-              <Typography variant="subtitle2" className={classes.OutroTypographyStyle}>Town and Country Landscaping and Fencing </Typography>
-              <img src="OutroLogo.svg" style={{'height':'100px','width':'auto'}}/>
-              <Typography variant="subtitle2" className={classes.OutroTypographyStyle}>Established for over 25 years</Typography>
-              <Typography variant="subtitle2" className={classes.OutroTypographyStyle}>
-                <Link to='/home' className={classes.OutroTypographyStyle}>Home</Link>
+              <Typography variant="subtitle2" className={classes.OutroTypographyLogoStyle} style={{'fontSize':'30px'}}>TOWN AND COUNTRY</Typography>
+              <Typography variant="subtitle2" className={classes.OutroTypographyLogoStyle} style={{'fontSize':'20px'}}>LANDSCAPING AND FENCING</Typography>
+              <img src="OutroLogo.svg" style={{'height':'100px','width':'auto', 'margin':'20px'}}/>
+              <Typography variant="subtitle2" className={classes.OutroTypographyMedium}>ESTABLISHED FOR OVER 25 YEARS</Typography>
+              <Typography variant="subtitle2" className={classes.OutroTypographySmallerWithoutPadding}>
+                <Link to='/home' className={classes.OutroTypographySmaller}>HOME</Link>
                 <span>-</span>
-                <Link to='/services' className={classes.OutroTypographyStyle}>Services</Link>
+                <Link to='/services' className={classes.OutroTypographySmaller}>SERVICES</Link>
                 <span>-</span>
-                <Link to='/portfolio' className={classes.OutroTypographyStyle}>Portfolio</Link>
+                <Link to='/portfolio' className={classes.OutroTypographySmaller}>PORTFOLIO</Link>
                 <span>-</span>
-                <Link to='/aboutus' className={classes.OutroTypographyStyle}>About Us</Link>
+                <Link to='/aboutus' className={classes.OutroTypographySmaller}>ABOUT US</Link>
               </Typography>
             </Grid>
           </Grid>
@@ -63,6 +83,5 @@ class Outro extends Component {
     )
   }
 }
-
 
 export default withStyles(styles)(Outro);

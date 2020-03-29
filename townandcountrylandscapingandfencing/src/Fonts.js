@@ -1,6 +1,7 @@
 const Fonts = {
   BoldFont: "'Roboto', Helvetica",
-  LogoFont: "'Bowlby One SC', cursive"
+  LogoFont: "'Bowlby One SC', cursive",
+  OutroFont: "'Roboto', Helvetica"
 }
 
 /*"'Open Sans', sans-serif";
