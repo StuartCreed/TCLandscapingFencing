@@ -1,41 +1,26 @@
-<!DOCTYPE html>
-<html>
-<body>
-
 <?php
 $servername = "sql5c50c.megasqlservers.eu";
 $username = "tclandscap486749";
 $password = "3uZrgHrd5PZIpef";
 $dbname = "TownAndCountryLandscapingAndFencing_tclandscap486749";
 
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Create connection MySQLi Procedural
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 // Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-else {
-    echo "Connection successful to SQL Database using mysqli";
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "SELECT Service, FirstName, SecondName, Date, Comment FROM Comments";
-$result = $conn->query($sql);
-/*result=null
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-        echo "<br> id: ". $row["id"]. " - Name: ". $row["firstname"]. " " . $row["lastname"] . "<br>";
-    }
+// Query ERROR RECIEVED SO CONNECTION OK SO TYPO
+$sql = "INSERT INTO Comments (Service, FirstName, SecondName, Date, Comment)
+VALUES ('John', 'Doe', 'johnexampl', '2020-03-29','Comment Test')";
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
 } else {
-    echo "0 results";
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-*/
 
-$conn->close();
+mysqli_close($conn);
+
 ?>
-
-<p>Result is <?php echo $result ?>.</p>
-<script>console.log('Result is: " . $result . "' );</script>
-
-</body>
-</html>
