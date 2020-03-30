@@ -8,10 +8,11 @@ use \Datetime;
 
 $now = new DateTime();
 $todayDate = $now->format('Y-m-d');
-echo $todayDate;
+$FirstNameFromInput = $_POST["FirstName"];
+$SecondNameFromInput = $_POST["SecondName"];
+$CommentFromInput = $_POST["Comment"];
 ?>
 </div>
-
 
 <div>
 <?php
@@ -30,7 +31,7 @@ if (!$conn) {
 
 // Query ERROR RECIEVED SO CONNECTION OK SO TYPO
 $sql = "INSERT INTO Comments (Service, FirstName, SecondName, Date, Comment)
-VALUES ('John', 'Doe', 'johnexampl', '$todayDate','Comment Test')";
+VALUES ('Service', '$FirstNameFromInput', '$SecondNameFromInput', '$todayDate','$CommentFromInput')";
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
@@ -45,6 +46,8 @@ mysqli_close($conn);
 
 ?>
 </div>
+
+
 
 </body>
 </html>
