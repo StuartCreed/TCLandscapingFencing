@@ -1,4 +1,21 @@
+<html>
+<body>
+
+<div>
 <?php
+
+use \Datetime;
+
+$now = new DateTime();
+$todayDate = $now->format('Y-m-d');
+echo $todayDate;
+?>
+</div>
+
+
+<div>
+<?php
+
 $servername = "sql5c50c.megasqlservers.eu";
 $username = "tclandscap486749";
 $password = "3uZrgHrd5PZIpef";
@@ -13,14 +30,21 @@ if (!$conn) {
 
 // Query ERROR RECIEVED SO CONNECTION OK SO TYPO
 $sql = "INSERT INTO Comments (Service, FirstName, SecondName, Date, Comment)
-VALUES ('John', 'Doe', 'johnexampl', '2020-03-29','Comment Test')";
+VALUES ('John', 'Doe', 'johnexampl', '$todayDate','Comment Test')";
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
+
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
+
+
 mysqli_close($conn);
 
 ?>
+</div>
+
+</body>
+</html>
