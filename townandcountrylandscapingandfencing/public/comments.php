@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <body>
 
@@ -11,6 +12,7 @@ $todayDate = $now->format('Y-m-d');
 $FirstNameFromInput = $_POST["FirstName"];
 $SecondNameFromInput = $_POST["SecondName"];
 $CommentFromInput = $_POST["Comment"];
+$Service = $_POST["Service"];
 
 $servername = "sql5c50c.megasqlservers.eu";
 $username = "tclandscap486749";
@@ -26,7 +28,7 @@ if (!$conn) {
 
 // Insert new comment to database
 $sql = "INSERT INTO Comments (Service, FirstName, SecondName, Date, Comment)
-VALUES ('Service', '$FirstNameFromInput', '$SecondNameFromInput', '$todayDate','$CommentFromInput')";
+VALUES ('$Service', '$FirstNameFromInput', '$SecondNameFromInput', '$todayDate','$CommentFromInput')";
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
@@ -58,5 +60,11 @@ mysqli_close($conn);
 ?>
 </div>
 
+
+<div>
+<?php
+echo "Service Recieved is: " . $Service
+?>
+</div>
 </body>
 </html>
