@@ -1,6 +1,3 @@
-<!DOCTYPE html>
-<html>
-<body>
 
 <div>
 <?php
@@ -24,7 +21,7 @@ $result = mysqli_query($conn, $sqlExtract);
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        echo "Service: " . $row["Service"]. " - FirstName: " . $row["FirstName"]. " - SecondName: " . $row["SecondName"]. " - Date: " . $row["Date"]. " - Comment: " . $row["Comment"]."<br>" ;
+        echo "<div> Service: " . $row["Service"]. " - FirstName: " . $row["FirstName"]. " - SecondName: " . $row["SecondName"]. " - Date: " . $row["Date"]. " - Comment: " . $row["Comment"]."</div>" ;
     }
 } else {
     echo "0 results";
@@ -34,7 +31,3 @@ mysqli_close($conn);
 
 ?>
 </div>
-
-</div>
-</body>
-</html>

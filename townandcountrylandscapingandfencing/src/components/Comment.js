@@ -32,29 +32,16 @@ class Comment extends Component {
       };
       this.handleSubmit = this.handleSubmit.bind(this);
   }
-/*
-  function showTable(str) {
-    if (str == "") {
-        document.getElementById("txtHint").innerHTML = "";
-        return;
-    } else {
-        if (window.XMLHttpRequest) {
-            // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
-        } else {
-            // code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                document.getElementById("CommentFromDataBase").innerHTML = this.responseText;
-            }
-        };
-        xmlhttp.open("GET","http://www.tc-landscaping.co.uk/comments.php?q="+str,true);
-        xmlhttp.send();
-    }
+
+  componentDidMount() {
+    const axios = require('axios');
+    axios.get('http://www.tc-landscaping.co.uk/extractComments.php?q=')
+
+    .then(resp => {
+        console.log(resp.data);
+        document.getElementById("CommentFromDataBase").innerHTML=resp.data;
+    });
   }
-  */
 
   handleSubmit() {
     alert('Your comment has been submitted!');
