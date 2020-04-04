@@ -29,17 +29,6 @@ const styles = theme => ({
     margin: "auto",
     textAlign: 'center'
   },
-  bullet: {
-  display: 'inline-block',
-  margin: '0 2px',
-  transform: 'scale(0.8)',
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
 });
 
 class Comment extends Component {
@@ -69,14 +58,31 @@ class Comment extends Component {
         })
         let commentsArraysWithSplitFinal = commentsArraysWithSplit.map((line) => {
 
+          if (line.length === 0) {
+            return  (
+              <div style={{"textAlign":"center", "margin":"auto"}}>There are currently no comments.</div>
+            )
+          }
           return (
-            <div>
-            {line.map((i)=>{
-              return (
-                <span>{i}</span>
-              )
-            })}
-            </div>
+            <>
+                <Grid md={3} xs={12}>
+                <Card variant="outlined" style={{'margin':'20px'}}>
+                 <CardContent>
+                   <Typography style={{"fontSize":"14"}}>
+                     <b>Name:</b> {line[1]} {line[2]}
+                   </Typography>
+                   <Typography style={{"fontSize":"14"}}>
+                     <b>Date:</b> {line[3]}
+                   </Typography>
+                   <Typography style={{"fontSize":"14"}}>
+                     <b>Comment:</b> {line[4]}
+                   </Typography>
+                 </CardContent>
+                </Card>
+                </Grid>
+
+
+            </>
           )
         })
         this.setState({Comments: commentsArraysWithSplitFinal});
@@ -96,13 +102,12 @@ class Comment extends Component {
   render() {
 
     const { classes } = this.props;
-    const bull = <span className={classes.bullet}>•</span>;
     const commentsInState = this.state.Comments;
 
       return (
         <div style={{'margin':'30px'}}>
           <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-            <Grid xs={12} md={6} className={classes.CommentFieldContainerStyle}>
+            <Grid xs={12} md={3} className={classes.CommentFieldContainerStyle}>
               <form method="post" id={this.state.formId} action="http://www.tc-landscaping.co.uk/insertComment.php" target='PageNavigateStop' onSubmit={this.handleSubmit}>
                 <FormControl className={classes.margin} >
 
@@ -150,9 +155,14 @@ class Comment extends Component {
                 </FormControl>
               </form>
             </Grid>
-            <Grid xs={12} md={6} className={classes.CommentFieldContainerStyle}>
+            <Grid xs={12} md={9} className={classes.CommentFieldContainerStyle}>
+              <Typography style={{"fontSize":"30px"}}>
+                Comments
+              </Typography>
               <div>
+              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
                 {commentsInState}
+              </Grid>
               </div>
             </Grid>
           </Grid>
