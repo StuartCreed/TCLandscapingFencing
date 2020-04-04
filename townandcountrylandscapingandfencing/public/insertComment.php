@@ -8,6 +8,7 @@ $FirstNameFromInput = $_POST["FirstName"];
 $SecondNameFromInput = $_POST["SecondName"];
 $CommentFromInput = $_POST["Comment"];
 $Service = $_POST["Service"];
+$ServiceID = $_POST["ServiceID"];
 
 $servername = "sql5c50c.megasqlservers.eu";
 $username = "tclandscap486749";
@@ -22,8 +23,8 @@ if (!$conn) {
 }
 
 // Insert new comment to database
-$sql = "INSERT INTO Comments (Service, FirstName, SecondName, Date, Comment)
-VALUES ('$Service', '$FirstNameFromInput', '$SecondNameFromInput', '$todayDate','$CommentFromInput')";
+$sql = "INSERT INTO Comments (ServiceID, Service, FirstName, SecondName, Date, Comment)
+VALUES ('$ServiceID','$Service', '$FirstNameFromInput', '$SecondNameFromInput', '$todayDate','$CommentFromInput')";
 
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";

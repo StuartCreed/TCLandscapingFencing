@@ -49,8 +49,8 @@ class Comment extends Component {
       this.state = {
         service: this.props.service,
         formId: String(this.props.id) + "Form",
-        commentsInsertId: String(this.props.id) + "CommentInsert",
-        commentsFromDatabase: null
+        serviceID: String(this.props.id),
+        Comments: null
       };
       this.handleSubmit = this.handleSubmit.bind(this);
       this.getComments = this.getComments.bind(this);
@@ -61,17 +61,16 @@ class Comment extends Component {
     const getQuery = 'http://www.tc-landscaping.co.uk/extractComments.php?Service='+String(this.state.service);
     axios.get(getQuery)
     .then(resp => {
-        let commentsArrays =  resp.data.split("####");
+        let commentsArrays = resp.data.split("####");
         let commentsArraysWithSplit = commentsArrays.map((commentArray) => {
           return (
-              commentArray.split('%%%%')
+              commentArray.split('%%%%').slice(1, 6)
           )
         })
-        document.getElementById(this.state.commentsInsertId).innerHTML = commentsArraysWithSplit;
-        console.log(commentsArraysWithSplit,"THIS IS THE SPLIT DATA")
 
+        this.setState({Comments: commentsArraysWithSplit});
+        console.log(this.state.Comments,"THIS IS THE Comment STATE");
     });
-
   }
 
   componentDidMount() {
@@ -87,6 +86,20 @@ class Comment extends Component {
 
     const { classes } = this.props;
     const bull = <span className={classes.bullet}>•</span>;
+    const commentsInState = this.state.Comments;
+
+    /*const commentsInState = this.state.Comments.map((line) => {
+        return (
+          <div>
+            <span>{line[1]}</span>
+            <span>{line[2]}</span>
+            <span>{line[3]}</span>
+            <span>{line[4]}</span>
+            <span>{line[5]}</span>
+          </div>
+        )
+    })*/
+
 
       return (
         <div style={{'margin':'30px'}}>
@@ -96,6 +109,7 @@ class Comment extends Component {
                 <FormControl className={classes.margin} >
 
                   <input name="Service" value={this.state.service} style={{"display":"none"}}/>
+                  <input name="ServiceID" value={this.state.serviceID} style={{"display":"none"}}/>
 
                   <Input
                     id="FirstName"
@@ -139,9 +153,9 @@ class Comment extends Component {
               </form>
             </Grid>
             <Grid xs={12} md={6} className={classes.CommentFieldContainerStyle}>
-              <div id={this.state.commentsInsertId}>
+              <div>
+                {commentsInState}
               </div>
-
             </Grid>
           </Grid>
         </div>

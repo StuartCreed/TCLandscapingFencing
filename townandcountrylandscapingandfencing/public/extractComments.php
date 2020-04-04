@@ -14,13 +14,13 @@ if (!$conn) {
 
 // Extract new version of database to chow comments on Website
 $service = $_GET["Service"];
-$sqlExtract = "SELECT Service, FirstName, SecondName, Date, Comment FROM Comments WHERE Service = '$service'";
+$sqlExtract = "SELECT ServiceID, Service, FirstName, SecondName, Date, Comment FROM Comments WHERE Service = '$service'";
 $result = mysqli_query($conn, $sqlExtract);
 
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        echo "####". "%%%%". $row["FirstName"]. "%%%%". $row["SecondName"]. "%%%%". $row["Date"]. "%%%%". $row["Comment"];
+        echo "####". "%%%%". $row["ServiceID"]. "%%%%". $row["FirstName"]. "%%%%". $row["SecondName"]. "%%%%". $row["Date"]. "%%%%". $row["Comment"];
     }
 } else {
     echo "0 results";
