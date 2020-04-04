@@ -1,4 +1,13 @@
-
+<div>
+  <?php
+  // Chose the Service asked for in the GET request
+  if($_GET["Service"] === "Paving and Patios") echo "Paving and Patios has been got\n";
+  if($_GET["Service"] === "Fencing and Gates") echo "Fencing and Gates has been got\n";
+  if($_GET["Service"] === "Driveways") echo "Driveways has been got\n";
+  if($_GET["Service"] === "Ponds and Pergolas") echo "Ponds and Pergolas has been got\n";
+  if($_GET["Service"] === "Lawns and Decking") echo "Lawns and Decking has been got\n";
+  ?>
+</div>
 <div>
 <?php
 
@@ -15,7 +24,8 @@ if (!$conn) {
 }
 
 // Extract new version of database to chow comments on Website
-$sqlExtract = "SELECT Service, FirstName, SecondName, Date, Comment FROM Comments";
+$service = $_GET["Service"];
+$sqlExtract = "SELECT Service, FirstName, SecondName, Date, Comment FROM Comments WHERE Service = '$service'";
 $result = mysqli_query($conn, $sqlExtract);
 
 if (mysqli_num_rows($result) > 0) {

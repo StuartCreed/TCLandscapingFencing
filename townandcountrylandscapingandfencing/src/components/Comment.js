@@ -27,39 +27,55 @@ class Comment extends Component {
   constructor(props) {
     super(props);
       this.state = {
-        comment: this.props.service,
+        service: this.props.service,
+        formId: String(this.props.id) + "Form",
+        commentsInsertId: String(this.props.id) + "CommentInsert",
         commentsFromDataBase: null
       };
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.handleSubmit = this.getComments.bind(this);
   }
 
-  componentDidMount() {
+  getComments() {
     const axios = require('axios');
-    axios.get('http://www.tc-landscaping.co.uk/extractComments.php?q=')
-
+    const getQuery = 'http://www.tc-landscaping.co.uk/extractComments.php?Service='+String(this.state.service);
+    console.log(getQuery, "THIS IS THE GET QUERY")
+    axios.get(getQuery)
     .then(resp => {
         console.log(resp.data);
-        document.getElementById("CommentFromDataBase").innerHTML=resp.data;
+        document.getElementById(this.state.commentsInsertId).innerHTML=resp.data;
+        this.setState({commentsInsertId: resp.data});
     });
   }
 
-  handleSubmit() {
-    alert('Your comment has been submitted!');
+  /*ADD KEYS!*/
+
+  componentDidMount() {
+    this.getComments();
+  }
+
+  componentDidUpdate() {
+    this.getComments();
+  }
+
+  handleSubmit(event) {
+    document.getElementById(this.state.formId).submit();
+    this.getComments();
+    console.log('Your comment has been submitted!');
   }
 
   render() {
 
     const { classes } = this.props;
-    const formId = String(this.props.id) + "Form";
 
       return (
         <div style={{'margin':'30px'}}>
-          <div id="CommentFromDataBase">
+          <div id={this.state.commentsInsertId}>
           </div>
-          <form method="post" id={formId} action="http://www.tc-landscaping.co.uk/insertComment.php" target='PageNavigateStop' onSubmit={this.handleSubmit}>
+          <form method="post" id={this.state.formId} action="http://www.tc-landscaping.co.uk/insertComment.php" target='PageNavigateStop' onSubmit={this.handleSubmit}>
             <FormControl className={classes.margin} >
 
-              <input name="Service" value={this.state.comment} style={{"display":"none"}}/>
+              <input name="Service" value={this.state.service} style={{"display":"none"}}/>
 
               <Input
                 id="FirstName"
