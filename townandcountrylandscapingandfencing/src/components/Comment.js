@@ -9,6 +9,10 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import { withStyles } from '@material-ui/styles';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Typography from '@material-ui/core/Typography';
 
 const styles = theme => ({
   root: {
@@ -16,6 +20,7 @@ const styles = theme => ({
       margin: '10px',
       width: '25ch',
     },
+    minWidth: 275,
   },
   margin: {
     margin: '10px'
@@ -23,6 +28,17 @@ const styles = theme => ({
   CommentFieldContainerStyle: {
     margin: "auto",
     textAlign: 'center'
+  },
+  bullet: {
+  display: 'inline-block',
+  margin: '0 2px',
+  transform: 'scale(0.8)',
+  },
+  title: {
+    fontSize: 14,
+  },
+  pos: {
+    marginBottom: 12,
   },
 });
 
@@ -45,7 +61,15 @@ class Comment extends Component {
     const getQuery = 'http://www.tc-landscaping.co.uk/extractComments.php?Service='+String(this.state.service);
     axios.get(getQuery)
     .then(resp => {
-        document.getElementById(this.state.commentsInsertId).innerHTML = resp.data;
+        let commentsArrays =  resp.data.split("####");
+        let commentsArraysWithSplit = commentsArrays.map((commentArray) => {
+          return (
+              commentArray.split('%%%%')
+          )
+        })
+        document.getElementById(this.state.commentsInsertId).innerHTML = commentsArraysWithSplit;
+        console.log(commentsArraysWithSplit,"THIS IS THE SPLIT DATA")
+
     });
 
   }
@@ -62,6 +86,7 @@ class Comment extends Component {
   render() {
 
     const { classes } = this.props;
+    const bull = <span className={classes.bullet}>•</span>;
 
       return (
         <div style={{'margin':'30px'}}>
@@ -116,6 +141,7 @@ class Comment extends Component {
             <Grid xs={12} md={6} className={classes.CommentFieldContainerStyle}>
               <div id={this.state.commentsInsertId}>
               </div>
+
             </Grid>
           </Grid>
         </div>
