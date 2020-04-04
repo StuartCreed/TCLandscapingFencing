@@ -67,8 +67,19 @@ class Comment extends Component {
               commentArray.split('%%%%').slice(1, 6)
           )
         })
+        let commentsArraysWithSplitFinal = commentsArraysWithSplit.map((line) => {
 
-        this.setState({Comments: commentsArraysWithSplit});
+          return (
+            <div>
+            {line.map((i)=>{
+              return (
+                <span>{i}</span>
+              )
+            })}
+            </div>
+          )
+        })
+        this.setState({Comments: commentsArraysWithSplitFinal});
         console.log(this.state.Comments,"THIS IS THE Comment STATE");
     });
   }
@@ -87,19 +98,6 @@ class Comment extends Component {
     const { classes } = this.props;
     const bull = <span className={classes.bullet}>•</span>;
     const commentsInState = this.state.Comments;
-
-    /*const commentsInState = this.state.Comments.map((line) => {
-        return (
-          <div>
-            <span>{line[1]}</span>
-            <span>{line[2]}</span>
-            <span>{line[3]}</span>
-            <span>{line[4]}</span>
-            <span>{line[5]}</span>
-          </div>
-        )
-    })*/
-
 
       return (
         <div style={{'margin':'30px'}}>
