@@ -33,11 +33,11 @@ const styles = theme => ({
   },
   OutroTypographySmaller: {
     color: ColourTheme.InvertedColour,
-    padding: '15px',
+    padding: '8px',
     textAlign: "center",
     fontFamily: Fonts.OutroFont,
     fontWeight: 'bold',
-    fontSize: '14px'
+    fontSize: '10px'
   },
   OutroTypographySmallerWithoutPadding: {
     color: ColourTheme.InvertedColour,

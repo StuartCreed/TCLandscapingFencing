@@ -66,6 +66,11 @@ class Comment extends Component {
               <div id={this.state.formId + "NOCOMMENT"} style={{"textAlign":"center", "margin":"auto"}}>There are currently no comments.</div>
             )
           }
+          if (line.length === 0) {
+            return (
+              <div></div>
+            )
+          }
           else {
           return (
             <>
