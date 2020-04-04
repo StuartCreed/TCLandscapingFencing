@@ -39,7 +39,8 @@ class Comment extends Component {
         service: this.props.service,
         formId: String(this.props.id) + "Form",
         serviceID: String(this.props.id),
-        Comments: null
+        Comments: null,
+        Empty: null
       };
       this.handleSubmit = this.handleSubmit.bind(this);
       this.getComments = this.getComments.bind(this);
@@ -51,18 +52,21 @@ class Comment extends Component {
     axios.get(getQuery)
     .then(resp => {
         let commentsArrays = resp.data.split("####");
+        if (commentsArrays[0] === "0 results") {
+          this.setState({Empty: "noComments"});
+        }
         let commentsArraysWithSplit = commentsArrays.map((commentArray) => {
           return (
               commentArray.split('%%%%').slice(1, 6)
           )
         })
         let commentsArraysWithSplitFinal = commentsArraysWithSplit.map((line) => {
-
-          if (line.length === 0) {
-            return  (
-              <div style={{"textAlign":"center", "margin":"auto"}}>There are currently no comments.</div>
+          if (this.state.Empty === "noComments") {
+            return (
+              <div id={this.state.formId + "NOCOMMENT"} style={{"textAlign":"center", "margin":"auto"}}>There are currently no comments.</div>
             )
           }
+          else {
           return (
             <>
                 <Grid md={3} xs={12}>
@@ -80,10 +84,9 @@ class Comment extends Component {
                  </CardContent>
                 </Card>
                 </Grid>
-
-
             </>
           )
+        }
         })
         this.setState({Comments: commentsArraysWithSplitFinal});
         console.log(this.state.Comments,"THIS IS THE Comment STATE");
@@ -94,9 +97,14 @@ class Comment extends Component {
     this.getComments();
   }
 
+
   handleSubmit(event) {
     document.getElementById(this.state.formId).submit();
     this.getComments();
+    if (this.state.Empty === "noComments") {
+      this.setState({Empty: "Comments"});
+
+    }
   }
 
   render() {
