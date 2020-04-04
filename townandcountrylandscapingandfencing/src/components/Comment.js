@@ -20,6 +20,10 @@ const styles = theme => ({
   margin: {
     margin: '10px'
   },
+  CommentFieldContainerStyle: {
+    margin: "auto",
+    textAlign: 'center'
+  },
 });
 
 class Comment extends Component {
@@ -30,38 +34,29 @@ class Comment extends Component {
         service: this.props.service,
         formId: String(this.props.id) + "Form",
         commentsInsertId: String(this.props.id) + "CommentInsert",
-        commentsFromDataBase: null
+        commentsFromDatabase: null
       };
       this.handleSubmit = this.handleSubmit.bind(this);
-      this.handleSubmit = this.getComments.bind(this);
+      this.getComments = this.getComments.bind(this);
   }
 
   getComments() {
     const axios = require('axios');
     const getQuery = 'http://www.tc-landscaping.co.uk/extractComments.php?Service='+String(this.state.service);
-    console.log(getQuery, "THIS IS THE GET QUERY")
     axios.get(getQuery)
     .then(resp => {
-        console.log(resp.data);
-        document.getElementById(this.state.commentsInsertId).innerHTML=resp.data;
-        this.setState({commentsInsertId: resp.data});
+        document.getElementById(this.state.commentsInsertId).innerHTML = resp.data;
     });
-  }
 
-  /*ADD KEYS!*/
+  }
 
   componentDidMount() {
-    this.getComments();
-  }
-
-  componentDidUpdate() {
     this.getComments();
   }
 
   handleSubmit(event) {
     document.getElementById(this.state.formId).submit();
     this.getComments();
-    console.log('Your comment has been submitted!');
   }
 
   render() {
@@ -70,55 +65,59 @@ class Comment extends Component {
 
       return (
         <div style={{'margin':'30px'}}>
-          <div id={this.state.commentsInsertId}>
-          </div>
-          <form method="post" id={this.state.formId} action="http://www.tc-landscaping.co.uk/insertComment.php" target='PageNavigateStop' onSubmit={this.handleSubmit}>
-            <FormControl className={classes.margin} >
+          <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
+            <Grid xs={12} md={6} className={classes.CommentFieldContainerStyle}>
+              <form method="post" id={this.state.formId} action="http://www.tc-landscaping.co.uk/insertComment.php" target='PageNavigateStop' onSubmit={this.handleSubmit}>
+                <FormControl className={classes.margin} >
 
-              <input name="Service" value={this.state.service} style={{"display":"none"}}/>
+                  <input name="Service" value={this.state.service} style={{"display":"none"}}/>
 
-              <Input
-                id="FirstName"
-                name="FirstName"
-                placeholder="First Name"
-                startAdornment={
-                  <InputAdornment position="start">
-                    <AccountCircle />
-                  </InputAdornment>
-                }
-              />
+                  <Input
+                    id="FirstName"
+                    name="FirstName"
+                    placeholder="First Name"
+                    startAdornment={
+                      <InputAdornment position="start">
+                        <AccountCircle />
+                      </InputAdornment>
+                    }
+                  />
 
-              <Input
-                id="SecondName"
-                name="SecondName"
-                placeholder="Second Name"
-                startAdornment={
-                  <InputAdornment position="start">
-                    <AccountCircle />
-                  </InputAdornment>
-                }
-              />
+                  <Input
+                    id="SecondName"
+                    name="SecondName"
+                    placeholder="Second Name"
+                    startAdornment={
+                      <InputAdornment position="start">
+                        <AccountCircle />
+                      </InputAdornment>
+                    }
+                  />
 
-              <TextField
-               id="Comment"
-               label="Comment"
-               name="Comment"
-               multiline
-               rows="4"
-               placeholder="Insert your comment here."
-               variant="outlined"
-               style={{'margin':'30px'}}
-              />
-
-
-              <Button variant="contained" color="primary" type="submit" style={{'margin':'30px'}}>
-                Submit
-              </Button>
-
-            </FormControl>
+                  <TextField
+                   id="Comment"
+                   label="Comment"
+                   name="Comment"
+                   multiline
+                   rows="4"
+                   placeholder="Insert your comment here."
+                   variant="outlined"
+                   style={{'margin':'30px'}}
+                  />
 
 
-          </form>
+                  <Button variant="contained" color="primary" type="submit" style={{'margin':'30px'}}>
+                    Submit
+                  </Button>
+
+                </FormControl>
+              </form>
+            </Grid>
+            <Grid xs={12} md={6} className={classes.CommentFieldContainerStyle}>
+              <div id={this.state.commentsInsertId}>
+              </div>
+            </Grid>
+          </Grid>
         </div>
       );
   }

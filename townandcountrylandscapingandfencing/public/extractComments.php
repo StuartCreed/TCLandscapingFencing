@@ -1,14 +1,4 @@
 <div>
-  <?php
-  // Chose the Service asked for in the GET request
-  if($_GET["Service"] === "Paving and Patios") echo "Paving and Patios has been got\n";
-  if($_GET["Service"] === "Fencing and Gates") echo "Fencing and Gates has been got\n";
-  if($_GET["Service"] === "Driveways") echo "Driveways has been got\n";
-  if($_GET["Service"] === "Ponds and Pergolas") echo "Ponds and Pergolas has been got\n";
-  if($_GET["Service"] === "Lawns and Decking") echo "Lawns and Decking has been got\n";
-  ?>
-</div>
-<div>
 <?php
 
 $servername = "sql5c50c.megasqlservers.eu";
@@ -31,7 +21,7 @@ $result = mysqli_query($conn, $sqlExtract);
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
     while($row = mysqli_fetch_assoc($result)) {
-        echo "<div> Service: " . $row["Service"]. " - FirstName: " . $row["FirstName"]. " - SecondName: " . $row["SecondName"]. " - Date: " . $row["Date"]. " - Comment: " . $row["Comment"]."</div>" ;
+        echo "<div>". $row["FirstName"]. $row["SecondName"]. $row["Date"]. $row["Comment"]. "</div>";
     }
 } else {
     echo "0 results";
