@@ -14,6 +14,7 @@ import { Map, GoogleApiWrapper } from 'google-maps-react';
 import GoogleMap from './GoogleMap';
 import {OTHER} from '../OtherJSON';
 import Outro from './Outro.js';
+import HoverScrollTop from './HoverScrollTop';
 
 const styles = theme => ({
     AboutUsTypography: {
@@ -117,6 +118,10 @@ class ServiceRadius extends Component {
         </Grid>
       </Hidden>
       <Outro />
+
+      {/*HOVERSCROLL*/}
+      <HoverScrollTop />
+
       </>
     )
   }

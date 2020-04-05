@@ -16,7 +16,7 @@ import { withStyles } from '@material-ui/styles';
 import Fonts from '../Fonts';
 import Outro from './Outro.js';
 import {OTHER} from '../OtherJSON';
-
+import HoverScrollTop from './HoverScrollTop';
 
 const styles = theme => ({
     AboutUsTypography: {
@@ -145,6 +145,9 @@ class Home extends Component {
 
         {/*OUTRO*/}
         <Outro/>
+
+        {/*HOVERSCROLL*/}
+        <HoverScrollTop />
 
       </>
     )

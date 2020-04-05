@@ -13,6 +13,7 @@ import Navbar from './Navbar';
 import ServicesCard from './ServicesCard';
 import Outro from './Outro.js';
 import {SERVICES} from '../ServicesJSON';
+import HoverScrollTop from './HoverScrollTop';
 
 const styles = theme => ({
   CardGridStyle: {
@@ -70,6 +71,9 @@ class Services extends Component {
 
             {/*OUTRO*/}
             <Outro/>
+
+            {/*HOVERSCROLL*/}
+            <HoverScrollTop />
         </>
       )
   }

@@ -12,6 +12,7 @@ import Navbar from './Navbar';
 import Fonts from '../Fonts';
 import Outro from './Outro.js';
 import Carousels from './Carousels';
+import HoverScrollTop from './HoverScrollTop';
 
 const styles = theme => ({
     PortfolioTitlesTypography: {
@@ -55,6 +56,9 @@ class Portfolio extends Component {
         {/*OUTRO*/}
         <Outro/>
 
+        {/*HOVERSCROLL*/}
+        <HoverScrollTop />
+        
     </>
     )
   }
