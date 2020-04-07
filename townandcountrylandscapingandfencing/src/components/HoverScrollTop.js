@@ -18,8 +18,8 @@ const styles = theme => ({
     right:"30px",
     bottom:"30px",
     cursor:"pointer",
-    width:"80px",
-    height:"80px",
+    width:"50px",
+    height:"50px",
     backgroundColor: ColourTheme.FirstColour,
     textIndent:"-9999px",
     borderRadius:"60px",
@@ -37,7 +37,7 @@ class HoverScrollTop extends Component {
 
   scrollUpFunction() {
     $('#scroll').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 600);
+        $("html, body").animate({ scrollTop: 0 }, 2000);
         return false;
     });;
   }
