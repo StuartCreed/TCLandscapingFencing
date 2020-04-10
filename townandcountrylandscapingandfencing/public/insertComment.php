@@ -33,4 +33,17 @@ if (mysqli_query($conn, $sql)) {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
+$to = "tcland-enquiries@hotmail.co.uk";
+$subject = "A comment has been been made on your Town and Country Landscaping and Fencing website";
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+$headers .= 'From: <stuart.a.creed@gmail.com>' . "\r\n";
+
+$message = '<html><body>';
+$message .= "<p>Comment on Service " . strip_tags($Service) . " is: " . strip_tags($CommentFromInput) . "</p>";
+$message .= "<p>Date the comment was made: " . strip_tags($todayDate) . "</p>";
+$message .= "<p>Name of person who made comment: " . strip_tags($FirstNameFromInput) . " " . strip_tags($SecondNameFromInput) . "</p>";
+$message .= '</body></html>';
+
+mail($to,$subject,$message,$headers);
 ?>

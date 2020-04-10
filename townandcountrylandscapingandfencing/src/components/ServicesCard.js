@@ -19,8 +19,8 @@ const useStyles = makeStyles({
   media: {
     height: 140,
   },
-  ServiceTypeTypography: {
-    color: ColourTheme.FirstColour
+  TextColour: {
+    color: ColourTheme.FirstColour,
   }
 });
 
@@ -40,7 +40,7 @@ export default function ServicesCard(props) {
               title={item.item.service}
             />
             <CardContent>
-              <Typography variant="h5" component="h2" className={classes.ServiceTypeTypography}>
+              <Typography variant="h5" component="h2" className={classes.TextColour}>
                 {item.item.service}
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
@@ -51,7 +51,7 @@ export default function ServicesCard(props) {
           <CardActions>
             <Link to={pathString} style={{"textDecoration": "none", 'margin':'auto'}}>
                 <Button size="small" color="primary" style={{'margin':'auto'}}>
-                  Portfolio
+                  <span className={classes.TextColour}>Portfolio</span>
                 </Button>
             </Link>
           </CardActions>
@@ -72,7 +72,7 @@ export default function ServicesCard(props) {
               title={item.item.service}
             />
             <CardContent>
-              <Typography variant="h5" component="h2" className={classes.ServiceTypeTypography}>
+              <Typography variant="h5" component="h2" className={classes.TextColour}>
                 {item.item.service}
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
@@ -83,7 +83,7 @@ export default function ServicesCard(props) {
           <CardActions>
             <Link to={pathStringMob} style={{"textDecoration": "none", 'margin':'auto'}}>
                 <Button size="small" color="primary" style={{'margin':'auto'}}>
-                  Portfolio
+                  <span className={classes.TextColour}>Portfolio</span>
                 </Button>
             </Link>
           </CardActions>

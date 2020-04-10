@@ -13,6 +13,7 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
+import ColourTheme from '../ColourTheme';
 
 const styles = theme => ({
   root: {
@@ -29,6 +30,12 @@ const styles = theme => ({
     margin: "auto",
     textAlign: 'center'
   },
+  ButtonColour: {
+    backgroundColor: ColourTheme.FirstColour,
+    color: ColourTheme.ThirdColour,
+    margin:'30px'
+  },
+
 });
 
 class Comment extends Component {
@@ -77,13 +84,13 @@ class Comment extends Component {
                 <Grid md={3} xs={12}>
                 <Card variant="outlined" style={{'margin':'20px'}}>
                  <CardContent>
-                   <Typography style={{"fontSize":"14"}}>
+                   <Typography style={{"fontSize":"14"}} color='Primary'>
                      <b>Name:</b> {line[1]} {line[2]}
                    </Typography>
-                   <Typography style={{"fontSize":"14"}}>
+                   <Typography style={{"fontSize":"14"}} color='Primary'>
                      <b>Date:</b> {line[3]}
                    </Typography>
-                   <Typography style={{"fontSize":"14"}}>
+                   <Typography style={{"fontSize":"14"}} color='Primary'>
                      <b>Comment:</b> {line[4]}
                    </Typography>
                  </CardContent>
@@ -136,6 +143,7 @@ class Comment extends Component {
                         <AccountCircle />
                       </InputAdornment>
                     }
+                    color='Primary'
                   />
 
                   <Input
@@ -147,6 +155,7 @@ class Comment extends Component {
                         <AccountCircle />
                       </InputAdornment>
                     }
+                    color='Primary'
                   />
 
                   <TextField
@@ -157,23 +166,26 @@ class Comment extends Component {
                    rows="4"
                    placeholder="Insert your comment here."
                    variant="outlined"
+                   color='primary'
                    style={{'margin':'30px'}}
                   />
 
 
-                  <Button variant="contained" color="primary" type="submit" style={{'margin':'30px'}}>
+                  <Button variant="contained" className={classes.ButtonColour} type="submit">
                     Submit
                   </Button>
 
                 </FormControl>
               </form>
             </Grid>
+
+
             <Grid xs={12} md={9} className={classes.CommentFieldContainerStyle}>
-              <Typography style={{"fontSize":"30px"}}>
+              <Typography style={{"fontSize":"30px", 'color':ColourTheme.FirstColour}}>
                 Comments
               </Typography>
               <div>
-              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
+              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'color':ColourTheme.FirstColour}}>
                 {commentsInState}
               </Grid>
               </div>
