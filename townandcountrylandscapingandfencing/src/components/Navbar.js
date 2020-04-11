@@ -16,6 +16,8 @@ import PhoneNumberModal from './PhoneNumberModal';
 import MailLinkModal from './MailLinkModal';
 import {OTHER} from '../OtherJSON';
 
+const borderStyle = '3px solid' + ColourTheme.SecondColour;
+
 const styles = theme => ({
   MenuItemTypography: {
     color: ColourTheme.ThirdColour,
@@ -127,7 +129,7 @@ class Navbar extends Component {
         <>
             {/*MOBILE VIEW*/}
             <Hidden lgUp>
-              <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, 'borderBottom': ColourTheme.Shadow}}>
+              <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, 'borderBottom': borderStyle}}>
                 <Toolbar>
                   <SwipeableTemporaryDrawer />
                   <Link to='/home' style={{"textDecoration": "none"}}><IconButton><img src="yellowLogo.svg" alt="Logo" style={{'width':'40px','height':'40px'}} /></IconButton></Link>

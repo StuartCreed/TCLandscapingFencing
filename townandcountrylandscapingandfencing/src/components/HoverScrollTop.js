@@ -11,8 +11,8 @@ const styles = theme => ({
       right:"30px",
       bottom:"30px",
       cursor:"pointer",
-      width:"60px",
-      height:"60px",
+      width:"56px",
+      height:"56px",
       backgroundColor: ColourTheme.SecondColour,
       borderRadius:"60px",
       textAlign: 'center'
@@ -23,7 +23,7 @@ const styles = theme => ({
       backgroundColor: ColourTheme.FirstColour,
       borderRadius:"60px",
       color: ColourTheme.ThirdColour,
-      margin: '5px auto 0px auto'
+      margin: '3px auto 0px auto'
     },
   });
 

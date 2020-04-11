@@ -50,7 +50,7 @@ export default function ServicesCard(props) {
           <CardActions>
             <Link to={pathString} style={{"textDecoration": "none", 'margin':'auto'}}>
                 <Button size="small" color="primary" style={{'margin':'auto'}}>
-                  <span className={classes.TextColour}>Portfolio</span>
+                  <span style={{'color': ColourTheme.SecondColour}}>Portfolio</span>
                 </Button>
             </Link>
           </CardActions>
@@ -82,7 +82,7 @@ export default function ServicesCard(props) {
           <CardActions>
             <Link to={pathStringMob} style={{"textDecoration": "none", 'margin':'auto'}}>
                 <Button size="small" color="primary" style={{'margin':'auto'}}>
-                  <span className={classes.TextColour}>Portfolio</span>
+                  <span style={{'color': ColourTheme.SecondColour}}>Portfolio</span>
                 </Button>
             </Link>
           </CardActions>

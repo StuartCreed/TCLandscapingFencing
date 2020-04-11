@@ -31,7 +31,7 @@ const styles = theme => ({
     textAlign: 'center'
   },
   ButtonColour: {
-    backgroundColor: ColourTheme.SecondColour,
+    backgroundColor: ColourTheme.FirstColour,
     color: ColourTheme.ThirdColour,
     margin:'30px'
   },
