@@ -2,7 +2,6 @@ import React from 'react';
 import { Component } from 'react';
 import ColourTheme from '../ColourTheme';
 import { withStyles } from '@material-ui/styles';
-import 'typeface-roboto';
 import $ from "jquery";
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
