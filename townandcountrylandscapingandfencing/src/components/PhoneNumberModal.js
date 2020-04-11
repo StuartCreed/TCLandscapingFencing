@@ -5,7 +5,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import ColourTheme from '../ColourTheme';
 import PhoneIcon from '@material-ui/icons/Phone';
-import { IconButton, Button, Box, Grid } from '@material-ui/core';
+import { IconButton, Button, Grid } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import Fonts from '../Fonts';
 

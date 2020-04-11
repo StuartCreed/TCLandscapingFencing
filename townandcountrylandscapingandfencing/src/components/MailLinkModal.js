@@ -4,10 +4,8 @@ import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
 import ColourTheme from '../ColourTheme';
-import PhoneIcon from '@material-ui/icons/Phone';
-import { IconButton, Button, Box, Grid } from '@material-ui/core';
+import { IconButton, Button, Grid } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
-import FacebookIcon from '@material-ui/icons/Facebook';
 import Fonts from '../Fonts';
 import MailIcon from '@material-ui/icons/Mail';
 

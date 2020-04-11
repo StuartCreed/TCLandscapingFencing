@@ -6,7 +6,6 @@ import ColourTheme from '../ColourTheme';
 import { Grid } from '@material-ui/core';
 import CarouselBigScreen from './CarouselBigScreen';
 import CarouselSmallScreen from './CarouselSmallScreen';
-import { withRouter } from 'react-router';
 import Navbar from './Navbar';
 import { withStyles } from '@material-ui/styles';
 import Fonts from '../Fonts';
@@ -77,7 +76,7 @@ class Home extends Component {
       </Hidden>
 
       {/*ABOUT US*/}
-        <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%'}} style={{'marginTop':'40px'}}>
+        <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'40px'}}>
           <Grid item xs={1} lg={2}></Grid>
           <Grid item xs={10} lg={4}>
               <Typography variant="h2" className={classes.AboutUsTypography}>
@@ -96,13 +95,13 @@ class Home extends Component {
               <Grid item xs={1}></Grid>
             </Hidden>
             <Grid item xs={12} lg={3}>
-              <img src={OTHER[0].HomePageWorkerPhoto} style={{'width':'100%'}}/>
+              <img src={OTHER[0].HomePageWorkerPhoto} alt="Worker" style={{'width':'100%'}}/>
             </Grid>
           </Hidden>
 
           <Hidden lgUp>
           <Grid item xs={12} lg={3}>
-            <img src={OTHER[0].HomePageWorkerPhoto} style={{'width':'100%', 'marginTop':'40px'}}/>
+            <img src={OTHER[0].HomePageWorkerPhoto} alt="Worker" style={{'width':'100%', 'marginTop':'40px'}}/>
           </Grid>
           </Hidden>
         </Grid>
@@ -110,11 +109,11 @@ class Home extends Component {
         {/*CONTACT US*/}
 
         {/*DESKTOP VIEW*/}
-        <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%'}} style={{'marginTop':'40px'}}>
+        <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'40px'}}>
           <Hidden only={['xs', 'sm', 'md']}>
             <Grid item lg={2}></Grid>
             <Grid item lg={4}>
-              <img src={OTHER[0].ContactUsPhoto} style={{'width':'100%'}}/>
+              <img src={OTHER[0].ContactUsPhoto} alt='Worker' style={{'width':'100%'}}/>
             </Grid>
             <Grid item lg={1}></Grid>
             <Grid item lg={3}>
@@ -133,7 +132,7 @@ class Home extends Component {
             <Grid item xs={1}></Grid>
 
             <Grid item xs={12}>
-              <img src={OTHER[0].ContactUsPhoto} style={{'width':'100%', 'marginTop':'40px'}}/>
+              <img src={OTHER[0].ContactUsPhoto} alt='Worker' style={{'width':'100%', 'marginTop':'40px'}}/>
             </Grid>
           </Hidden>
 

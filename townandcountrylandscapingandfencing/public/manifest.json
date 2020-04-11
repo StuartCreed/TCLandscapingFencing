@@ -3,17 +3,17 @@
   "name": "Town and Country Landscaping and Fencing",
   "icons": [
     {
-      "src": "SmallBrowserLogo.jpg",
+      "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "SmallBrowserLogo.jpg",
+      "src": "192X192Logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "SmallBrowserLogo.jpg",
+      "src": "512X512Logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }

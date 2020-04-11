@@ -65,7 +65,7 @@ class Outro extends Component {
             <Grid xs={12} item>
               <Typography variant="subtitle2" className={classes.OutroTypographyLogoStyle} style={{'fontSize':'30px'}}>TOWN AND COUNTRY</Typography>
               <Typography variant="subtitle2" className={classes.OutroTypographyLogoStyle} style={{'fontSize':'20px'}}>LANDSCAPING AND FENCING</Typography>
-              <img src="OutroLogo.svg" style={{'height':'100px','width':'auto', 'margin':'20px'}}/>
+              <img src="OutroLogo.svg" alt='logo' style={{'height':'100px','width':'auto', 'margin':'20px'}}/>
               <Typography variant="subtitle2" className={classes.OutroTypographyMedium}>ESTABLISHED FOR OVER 25 YEARS</Typography>
               <Typography variant="subtitle2" className={classes.OutroTypographySmallerWithoutPadding}>
                 <Link to='/home' className={classes.OutroTypographySmaller}>HOME</Link>

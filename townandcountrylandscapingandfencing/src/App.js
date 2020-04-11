@@ -4,7 +4,7 @@ import Home from './components/Home';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
 import AboutUs from './components/AboutUs';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
 class App extends Component {
@@ -41,10 +41,9 @@ class App extends Component {
       )
     }
 
-
     return(
         <>
-          <BrowserRouter>
+          <HashRouter>
             <Switch location={this.props.location}>
               <Route path='/home' component={HomePage} />
               <Route path='/services' component={ServicesPage} />
@@ -52,7 +51,7 @@ class App extends Component {
               <Route path='/aboutus' component={AboutUsPage} />
               <Redirect to="/home" />
             </Switch>
-          </BrowserRouter>
+          </HashRouter>
         </>
     )
   }
