@@ -8,16 +8,25 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 const styles = theme => ({
   scrollStyle: {
-    position:"fixed",
-    right:"30px",
-    bottom:"30px",
     cursor:"pointer",
     width:"50px",
     height:"50px",
     backgroundColor: ColourTheme.FirstColour,
-    textIndent:"-9999px",
     borderRadius:"60px",
+    color: ColourTheme.ThirdColour,
+    margin: '5px auto 0px auto'
   },
+  scrollStyleOuter: {
+    position:"fixed",
+    right:"30px",
+    bottom:"30px",
+    cursor:"pointer",
+    width:"60px",
+    height:"60px",
+    backgroundColor: ColourTheme.SecondColour,
+    borderRadius:"60px",
+    textAlign: 'center'
+  }
   });
 
 class HoverScrollTop extends Component {
@@ -42,11 +51,11 @@ class HoverScrollTop extends Component {
 
     return(
         <>
-          <div>
-            <a id="scroll" href="#">
-              <ExpandLessIcon style={{"color": ColourTheme.ThirdColour}} onClick={this.scrollUpFunction} className={classes.scrollStyle}/>
-            </a>
-          </div>
+          <a id="scroll" href="#">
+            <div className={classes.scrollStyleOuter}>
+              <ExpandLessIcon onClick={this.scrollUpFunction} className={classes.scrollStyle}/>
+            </div>
+          </a>
         </>
       )
   }

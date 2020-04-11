@@ -127,7 +127,7 @@ class Navbar extends Component {
         <>
             {/*MOBILE VIEW*/}
             <Hidden lgUp>
-              <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
+              <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, "boxShadow": ColourTheme.Shadow}}>
                 <Toolbar>
                   <SwipeableTemporaryDrawer />
                   <Link to='/home' style={{"textDecoration": "none"}}><IconButton><img src="yellowLogo.svg" alt="Logo" style={{'width':'40px','height':'40px'}} /></IconButton></Link>
@@ -142,7 +142,7 @@ class Navbar extends Component {
 
             {/*COMPUTER VIEW*/}
             <Hidden only={['md', 'sm', 'xs']}>
-              <AppBar position="fixed" style={{"boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
+              <AppBar position="fixed" style={{"boxShadow": ColourTheme.Shadow}}>
 
                 <Toolbar style={{'backgroundColor': ColourTheme.FirstColour, "height": "90px"}}>
                   <Link to='/home' style={{"textDecoration": "none"}}><IconButton><img src="yellowLogo.svg" alt="Logo" style={{'width':'60px','height':'60px'}} /></IconButton></Link>
