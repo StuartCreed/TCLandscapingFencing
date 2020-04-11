@@ -1,0 +1,9 @@
+
+# for PHP7.3-CGI
+AddHandler php-cgi .php
+Action php-cgi /cgi-bin/php-cgi
+# for php and securewebexchange
+<IfDefine SSL>
+    AddHandler php-cgi .php
+    Action php-cgi https://secure50.securewebsession.eu/tc-landscaping.co.uk/cgi-bin/php-cgi
+</IfDefine>

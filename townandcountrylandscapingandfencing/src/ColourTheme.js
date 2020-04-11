@@ -4,7 +4,7 @@ const ColourTheme = {
   ThirdColour: "#fbf579",
   InvertedColour: "#fff",
   OutroColour: "#1d1e22",
-  Shadow: "0 2px 4px 2px #F05566"
+  Shadow: '5px solid #F05566'
 }
 
 /*Other Colour Options:
