@@ -40,22 +40,22 @@ export default function SwipeableTemporaryDrawer() {
     let indexNumber = index.index;
     if (indexNumber === 0) {
       return(
-        <HomeIcon style={{"color": ColourTheme.FirstColour}}/>
+        <HomeIcon style={{"color": ColourTheme.SecondColour}}/>
       )
     }
     if (indexNumber === 1) {
       return(
-        <WorkIcon style={{"color": ColourTheme.FirstColour}} />
+        <WorkIcon style={{"color": ColourTheme.SecondColour}} />
       )
     }
     if (indexNumber === 2) {
       return(
-        <ImageIcon  style={{"color": ColourTheme.FirstColour}} />
+        <ImageIcon  style={{"color": ColourTheme.SecondColour}} />
       )
     }
     if (indexNumber === 3) {
       return(
-        <RoomIcon style={{"color": ColourTheme.FirstColour}} />
+        <RoomIcon style={{"color": ColourTheme.SecondColour}} />
       )
     }
     else {
@@ -79,25 +79,25 @@ export default function SwipeableTemporaryDrawer() {
             <Link to='/home' style={{"textDecoration": "none"}}>
               <ListItem button key="Home">
                 <ListItemIcon><IconSelector index={0}/></ListItemIcon>
-                <ListItemText primary="Home" style={{"color":ColourTheme.FirstColour}} />
+                <ListItemText primary="Home" style={{"color":ColourTheme.SecondColour}} />
               </ListItem>
             </Link>
             <Link to='/services' style={{"textDecoration": "none"}}>
               <ListItem button key="Services">
                 <ListItemIcon><IconSelector index={1}/></ListItemIcon>
-                <ListItemText primary="Services" style={{"color":ColourTheme.FirstColour}} />
+                <ListItemText primary="Services" style={{"color":ColourTheme.SecondColour}} />
               </ListItem>
             </Link>
             <Link to='/portfolio' style={{"textDecoration": "none"}}>
               <ListItem button key="Portfolio">
                 <ListItemIcon><IconSelector index={2}/></ListItemIcon>
-                <ListItemText primary="Portfolio" style={{"color":ColourTheme.FirstColour}} />
+                <ListItemText primary="Portfolio" style={{"color":ColourTheme.SecondColour}} />
               </ListItem>
             </Link>
             <Link to='/aboutus' style={{"textDecoration": "none"}}>
               <ListItem button key="About Us">
                 <ListItemIcon><IconSelector index={3}/></ListItemIcon>
-                <ListItemText primary="About Us" style={{"color":ColourTheme.FirstColour}} />
+                <ListItemText primary="About Us" style={{"color":ColourTheme.SecondColour}} />
               </ListItem>
             </Link>
           </>
