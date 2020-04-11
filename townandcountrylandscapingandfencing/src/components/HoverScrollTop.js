@@ -7,26 +7,25 @@ import $ from "jquery";
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
 const styles = theme => ({
-  scrollStyle: {
-    cursor:"pointer",
-    width:"50px",
-    height:"50px",
-    backgroundColor: ColourTheme.FirstColour,
-    borderRadius:"60px",
-    color: ColourTheme.ThirdColour,
-    margin: '5px auto 0px auto'
-  },
-  scrollStyleOuter: {
-    position:"fixed",
-    right:"30px",
-    bottom:"30px",
-    cursor:"pointer",
-    width:"60px",
-    height:"60px",
-    backgroundColor: ColourTheme.SecondColour,
-    borderRadius:"60px",
-    textAlign: 'center'
-  }
+    scrollStyleOuter: {
+      position:"fixed",
+      right:"30px",
+      bottom:"30px",
+      cursor:"pointer",
+      width:"60px",
+      height:"60px",
+      backgroundColor: ColourTheme.SecondColour,
+      borderRadius:"60px",
+      textAlign: 'center'
+    },
+    scrollStyle: {
+      width:"50px",
+      height:"50px",
+      backgroundColor: ColourTheme.FirstColour,
+      borderRadius:"60px",
+      color: ColourTheme.ThirdColour,
+      margin: '5px auto 0px auto'
+    },
   });
 
 class HoverScrollTop extends Component {
@@ -40,7 +39,7 @@ class HoverScrollTop extends Component {
 
   scrollUpFunction() {
     $('#scroll').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 1500);
+        $("html, body").animate({ scrollTop: 0 }, 1200);
         return false;
     });;
   }
