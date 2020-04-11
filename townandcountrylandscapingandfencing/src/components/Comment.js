@@ -101,7 +101,6 @@ class Comment extends Component {
         }
         })
         this.setState({Comments: commentsArraysWithSplitFinal});
-        console.log(this.state.Comments,"THIS IS THE Comment STATE");
     });
   }
 

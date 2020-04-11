@@ -1,13 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
-import Box from '@material-ui/core/Box';
 import { withStyles } from '@material-ui/styles';
-import Paper from '@material-ui/core/Paper';
 import Hidden from '@material-ui/core/Hidden';
-import withWidth from '@material-ui/core/withWidth';
-import Typography from '@material-ui/core/Typography';
 import ColourTheme from '../ColourTheme';
-import { Container, AppBar, Toolbar, IconButton, Button, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import Navbar from './Navbar';
 import Fonts from '../Fonts';
 import Outro from './Outro.js';
@@ -58,7 +54,7 @@ class Portfolio extends Component {
 
         {/*HOVERSCROLL*/}
         <HoverScrollTop />
-        
+
     </>
     )
   }

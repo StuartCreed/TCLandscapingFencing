@@ -1,7 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
 import Fonts from '../Fonts';
-import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/styles';
 import Typography from '@material-ui/core/Typography';
@@ -63,7 +62,7 @@ class Outro extends Component {
     return(
         <>
           <Grid container className={classes.OutroContainerStyle} >
-            <Grid xs={12}>
+            <Grid xs={12} item>
               <Typography variant="subtitle2" className={classes.OutroTypographyLogoStyle} style={{'fontSize':'30px'}}>TOWN AND COUNTRY</Typography>
               <Typography variant="subtitle2" className={classes.OutroTypographyLogoStyle} style={{'fontSize':'20px'}}>LANDSCAPING AND FENCING</Typography>
               <img src="OutroLogo.svg" style={{'height':'100px','width':'auto', 'margin':'20px'}}/>

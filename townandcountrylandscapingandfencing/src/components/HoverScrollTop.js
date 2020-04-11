@@ -1,14 +1,8 @@
 import React from 'react';
 import { Component } from 'react';
 import ColourTheme from '../ColourTheme';
-import Fonts from '../Fonts';
-import Container from '@material-ui/core/Container';
-import Hidden from '@material-ui/core/Hidden';
-import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/styles';
-import Typography from '@material-ui/core/Typography';
 import 'typeface-roboto';
-import { createMuiTheme } from "@material-ui/core/styles";
 import $ from "jquery";
 import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 
@@ -37,7 +31,7 @@ class HoverScrollTop extends Component {
 
   scrollUpFunction() {
     $('#scroll').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 2000);
+        $("html, body").animate({ scrollTop: 0 }, 1500);
         return false;
     });;
   }
@@ -49,8 +43,8 @@ class HoverScrollTop extends Component {
     return(
         <>
           <div>
-            <a href="#" id="scroll">
-            <ExpandLessIcon style={{"color": ColourTheme.ThirdColour}} OnClick={this.scrollUpFunction} className={classes.scrollStyle}/>
+            <a id="scroll" href="#">
+              <ExpandLessIcon style={{"color": ColourTheme.ThirdColour}} onClick={this.scrollUpFunction} className={classes.scrollStyle}/>
             </a>
           </div>
         </>

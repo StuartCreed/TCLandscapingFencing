@@ -9,7 +9,7 @@ import ColourTheme from './ColourTheme';
 const theme = createMuiTheme({
    palette: {
       primary: {
-         main: ColourTheme.FirstColour
+        main: ColourTheme.FirstColour
       },
       secondary: {
         main: ColourTheme.ThirdColour,
@@ -21,7 +21,7 @@ const theme = createMuiTheme({
 });
 
 ReactDOM.render(
-  <MuiThemeProvider theme = { theme }>
+  <MuiThemeProvider theme = {theme}>
     <App />
   </MuiThemeProvider>,
   document.getElementById('root'));

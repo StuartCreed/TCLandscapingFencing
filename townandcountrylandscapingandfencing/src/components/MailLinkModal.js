@@ -46,7 +46,7 @@ export default function MailLinkModal() {
 
   return (
     <>
-      <IconButton onClick={handleOpen}><MailIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
+      <IconButton onClick={handleOpen}><MailIcon edge="true" style={{"color": ColourTheme.ThirdColour}} /></IconButton>
       <Modal
         aria-describedby="transition-modal-description"
         className={classes.modal}
@@ -61,7 +61,7 @@ export default function MailLinkModal() {
         <Fade in={open}>
           <div className={classes.paper}>
             <Grid container style={{'textAlign': 'center'}}>
-              <Grid xs={12}>
+              <Grid xs={12} item>
                 <Button href="mailto:tcland-enquiries@hotmail.co.uk"><MailIcon edge style={{"color": ColourTheme.ThirdColour, 'marginRight':'20px'}} /><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography}>tcland-enquiries@hotmail.co.uk</Typography></Button>
               </Grid>
             </Grid>

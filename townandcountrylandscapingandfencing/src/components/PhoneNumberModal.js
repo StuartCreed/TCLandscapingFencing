@@ -44,7 +44,7 @@ export default function PhoneNumberModal() {
 
   return (
     <>
-      <IconButton onClick={handleOpen}><PhoneIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
+      <IconButton onClick={handleOpen}><PhoneIcon edge="true" style={{"color": ColourTheme.ThirdColour}} /></IconButton>
       <Modal
         aria-describedby="transition-modal-description"
         className={classes.modal}
@@ -59,10 +59,10 @@ export default function PhoneNumberModal() {
         <Fade in={open}>
           <div className={classes.paper}>
             <Grid container style={{'textAlign': 'center'}}>
-              <Grid xs={12}>
+              <Grid xs={12} item>
                 <Button id="transition-modal-description" href="tel:+447815946340"><PhoneIcon edge style={{"color": ColourTheme.ThirdColour, 'marginRight':'20px'}}/><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour}}>Andy: 07815946340</Typography></Button>
               </Grid>
-              <Grid xs={12}>
+              <Grid xs={12} item>
                 <Button href="tel:+447870519614"><PhoneIcon edge style={{"color": ColourTheme.ThirdColour, 'marginRight':'20px'}}/><Typography variant="subtitle1" noWrap className={classes.MenuItemTypography} style={{'color': ColourTheme.ThirdColour}}>Richard: 07870519614</Typography></Button>
               </Grid>
             </Grid>

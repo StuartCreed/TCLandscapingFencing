@@ -1,14 +1,7 @@
 import React from 'react';
 import { Component } from 'react';
-import ColourTheme from '../ColourTheme';
-import Fonts from '../Fonts';
-import Container from '@material-ui/core/Container';
-import Hidden from '@material-ui/core/Hidden';
-import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/styles';
-import Typography from '@material-ui/core/Typography';
 import 'typeface-roboto';
-import { createMuiTheme } from "@material-ui/core/styles";
 import GoogleMap from 'google-map-react';
 
 const mapHeightComputer = JSON.stringify(window.innerHeight - 140)+'px';

@@ -1,13 +1,9 @@
 import React from 'react';
 import { Component } from 'react';
-import Box from '@material-ui/core/Box';
-import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Hidden from '@material-ui/core/Hidden';
-import withWidth from '@material-ui/core/withWidth';
 import Typography from '@material-ui/core/Typography';
 import ColourTheme from '../ColourTheme';
-import { Container, AppBar, Toolbar, IconButton, Button, Grid, Card } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import CarouselBigScreen from './CarouselBigScreen';
 import CarouselSmallScreen from './CarouselSmallScreen';
 import { withRouter } from 'react-router';
@@ -65,7 +61,7 @@ class Home extends Component {
       <Navbar page={'Home'}/>
       <Hidden lgUp>
         <Grid container style={{'direction':'row', 'marginTop':'64px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-          <Grid xs={12}>
+          <Grid xs={12} item>
             <CarouselSmallScreen photos={OTHER[0].PorfoliioPagePhotos} photo1={OTHER[0].HomePageCarouselPhotos.photo1} photo2={OTHER[0].HomePageCarouselPhotos.photo2} photo3={OTHER[0].HomePageCarouselPhotos.photo3}/>
           </Grid>
         </Grid>
@@ -74,7 +70,7 @@ class Home extends Component {
       {/*DESKTOP VIEW CAROUSEL*/}
       <Hidden only={['md' ,'sm', 'xs']}>
         <Grid container style={{'direction':'row', 'marginTop':'140px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
-          <Grid xs={12} >
+          <Grid xs={12} item>
             <CarouselBigScreen photos={OTHER[0].PorfoliioPagePhotos} photo1={OTHER[0].HomePageCarouselPhotos.photo1} photo2={OTHER[0].HomePageCarouselPhotos.photo2} photo3={OTHER[0].HomePageCarouselPhotos.photo3}/>
           </Grid>
         </Grid>

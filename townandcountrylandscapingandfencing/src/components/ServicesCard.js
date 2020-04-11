@@ -9,7 +9,6 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import ColourTheme from '../ColourTheme';
 import { HashLink as Link } from 'react-router-hash-link';
-import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles({
   root: {
