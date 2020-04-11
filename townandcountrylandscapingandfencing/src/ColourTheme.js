@@ -1,6 +1,6 @@
 const ColourTheme = {
   FirstColour: "#005847",
-  SecondColour: "#5C9990",
+  SecondColour: "#F05566",
   ThirdColour: "#fbf579",
   InvertedColour: "#fff",
   OutroColour: "#1d1e22"

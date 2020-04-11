@@ -18,7 +18,7 @@ import {OTHER} from '../OtherJSON';
 
 const styles = theme => ({
   MenuItemTypography: {
-    color: ColourTheme.FirstColour,
+    color: ColourTheme.ThirdColour,
     fontWeight: 'normal',
     fontFamily: Fonts.BoldFont,
     letterSpacing: "0.5px"
@@ -142,7 +142,7 @@ class Navbar extends Component {
 
             {/*COMPUTER VIEW*/}
             <Hidden only={['md', 'sm', 'xs']}>
-              <AppBar position="fixed" style={{'backgroundColor': ColourTheme.FirstColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
+              <AppBar position="fixed" style={{"boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
 
                 <Toolbar style={{'backgroundColor': ColourTheme.FirstColour, "height": "90px"}}>
                   <Link to='/home' style={{"textDecoration": "none"}}><IconButton><img src="yellowLogo.svg" alt="Logo" style={{'width':'60px','height':'60px'}} /></IconButton></Link>
@@ -161,7 +161,7 @@ class Navbar extends Component {
                   </section>
                 </Toolbar>
 
-                <Grid container style={{'direction':'row', 'justify':"space-around", "alignItems":"center", 'height':'50px', 'width':'100%', 'backgroundColor': ColourTheme.ThirdColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
+                <Grid container style={{'direction':'row', 'justify':"space-around", "alignItems":"center", 'height':'50px', 'width':'100%', 'backgroundColor': ColourTheme.SecondColour, "boxShadow": "0 2px 4px 2px rgba(0,0,0,.25)"}}>
                   <Grid xs={2} item></Grid>
                   <HomeButton/>
                   <ServicesButton />
