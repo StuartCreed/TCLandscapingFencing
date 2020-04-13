@@ -45,10 +45,10 @@ class Carousels extends Component {
             </Typography>
 
             <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-              <Grid xs={12}>
+              <Grid xs={12} item>
                 <CarouselSmallScreen photos={SERVICES[item.id].PorfoliioPagePhotos} photo1={SERVICES[item.id].PorfoliioPagePhotos.photo1} photo2={SERVICES[item.id].PorfoliioPagePhotos.photo2} photo3={SERVICES[item.id].PorfoliioPagePhotos.photo3} />
               </Grid>
-              <Grid xs={12}>
+              <Grid xs={12} item>
                 <Comment service={SERVICES[item.id].service} id={item.id}/>
               </Grid>
             </Grid>
@@ -62,10 +62,10 @@ class Carousels extends Component {
             </Typography>
 
             <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
-              <Grid xs={12} >
+              <Grid xs={12} item>
                 <CarouselBigScreen photos={SERVICES[item.id].PorfoliioPagePhotos} photo1={SERVICES[item.id].PorfoliioPagePhotos.photo1} photo2={SERVICES[item.id].PorfoliioPagePhotos.photo2} photo3={SERVICES[item.id].PorfoliioPagePhotos.photo3} />
               </Grid>
-              <Grid xs={12}>
+              <Grid xs={12} item>
                 <Comment service={SERVICES[item.id].service} id={item.id}/>
               </Grid>
             </Grid>

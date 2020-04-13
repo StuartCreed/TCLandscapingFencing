@@ -62,7 +62,7 @@ class ServiceRadius extends Component {
             </Grid>
           </Hidden>
 
-          <Hidden lgUp style>
+          <Hidden lgUp>
             <Hidden lgUp>
               <Grid item xs={1}></Grid>
             </Hidden>

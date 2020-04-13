@@ -34,6 +34,7 @@ class GoogleMapWrapper extends Component {
           bootstrapURLKeys={{ key: 'AIzaSyAiOPSvsBYhY28VmvJhQr6i-onTs7edJ-o' }}
           defaultZoom={window.innerWidth > 792? zoom :10}
           defaultCenter={latlng}
+          yesIWantToUseGoogleMapApiInternals={true}
           onGoogleApiLoaded={({map, maps}) =>
             new maps.Circle({
               strokeColor: '#FF0000',

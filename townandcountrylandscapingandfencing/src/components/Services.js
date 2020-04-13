@@ -52,7 +52,7 @@ class Services extends Component {
             <Navbar page={'Services'}/>
             {/*MOBILE VIEW*/}
             <Hidden lgUp>
-            <Grid xs={12} container style={{'direction':'row', 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'64px', 'padding': '0px'}} >
+            <Grid xs={12} item container style={{'direction':'row', 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'64px', 'padding': '0px'}} >
               {MobileCardWithJSON}
             </Grid>
             </Hidden>

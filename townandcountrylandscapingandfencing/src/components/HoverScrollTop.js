@@ -38,7 +38,7 @@ class HoverScrollTop extends Component {
 
   scrollUpFunction() {
     $('#scroll').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 1200);
+        $("html, body").animate({ scrollTop: 0 }, 1500);
         return false;
     });;
   }
@@ -49,11 +49,11 @@ class HoverScrollTop extends Component {
 
     return(
         <>
-          <a id="scroll" href="#">
+          <div id="scroll">
             <div className={classes.scrollStyleOuter}>
               <ExpandLessIcon onClick={this.scrollUpFunction} className={classes.scrollStyle}/>
             </div>
-          </a>
+          </div>
         </>
       )
   }

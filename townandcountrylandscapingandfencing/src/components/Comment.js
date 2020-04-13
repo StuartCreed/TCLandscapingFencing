@@ -79,16 +79,16 @@ class Comment extends Component {
           else {
           return (
             <>
-                <Grid md={3} xs={12}>
+                <Grid md={3} xs={12} item>
                 <Card variant="outlined" style={{'margin':'20px'}}>
                  <CardContent>
-                   <Typography style={{"fontSize":"14"}} color='Primary'>
+                   <Typography style={{"fontSize":"14"}} color='primary'>
                      <b>Name:</b> {line[1]} {line[2]}
                    </Typography>
-                   <Typography style={{"fontSize":"14"}} color='Primary'>
+                   <Typography style={{"fontSize":"14"}} color='primary'>
                      <b>Date:</b> {line[3]}
                    </Typography>
-                   <Typography style={{"fontSize":"14"}} color='Primary'>
+                   <Typography style={{"fontSize":"14"}} color='primary'>
                      <b>Comment:</b> {line[4]}
                    </Typography>
                  </CardContent>
@@ -124,7 +124,7 @@ class Comment extends Component {
       return (
         <div style={{'margin':'30px'}}>
           <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-            <Grid xs={12} md={3} className={classes.CommentFieldContainerStyle}>
+            <Grid xs={12} md={3} item className={classes.CommentFieldContainerStyle}>
               <form method="post" id={this.state.formId} action="http://www.tc-landscaping.co.uk/insertComment.php" target='PageNavigateStop' onSubmit={this.handleSubmit}>
                 <FormControl className={classes.margin} >
 
@@ -140,7 +140,7 @@ class Comment extends Component {
                         <AccountCircle />
                       </InputAdornment>
                     }
-                    color='Primary'
+                    color='primary'
                   />
 
                   <Input
@@ -152,7 +152,7 @@ class Comment extends Component {
                         <AccountCircle />
                       </InputAdornment>
                     }
-                    color='Primary'
+                    color='primary'
                   />
 
                   <TextField
@@ -177,7 +177,7 @@ class Comment extends Component {
             </Grid>
 
 
-            <Grid xs={12} md={9} className={classes.CommentFieldContainerStyle}>
+            <Grid xs={12} md={9} item className={classes.CommentFieldContainerStyle}>
               <Typography style={{"fontSize":"30px", 'color':ColourTheme.FirstColour}}>
                 Comments
               </Typography>

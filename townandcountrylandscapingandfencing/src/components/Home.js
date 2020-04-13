@@ -18,7 +18,7 @@ const styles = theme => ({
       fontFamily: Fonts.BoldFont,
       color: ColourTheme.FirstColour,
       textAlign: 'left',
-    }
+    },
   });
 
 class Home extends Component {
