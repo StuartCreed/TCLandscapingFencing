@@ -40,7 +40,6 @@ class Comment extends Component {
   constructor(props) {
     super(props);
       this.state = {
-        serviceID: String(this.props.id),
         Comments: [],
         newCommentorFirstName: [],
         newCommentorSecondName: [],
@@ -64,11 +63,18 @@ class Comment extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-
+    const todayDateConst = new Date();
+    const todayDateString = String(todayDateConst.toISOString().substr(0,10));
+    let originalCommentsArray = this.state.Comments;
+    let newCommentsArray = [[String(this.props.id), this.props.service, this.state.newCommentorFirstName, this.state.newCommentorSecondName, todayDateString, this.state.newComment]];
+    let concatenatedComments = originalCommentsArray.concat(newCommentsArray);
+    this.setState({
+      Comments: concatenatedComments
+    })
+    /*AXIOS POST FUNCTION GOES HERE*/
   }
 
   myChangeHandler = (event) => {
-    console.log(event.target.value, "EVENT VALUE")
     if ([event.target.name][0] === "Comment") {
       this.setState({newComment: event.target.value});
     }
@@ -83,7 +89,10 @@ class Comment extends Component {
   /*NEED TO MAP NEW COMMENT INTO STATE BY TRACKING THE NEW COMMENT LIVE IN STATE AND THEN ON SUBMIT UPDATE THE COMMENTS ARRAY AND REMOVE THE LIVE COMMENTS. then
   WE DO AN AXIOS POST TO SEND THE DATABASE THE DATA. THIS WOULD QUICKLY UPDATE THE VIEW AND THEN UPDATE THE DATABASE.
 
-  NEED TO RENDER THE COMMETNS FIELDS UPON MOUNTING. NEED TO INCLUDE KEYS FOR EFFICIENCY. ONLY THE COMMENTS DATA SHOULD BE KEPT IN THE STATE, NOT THE JSX*/
+  NEED TO RENDER THE COMMETNS FIELDS UPON MOUNTING. NEED TO INCLUDE KEYS FOR EFFICIENCY. ONLY THE COMMENTS DATA SHOULD BE KEPT IN THE STATE, NOT THE JSX
+
+  NOW JUST NEED TO SET UP THE AXIOS POST REQUEST AND SET UP KEYS!!
+  */
 
   render() {
 
@@ -134,7 +143,7 @@ class Comment extends Component {
                 <FormControl className={classes.margin} >
 
                   <input name="Service" value={this.props.service} style={{"display":"none"}}/>
-                  <input name="ServiceID" value={this.state.serviceID} style={{"display":"none"}}/>
+                  <input name="ServiceID" value={String(this.props.serviceID)} style={{"display":"none"}}/>
 
                   <Input
                     id="FirstName"
