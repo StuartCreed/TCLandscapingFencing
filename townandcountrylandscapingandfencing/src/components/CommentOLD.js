@@ -33,6 +33,7 @@ const styles = theme => ({
     color: ColourTheme.ThirdColour,
     margin:'30px'
   },
+
 });
 
 class Comment extends Component {
@@ -40,43 +41,78 @@ class Comment extends Component {
   constructor(props) {
     super(props);
       this.state = {
+        service: this.props.service,
+        formId: String(this.props.id) + "Form",
         serviceID: String(this.props.id),
-        Comments: [],
-        newCommentorFirstName: [],
-        newCommentorSecondName: [],
-        newComment: []
+        Comments: null,
+        Empty: null
       };
+      this.handleSubmit = this.handleSubmit.bind(this);
+      this.getComments = this.getComments.bind(this);
   }
 
-  getCommentsAction = () => {
+  getComments() {
     const axios = require('axios');
-    const getQuery = 'http://www.tc-landscaping.co.uk/extractComments.php?Service='+String(this.props.service);
+    const getQuery = 'http://www.tc-landscaping.co.uk/extractComments.php?Service='+String(this.state.service);
     axios.get(getQuery)
     .then(resp => {
-        let commentsArrays = resp.data;
-        this.setState({Comments: commentsArrays});
+        let commentsArrays = resp.data.split("####");
+        if (commentsArrays[0] === "0 results") {
+          this.setState({Empty: "noComments"});
+        }
+        let commentsArraysWithSplit = commentsArrays.map((commentArray) => {
+          return (
+              commentArray.split('%%%%').slice(1, 6)
+          )
+        })
+        let commentsArraysWithSplitFinal = commentsArraysWithSplit.map((line) => {
+          if (this.state.Empty === "noComments") {
+            return (
+              <div id={this.state.formId + "NOCOMMENT"} style={{"textAlign":"center", "margin":"auto"}}>There are currently no comments.</div>
+            )
+          }
+          if (line.length === 0) {
+            return (
+              <div></div>
+            )
+          }
+          else {
+          return (
+            <>
+                <Grid md={3} xs={12} item>
+                <Card variant="outlined" style={{'margin':'20px'}}>
+                 <CardContent>
+                   <Typography style={{"fontSize":"14"}} color='primary'>
+                     <b>Name:</b> {line[1]} {line[2]}
+                   </Typography>
+                   <Typography style={{"fontSize":"14"}} color='primary'>
+                     <b>Date:</b> {line[3]}
+                   </Typography>
+                   <Typography style={{"fontSize":"14"}} color='primary'>
+                     <b>Comment:</b> {line[4]}
+                   </Typography>
+                 </CardContent>
+                </Card>
+                </Grid>
+            </>
+          )
+        }
+        })
+        this.setState({Comments: commentsArraysWithSplitFinal});
     });
   }
 
   componentDidMount() {
-    this.getCommentsAction();
+    this.getComments();
   }
 
-  handleSubmit = (event) => {
-    event.preventDefault();
 
-  }
+  handleSubmit(event) {
+    document.getElementById(this.state.formId).submit();
+    this.getComments();
+    if (this.state.Empty === "noComments") {
+      this.setState({Empty: "Comments"});
 
-  myChangeHandler = (event) => {
-    console.log(event.target.value, "EVENT VALUE")
-    if ([event.target.name][0] === "Comment") {
-      this.setState({newComment: event.target.value});
-    }
-    if ([event.target.name][0] === "FirstName") {
-      this.setState({newCommentorFirstName: event.target.value});
-    }
-    if ([event.target.name][0] === "SecondName") {
-      this.setState({newCommentorSecondName: event.target.value});
     }
   }
 
@@ -88,52 +124,16 @@ class Comment extends Component {
   render() {
 
     const { classes } = this.props;
-
-    const CommentsFromDataBase = () => {
-      if (this.state.Comments === "No Comments" ) {
-        return (
-          <div style={{"textAlign":"center", "margin":"auto"}}>There are currently no comments.</div>
-        )
-      }
-      else {
-        let commentRendered = this.state.Comments.map((comment) => {
-          return (
-            <>
-                <Grid xs={12} md={4} item>
-                <Card variant="outlined" style={{'margin':'20px'}}>
-                 <CardContent>
-                   <Typography style={{"fontSize":"14"}} color='primary'>
-                     <b>Name:</b> {comment[2]} {comment[3]}
-                   </Typography>
-                   <Typography style={{"fontSize":"14"}} color='primary'>
-                     <b>Date:</b> {comment[4]}
-                   </Typography>
-                   <Typography style={{"fontSize":"14"}} color='primary'>
-                     <b>Comment:</b> {comment[5]}
-                   </Typography>
-                 </CardContent>
-                </Card>
-                </Grid>
-            </>
-          )
-        })
-        return (
-          <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'color':ColourTheme.FirstColour}}>
-            {commentRendered}
-          </Grid>
-        )
-      }
-    }
-
+    const commentsInState = this.state.Comments;
 
       return (
         <div style={{'margin':'30px'}}>
           <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
             <Grid xs={12} md={3} item className={classes.CommentFieldContainerStyle}>
-              <form method="post" onSubmit={this.handleSubmit}>
+              <form method="post" id={this.state.formId} action="http://www.tc-landscaping.co.uk/insertComment.php" target='PageNavigateStop' onSubmit={this.handleSubmit}>
                 <FormControl className={classes.margin} >
 
-                  <input name="Service" value={this.props.service} style={{"display":"none"}}/>
+                  <input name="Service" value={this.state.service} style={{"display":"none"}}/>
                   <input name="ServiceID" value={this.state.serviceID} style={{"display":"none"}}/>
 
                   <Input
@@ -145,7 +145,6 @@ class Comment extends Component {
                         <AccountCircle />
                       </InputAdornment>
                     }
-                    onChange={this.myChangeHandler}
                     color='primary'
                   />
 
@@ -158,7 +157,6 @@ class Comment extends Component {
                         <AccountCircle />
                       </InputAdornment>
                     }
-                    onChange={this.myChangeHandler}
                     color='primary'
                   />
 
@@ -168,7 +166,6 @@ class Comment extends Component {
                    name="Comment"
                    multiline
                    rows="4"
-                   onChange={this.myChangeHandler}
                    placeholder="Insert your comment here."
                    variant="outlined"
                    color='primary'
@@ -189,7 +186,11 @@ class Comment extends Component {
               <Typography style={{"fontSize":"30px", 'color':ColourTheme.FirstColour}}>
                 Comments
               </Typography>
-              <CommentsFromDataBase/>
+              <div>
+              <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'color':ColourTheme.FirstColour}}>
+                {commentsInState}
+              </Grid>
+              </div>
             </Grid>
           </Grid>
         </div>

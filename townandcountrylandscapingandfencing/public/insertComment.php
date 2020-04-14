@@ -33,11 +33,11 @@ if (mysqli_query($conn, $sql)) {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
-$to = "tcland-enquiries@hotmail.co.uk";
+$to = "stuart.a.creed@gmail.com";
 $subject = "A comment has been been made on your Town and Country Landscaping and Fencing website";
 $headers = "MIME-Version: 1.0" . "\r\n";
 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-$headers .= 'From: <stuart.a.creed@gmail.com>' . "\r\n";
+$headers .= 'From: <creedsuart@hotmail.co.uk>' . "\r\n";
 
 $message = '<html><body>';
 $message .= "<p>Comment on Service " . strip_tags($Service) . " is: " . strip_tags($CommentFromInput) . "</p>";
