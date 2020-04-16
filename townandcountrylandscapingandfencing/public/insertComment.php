@@ -33,6 +33,7 @@ if (mysqli_query($conn, $sql)) {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
 
+// Notify via email that comment has been inserted into database
 $to = "stuart.a.creed@gmail.com";
 $subject = "A comment has been been made on your Town and Country Landscaping and Fencing website";
 $headers = "MIME-Version: 1.0" . "\r\n";

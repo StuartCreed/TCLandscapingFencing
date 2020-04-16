@@ -71,7 +71,21 @@ class Comment extends Component {
     this.setState({
       Comments: concatenatedComments
     })
-    /*AXIOS POST FUNCTION GOES HERE*/
+    /*
+    axios.post('http://www.tc-landscaping.co.uk/insertComment.php', {
+      FirstName: 'Fred',
+      SecondName: 'Flintstone',
+      Comment: 'This is the Comment',
+      Service: 'This is the Service',
+      ServiceID: '4'
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    */
   }
 
   myChangeHandler = (event) => {
