@@ -136,6 +136,7 @@
   dependencies:
     "@babel/traverse" "^7.7.4"
     "@babel/types" "^7.7.4"
+<<<<<<< HEAD
 
 "@babel/helper-function-name@^7.7.4":
   version "7.7.4"
@@ -146,6 +147,18 @@
     "@babel/template" "^7.7.4"
     "@babel/types" "^7.7.4"
 
+=======
+
+"@babel/helper-function-name@^7.7.4":
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/@babel/helper-function-name/-/helper-function-name-7.7.4.tgz#ab6e041e7135d436d8f0a3eca15de5b67a341a2e"
+  integrity sha512-AnkGIdiBhEuiwdoMnKm7jfPfqItZhgRaZfMg1XX3bS25INOnLPjPG1Ppnajh8eqgt5kPJnfqrRHqFqmjKDZLzQ==
+  dependencies:
+    "@babel/helper-get-function-arity" "^7.7.4"
+    "@babel/template" "^7.7.4"
+    "@babel/types" "^7.7.4"
+
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 "@babel/helper-function-name@^7.8.3":
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/helper-function-name/-/helper-function-name-7.8.3.tgz#eeeb665a01b1f11068e9fb86ad56a1cb1a824cca"
@@ -722,6 +735,9 @@
     "@babel/helper-annotate-as-pure" "^7.7.4"
     "@babel/helper-plugin-utils" "^7.0.0"
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 
 "@babel/plugin-transform-react-display-name@7.7.4", "@babel/plugin-transform-react-display-name@^7.7.4":
   version "7.7.4"
@@ -729,6 +745,7 @@
   integrity sha512-sBbIvqYkthai0X0vkD2xsAwluBp+LtNHH+/V4a5ydifmTtb8KOVOlrMIk/MYmIc4uTYDnjZUHQildYNo36SRJw==
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
+<<<<<<< HEAD
 
 "@babel/plugin-transform-react-jsx-self@^7.7.4":
   version "7.7.4"
@@ -747,10 +764,26 @@
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-self/-/plugin-transform-react-jsx-self-7.7.4.tgz#81b8fbfd14b2215e8f1c2c3adfba266127b0231c"
   integrity sha512-PWYjSfqrO273mc1pKCRTIJXyqfc9vWYBax88yIhQb+bpw3XChVC7VWS4VwRVs63wFHKxizvGSd00XEr+YB9Q2A==
+=======
+
+"@babel/plugin-transform-react-jsx-self@^7.7.4":
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-self/-/plugin-transform-react-jsx-self-7.7.4.tgz#81b8fbfd14b2215e8f1c2c3adfba266127b0231c"
+  integrity sha512-PWYjSfqrO273mc1pKCRTIJXyqfc9vWYBax88yIhQb+bpw3XChVC7VWS4VwRVs63wFHKxizvGSd00XEr+YB9Q2A==
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
     "@babel/plugin-syntax-jsx" "^7.7.4"
 
+"@babel/plugin-transform-react-jsx-source@^7.7.4":
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-source/-/plugin-transform-react-jsx-source-7.7.4.tgz#8994b1bf6014b133f5a46d3b7d1ee5f5e3e72c10"
+  integrity sha512-5ZU9FnPhqtHsOXxutRtXZAzoEJwDaP32QcobbMP1/qt7NYcsCNK8XgzJcJfoEr/ZnzVvUNInNjIW22Z6I8p9mg==
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/plugin-syntax-jsx" "^7.7.4"
+
+<<<<<<< HEAD
 "@babel/plugin-transform-react-jsx-source@^7.7.4":
   version "7.7.4"
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx-source/-/plugin-transform-react-jsx-source-7.7.4.tgz#8994b1bf6014b133f5a46d3b7d1ee5f5e3e72c10"
@@ -820,6 +853,36 @@
   resolved "https://registry.yarnpkg.com/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.7.4.tgz#51fe458c1c1fa98a8b07934f4ed38b6cd62177a6"
   integrity sha512-O8kSkS5fP74Ad/8pfsCMGa8sBRdLxYoSReaARRNSz3FbFQj3z/QUvoUmJ28gn9BO93YfnXc3j+Xyaqe8cKDNBQ==
   dependencies:
+=======
+"@babel/plugin-transform-react-jsx@^7.7.4":
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-react-jsx/-/plugin-transform-react-jsx-7.7.4.tgz#d91205717fae4e2f84d020cd3057ec02a10f11da"
+  integrity sha512-LixU4BS95ZTEAZdPaIuyg/k8FiiqN9laQ0dMHB4MlpydHY53uQdWCUrwjLr5o6ilS6fAgZey4Q14XBjl5tL6xw==
+  dependencies:
+    "@babel/helper-builder-react-jsx" "^7.7.4"
+    "@babel/helper-plugin-utils" "^7.0.0"
+    "@babel/plugin-syntax-jsx" "^7.7.4"
+
+"@babel/plugin-transform-regenerator@^7.7.4":
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-regenerator/-/plugin-transform-regenerator-7.7.4.tgz#d18eac0312a70152d7d914cbed2dc3999601cfc0"
+  integrity sha512-e7MWl5UJvmPEwFJTwkBlPmqixCtr9yAASBqff4ggXTNicZiwbF8Eefzm6NVgfiBp7JdAGItecnctKTgH44q2Jw==
+  dependencies:
+    regenerator-transform "^0.14.0"
+
+"@babel/plugin-transform-reserved-words@^7.7.4":
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-reserved-words/-/plugin-transform-reserved-words-7.7.4.tgz#6a7cf123ad175bb5c69aec8f6f0770387ed3f1eb"
+  integrity sha512-OrPiUB5s5XvkCO1lS7D8ZtHcswIC57j62acAnJZKqGGnHP+TIc/ljQSrgdX/QyOTdEK5COAhuc820Hi1q2UgLQ==
+  dependencies:
+    "@babel/helper-plugin-utils" "^7.0.0"
+
+"@babel/plugin-transform-runtime@7.7.4":
+  version "7.7.4"
+  resolved "https://registry.yarnpkg.com/@babel/plugin-transform-runtime/-/plugin-transform-runtime-7.7.4.tgz#51fe458c1c1fa98a8b07934f4ed38b6cd62177a6"
+  integrity sha512-O8kSkS5fP74Ad/8pfsCMGa8sBRdLxYoSReaARRNSz3FbFQj3z/QUvoUmJ28gn9BO93YfnXc3j+Xyaqe8cKDNBQ==
+  dependencies:
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
     "@babel/helper-module-imports" "^7.7.4"
     "@babel/helper-plugin-utils" "^7.0.0"
     resolve "^1.8.1"
@@ -1660,6 +1723,7 @@
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-13.0.3.tgz#76482af3981d4412d65371a318f992d33464a380"
   integrity sha512-K8/LfZq2duW33XW/tFwEAfnZlqIfVsoyRB3kfXdPXYhl0nfM8mmh7GS0jg7WrX2Dgq/0Ha/pR1PaR+BvmWwjiQ==
 <<<<<<< HEAD
+<<<<<<< HEAD
   dependencies:
     "@types/yargs-parser" "*"
 
@@ -1669,6 +1733,8 @@
   integrity sha512-rT51fNLW0u3fnDGnAHVC5nu+Das+y2CpW10yqvf6/j5xbuUV3FxA3mBaIbM24CXODXjbgUznNb4Kg9XZOUxKAw==
   dependencies:
 =======
+=======
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
   dependencies:
     "@types/yargs-parser" "*"
 
@@ -1677,6 +1743,9 @@
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-2.10.0.tgz#c4cb103275e555e8a7e9b3d14c5951eb6d431e70"
   integrity sha512-rT51fNLW0u3fnDGnAHVC5nu+Das+y2CpW10yqvf6/j5xbuUV3FxA3mBaIbM24CXODXjbgUznNb4Kg9XZOUxKAw==
   dependencies:
+<<<<<<< HEAD
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
+=======
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
     "@typescript-eslint/experimental-utils" "2.10.0"
     eslint-utils "^1.4.3"
@@ -1970,11 +2039,14 @@ ajv@6.5.3:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.12.0, ajv@^6.5.5:
   version "6.12.0"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.0.tgz#06d60b96d87b8454a5adaba86e7854da629db4b7"
   integrity sha512-D6gFiFA0RRLyUbvijN74DWAjXSFxWKaWP7mldxkVhyhAV3+SWA9HEJPHQ2c9soIeTFJqcSdFDGFgdqs1iUU2Hw==
 =======
+=======
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
@@ -1985,7 +2057,10 @@ ajv@^6.1.0, ajv@^6.10.0, ajv@^6.10.2, ajv@^6.5.5:
   integrity sha512-TXtUUEYHuaTEbLZWIKUr5pmBuhDLy+8KYtPYdcV8qC+pOZL+NKqYwvWSRrVXHn+ZmRRAu8vJTAznH7Oag6RVRw==
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 648ddc3... Error Test
+=======
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
@@ -2787,6 +2862,7 @@ camelcase@5.0.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 camelcase@^4.0.0, camelcase@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
@@ -2796,6 +2872,9 @@ camelcase@^5.0.0, camelcase@^5.2.0, camelcase@^5.3.1:
 =======
 camelcase@5.3.1, camelcase@^5.0.0, camelcase@^5.3.1:
 >>>>>>> parent of 648ddc3... Error Test
+=======
+camelcase@5.3.1, camelcase@^5.0.0, camelcase@^5.3.1:
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 camelcase@5.3.1, camelcase@^5.0.0, camelcase@^5.3.1:
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
@@ -2952,7 +3031,10 @@ clean-css@4.2.x:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
 clean-stack@^2.0.0:
@@ -2961,6 +3043,9 @@ clean-stack@^2.0.0:
   integrity sha512-4diC9HaTE+KRAMWhDhrGOECgWZxoevMc5TlkObMqNSsVU62PYzXZ/SMTjzyGAFF1YusgxGcSWTEXBhp0CPwQ1A==
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
+=======
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
@@ -2994,7 +3079,10 @@ cli-width@^2.0.0:
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.2.0.tgz#ff19ede8a9a5e579324147b0c11f0fbcbabed639"
   integrity sha1-/xnt6Kml5XkyQUewwR8PvLq+1jk=
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 
 clipboardy@1.2.3:
   version "1.2.3"
@@ -3155,7 +3243,11 @@ compose-function@3.0.3:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 compressible@~2.0.14, compressible@~2.0.16:
+=======
+compressible@~2.0.14:
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 compressible@~2.0.14:
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
@@ -3190,6 +3282,7 @@ compression@1.7.3:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 compression@^1.5.2:
 =======
 compressible@~2.0.16:
@@ -3201,6 +3294,9 @@ compressible@~2.0.16:
 
 compression@^1.7.4:
 >>>>>>> parent of 648ddc3... Error Test
+=======
+compression@^1.7.4:
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 compression@^1.7.4:
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
@@ -4984,7 +5080,10 @@ get-own-enumerable-property-symbols@^3.0.0:
   resolved "https://registry.yarnpkg.com/get-own-enumerable-property-symbols/-/get-own-enumerable-property-symbols-3.0.1.tgz#6f7764f88ea11e0b514bd9bd860a132259992ca4"
   integrity sha512-09/VS4iek66Dh2bctjRkowueRJbY1JDGR1L/zRxO1Qk8Uxs6PnqaNSqalpizPT+CDjre3hnEsuzvhgomz9qYrA==
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 
 get-stream@^3.0.0:
   version "3.0.0"
@@ -7068,8 +7167,11 @@ miller-rabin@^4.0.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 mime-db@1.43.0, "mime-db@>= 1.43.0 < 2":
 =======
+=======
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
 mime-db@1.42.0, "mime-db@>= 1.40.0 < 2":
@@ -7079,6 +7181,9 @@ mime-db@1.42.0, "mime-db@>= 1.40.0 < 2":
 
 "mime-db@>= 1.43.0 < 2":
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
+=======
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
@@ -7460,6 +7565,7 @@ node-pre-gyp@^0.12.0:
     rimraf "^2.6.1"
     semver "^5.3.0"
     tar "^4"
+<<<<<<< HEAD
 
 node-releases@^1.1.40:
   version "1.1.46"
@@ -7468,6 +7574,16 @@ node-releases@^1.1.40:
   dependencies:
     semver "^6.3.0"
 
+=======
+
+node-releases@^1.1.40:
+  version "1.1.46"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.46.tgz#6b262afef1bdc9a950a96df2e77e0d2290f484bf"
+  integrity sha512-YOjdx+Uoh9FbRO7yVYbnbt1puRWPQMemR3SutLeyv2XfxKs1ihpe0OLAUwBPEP2ImNH/PZC7SEiC6j32dwRZ7g==
+  dependencies:
+    semver "^6.3.0"
+
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 node-releases@^1.1.41:
   version "1.1.42"
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.42.tgz#a999f6a62f8746981f6da90627a8d2fc090bbad7"
@@ -7895,6 +8011,28 @@ p-map@^3.0.0:
   resolved "https://registry.yarnpkg.com/p-map/-/p-map-3.0.0.tgz#d704d9af8a2ba684e2600d9a215983d4141a979d"
   integrity sha512-d3qXVTF/s+W+CdJ5A29wywV2n8CQQYahlgz2bFiA+4eVNJbHJodPZ+/gXwPGh0bOqA+j8S+6+ckmvLGPk1QpxQ==
   dependencies:
+<<<<<<< HEAD
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
+=======
+    p-limit "^2.0.0"
+
+p-locate@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/p-locate/-/p-locate-4.1.0.tgz#a3428bb7088b3a60292f66919278b7c297ad4f07"
+  integrity sha512-R79ZZ/0wAxKGu3oYMlz8jy/kbhsNrS7SKZ7PxEHBgJ5+F2mtFW2fK2cOtBh1cHYkQsbzFV7I+EoRKe6Yt0oK7A==
+  dependencies:
+    p-limit "^2.2.0"
+
+p-map@^2.0.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/p-map/-/p-map-2.1.0.tgz#310928feef9c9ecc65b68b17693018a665cea175"
+  integrity sha512-y3b8Kpd8OAN444hxfBbFfj1FY/RjtTd8tzYwhUqNYXx0fXx2iX4maP4Qr6qhIKbQXI02wTLAda4fYUbDagTUFw==
+
+p-map@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/p-map/-/p-map-3.0.0.tgz#d704d9af8a2ba684e2600d9a215983d4141a979d"
+  integrity sha512-d3qXVTF/s+W+CdJ5A29wywV2n8CQQYahlgz2bFiA+4eVNJbHJodPZ+/gXwPGh0bOqA+j8S+6+ckmvLGPk1QpxQ==
+  dependencies:
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
     aggregate-error "^3.0.0"
 
@@ -8040,10 +8178,14 @@ path-is-absolute@^1.0.0:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 path-is-inside@1.0.2, path-is-inside@^1.0.1:
 =======
 path-is-inside@^1.0.2:
 >>>>>>> parent of 648ddc3... Error Test
+=======
+path-is-inside@1.0.2, path-is-inside@^1.0.2:
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 path-is-inside@1.0.2, path-is-inside@^1.0.2:
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
@@ -8983,11 +9125,14 @@ pseudomap@^1.0.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 psl@^1.1.28:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/psl/-/psl-1.8.0.tgz#9326f8bcfb013adcc005fdff056acce020e51c24"
   integrity sha512-RIdOzyoavK+hA18OGGWDqUTsCLhtA7IcZ/6NCs4fFJaHBDab+pDDmDIByWFRQJq2Cd7r1OoQxBGKOaztq+hjIQ==
 =======
+=======
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
@@ -8998,7 +9143,10 @@ psl@^1.1.24, psl@^1.1.28:
   integrity sha512-4vqUjKi2huMu1OJiLhi3jN6jeeKvMZdI1tYgi/njW5zV52jNLgSAZSdN16m9bJFe61/cT8ulmw4qFitV9QRsEA==
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> parent of 648ddc3... Error Test
+=======
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
@@ -9049,10 +9197,14 @@ punycode@1.3.2:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 punycode@^1.2.4, punycode@^1.3.2:
 =======
 punycode@^1.2.4, punycode@^1.4.1:
 >>>>>>> parent of 648ddc3... Error Test
+=======
+punycode@^1.2.4, punycode@^1.3.2, punycode@^1.4.1:
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 punycode@^1.2.4, punycode@^1.3.2, punycode@^1.4.1:
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
@@ -9573,10 +9725,14 @@ registry-url@3.1.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 regjsgen@^0.5.1:
 =======
 regjsgen@^0.5.0:
 >>>>>>> parent of 648ddc3... Error Test
+=======
+regjsgen@^0.5.0:
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 regjsgen@^0.5.0:
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
@@ -10009,10 +10165,14 @@ serve-handler@6.1.2:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 serve-index@^1.7.2:
 =======
 serve-index@^1.9.1:
 >>>>>>> parent of 648ddc3... Error Test
+=======
+serve-index@^1.9.1:
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 serve-index@^1.9.1:
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
@@ -10672,8 +10832,11 @@ term-size@^1.2.0:
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 terser-webpack-plugin@1.4.1:
 =======
+=======
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
@@ -10682,6 +10845,7 @@ terser-webpack-plugin@2.2.1:
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-2.2.1.tgz#5569e6c7d8be79e5e43d6da23acc3b6ba77d22bd"
   integrity sha512-jwdauV5Al7zopR6OAYvIIRcxXCSvLjZjr7uZE8l2tIWb/ryrGN48sJftqGf5k9z09tWhajx53ldp0XPI080YnA==
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   dependencies:
@@ -10699,6 +10863,8 @@ terser-webpack-plugin@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/terser-webpack-plugin/-/terser-webpack-plugin-1.4.1.tgz#61b18e40eaee5be97e771cdbb10ed1280888c2b4"
   integrity sha512-ZXmmfiwtCLfz8WKZyYUuuHf3dMYEjg8NrjHMb0JqHVHVOSkzp3cW2/XG1fP3tRhqEqSzMwzzRQGtAPbs4Cncxg==
+=======
+>>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
 >>>>>>> parent of 718c3a7... Update to Make Heroku Work
 =======
