@@ -12,6 +12,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import ColourTheme from '../ColourTheme';
+import $ from "jquery";
 
 const styles = theme => ({
   root: {
@@ -71,21 +72,28 @@ class Comment extends Component {
     this.setState({
       Comments: concatenatedComments
     })
-    /*
-    axios.post('http://www.tc-landscaping.co.uk/insertComment.php', {
-      FirstName: 'Fred',
-      SecondName: 'Flintstone',
-      Comment: 'This is the Comment',
-      Service: 'This is the Service',
-      ServiceID: '4'
-    })
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
+
+    $.post("http://www.tc-landscaping.co.uk/insertComment.php",
+    {
+      FirstName: this.state.newCommentorFirstName,
+      SecondName: this.state.newCommentorSecondName,
+      Comment: this.state.newComment,
+      Service: this.props.service,
+      ServiceID: String(this.props.id)
+    },
+    (data, status) => {
+      if (status === "success") {
+          alert("Comment Successfully Stored!");
+          this.setState({newComment: ""});
+          this.setState({newCommentorFirstName: ""});
+          this.setState({newCommentorSecondName: ""});
+          /*THE ABOVE IS NOT CHANGING THINGS*/
+      }
+      else {
+        alert("Status: " + status);
+      }
+
     });
-    */
   }
 
   myChangeHandler = (event) => {
@@ -99,14 +107,6 @@ class Comment extends Component {
       this.setState({newCommentorSecondName: event.target.value});
     }
   }
-
-  /*NEED TO MAP NEW COMMENT INTO STATE BY TRACKING THE NEW COMMENT LIVE IN STATE AND THEN ON SUBMIT UPDATE THE COMMENTS ARRAY AND REMOVE THE LIVE COMMENTS. then
-  WE DO AN AXIOS POST TO SEND THE DATABASE THE DATA. THIS WOULD QUICKLY UPDATE THE VIEW AND THEN UPDATE THE DATABASE.
-
-  NEED TO RENDER THE COMMETNS FIELDS UPON MOUNTING. NEED TO INCLUDE KEYS FOR EFFICIENCY. ONLY THE COMMENTS DATA SHOULD BE KEPT IN THE STATE, NOT THE JSX
-
-  NOW JUST NEED TO SET UP THE AXIOS POST REQUEST AND SET UP KEYS!!
-  */
 
   render() {
 
@@ -155,9 +155,6 @@ class Comment extends Component {
             <Grid xs={12} md={3} item className={classes.CommentFieldContainerStyle}>
               <form method="post" onSubmit={this.handleSubmit}>
                 <FormControl className={classes.margin} >
-
-                  <input name="Service" value={this.props.service} style={{"display":"none"}}/>
-                  <input name="ServiceID" value={String(this.props.serviceID)} style={{"display":"none"}}/>
 
                   <Input
                     id="FirstName"
