@@ -41,10 +41,10 @@ class Comment extends Component {
   constructor(props) {
     super(props);
       this.state = {
-        Comments: [],
-        newCommentorFirstName: [],
-        newCommentorSecondName: [],
-        newComment: []
+        Comments: [""],
+        newCommentorFirstName: [""],
+        newCommentorSecondName: [""],
+        newComment: [""]
       };
   }
 
@@ -64,46 +64,58 @@ class Comment extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    const todayDateConst = new Date();
-    const todayDateString = String(todayDateConst.toISOString().substr(0,10));
-    let originalCommentsArray = this.state.Comments;
-    let newCommentsArray = [[String(this.props.id), this.props.service, this.state.newCommentorFirstName, this.state.newCommentorSecondName, todayDateString, this.state.newComment]];
-    let concatenatedComments = originalCommentsArray.concat(newCommentsArray);
-    this.setState({
-      Comments: concatenatedComments
-    })
+    console.log(this.state.newCommentorFirstName[0], "NEW COMMENTOR FIRST NAME");
+    if (this.state.newCommentorFirstName[0] === "") {
+      alert('Comment not Submitted, you must submit a First Name')
+    }
+    if (this.state.newCommentorSecondName[0] === "") {
+      alert('Comment not Submitted, you must submit a Second Name')
+    }
+    if (this.state.newComment[0] === "") {
+      alert('Comment not Submitted, you must submit a Comment')
+    }
+    else if (this.state.newCommentorFirstName[0] !== "" && this.state.newCommentorSecondName[0] !== "" && this.state.newComment[0] !== "") {
+      const todayDateConst = new Date();
+      const todayDateString = String(todayDateConst.toISOString().substr(0,10));
+      let originalCommentsArray = this.state.Comments;
+      let newCommentsArray = [[String(this.props.id), this.props.service, this.state.newCommentorFirstName, this.state.newCommentorSecondName, todayDateString, this.state.newComment]];
+      let concatenatedComments = originalCommentsArray.concat(newCommentsArray);
+      this.setState({
+        Comments: concatenatedComments
+      })
 
-    $.post("http://www.tc-landscaping.co.uk/insertComment.php",
-    {
-      FirstName: this.state.newCommentorFirstName,
-      SecondName: this.state.newCommentorSecondName,
-      Comment: this.state.newComment,
-      Service: this.props.service,
-      ServiceID: String(this.props.id)
-    },
-    (data, status) => {
-      if (status === "success") {
-          alert("Comment Successfully Stored!");
-          this.setState({newComment: ""});
-          this.setState({newCommentorFirstName: ""});
-          this.setState({newCommentorSecondName: ""});
-      }
-      else {
-        alert("Status: " + status);
-      }
+      $.post("http://www.tc-landscaping.co.uk/insertComment.php",
+      {
+        FirstName: this.state.newCommentorFirstName,
+        SecondName: this.state.newCommentorSecondName,
+        Comment: this.state.newComment,
+        Service: this.props.service,
+        ServiceID: String(this.props.id)
+      },
+      (data, status) => {
+        if (status === "success") {
+            alert("Comment Successfully Stored!");
+            this.setState({newComment: [""]});
+            this.setState({newCommentorFirstName: [""]});
+            this.setState({newCommentorSecondName: [""]});
+        }
+        else {
+          alert("Status: " + status);
+        }
 
-    });
+      });
+    }
   }
 
   myChangeHandler = (event) => {
     if ([event.target.name][0] === "Comment") {
-      this.setState({newComment: event.target.value});
+      this.setState({newComment: [event.target.value]});
     }
     if ([event.target.name][0] === "FirstName") {
-      this.setState({newCommentorFirstName: event.target.value});
+      this.setState({newCommentorFirstName: [event.target.value]});
     }
     if ([event.target.name][0] === "SecondName") {
-      this.setState({newCommentorSecondName: event.target.value});
+      this.setState({newCommentorSecondName: [event.target.value]});
     }
   }
 
@@ -118,27 +130,28 @@ class Comment extends Component {
         )
       }
       else {
-        let commentRendered = this.state.Comments.map((comment) => {
-          return (
-            <>
-                <Grid xs={12} md={4} item>
-                <Card variant="outlined" style={{'margin':'20px'}}>
-                 <CardContent>
-                   <Typography style={{"fontSize":"14"}} color='primary'>
-                     <b>Name:</b> {comment[2]} {comment[3]}
-                   </Typography>
-                   <Typography style={{"fontSize":"14"}} color='primary'>
-                     <b>Date:</b> {comment[4]}
-                   </Typography>
-                   <Typography style={{"fontSize":"14"}} color='primary'>
-                     <b>Comment:</b> {comment[5]}
-                   </Typography>
-                 </CardContent>
-                </Card>
-                </Grid>
-            </>
-          )
-        })
+        console.log(this.state.Comments);
+          let commentRendered = this.state.Comments.map((comment) => {
+            return (
+              <>
+                  <Grid xs={12} md={4} item>
+                  <Card variant="outlined" style={{'margin':'20px'}}>
+                   <CardContent>
+                     <Typography style={{"fontSize":"14"}} color='primary'>
+                       <b>Name:</b> {comment[2]} {comment[3]}
+                     </Typography>
+                     <Typography style={{"fontSize":"14"}} color='primary'>
+                       <b>Date:</b> {comment[4]}
+                     </Typography>
+                     <Typography style={{"fontSize":"14"}} color='primary'>
+                       <b>Comment:</b> {comment[5]}
+                     </Typography>
+                   </CardContent>
+                  </Card>
+                  </Grid>
+              </>
+            )
+          })
         return (
           <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'color':ColourTheme.FirstColour}}>
             {commentRendered}
