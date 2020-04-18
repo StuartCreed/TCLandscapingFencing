@@ -87,7 +87,6 @@ class Comment extends Component {
           this.setState({newComment: ""});
           this.setState({newCommentorFirstName: ""});
           this.setState({newCommentorSecondName: ""});
-          /*THE ABOVE IS NOT CHANGING THINGS*/
       }
       else {
         alert("Status: " + status);
@@ -166,6 +165,7 @@ class Comment extends Component {
                       </InputAdornment>
                     }
                     onChange={this.myChangeHandler}
+                    value={this.state.newCommentorFirstName}
                     color='primary'
                   />
 
@@ -179,6 +179,7 @@ class Comment extends Component {
                       </InputAdornment>
                     }
                     onChange={this.myChangeHandler}
+                    value={this.state.newCommentorSecondName}
                     color='primary'
                   />
 
@@ -193,6 +194,7 @@ class Comment extends Component {
                    variant="outlined"
                    color='primary'
                    style={{'margin':'30px'}}
+                   value={this.state.newComment}
                   />
 
 
