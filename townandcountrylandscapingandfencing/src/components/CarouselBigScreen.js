@@ -8,47 +8,78 @@ export default class CarouselBigScreen extends Component {
     constructor(props) {
       super(props);
          this.state = {
-          loaded: 'false',
+          imgOneloaded: 'false',
+          imgTwoloaded: 'false',
+          imgThreeloaded: 'false'
       };
     }
 
-    handleLoad = () => {
-      this.setState({loaded: 'true'});
+    handleimgOneloaded = () => {
+      this.setState({imgOneloaded: 'true'});
     }
 
+    handleimgTwoloaded = () => {
+      this.setState({imgTwoloaded: 'true'});
+    }
+
+    handleimgThreeloaded = () => {
+      this.setState({imgThreeloaded: 'true'});
+    }
 
     render() {
 
       const CarouselBigScreenComponent = () => {
-        const Images = () => {
-          return (
-            <>
-              <img src={this.props.photo1} alt="1" style={{'height':'500px'}}/>
-              <img src={this.props.photo2} alt="2" style={{'height':'500px'}}/>
-              <img src={this.props.photo3} alt="3" style={{'height':'500px'}} onLoad={this.handleLoad}/>
-            </>
-          )
-        }
-        if (this.state.loaded === 'false') {
-          return (
-            <>
-              <Skeleton animation="wave" width={"auto"} height={500} />
 
-              <Carousel
-              centered
-              infinite
-              keepDirectionWhenDragging
-              slidesPerPage={3}
-              dots
-              style={{'display': 'none'}}
-              >
-                <Images />
-              </Carousel>
-            </>
-          )
+        const Image1 = () => {
+          if (this.state.imgOneloaded === 'false') {
+            return (
+              <>
+                <Skeleton animation="wave" width={"100%"} height={500} alt="1"/>
+                <img src={this.props.photo1} alt="1" style={{'height':'500px', 'display':'none'}} onLoad={this.handleimgOneloaded}/>
+              </>
+            )
+          }
+          else if (this.state.imgOneloaded === 'true') {
+            return (
+              <img src={this.props.photo1} alt="1" style={{'height':'500px'}}/>
+            )
+          }
         }
-        else if (this.state.loaded === 'true') {
-          return (
+
+        const Image2 = () => {
+          if (this.state.imgTwoloaded === 'false') {
+            return (
+              <>
+                <Skeleton animation="wave" width={"100%"} height={500} alt="2"/>
+                <img src={this.props.photo2} alt="2" style={{'height':'500px', 'display':'none'}} onLoad={this.handleimgTwoloaded}/>
+              </>
+            )
+          }
+          else if (this.state.imgTwoloaded === 'true') {
+            return (
+              <img src={this.props.photo2} alt="2" style={{'height':'500px'}}/>
+            )
+          }
+        }
+
+        const Image3 = () => {
+          if (this.state.imgThreeloaded === 'false') {
+            return (
+              <>
+                <Skeleton animation="wave" width={"100%"} height={500} alt="3"/>
+                <img src={this.props.photo3} alt="3" style={{'height':'500px', 'display':'none'}} onLoad={this.handleimgThreeloaded}/>
+              </>
+            )
+          }
+          else if (this.state.imgTwoloaded === 'true') {
+            return (
+              <img src={this.props.photo3} alt="3" style={{'height':'500px'}}/>
+            )
+          }
+        }
+
+        return (
+          <>
             <Carousel
             centered
             infinite
@@ -56,12 +87,13 @@ export default class CarouselBigScreen extends Component {
             slidesPerPage={3}
             dots
             >
-              <img src={this.props.photo1} alt="1" style={{'height':'500px'}}/>
-              <img src={this.props.photo2} alt="2" style={{'height':'500px'}}/>
-              <img src={this.props.photo3} alt="3" style={{'height':'500px'}}/>
+              <Image1 />
+              <Image2 />
+              <Image3 />
             </Carousel>
-          )
-        }
+          </>
+        )
+
       }
 
       return (
