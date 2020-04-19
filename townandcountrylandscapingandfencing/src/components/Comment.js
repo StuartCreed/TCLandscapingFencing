@@ -13,6 +13,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import ColourTheme from '../ColourTheme';
 import $ from "jquery";
+import Switch from '@material-ui/core/Switch';
 
 const styles = theme => ({
   root: {
@@ -46,7 +47,7 @@ class Comment extends Component {
         newCommentorSecondName: [""],
         newComment: [""],
         greaterThanThreeComments: null,
-        showAllComments: "no",
+        showAllComments: false,
         lengthOfCommentsArrayStraightFromDatabaseBeforeTruncation: null
       };
   }
@@ -62,7 +63,7 @@ class Comment extends Component {
           this.setState({lengthOfCommentsArrayStraightFromDatabaseBeforeTruncation: lengthOfCommentsArrayStraightFromDatabase});
           if (lengthOfCommentsArrayStraightFromDatabase > 3) {
             this.setState({greaterThanThreeComments: "yes"});
-            if (this.state.showAllComments === "no") {
+            if (this.state.showAllComments === false ) {
               let numberOfCommentsToCut = lengthOfCommentsArrayStraightFromDatabase - 3;
               commentsArrays.splice(0,numberOfCommentsToCut);
             }
@@ -120,7 +121,6 @@ class Comment extends Component {
         else {
           alert("Status: " + status);
         }
-
       });
     }
   }
@@ -134,6 +134,18 @@ class Comment extends Component {
     }
     if ([event.target.name][0] === "SecondName") {
       this.setState({newCommentorSecondName: [event.target.value]});
+    }
+    if ([event.target.name][0] === "showCommentsToggleSwitch") {
+
+      if (this.state.showAllComments === false) {
+        this.setState({showAllComments: true});
+        this.getCommentsAction();
+      }
+      else if (this.state.showAllComments === true) {
+        this.setState({showAllComments: false});
+        this.getCommentsAction();
+      }
+      console.log(this.state.showAllComments, "showAllComments stATE")
     }
   }
 
@@ -179,6 +191,29 @@ class Comment extends Component {
       }
     }
 
+    const ShowCommentsToggle = () => {
+      if (this.state.greaterThanThreeComments === "no" || this.state.greaterThanThreeComments === null) {
+        return (
+          <div></div>
+        )
+      }
+
+      else if (this.state.greaterThanThreeComments === "yes") {
+        return (
+          <>
+              <Typography style={{"fontSize":"15px", 'color':ColourTheme.SecondColour, 'fontWeight':'bold'}}>
+                Show all Comments:
+                <Switch
+                checked={this.state.showAllComments}
+                onChange={this.myChangeHandler}
+                color="primary"
+                name="showCommentsToggleSwitch"
+                />
+              </Typography>
+          </>
+        )
+      }
+    }
 
       return (
         <div style={{'margin':'30px'}}>
@@ -243,6 +278,7 @@ class Comment extends Component {
               <Typography style={{"fontSize":"30px", 'color':ColourTheme.FirstColour}}>
                 Comments
               </Typography>
+              <ShowCommentsToggle/>
               <CommentsFromDataBase/>
             </Grid>
           </Grid>
