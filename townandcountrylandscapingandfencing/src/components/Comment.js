@@ -23,10 +23,6 @@ const styles = theme => ({
       width: '25ch',
     },
     minWidth: 275,
-    display: 'flex',
-    '& > * + *': {
-      marginLeft: theme.spacing(2),
-    },
   },
   margin: {
     margin: '10px'
@@ -179,9 +175,10 @@ class Comment extends Component {
       }
       if (this.state.Comments[0] === "") {
         return (
-          <div className={classes.root} style={{"textAlign":"center", "margin":"auto"}}>
-            <CircularProgress />
-            <CircularProgress color="secondary" />
+          <div style={{"textAlign":"center", "margin":"auto"}}>
+            <div style={{"textAlign":"center", "margin":"auto"}}>
+              <CircularProgress />
+            </div>
           </div>
         )
       }
@@ -309,7 +306,7 @@ class Comment extends Component {
             <Grid xs={12} item className={classes.CommentFieldContainerStyle}>
               <form onSubmit={this.showCommentFormFunction}>
                 <Button variant="contained" className={classes.ButtonColour} type="submit">
-                  Click on me to make a comment
+                  Make a comment
                 </Button>
               </form>
             </Grid>
