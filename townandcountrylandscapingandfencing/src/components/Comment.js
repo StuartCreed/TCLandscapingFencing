@@ -14,6 +14,7 @@ import Typography from '@material-ui/core/Typography';
 import ColourTheme from '../ColourTheme';
 import $ from "jquery";
 import Switch from '@material-ui/core/Switch';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 const styles = theme => ({
   root: {
@@ -22,6 +23,10 @@ const styles = theme => ({
       width: '25ch',
     },
     minWidth: 275,
+    display: 'flex',
+    '& > * + *': {
+      marginLeft: theme.spacing(2),
+    },
   },
   margin: {
     margin: '10px'
@@ -167,9 +172,17 @@ class Comment extends Component {
     const { classes } = this.props;
 
     const CommentsFromDataBase = () => {
-      if (this.state.Comments === "No Comments" || this.state.Comments[0] === "") {
+      if (this.state.Comments === "No Comments") {
         return (
           <div style={{"textAlign":"center", "margin":"auto"}}>There are currently no comments.</div>
+        )
+      }
+      if (this.state.Comments[0] === "") {
+        return (
+          <div className={classes.root} style={{"textAlign":"center", "margin":"auto"}}>
+            <CircularProgress />
+            <CircularProgress color="secondary" />
+          </div>
         )
       }
       else {
@@ -233,7 +246,7 @@ class Comment extends Component {
         console.log("PASSED TEST")
         return (
           <>
-          <Grid xs={12} md={3} item className={classes.CommentFieldContainerStyle}>
+          <Grid xs={12} md={3} item className={classes.CommentFieldContainerStyle} style={{'marginTop':'30px'}}>
           <form method="post" onSubmit={this.handleSubmit}>
             <FormControl className={classes.margin} >
 
