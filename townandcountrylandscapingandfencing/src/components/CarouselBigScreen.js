@@ -9,10 +9,11 @@ export default class CarouselBigScreen extends Component {
       super(props);
          this.state = {
           loaded: 'false',
+          loadedImg1: 'false',
       };
     }
 
-    handleLoad = () => {
+    handleLoadImg1 = () => {
       this.setState({loaded: 'true'});
     }
 
@@ -35,7 +36,7 @@ export default class CarouselBigScreen extends Component {
               >
                 <img src={this.props.photo1} alt="1" style={{'height':'500px'}}/>
                 <img src={this.props.photo2} alt="2" style={{'height':'500px'}}/>
-                <img src={this.props.photo3} alt="3" style={{'height':'500px'}} onLoad={this.handleLoad}/>
+                <img src={this.props.photo3} alt="3" style={{'height':'500px'}} onLoad={this.handleLoadImg1}/>
               </Carousel>
             </>
           )
