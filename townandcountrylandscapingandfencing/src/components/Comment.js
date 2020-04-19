@@ -44,7 +44,10 @@ class Comment extends Component {
         Comments: [""],
         newCommentorFirstName: [""],
         newCommentorSecondName: [""],
-        newComment: [""]
+        newComment: [""],
+        greaterThanThreeComments: null,
+        showAllComments: "no",
+        lengthOfCommentsArrayStraightFromDatabaseBeforeTruncation: null
       };
   }
 
@@ -54,8 +57,23 @@ class Comment extends Component {
     axios.get(getQuery)
     .then(resp => {
         let commentsArrays = resp.data;
+        if (commentsArrays !== "No Comments") {
+          let lengthOfCommentsArrayStraightFromDatabase = commentsArrays.length;
+          this.setState({lengthOfCommentsArrayStraightFromDatabaseBeforeTruncation: lengthOfCommentsArrayStraightFromDatabase});
+          if (lengthOfCommentsArrayStraightFromDatabase > 3) {
+            this.setState({greaterThanThreeComments: "yes"});
+            if (this.state.showAllComments === "no") {
+              let numberOfCommentsToCut = lengthOfCommentsArrayStraightFromDatabase - 3;
+              commentsArrays.splice(0,numberOfCommentsToCut);
+            }
+          }
+          if (lengthOfCommentsArrayStraightFromDatabase < 4) {
+            this.setState({greaterThanThreeComments: "no"});
+          }
+        }
         this.setState({Comments: commentsArrays});
     });
+
   }
 
   componentDidMount() {
@@ -83,18 +101,18 @@ class Comment extends Component {
       this.setState({
         Comments: concatenatedComments
       })
-
       $.post("http://www.tc-landscaping.co.uk/insertComment.php",
       {
-        FirstName: this.state.newCommentorFirstName,
-        SecondName: this.state.newCommentorSecondName,
-        Comment: this.state.newComment,
+        FirstName: this.state.newCommentorFirstName[0],
+        SecondName: this.state.newCommentorSecondName[0],
+        Comment: this.state.newComment[0],
         Service: this.props.service,
         ServiceID: String(this.props.id)
       },
       (data, status) => {
         if (status === "success") {
             alert("Comment Successfully Stored!");
+            /*The below resets comment form for that Service now that the comment has been submitted to the database*/
             this.setState({newComment: [""]});
             this.setState({newCommentorFirstName: [""]});
             this.setState({newCommentorSecondName: [""]});
@@ -130,29 +148,30 @@ class Comment extends Component {
         )
       }
       else {
-        console.log(this.state.Comments);
-          let commentRendered = this.state.Comments.map((comment) => {
-            return (
-              <>
-                  <Grid xs={12} md={4} item>
-                  <Card variant="outlined" style={{'margin':'20px'}}>
-                   <CardContent>
-                     <Typography style={{"fontSize":"14"}} color='primary'>
-                       <b>Name:</b> {comment[2]} {comment[3]}
-                     </Typography>
-                     <Typography style={{"fontSize":"14"}} color='primary'>
-                       <b>Date:</b> {comment[4]}
-                     </Typography>
-                     <Typography style={{"fontSize":"14"}} color='primary'>
-                       <b>Comment:</b> {comment[5]}
-                     </Typography>
-                   </CardContent>
-                  </Card>
-                  </Grid>
-              </>
-            )
-          })
-        return (
+        /*RETURN COMMENTS FROM DATABASE. IF > 3 THE COMMENTS IN THE STATE ARE TRUNCATED AS PART OF THE LOGIC IN getCommentsAction*/
+        let commentRendered = this.state.Comments.map((comment) => {
+          return (
+            <>
+                <Grid xs={12} md={4} item>
+                <Card variant="outlined" style={{'margin':'20px'}}>
+                 <CardContent>
+                   <Typography style={{"fontSize":"14"}} color='primary'>
+                     <b>Name:</b> {comment[2]} {comment[3]}
+                   </Typography>
+                   <Typography style={{"fontSize":"14"}} color='primary'>
+                     <b>Date:</b> {comment[4]}
+                   </Typography>
+                   <Typography style={{"fontSize":"14"}} color='primary'>
+                     <b>Comment:</b> {comment[5]}
+                   </Typography>
+                 </CardContent>
+                </Card>
+                </Grid>
+            </>
+          )
+        })
+
+      return (
           <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'color':ColourTheme.FirstColour}}>
             {commentRendered}
           </Grid>
