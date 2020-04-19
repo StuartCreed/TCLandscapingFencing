@@ -48,7 +48,8 @@ class Comment extends Component {
         newComment: [""],
         greaterThanThreeComments: null,
         showAllComments: false,
-        lengthOfCommentsArrayStraightFromDatabaseBeforeTruncation: null
+        lengthOfCommentsArrayStraightFromDatabaseBeforeTruncation: null,
+        showCommentForm: 'false'
       };
   }
 
@@ -79,6 +80,13 @@ class Comment extends Component {
 
   componentDidMount() {
     this.getCommentsAction();
+    console.log(this.props.mobile);
+    if (this.props.mobile === 'false') {
+      this.setState({showCommentForm: 'true'});
+    }
+    if (this.props.mobile === 'true') {
+      this.setState({showCommentForm: 'false'});
+    }
   }
 
   handleSubmit = (event) => {
@@ -125,6 +133,11 @@ class Comment extends Component {
     }
   }
 
+  showCommentFormFunction = (event) => {
+    event.preventDefault();
+    this.setState({showCommentForm: 'true'});
+  }
+
   myChangeHandler = (event) => {
     if ([event.target.name][0] === "Comment") {
       this.setState({newComment: [event.target.value]});
@@ -154,7 +167,7 @@ class Comment extends Component {
     const { classes } = this.props;
 
     const CommentsFromDataBase = () => {
-      if (this.state.Comments === "No Comments" ) {
+      if (this.state.Comments === "No Comments" || this.state.Comments[0] === "") {
         return (
           <div style={{"textAlign":"center", "margin":"auto"}}>There are currently no comments.</div>
         )
@@ -202,7 +215,7 @@ class Comment extends Component {
         return (
           <>
               <Typography style={{"fontSize":"15px", 'color':ColourTheme.SecondColour, 'fontWeight':'bold'}}>
-                Show all Comments:
+                Show all {this.state.lengthOfCommentsArrayStraightFromDatabaseBeforeTruncation} Comments:
                 <Switch
                 checked={this.state.showAllComments}
                 onChange={this.myChangeHandler}
@@ -215,64 +228,88 @@ class Comment extends Component {
       }
     }
 
-      return (
-        <div style={{'margin':'30px'}}>
-          <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-            <Grid xs={12} md={3} item className={classes.CommentFieldContainerStyle}>
-              <form method="post" onSubmit={this.handleSubmit}>
-                <FormControl className={classes.margin} >
+    const CommentForm = () => {
+      if (this.state.showCommentForm === 'true') {
+        console.log("PASSED TEST")
+        return (
+          <>
+          <Grid xs={12} md={3} item className={classes.CommentFieldContainerStyle}>
+          <form method="post" onSubmit={this.handleSubmit}>
+            <FormControl className={classes.margin} >
 
-                  <Input
-                    id="FirstName"
-                    name="FirstName"
-                    placeholder="First Name"
-                    startAdornment={
-                      <InputAdornment position="start">
-                        <AccountCircle />
-                      </InputAdornment>
-                    }
-                    onChange={this.myChangeHandler}
-                    value={this.state.newCommentorFirstName}
-                    color='primary'
-                  />
+              <Input
+                id="FirstName"
+                name="FirstName"
+                placeholder="First Name"
+                startAdornment={
+                  <InputAdornment position="start">
+                    <AccountCircle />
+                  </InputAdornment>
+                }
+                onChange={this.myChangeHandler}
+                value={this.state.newCommentorFirstName}
+                color='primary'
+              />
 
-                  <Input
-                    id="SecondName"
-                    name="SecondName"
-                    placeholder="Second Name"
-                    startAdornment={
-                      <InputAdornment position="start">
-                        <AccountCircle />
-                      </InputAdornment>
-                    }
-                    onChange={this.myChangeHandler}
-                    value={this.state.newCommentorSecondName}
-                    color='primary'
-                  />
+              <Input
+                id="SecondName"
+                name="SecondName"
+                placeholder="Second Name"
+                startAdornment={
+                  <InputAdornment position="start">
+                    <AccountCircle />
+                  </InputAdornment>
+                }
+                onChange={this.myChangeHandler}
+                value={this.state.newCommentorSecondName}
+                color='primary'
+              />
 
-                  <TextField
-                   id="Comment"
-                   label="Comment"
-                   name="Comment"
-                   multiline
-                   rows="4"
-                   onChange={this.myChangeHandler}
-                   placeholder="Insert your comment here."
-                   variant="outlined"
-                   color='primary'
-                   style={{'margin':'30px'}}
-                   value={this.state.newComment}
-                  />
+              <TextField
+               id="Comment"
+               label="Comment"
+               name="Comment"
+               multiline
+               rows="4"
+               onChange={this.myChangeHandler}
+               placeholder="Insert your comment here."
+               variant="outlined"
+               color='primary'
+               style={{'margin':'30px'}}
+               value={this.state.newComment}
+              />
 
 
-                  <Button variant="contained" className={classes.ButtonColour} type="submit">
-                    Submit
-                  </Button>
+              <Button variant="contained" className={classes.ButtonColour} type="submit">
+                Submit
+              </Button>
 
-                </FormControl>
+            </FormControl>
+          </form>
+          </Grid>
+          </>
+        )
+      }
+      else if (this.state.showCommentForm === 'false') {
+        return (
+          <>
+            <Grid xs={12} item className={classes.CommentFieldContainerStyle}>
+              <form onSubmit={this.showCommentFormFunction}>
+                <Button variant="contained" className={classes.ButtonColour} type="submit">
+                  Click on me to make a comment
+                </Button>
               </form>
             </Grid>
+          </>
+        )
+      }
+    }
 
+    return (
+        <div style={{'margin':'0px 30px 0px 30px'}}>
+          <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
+
+            <CommentForm />
 
             <Grid xs={12} md={9} item className={classes.CommentFieldContainerStyle}>
               <Typography style={{"fontSize":"30px", 'color':ColourTheme.FirstColour}}>

@@ -49,7 +49,7 @@ class Carousels extends Component {
                 <CarouselSmallScreen photos={SERVICES[item.id].PorfoliioPagePhotos} photo1={SERVICES[item.id].PorfoliioPagePhotos.photo1} photo2={SERVICES[item.id].PorfoliioPagePhotos.photo2} photo3={SERVICES[item.id].PorfoliioPagePhotos.photo3} />
               </Grid>
               <Grid xs={12} item>
-                <Comment service={SERVICES[item.id].service} id={item.id}/>
+                <Comment service={SERVICES[item.id].service} id={item.id} mobile='true' />
               </Grid>
             </Grid>
           </Hidden>
@@ -66,7 +66,7 @@ class Carousels extends Component {
                 <CarouselBigScreen photos={SERVICES[item.id].PorfoliioPagePhotos} photo1={SERVICES[item.id].PorfoliioPagePhotos.photo1} photo2={SERVICES[item.id].PorfoliioPagePhotos.photo2} photo3={SERVICES[item.id].PorfoliioPagePhotos.photo3} />
               </Grid>
               <Grid xs={12} item>
-                <Comment service={SERVICES[item.id].service} id={item.id}/>
+                <Comment service={SERVICES[item.id].service} id={item.id} mobile='false'/>
               </Grid>
             </Grid>
           </Hidden>
