@@ -81,7 +81,6 @@ class Comment extends Component {
 
   componentDidMount() {
     this.getCommentsAction();
-    console.log(this.props.mobile);
     if (this.props.mobile === 'false') {
       this.setState({showCommentForm: 'true'});
     }
@@ -92,7 +91,6 @@ class Comment extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state.newCommentorFirstName[0], "NEW COMMENTOR FIRST NAME");
     if (this.state.newCommentorFirstName[0] === "") {
       alert('Comment not Submitted, you must submit a First Name')
     }
@@ -159,7 +157,6 @@ class Comment extends Component {
         this.setState({showAllComments: false});
         this.getCommentsAction();
       }
-      console.log(this.state.showAllComments, "showAllComments stATE")
     }
   }
 
@@ -240,7 +237,6 @@ class Comment extends Component {
 
     const CommentForm = () => {
       if (this.state.showCommentForm === 'true') {
-        console.log("PASSED TEST")
         return (
           <>
           <Grid xs={12} md={3} item className={classes.CommentFieldContainerStyle} style={{'marginTop':'30px'}}>
