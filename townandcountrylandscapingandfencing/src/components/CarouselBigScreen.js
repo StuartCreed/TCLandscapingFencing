@@ -97,7 +97,9 @@ export default class CarouselBigScreen extends Component {
       }
 
       return (
-        <CarouselBigScreenComponent />
+        <>
+            <CarouselBigScreenComponent />
+        </>
       )
 
     }

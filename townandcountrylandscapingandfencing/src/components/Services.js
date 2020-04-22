@@ -9,6 +9,9 @@ import ServicesCard from './ServicesCard';
 import Outro from './Outro.js';
 import {SERVICES} from '../ServicesJSON';
 import HoverScrollTop from './HoverScrollTop';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
+
 
 const styles = theme => ({
   CardGridStyle: {
@@ -34,15 +37,20 @@ class Services extends Component {
     const CardWithJSON = SERVICES.map((item) => {
       return (
         <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
+        <ScrollAnimation animateIn="fadeInUp" duration="1">
           <ServicesCard cardService={item} mobile={'false'}/>
+        </ScrollAnimation>
         </Grid>
+
       )
     })
 
     const MobileCardWithJSON = SERVICES.map((item) => {
       return (
         <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
-          <ServicesCard cardService={item} mobile={'true'} />
+          <ScrollAnimation animateIn="fadeInUp" duration="1">
+            <ServicesCard cardService={item} mobile={'true'} />
+          </ScrollAnimation>
         </Grid>
       )
     })
@@ -50,6 +58,7 @@ class Services extends Component {
     return(
         <>
             <Navbar page={'Services'}/>
+
             {/*MOBILE VIEW*/}
             <Hidden lgUp>
             <Grid xs={12} item container style={{'direction':'row', 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'64px', 'padding': '0px'}} >
@@ -69,6 +78,7 @@ class Services extends Component {
 
             {/*HOVERSCROLL*/}
             <HoverScrollTop />
+
         </>
       )
   }

@@ -12,6 +12,8 @@ import Fonts from '../Fonts';
 import Outro from './Outro.js';
 import {OTHER} from '../OtherJSON';
 import HoverScrollTop from './HoverScrollTop';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 const styles = theme => ({
     AboutUsTypography: {
@@ -76,6 +78,7 @@ class Home extends Component {
       </Hidden>
 
       {/*ABOUT US*/}
+      <ScrollAnimation animateIn="fadeInUp" duration="0.6">
         <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'40px'}}>
           <Grid item xs={1} lg={2}></Grid>
           <Grid item xs={10} lg={4}>
@@ -105,9 +108,10 @@ class Home extends Component {
           </Grid>
           </Hidden>
         </Grid>
+      </ScrollAnimation>
 
         {/*CONTACT US*/}
-
+      <ScrollAnimation animateIn="fadeInUp" duration="1">
         {/*DESKTOP VIEW*/}
         <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'40px'}}>
           <Hidden only={['xs', 'sm', 'md']}>
@@ -135,8 +139,8 @@ class Home extends Component {
               <img src={OTHER[0].ContactUsPhoto} alt='Worker' style={{'width':'100%', 'marginTop':'40px'}}/>
             </Grid>
           </Hidden>
-
         </Grid>
+      </ScrollAnimation>
 
         {/*OUTRO*/}
         <Outro/>

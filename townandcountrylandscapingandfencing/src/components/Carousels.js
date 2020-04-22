@@ -38,7 +38,9 @@ class Carousels extends Component {
       return (
         <>
           {/*MOBILE VIEW*/}
+
           <Hidden lgUp>
+
             <div id={this.props.mobile === 'true' ? String(item.id).concat('mob'): String(item.id)}></div>
             <Typography variant="h2" className={classes.PortfolioTitlesTypography}>
               {item.service}
