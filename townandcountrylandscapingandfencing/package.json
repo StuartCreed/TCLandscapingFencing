@@ -12,6 +12,7 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "axios": "^0.19.2",
+    "compress-images": "^1.7.8",
     "ftp-deploy": "^2.3.7",
     "google-map-react": "^1.1.6",
     "google-maps-react": "^2.0.2",
