@@ -20,7 +20,7 @@ ftpDeploy.deploy(config, function(err, res) {
 	if (err) console.log(err)
 	else {
     console.log('finished:', res);
-    console.log('App Deployed without New Photos');
+    console.log('App Deployed with New Photos');
     process.exit();
   }
 });
