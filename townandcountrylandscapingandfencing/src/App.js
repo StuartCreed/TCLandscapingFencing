@@ -1,5 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
+import 'typeface-roboto';
 import Home from './components/Home';
 import Services from './components/Services';
 import Portfolio from './components/Portfolio';
