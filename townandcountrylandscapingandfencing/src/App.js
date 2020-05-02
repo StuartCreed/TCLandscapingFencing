@@ -1,61 +1,24 @@
 import React from 'react';
 import { Component } from 'react';
-import 'typeface-roboto';
-import Home from './components/Home';
-import Services from './components/Services';
-import Portfolio from './components/Portfolio';
-import AboutUs from './components/AboutUs';
+import Home from './pages/Home';
+import Services from './pages/Services';
+import Portfolio from './pages/Portfolio';
+import AboutUs from './pages/AboutUs';
 import { HashRouter } from 'react-router-dom';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-       this.state = {
-        pageView: null
-    };
-  }
-
-  render() {
-
-    const HomePage = () => {
-      return(
-        <Home/>
-      )
-    }
-
-    const ServicesPage = () => {
-      return (
-        <Services/>
-      )
-    }
-
-    const PortfolioPage = () => {
-      return (
-        <Portfolio/>
-      )
-    }
-
-    const AboutUsPage = () => {
-      return (
-        <AboutUs />
-      )
-    }
-
-    return(
-        <>
-          <HashRouter>
-            <Switch location={this.props.location}>
-              <Route path='/home' component={HomePage} />
-              <Route path='/services' component={ServicesPage} />
-              <Route path='/portfolio' component={PortfolioPage} />
-              <Route path='/aboutus' component={AboutUsPage} />
-              <Redirect to="/home" />
-            </Switch>
-          </HashRouter>
-        </>
-    )
-  }
+export default function App() {
+  return (
+    <>
+      <HashRouter>
+        <Switch>
+          <Route path='/home' component={() => (<Home/>)} />
+          <Route path='/services' component={() => (<Services/>)} />
+          <Route path='/portfolio' component={() => (<Portfolio/>)} />
+          <Route path='/aboutus' component={() => (<AboutUs/>)} />
+          <Redirect to="/home" />
+        </Switch>
+      </HashRouter>
+    </>
+  )
 }
-
-export default App;

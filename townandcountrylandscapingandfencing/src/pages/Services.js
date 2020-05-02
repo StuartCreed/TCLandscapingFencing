@@ -4,11 +4,11 @@ import Hidden from '@material-ui/core/Hidden';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/styles';
 import 'typeface-roboto';
-import Navbar from './Navbar';
-import ServicesCard from './ServicesCard';
-import Outro from './Outro.js';
+import Navbar from '../components/Navbar';
+import ServicesCard from '../components/ServicesCard';
+import Outro from '../components/Outro.js';
 import {SERVICES} from '../ServicesJSON';
-import HoverScrollTop from './HoverScrollTop';
+import HoverScrollTop from '../components/HoverScrollTop';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
 

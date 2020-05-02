@@ -5,12 +5,12 @@ import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 import ColourTheme from '../ColourTheme';
 import { Grid } from '@material-ui/core';
-import Navbar from './Navbar';
+import Navbar from '../components/Navbar';
 import Fonts from '../Fonts';
-import GoogleMap from './GoogleMap';
+import GoogleMap from '../components/GoogleMap';
 import {OTHER} from '../OtherJSON';
-import Outro from './Outro.js';
-import HoverScrollTop from './HoverScrollTop';
+import Outro from '../components/Outro.js';
+import HoverScrollTop from '../components/HoverScrollTop';
 
 const styles = theme => ({
     AboutUsTypography: {

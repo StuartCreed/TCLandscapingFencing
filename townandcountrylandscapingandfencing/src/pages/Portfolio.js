@@ -3,10 +3,10 @@ import { Component } from 'react';
 import { withStyles } from '@material-ui/styles';
 import Hidden from '@material-ui/core/Hidden';
 import { Grid } from '@material-ui/core';
-import Navbar from './Navbar';
-import Outro from './Outro.js';
-import Carousels from './Carousels';
-import HoverScrollTop from './HoverScrollTop';
+import Navbar from '../components/Navbar';
+import Outro from '../components/Outro.js';
+import Carousels from '../components/Carousels';
+import HoverScrollTop from '../components/HoverScrollTop';
 
 const styles = theme => ({
     GridContainer: {

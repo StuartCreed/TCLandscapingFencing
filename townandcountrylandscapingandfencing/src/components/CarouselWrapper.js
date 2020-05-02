@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import Skeleton from '@material-ui/lab/Skeleton';
+import $ from "jquery";
 
-export default class CarouselBigScreen extends Component {
+export default class CarouselWrapper extends Component {
 
     constructor(props) {
       super(props);
          this.state = {
+          slidesPerPage: null,
           imgOneloaded: 'false',
           imgTwoloaded: 'false',
           imgThreeloaded: 'false'
@@ -26,7 +28,22 @@ export default class CarouselBigScreen extends Component {
       this.setState({imgThreeloaded: 'true'});
     }
 
+    slidesPerPageHandler = () => {
+      if ($(window).width() < 1279.95) {
+        this.setState({slidesPerPage: 1});
+      }
+      else {
+        this.setState({slidesPerPage: 3});
+      }
+    }
+
+    componentWillMount() {
+      this.slidesPerPageHandler()
+    }
+
     render() {
+
+      window.addEventListener('resize', this.slidesPerPageHandler);
 
       const CarouselBigScreenComponent = () => {
 
@@ -35,13 +52,13 @@ export default class CarouselBigScreen extends Component {
             return (
               <>
                 <Skeleton animation="wave" width={"100%"} height={500} alt="1"/>
-                <img src={this.props.photo1} alt="1" style={{'height':'500px', 'display':'none'}} onLoad={this.handleimgOneloaded}/>
+                <img src={this.props.photo1} alt="1" style={{'width':'100%', 'display':'none'}} onLoad={this.handleimgOneloaded}/>
               </>
             )
           }
           else {
             return (
-              <img src={this.props.photo1} alt="1" style={{'height':'500px'}}/>
+              <img src={this.props.photo1} alt="1" style={{'width':'100%'}}/>
             )
           }
         }
@@ -51,13 +68,13 @@ export default class CarouselBigScreen extends Component {
             return (
               <>
                 <Skeleton animation="wave" width={"100%"} height={500} alt="2"/>
-                <img src={this.props.photo2} alt="2" style={{'height':'500px', 'display':'none'}} onLoad={this.handleimgTwoloaded}/>
+                <img src={this.props.photo2} alt="2" style={{'width':'100%', 'display':'none'}} onLoad={this.handleimgTwoloaded}/>
               </>
             )
           }
           else {
             return (
-              <img src={this.props.photo2} alt="2" style={{'height':'500px'}}/>
+              <img src={this.props.photo2} alt="2" style={{'width':'100%'}}/>
             )
           }
         }
@@ -67,13 +84,13 @@ export default class CarouselBigScreen extends Component {
             return (
               <>
                 <Skeleton animation="wave" width={"100%"} height={500} alt="3"/>
-                <img src={this.props.photo3} alt="3" style={{'height':'500px', 'display':'none'}} onLoad={this.handleimgThreeloaded}/>
+                <img src={this.props.photo3} alt="3" style={{'width':'100%', 'display':'none'}} onLoad={this.handleimgThreeloaded}/>
               </>
             )
           }
           else {
             return (
-              <img src={this.props.photo3} alt="3" style={{'height':'500px'}}/>
+              <img src={this.props.photo3} alt="3" style={{'width':'100%'}}/>
             )
           }
         }
@@ -84,7 +101,7 @@ export default class CarouselBigScreen extends Component {
             centered
             infinite
             keepDirectionWhenDragging
-            slidesPerPage={3}
+            slidesPerPage={this.state.slidesPerPage}
             dots
             >
               <Image1 />

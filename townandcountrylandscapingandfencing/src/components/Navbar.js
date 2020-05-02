@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import { AppBar, Toolbar, IconButton, Button } from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Button, Box } from '@material-ui/core';
 import SwipeableTemporaryDrawer from './SwipeableTemporaryDrawer';
 import ColourTheme from '../ColourTheme';
 import Fonts from '../Fonts';
@@ -54,6 +54,12 @@ const styles = theme => ({
     fontFamily: Fonts.BoldFont,
     letterSpacing: "0.5px"
   },
+  DummySpace: {
+    marginTop:'140px',
+    [theme.breakpoints.down('md')]: {
+      marginTop:'64px',
+    },
+  },
   });
 
 class Navbar extends Component {
@@ -63,7 +69,6 @@ class Navbar extends Component {
        this.state = {
     };
   }
-
 
   render() {
 
@@ -174,6 +179,8 @@ class Navbar extends Component {
               </AppBar>
 
             </Hidden>
+
+            <Box className={classes.DummySpace}></Box>
         </>
       )
   }

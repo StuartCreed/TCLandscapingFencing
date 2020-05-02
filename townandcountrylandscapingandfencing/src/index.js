@@ -12,12 +12,9 @@ const theme = createMuiTheme({
         main: ColourTheme.FirstColour
       },
       secondary: {
-        main: ColourTheme.ThirdColour,
+        main: ColourTheme.ThirdColour
       },
    },
-   typography: {
-      useNextVariants: true
-   }
 });
 
 ReactDOM.render(

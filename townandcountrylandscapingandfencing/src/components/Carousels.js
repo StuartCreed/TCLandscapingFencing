@@ -8,8 +8,7 @@ import { withStyles } from '@material-ui/styles';
 import Typography from '@material-ui/core/Typography';
 import 'typeface-roboto';
 import {SERVICES} from '../ServicesJSON';
-import CarouselBigScreen from './CarouselBigScreen';
-import CarouselSmallScreen from './CarouselSmallScreen';
+import CarouselWrapper from './CarouselWrapper';
 import Comment from './Comment';
 
 const styles = theme => ({
@@ -48,7 +47,7 @@ class Carousels extends Component {
 
             <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
               <Grid xs={12} item>
-                <CarouselSmallScreen photos={SERVICES[item.id].PorfoliioPagePhotos} photo1={SERVICES[item.id].PorfoliioPagePhotos.photo1} photo2={SERVICES[item.id].PorfoliioPagePhotos.photo2} photo3={SERVICES[item.id].PorfoliioPagePhotos.photo3} />
+                <CarouselWrapper photos={SERVICES[item.id].PorfoliioPagePhotos} photo1={SERVICES[item.id].PorfoliioPagePhotos.photo1} photo2={SERVICES[item.id].PorfoliioPagePhotos.photo2} photo3={SERVICES[item.id].PorfoliioPagePhotos.photo3} />
               </Grid>
               <Grid xs={12} item>
                 <Comment service={SERVICES[item.id].service} id={item.id} mobile='true' />
@@ -65,7 +64,7 @@ class Carousels extends Component {
 
             <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
               <Grid xs={12} item>
-                <CarouselBigScreen photos={SERVICES[item.id].PorfoliioPagePhotos} photo1={SERVICES[item.id].PorfoliioPagePhotos.photo1} photo2={SERVICES[item.id].PorfoliioPagePhotos.photo2} photo3={SERVICES[item.id].PorfoliioPagePhotos.photo3} />
+                <CarouselWrapper photos={SERVICES[item.id].PorfoliioPagePhotos} photo1={SERVICES[item.id].PorfoliioPagePhotos.photo1} photo2={SERVICES[item.id].PorfoliioPagePhotos.photo2} photo3={SERVICES[item.id].PorfoliioPagePhotos.photo3} />
               </Grid>
               <Grid xs={12} item>
                 <Comment service={SERVICES[item.id].service} id={item.id} mobile='false'/>
