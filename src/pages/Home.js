@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '20px'
   },
 
-  imageStyling: {
+  imageContainerStyling: {
     margin: 'auto',
     '& img': {
       width:'100%'
@@ -59,7 +59,7 @@ export default function Home() {
         </Grid>
 
         {/*WHAT WE DO IMAGE*/}
-        <Grid item xs={12} lg={4} className={classes.imageStyling}>
+        <Grid item xs={12} lg={4} className={classes.imageContainerStyling}>
           <img src="./Photos/Home/1.jpg" alt="Worker" />
         </Grid>
 
@@ -83,7 +83,7 @@ export default function Home() {
         </Grid>
 
         {/*CONTACT US IMAGE*/}
-        <Grid item lg={4} className={classes.imageStyling}>
+        <Grid item lg={4} className={classes.imageContainerStyling}>
           <img src="./Photos/Home/2.jpg" alt='Worker'/>
         </Grid>
 
