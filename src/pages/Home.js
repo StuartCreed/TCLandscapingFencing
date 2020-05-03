@@ -11,40 +11,40 @@ import {OTHER} from '../OtherJSON';
 import HoverScrollTop from '../components/HoverScrollTop';
 import ScrollAnimation from 'react-animate-on-scroll';
 
+
+
 export default function Home() {
   return (
     <>
       <Navbar page={'Home'}/>
       {/*CAROUSEL AT THE TOP OF THE PAGE*/}
-      <CarouselWrapper photos={OTHER[0].PorfoliioPagePhotos} photo1={OTHER[0].HomePageCarouselPhotos.photo1} photo2={OTHER[0].HomePageCarouselPhotos.photo2} photo3={OTHER[0].HomePageCarouselPhotos.photo3}/>
+      <CarouselWrapper photo1="./Photos/Home/Promotion Pictures/1.jpg" photo2="./Photos/Home/Promotion Pictures/2.jpg" photo3="./Photos/Home/Promotion Pictures/1.jpg"/>
 
       {/*WHAT WE DO*/}
       <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'40px'}}>
         <Grid item xs={10} lg={5} style={{'margin':'auto'}}>
             <Typography variant="h2" color='primary'>
-              {OTHER[0].HomePageTitle}
+              What We Do
             </Typography>
             <Typography variant='subtitle1' style={{'marginTop':'20px'}} color='primary'>
-              {OTHER[0].CompanyName}{OTHER[0].HomePageText}
+              Town and Country Landscaping and Fencing are known for high quality, value for money design. We specialise in paving, drives, fencing, gardening and garden designs from small town gardens to large country estates. If you are looking for landscaping experts for Buckinghamshire and Hertfordshire, contact us now, for your NO OBLIGATION FREE QUOTATION. We would be happy to hear from you.
             </Typography>
         </Grid>
 
         <Grid item xs={12} lg={4} style={{'margin':'auto'}}>
-          <img src={OTHER[0].HomePageWorkerPhoto} alt="Worker" style={{'width':'100%'}}/>
+          <img src="./Photos/Home/1.jpg" alt="Worker" style={{'width':'100%'}}/>
         </Grid>
       </Grid>
 
       {/*CONTACT US*/}
       <ScrollAnimation animateIn="fadeInUp" duration="0.7">
       <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'40px'}}>
-          <Grid item lg={2}></Grid>
-          <Grid item lg={4}>
-            <img src={OTHER[0].ContactUsPhoto} alt='Worker' style={{'width':'100%'}}/>
+          <Grid item lg={4} style={{'margin':'auto'}}>
+            <img src="./Photos/Home/2.jpg" alt='Worker' style={{'width':'100%'}}/>
           </Grid>
-          <Grid item lg={1}></Grid>
-          <Grid item lg={3}>
+          <Grid item lg={3} style={{'margin':'auto'}}>
             <Typography variant='h2' color='primary'>
-              {OTHER[0].ContactUsTitle}
+              Contact Us
             </Typography>
             <Typography variant='subtitle1' color='primary'>
               <div style={{'marginTop':'20px'}}><b>Andy Creed's Phone Number: </b>{OTHER[0].ContactUsText.AndyPhoneNumber}</div>
@@ -53,7 +53,6 @@ export default function Home() {
               <div><b>Facebook: </b><a href={OTHER[0].ContactUsText.FacebookLink}>Link</a></div>
             </Typography>
           </Grid>
-          <Grid item lg={2}></Grid>
       </Grid>
       </ScrollAnimation>
 
