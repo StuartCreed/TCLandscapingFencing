@@ -40,8 +40,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "react-scripts build && node deployWithoutNewPhotos", //not posted on github for security
-    "deployWithNewPhotos": "react-scripts build && node deployWithNewPhotos", //not posted on github for security
+    "deploy": "react-scripts build && node deployWithoutNewPhotos",
+    "deployWithNewPhotos": "react-scripts build && node deployWithNewPhotos",
     "compressPhotos": "node compressImages"
   },
   "eslintConfig": {
