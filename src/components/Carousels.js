@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/styles';
 import Typography from '@material-ui/core/Typography';
 import 'typeface-roboto';
-import {SERVICES} from '../ServicesJSON';
+import {SERVICES} from '../shared/services';
 import CarouselWrapper from './CarouselWrapper';
 import Comment from './Comment';
 
