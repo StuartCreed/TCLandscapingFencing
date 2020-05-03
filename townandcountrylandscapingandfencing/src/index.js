@@ -3,19 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import ColourTheme from './ColourTheme';
-
-const theme = createMuiTheme({
-   palette: {
-      primary: {
-        main: ColourTheme.FirstColour
-      },
-      secondary: {
-        main: ColourTheme.ThirdColour
-      },
-   },
-});
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import { theme } from './shared/theme';
 
 ReactDOM.render(
   <MuiThemeProvider theme = {theme}>

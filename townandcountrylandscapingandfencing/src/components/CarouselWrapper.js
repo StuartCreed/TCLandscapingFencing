@@ -16,18 +16,7 @@ export default class CarouselWrapper extends Component {
       };
     }
 
-    handleimgOneloaded = () => {
-      this.setState({imgOneloaded: 'true'});
-    }
-
-    handleimgTwoloaded = () => {
-      this.setState({imgTwoloaded: 'true'});
-    }
-
-    handleimgThreeloaded = () => {
-      this.setState({imgThreeloaded: 'true'});
-    }
-
+    //Changes the number of photos shown at one once in the carousel so that the photos do not appear squashed on small screens. 
     slidesPerPageHandler = () => {
       if ($(window).width() < 1279.95) {
         this.setState({slidesPerPage: 1});
@@ -52,7 +41,7 @@ export default class CarouselWrapper extends Component {
             return (
               <>
                 <Skeleton animation="wave" width={"100%"} height={500} alt="1"/>
-                <img src={this.props.photo1} alt="1" style={{'width':'100%', 'display':'none'}} onLoad={this.handleimgOneloaded}/>
+                <img src={this.props.photo1} alt="1" style={{'width':'100%', 'display':'none'}} onLoad={this.setState({imgOneloaded: 'true'})}/>
               </>
             )
           }
@@ -68,7 +57,7 @@ export default class CarouselWrapper extends Component {
             return (
               <>
                 <Skeleton animation="wave" width={"100%"} height={500} alt="2"/>
-                <img src={this.props.photo2} alt="2" style={{'width':'100%', 'display':'none'}} onLoad={this.handleimgTwoloaded}/>
+                <img src={this.props.photo2} alt="2" style={{'width':'100%', 'display':'none'}} onLoad={this.setState({imgTwoloaded: 'true'})}/>
               </>
             )
           }
@@ -84,7 +73,7 @@ export default class CarouselWrapper extends Component {
             return (
               <>
                 <Skeleton animation="wave" width={"100%"} height={500} alt="3"/>
-                <img src={this.props.photo3} alt="3" style={{'width':'100%', 'display':'none'}} onLoad={this.handleimgThreeloaded}/>
+                <img src={this.props.photo3} alt="3" style={{'width':'100%', 'display':'none'}} onLoad={this.setState({imgThreeloaded: 'true'})}/>
               </>
             )
           }

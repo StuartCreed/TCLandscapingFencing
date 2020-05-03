@@ -34,7 +34,6 @@ export default function Home() {
       <CarouselWrapper photos={OTHER[0].PorfoliioPagePhotos} photo1={OTHER[0].HomePageCarouselPhotos.photo1} photo2={OTHER[0].HomePageCarouselPhotos.photo2} photo3={OTHER[0].HomePageCarouselPhotos.photo3}/>
 
       {/*ABOUT US*/}
-      <ScrollAnimation animateIn="fadeInUp" duration="0.6">
         <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'40px'}}>
           <Grid item xs={1} lg={2}></Grid>
           <Grid item xs={10} lg={4}>
@@ -64,10 +63,9 @@ export default function Home() {
           </Grid>
           </Hidden>
         </Grid>
-      </ScrollAnimation>
 
         {/*CONTACT US*/}
-      <ScrollAnimation animateIn="fadeInUp" duration="1">
+      <ScrollAnimation animateIn="fadeInUp" duration="0.7">
         {/*DESKTOP VIEW*/}
         <Grid container style={{'direction':'row', "alignItems":"center", 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'40px'}}>
           <Hidden only={['xs', 'sm', 'md']}>
