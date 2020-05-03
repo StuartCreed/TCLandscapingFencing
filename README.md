@@ -1,9 +1,10 @@
 This is for company Town and Country Landscaping and Fencing.
-The deployed version of this website is available at http://www.tc-landscaping.co.uk/
+The deployed version of this website is available at http://www.tc-landscaping.co.uk/.
 This application has been created using React with Material UI.
 The Material UI theme is invoked in the index.js.
 It uses PHP and MySQL as a backend to retrieve and store comments.
 It is hosted on https://easily.uk/.
+Github repository is https://github.com/StuartCreed/TCLandscapingFencing.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
