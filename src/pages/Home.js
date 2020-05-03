@@ -23,7 +23,10 @@ const useStyles = makeStyles((theme) => ({
 
   cardOuterStyling: {
     margin: 'auto',
-    padding: '40px 40px 40px 0px',
+    padding: '40px 40px 40px 40px',
+    [theme.breakpoints.up('lg')]: {
+      padding: '40px 40px 40px 0px',
+    },
   },
   cardInnerTextStyling: {
     marginTop: '20px'
