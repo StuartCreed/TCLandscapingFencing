@@ -5,3 +5,5 @@ const Fonts = {
 }
 
 export default Fonts;
+
+/*Fonts that ionic use font-family: Eina,"Helvetica Neue",Helvetica,sans-serif;*/

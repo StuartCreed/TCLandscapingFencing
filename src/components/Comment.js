@@ -167,7 +167,7 @@ class Comment extends Component {
     const CommentsFromDataBase = () => {
       if (this.state.Comments === "No Comments") {
         return (
-          <div style={{"textAlign":"center", "margin":"auto"}}>There are currently no comments.</div>
+          <Typography style={{"textAlign":"center", "margin":"auto", }}>There are currently no comments.</Typography>
         )
       }
       if (this.state.Comments[0] === "") {

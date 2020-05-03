@@ -16,10 +16,13 @@ export default class CarouselWrapper extends Component {
       };
     }
 
-    //Changes the number of photos shown at one once in the carousel so that the photos do not appear squashed on small screens. 
+    //Changes the number of photos shown at one once in the carousel so that the photos do not appear squashed on small screens.
     slidesPerPageHandler = () => {
-      if ($(window).width() < 1279.95) {
+      if ($(window).width() < 750) {
         this.setState({slidesPerPage: 1});
+      }
+      else if ($(window).width() < 1200) {
+        this.setState({slidesPerPage: 2});
       }
       else {
         this.setState({slidesPerPage: 3});

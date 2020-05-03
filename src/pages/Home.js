@@ -11,6 +11,7 @@ import {OTHER} from '../OtherJSON';
 import HoverScrollTop from '../components/HoverScrollTop';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { makeStyles } from '@material-ui/core/styles';
+import { contactInformation } from '../shared/contactInformation';
 
 const useStyles = makeStyles((theme) => ({
 
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 
   cardOuterStyling: {
     margin: 'auto',
-    padding: '40px',
+    padding: '40px 40px 40px 0px',
   },
   cardInnerTextStyling: {
     marginTop: '20px'
@@ -33,7 +34,7 @@ const useStyles = makeStyles((theme) => ({
     '& img': {
       width:'100%'
     }
-  },
+  }
 }))
 
 export default function Home() {
@@ -46,10 +47,10 @@ export default function Home() {
       <CarouselWrapper photo1="./Photos/Home/Promotion Pictures/1.jpg" photo2="./Photos/Home/Promotion Pictures/2.jpg" photo3="./Photos/Home/Promotion Pictures/3.jpg"/>
 
       {/*WHAT WE DO SECTION*/}
-      <Grid container direction="row" alignItems="center" justify="space-evenly" className={classes.sectionStyling}>
+      <Grid container direction="row" justify="space-around" className={classes.sectionStyling}>
 
         {/*WHAT WE DO CARD*/}
-        <Grid item xs={10} lg={5} className={classes.cardOuterStyling}>
+        <Grid item md={5} className={classes.cardOuterStyling}>
           <Typography variant="h2" color='primary'>
             What We Do
           </Typography>
@@ -59,7 +60,7 @@ export default function Home() {
         </Grid>
 
         {/*WHAT WE DO IMAGE*/}
-        <Grid item xs={12} lg={4} className={classes.imageContainerStyling}>
+        <Grid item md={5} className={classes.imageContainerStyling}>
           <img src="./Photos/Home/1.jpg" alt="Worker" />
         </Grid>
 
@@ -67,23 +68,23 @@ export default function Home() {
 
       {/*CONTACT US SECTION*/}
       <ScrollAnimation animateIn="fadeInUp" duration="0.7">
-      <Grid container direction="row-reverse" alignItems="center" justify="space-evenly" className={classes.sectionStyling}>
+      <Grid container direction="row-reverse" justify="space-around" className={classes.sectionStyling}>
 
         {/*CONTACT US CARD*/}
-        <Grid item lg={3} className={classes.cardOuterStyling}>
+        <Grid item md={5} className={classes.cardOuterStyling}>
           <Typography variant='h2' color='primary' >
             Contact Us
           </Typography>
           <Typography variant='subtitle1' color='primary' className={classes.cardInnerTextStyling}>
-            <div><b>Andy Creed's Phone Number: </b>{OTHER[0].ContactUsText.AndyPhoneNumber}</div>
-            <div><b>Richard Salewski's Phone Number: </b>{OTHER[0].ContactUsText.RichardPhoneNumber}</div>
-            <div><b>Email: </b>{OTHER[0].ContactUsText.Email}</div>
-            <div><b>Facebook: </b><a href={OTHER[0].ContactUsText.FacebookLink}>Link</a></div>
+            <div><b>Andy Creed's Phone Number: </b>{contactInformation.AndyPhoneNumber}</div>
+            <div><b>Richard Salewski's Phone Number: </b>{contactInformation.RichardPhoneNumber}</div>
+            <div><b>Email: </b>{contactInformation.Email}</div>
+            <div><b>Facebook: </b><a href={contactInformation.FacebookLink}>Link</a></div>
           </Typography>
         </Grid>
 
         {/*CONTACT US IMAGE*/}
-        <Grid item lg={4} className={classes.imageContainerStyling}>
+        <Grid item md={5} className={classes.imageContainerStyling}>
           <img src="./Photos/Home/2.jpg" alt='Worker'/>
         </Grid>
 
