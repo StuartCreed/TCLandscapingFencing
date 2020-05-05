@@ -6,7 +6,6 @@ import { Grid } from '@material-ui/core';
 import Navbar from '../components/Navbar';
 import Outro from '../components/Outro.js';
 import Carousels from '../components/Carousels';
-import HoverScrollTop from '../components/HoverScrollTop';
 
 const styles = theme => ({
     GridContainer: {
@@ -50,9 +49,6 @@ class Portfolio extends Component {
 
         {/*OUTRO*/}
         <Outro/>
-
-        {/*HOVERSCROLL*/}
-        <HoverScrollTop />
 
     </>
     )

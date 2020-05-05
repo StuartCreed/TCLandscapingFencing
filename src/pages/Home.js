@@ -4,7 +4,6 @@ import { Grid } from '@material-ui/core';
 import CarouselWrapper from '../components/CarouselWrapper';
 import Navbar from '../components/Navbar';
 import Outro from '../components/Outro.js';
-import HoverScrollTop from '../components/HoverScrollTop';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { makeStyles } from '@material-ui/core/styles';
 import { contactInformation } from '../shared/contactInformation';
@@ -61,34 +60,31 @@ export default function Home() {
 
       {/*CONTACT US SECTION*/}
       <ScrollAnimation animateIn="fadeInUp" duration="0.7">
-      <Grid container direction="row-reverse" justify="space-around" alignItems="center" className={classes.sectionStyling}>
+        <Grid container direction="row-reverse" justify="space-around" alignItems="center" className={classes.sectionStyling}>
 
-        {/*CONTACT US CARD*/}
-        <Grid item md={6} className={classes.cardOuterStyling}>
-          <Typography variant='h2' color='primary' >
-            Contact Us
-          </Typography>
-          <Typography variant='subtitle1' color='primary' className={classes.cardInnerTextStyling}>
-            <div><b>Andy Creed's Phone Number: </b>{contactInformation.AndyPhoneNumber}</div>
-            <div><b>Richard Salewski's Phone Number: </b>{contactInformation.RichardPhoneNumber}</div>
-            <div><b>Email: </b>{contactInformation.Email}</div>
-            <div><b>Facebook: </b><a href={contactInformation.FacebookLink}>Link</a></div>
-          </Typography>
+          {/*CONTACT US CARD*/}
+          <Grid item md={6} className={classes.cardOuterStyling}>
+            <Typography variant='h2' color='primary' >
+              Contact Us
+            </Typography>
+            <Typography variant='subtitle1' color='primary' className={classes.cardInnerTextStyling}>
+              <div><b>Andy Creed's Phone Number: </b>{contactInformation.AndyPhoneNumber}</div>
+              <div><b>Richard Salewski's Phone Number: </b>{contactInformation.RichardPhoneNumber}</div>
+              <div><b>Email: </b>{contactInformation.Email}</div>
+              <div><b>Facebook: </b><a href={contactInformation.FacebookLink}>Link</a></div>
+            </Typography>
+          </Grid>
+
+          {/*CONTACT US IMAGE*/}
+          <Grid item md={6}>
+            <img src="./Photos/Home/2.jpg" alt='Worker' className={classes.imageStyling}/>
+          </Grid>
+
         </Grid>
-
-        {/*CONTACT US IMAGE*/}
-        <Grid item md={6}>
-          <img src="./Photos/Home/2.jpg" alt='Worker' className={classes.imageStyling}/>
-        </Grid>
-
-      </Grid>
       </ScrollAnimation>
 
       {/*OUTRO*/}
       <Outro/>
-
-      {/*HOVERING CIRCULAR BUTTON THAT ALLOWS YOU TO SCROLL TO THE TOP OF THE PAGE*/}
-      <HoverScrollTop />
     </>
   )
 }

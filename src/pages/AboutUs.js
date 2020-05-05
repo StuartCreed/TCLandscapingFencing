@@ -10,7 +10,6 @@ import Fonts from '../Fonts';
 import GoogleMap from '../components/GoogleMap';
 import {OTHER} from '../OtherJSON';
 import Outro from '../components/Outro.js';
-import HoverScrollTop from '../components/HoverScrollTop';
 
 const styles = theme => ({
     AboutUsTypography: {
@@ -113,10 +112,9 @@ class ServiceRadius extends Component {
           </Grid>
         </Grid>
       </Hidden>
-      <Outro />
 
-      {/*HOVERSCROLL*/}
-      <HoverScrollTop />
+      {/*OUTRO*/}
+      <Outro />
 
       </>
     )

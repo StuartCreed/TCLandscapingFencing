@@ -8,7 +8,6 @@ import Navbar from '../components/Navbar';
 import ServicesCard from '../components/ServicesCard';
 import Outro from '../components/Outro.js';
 import {SERVICES} from '../shared/services';
-import HoverScrollTop from '../components/HoverScrollTop';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
 
@@ -74,10 +73,6 @@ class Services extends Component {
 
             {/*OUTRO*/}
             <Outro/>
-
-            {/*HOVERSCROLL*/}
-            <HoverScrollTop />
-
         </>
       )
   }
