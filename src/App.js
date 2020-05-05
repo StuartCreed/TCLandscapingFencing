@@ -1,5 +1,4 @@
 import React from 'react';
-import { Component } from 'react';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Portfolio from './pages/Portfolio';
