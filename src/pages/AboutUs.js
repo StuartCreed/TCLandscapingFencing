@@ -34,84 +34,35 @@ class ServiceRadius extends Component {
 
     const { classes } = this.props;
 
-    const AboutUsHeader = () => {
-      return (
-        <>
-          <Grid item xs={1} lg={2}></Grid>
-          <Grid item xs={10} lg={5}>
-              <Typography variant="h2" className={classes.AboutUsTypography}>
-                {OTHER[1].AboutUsTitle}
-              </Typography>
-              <Typography variant='subtitle1' className={classes.AboutUsTypography} style={{'marginTop':'20px'}}>
-                {OTHER[1].AboutUsText}
-              </Typography>
-          </Grid>
-          <Hidden lgUp>
-            <Grid item xs={1}></Grid>
-          </Hidden>
-
-          <Hidden only={['xs', 'sm', 'md']}>
-            <Grid item xs={12} lg={3} style={{'paddingLeft':'30px'}}>
-              <Typography variant="h2" className={classes.AboutUsTypography}>
-                {OTHER[1].ServiceAreaTitle}
-              </Typography>
-              <Typography variant='subtitle1' className={classes.AboutUsTypography} style={{'marginTop':'20px'}}>
-                {OTHER[1].ServiceAreaText}
-              </Typography>
-            </Grid>
-          </Hidden>
-
-          <Hidden lgUp>
-            <Hidden lgUp>
-              <Grid item xs={1}></Grid>
-            </Hidden>
-            <Grid item xs={10} lg={3} style={{'marginTop':'40px'}}>
-              <Typography variant="h2" className={classes.AboutUsTypography}>
-                {OTHER[1].ServiceAreaTitle}
-              </Typography>
-              <Typography variant='subtitle1' className={classes.AboutUsTypography} style={{'marginTop':'20px'}}>
-                  {OTHER[1].ServiceAreaText}
-              </Typography>
-            </Grid>
-            <Hidden lgUp>
-              <Grid item xs={1}></Grid>
-            </Hidden>
-          </Hidden>
-        </>
-      )
-
-    }
-
     return(
       <>
       <Navbar page={'AboutUs'}/>
-      {/*MOBILE VIEW*/}
-      <Hidden lgUp>
-        <Grid container style={{'direction':'row', 'marginTop':'64px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-          <Grid item xs={12} style={{'margin':'40px 0px 40px 0px'}}>
-            <Grid container>
-              <AboutUsHeader />
-            </Grid>
-          </Grid>
-          <Grid item xs={12}>
-            <GoogleMap mobile={"true"}/>
-          </Grid>
-        </Grid>
-      </Hidden>
 
-      {/*COMPUTER VIEW*/}
-      <Hidden only={['md' ,'sm', 'xs']}>
-        <Grid container style={{'direction':'row', 'marginTop':'140px','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
-          <Grid item xs={12} style={{'margin':'40px 0px 40px 0px'}}>
-            <Grid container>
-              <AboutUsHeader />
-            </Grid>
-          </Grid>
-          <Grid item xs={12}>
-            <GoogleMap mobile={"false"}/>
-          </Grid>
+      <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%'}}>
+
+        <Grid item lg={6} style={{'padding':'40px 40px 40px 40px'}}>
+          <Typography variant="h2" className={classes.AboutUsTypography}>
+            About Us
+          </Typography>
+          <Typography variant='subtitle1' className={classes.AboutUsTypography} style={{'marginTop':'20px'}}>
+            Town and Country Landscaping and Fencing was founded over 25 years ago by Andy Creed and Richard Salewski. Through hard work and building a reputation for high quality work they have been able to expand into the business into small teams serving Aylesbury and surrounding areas.
+          </Typography>
         </Grid>
-      </Hidden>
+
+        <Grid item lg={6} style={{'padding':'40px 40px 40px 40px'}}>
+          <Typography variant="h2" className={classes.AboutUsTypography}>
+            Service Area
+          </Typography>
+          <Typography variant='subtitle1' className={classes.AboutUsTypography} style={{'marginTop':'20px'}}>
+            We are based in Aylesbury but are the local experts for around Buckinghamshire. The red area on the map below is a rough guide to the area which we cover.
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12}>
+          <GoogleMap mobile={"false"}/>
+        </Grid>
+
+      </Grid>
 
       {/*OUTRO*/}
       <Outro />
