@@ -1,5 +1,3 @@
-/*NOTES - STYLING STARTED FOR MOBILE VIEW INSTEAD OF HIDDEN*/
-
 import React from 'react';
 import { Component } from 'react';
 import { AppBar, Toolbar, IconButton, Button, Box } from '@material-ui/core';
@@ -62,13 +60,6 @@ const styles = theme => ({
       marginTop:'64px',
     },
   },
-
-  mobileViewStyle: {
-    [theme.breakpoints.down('sm')]: {
-      display: "none",
-    },
-  }
-
   });
 
 class Navbar extends Component {
