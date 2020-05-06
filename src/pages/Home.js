@@ -17,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
   },
 
   cardOuterStyling: {
-    margin: 'auto',
     padding: '40px 40px 40px 40px',
   },
   cardInnerTextStyling: {
