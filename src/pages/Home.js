@@ -47,7 +47,7 @@ export default function Home() {
       <CarouselWrapper photo1="./Photos/Home/Promotion Pictures/1.jpg" photo2="./Photos/Home/Promotion Pictures/2.jpg" photo3="./Photos/Home/Promotion Pictures/3.jpg"/>
 
       {/*WHAT WE DO SECTION*/}
-      <Grid container alignItems="center" className={classes.sectionStyling}>
+      <Grid container className={classes.sectionStyling} alignItems="center">
 
         {/*WHAT WE DO CARD*/}
         <Grid item md={6} className={classes.cardOuterStyling}>
@@ -55,7 +55,17 @@ export default function Home() {
             What We Do
           </Typography>
           <Typography variant='subtitle1' color='primary' className={classes.cardInnerTextStyling}>
-            Town and Country Landscaping and Fencing are known for high quality, value for money design. We specialise in paving, drives, fencing, gardening and garden designs from small town gardens to large country estates. If you are looking for landscaping experts for Buckinghamshire and Hertfordshire, contact us now, for your NO OBLIGATION FREE QUOTATION. We would be happy to hear from you.
+            <div>Town and Country Landscaping and Fencing are known for high quality, value for money work.</div>
+            <div>From small town gardens to large country estates our services include: </div>
+            <ul>
+              <li>Paving</li>
+              <li>Patios</li>
+              <li>Drives</li>
+              <li>Fencing</li>
+              <li>Gates</li>
+              <li>Gardening</li>
+            </ul>
+            <div>If you are looking for landscaping experts for Buckinghamshire and Hertfordshire, contact us now, for your NO OBLIGATION FREE QUOTATION. We would be happy to hear from you. </div>
           </Typography>
         </Grid>
 
@@ -67,29 +77,27 @@ export default function Home() {
       </Grid>
 
       {/*CONTACT US SECTION*/}
-      <ScrollAnimation animateIn="fadeInUp" duration="0.7">
-        <Grid container direction="row-reverse" alignItems="center" className={classes.sectionStyling}>
+      <Grid container direction="row-reverse" alignItems="center" className={classes.sectionStyling}>
 
-          {/*CONTACT US CARD*/}
-          <Grid item md={6} className={classes.cardOuterStyling}>
-            <Typography variant='h2' color='primary' >
-              Contact Us
-            </Typography>
-            <Typography variant='subtitle1' color='primary' className={classes.cardInnerTextStyling}>
-              <div><b>Andy Creed's Phone Number: </b>{contactInformation.AndyPhoneNumber}</div>
-              <div><b>Richard Salewski's Phone Number: </b>{contactInformation.RichardPhoneNumber}</div>
-              <div><b>Email: </b>{contactInformation.Email}</div>
-              <div><b>Facebook: </b><a href={contactInformation.FacebookLink}>Link</a></div>
-            </Typography>
-          </Grid>
-
-          {/*CONTACT US IMAGE*/}
-          <Grid item md={6}>
-            <img src="./Photos/Home/2.jpg" alt='Worker' className={classes.imageStyling}/>
-          </Grid>
-
+        {/*CONTACT US CARD*/}
+        <Grid item md={6} className={classes.cardOuterStyling}>
+          <Typography variant='h2' color='primary' >
+            Contact Us
+          </Typography>
+          <Typography variant='subtitle1' color='primary' className={classes.cardInnerTextStyling}>
+            <div><b>Andy Creed's Phone Number: </b>{contactInformation.AndyPhoneNumber}</div>
+            <div><b>Richard Salewski's Phone Number: </b>{contactInformation.RichardPhoneNumber}</div>
+            <div><b>Email: </b>{contactInformation.Email}</div>
+            <div><b>Facebook: </b><a href={contactInformation.FacebookLink}>Link</a></div>
+          </Typography>
         </Grid>
-      </ScrollAnimation>
+
+        {/*CONTACT US IMAGE*/}
+        <Grid item md={6}>
+          <img src="./Photos/Home/2.jpg" alt='Worker' className={classes.imageStyling}/>
+        </Grid>
+
+      </Grid>
 
       {/*OUTRO*/}
       <Outro/>

@@ -10,6 +10,7 @@ import Outro from '../components/Outro.js';
 import {SERVICES} from '../shared/services';
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
+import { fade } from 'react-animations';
 
 const styles = theme => ({
   CardGridStyle: {
@@ -35,9 +36,7 @@ class Services extends Component {
     const CardWithJSON = SERVICES.map((item) => {
       return (
         <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
-        <ScrollAnimation animateIn="fadeInUp" duration="1">
           <ServicesCard cardService={item}/>
-        </ScrollAnimation>
         </Grid>
 
       )

@@ -9,7 +9,6 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import ColourTheme from '../ColourTheme';
 import { HashLink as Link } from 'react-router-hash-link';
-import $ from "jquery";
 
 const useStyles = makeStyles({
   root: {

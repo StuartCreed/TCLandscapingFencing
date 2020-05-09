@@ -140,6 +140,12 @@ class Navbar extends Component {
                 <Toolbar>
                   <SwipeableTemporaryDrawer />
                   <Link to='/home' style={{"textDecoration": "none"}}><IconButton><img src="yellowLogo.svg" alt="Logo" style={{'width':'40px','height':'40px'}} /></IconButton></Link>
+                  <Button style={{'width':'100px'}}>
+                    <Grid container style={{'direction':'column'}}>
+                      <Grid xs={12} item><Typography className={classes.LogoTypography} style={{'fontSize':'10px'}}>Town and Country</Typography></Grid>
+                      <Grid xs={12} item><Typography className={classes.LogoTypography} style={{'fontSize':'10px'}}>Landscaping and Fencing</Typography></Grid>
+                    </Grid>
+                  </Button>
                   <section className={classes.rightToolbar}>
                       <IconButton href={contactInformation.FacebookLink}><FacebookIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                       <IconButton href="mailto:tcland-enquiries@hotmail.co.uk"><MailIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>

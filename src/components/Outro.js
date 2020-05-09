@@ -63,7 +63,6 @@ class Outro extends Component {
 
     return(
         <>
-          <ScrollAnimation animateIn="fadeInUp" duration="1">
           <Grid container className={classes.OutroContainerStyle} >
             <Grid xs={12} item>
               <Typography variant="subtitle2" className={classes.OutroTypographyLogoStyle} style={{'fontSize':'30px'}}>TOWN AND COUNTRY</Typography>
@@ -81,7 +80,6 @@ class Outro extends Component {
               </Typography>
             </Grid>
           </Grid>
-          </ScrollAnimation>
         </>
     )
   }
