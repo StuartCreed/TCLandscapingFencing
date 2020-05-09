@@ -38,7 +38,7 @@ export default function Home() {
       <CarouselWrapper photo1="./Photos/Home/Promotion Pictures/1.jpg" photo2="./Photos/Home/Promotion Pictures/2.jpg" photo3="./Photos/Home/Promotion Pictures/3.jpg"/>
 
       {/*WHAT WE DO SECTION*/}
-      <Grid container direction="row" justify="space-around" alignItems="center" className={classes.sectionStyling}>
+      <Grid container direction="row" alignItems="center" className={classes.sectionStyling}>
 
         {/*WHAT WE DO CARD*/}
         <Grid item md={6} className={classes.cardOuterStyling}>
@@ -59,7 +59,7 @@ export default function Home() {
 
       {/*CONTACT US SECTION*/}
       <ScrollAnimation animateIn="fadeInUp" duration="0.7">
-        <Grid container direction="row-reverse" justify="space-around" alignItems="center" className={classes.sectionStyling}>
+        <Grid container direction="row-reverse" alignItems="center" className={classes.sectionStyling}>
 
           {/*CONTACT US CARD*/}
           <Grid item md={6} className={classes.cardOuterStyling}>

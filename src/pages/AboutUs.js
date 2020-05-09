@@ -24,7 +24,7 @@ export default function AboutUs() {
 
     <Navbar page={'AboutUs'}/>
 
-    <Grid container direction="row" justify="space-around" alignItems="center">
+    <Grid container direction="row">
 
       {/*ABOUT US CARD*/}
       <Grid item lg={6} className={classes.cardOuterStyling}>

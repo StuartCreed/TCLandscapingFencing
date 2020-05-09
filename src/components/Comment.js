@@ -81,10 +81,10 @@ class Comment extends Component {
 
   componentDidMount() {
     this.getCommentsAction();
-    if (this.props.mobile === 'false') {
-      this.setState({showCommentForm: 'true'});
+    if ($(window).width() > 768) {
+      this.setState({showCommentForm: 'true'})
     }
-    if (this.props.mobile === 'true') {
+    else {
       this.setState({showCommentForm: 'false'});
     }
   }
@@ -310,6 +310,8 @@ class Comment extends Component {
         )
       }
     }
+
+    window.addEventListener('resize', this.slidesPerPageHandler);
 
     return (
         <div style={{'margin':'0px 30px 0px 30px'}}>
