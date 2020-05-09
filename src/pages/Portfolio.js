@@ -1,58 +1,32 @@
 import React from 'react';
-import { Component } from 'react';
-import { withStyles } from '@material-ui/styles';
 import Hidden from '@material-ui/core/Hidden';
 import { Grid } from '@material-ui/core';
 import Navbar from '../components/Navbar';
 import Outro from '../components/Outro.js';
 import Carousels from '../components/Carousels';
+import { makeStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
-    GridContainer: {
-      direction: 'row',
-      justify: 'space-around',
-      height:'100%',
-      width:'100%',
-      padding: '0px'
+const useStyles = makeStyles((theme) => ({
+  sectionStyling: {
+    marginTop: '140px',
+    [theme.breakpoints.down('sm')]: {
+      marginTop: '64px'
     }
-  });
-
-class Portfolio extends Component {
-  constructor(props) {
-    super(props);
-       this.state = {
-    };
   }
+}))
 
-  render() {
+export default function Portfolio() {
+  const classes = useStyles();
+  return (
+    <>
+      <Navbar page={'Portfolio'}/>
 
-    const { classes } = this.props;
+      <Grid container direction="row" justify="space-around" alignItems="center" className={classes.sectionStyling}>
+        <Carousels/>
+      </Grid>
 
-    return(
-      <>
-        <Navbar page={'Portfolio'}/>
-
-
-        {/*MOBILE VIEW*/}
-        <Hidden lgUp>
-          <Grid container style={{'marginTop':'64px'}} className={classes.GridContainer}>
-            <Carousels mobile={'true'}/>
-          </Grid>
-        </Hidden>
-
-        {/*COMPUTER VIEW*/}
-        <Hidden only={['md', 'sm', 'xs']}>
-          <Grid container style={{'marginTop':'140px'}} className={classes.GridContainer}>
-            <Carousels mobile={'false'}/>
-          </Grid>
-        </Hidden>
-
-        {/*OUTRO*/}
-        <Outro/>
-
-    </>
-    )
-  }
+      {/*OUTRO*/}
+      <Outro/>
+  </>
+  )
 }
-
-export default withStyles(styles)(Portfolio);
