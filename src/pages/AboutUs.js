@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import { Grid } from '@material-ui/core';
+import { Grid, Box } from '@material-ui/core';
 import Navbar from '../components/Navbar';
 import GoogleMap from '../components/GoogleMap';
 import Outro from '../components/Outro.js';
@@ -15,6 +15,14 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '20px'
     },
 
+    /*THIS STYLING IS TO MAKE THE PAGE SHOW BELOW THE FIXED HEADER*/
+    pageMarginTop: {
+      marginTop: '140px',
+      [theme.breakpoints.down('md')]: {
+        marginTop: '64px'
+      }
+    },
+
   }));
 
 export default function AboutUs() {
@@ -23,8 +31,9 @@ export default function AboutUs() {
     <>
 
     <Navbar page={'AboutUs'}/>
+    <Box  className={classes.pageMarginTop}></Box>
 
-    <Grid container direction="row">
+    <Grid container>
 
       {/*ABOUT US CARD*/}
       <Grid item lg={6} className={classes.cardOuterStyling}>

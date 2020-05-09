@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import ColourTheme from '../ColourTheme';
 import { HashLink as Link } from 'react-router-hash-link';
+import $ from "jquery";
 
 const useStyles = makeStyles({
   root: {
@@ -27,7 +28,7 @@ export default function ServicesCard(props) {
   const classes = useStyles();
 
   const ServicesCardComponent = (item) => {
-    if (props.mobile === 'false') {
+
       const pathString = String('/portfolio#') + String(item.item.id);
       return (
         <>
@@ -57,39 +58,6 @@ export default function ServicesCard(props) {
         </Card>
         </>
       )
-    }
-
-    if (props.mobile === 'true') {
-      const pathStringMob = String('/portfolio#') + String(item.item.id) + String('mob');
-      return (
-        <>
-        <Card className={classes.root}>
-          <CardActionArea>
-            <CardMedia
-              className={classes.media}
-              image={item.item.servicePagePhoto}
-              title={item.item.service}
-            />
-            <CardContent>
-              <Typography variant="h5" component="h2" className={classes.TextColour}>
-                {item.item.service}
-              </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                {item.item.ServicePageText}
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <Link to={pathStringMob} style={{"textDecoration": "none", 'margin':'auto'}}>
-                <Button size="small" color="primary" style={{'margin':'auto'}}>
-                  <span style={{'color': ColourTheme.SecondColour}}>Portfolio</span>
-                </Button>
-            </Link>
-          </CardActions>
-        </Card>
-        </>
-      )
-    }
   }
 
   return (

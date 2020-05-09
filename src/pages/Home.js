@@ -1,6 +1,6 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { Grid } from '@material-ui/core';
+import { Grid, Box } from '@material-ui/core';
 import CarouselWrapper from '../components/CarouselWrapper';
 import Navbar from '../components/Navbar';
 import Outro from '../components/Outro.js';
@@ -9,6 +9,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import { contactInformation } from '../shared/contactInformation';
 
 const useStyles = makeStyles((theme) => ({
+
+  /*THIS STYLING IS TO MAKE THE PAGE SHOW BELOW THE FIXED HEADER*/
+  pageMarginTop: {
+    marginTop: '140px',
+    [theme.breakpoints.down('md')]: {
+      marginTop: '64px'
+    }
+  },
 
   sectionStyling: {
     [theme.breakpoints.up('lg')]: {
@@ -33,12 +41,13 @@ export default function Home() {
   return (
     <>
       <Navbar page={'Home'}/>
+      <Box className={classes.pageMarginTop}></Box>
 
       {/*CAROUSEL AT THE TOP OF THE PAGE*/}
       <CarouselWrapper photo1="./Photos/Home/Promotion Pictures/1.jpg" photo2="./Photos/Home/Promotion Pictures/2.jpg" photo3="./Photos/Home/Promotion Pictures/3.jpg"/>
 
       {/*WHAT WE DO SECTION*/}
-      <Grid container direction="row" alignItems="center" className={classes.sectionStyling}>
+      <Grid container alignItems="center" className={classes.sectionStyling}>
 
         {/*WHAT WE DO CARD*/}
         <Grid item md={6} className={classes.cardOuterStyling}>

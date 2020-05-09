@@ -56,13 +56,6 @@ const styles = theme => ({
     fontFamily: Fonts.BoldFont,
     letterSpacing: "0.5px"
   },
-  DummySpace: {
-    marginTop:'140px',
-    [theme.breakpoints.down('md')]: {
-      marginTop:'64px',
-    },
-  },
-
   mobileViewStyle: {
     [theme.breakpoints.down('sm')]: {
       display: "none",
@@ -189,7 +182,6 @@ class Navbar extends Component {
 
             </Hidden>
 
-            <Box className={classes.DummySpace}></Box>
         </>
       )
   }

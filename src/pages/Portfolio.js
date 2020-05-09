@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, Box } from '@material-ui/core';
 import Navbar from '../components/Navbar';
 import Outro from '../components/Outro.js';
 import { makeStyles } from '@material-ui/core/styles';
@@ -9,45 +9,54 @@ import CarouselWrapper from '../components/CarouselWrapper';
 import Comment from '../components/Comment';
 
 const useStyles = makeStyles((theme) => ({
-  sectionStyling: {
+  /*THIS STYLING IS TO MAKE THE PAGE SHOW BELOW THE FIXED HEADER*/
+  pageMarginTop: {
     marginTop: '140px',
     [theme.breakpoints.down('md')]: {
       marginTop: '64px'
     }
   },
+
+  /*THIS STYLING IS THERE SO THAT WHEN THE LINK TO THE PARTICULAR SERVICE WITHIN THE PORTFOLIO
+  IS CLICKED ON THE SERVICES PAGE, THE PAGE IGNORES THE CURRENT HEIGHT OF THE NAVBAR*/
+  idStyling: {
+    position: 'absolute',
+    margin:'-140px',
+    [theme.breakpoints.down('md')]: {
+      margin: '-64px'
+    }
+  }
 }))
 
 export default function Portfolio() {
   const classes = useStyles();
 
-  const SlideWithJSON = SERVICES.map((item) => {
-    return (
-      <>
-          <div id={String(item.id)}></div>
-          <Typography variant="h2" color="primary" style={{'padding': '30px'}}>
-            {item.service}
-          </Typography>
-
-          <Grid container style={{'direction':'row','justify':"space-around", "alignItems":"center", 'height':'100%', 'width':'100%', 'paddingLeft':'0px', 'paddingRight':'0px'}}>
-            <Grid xs={12} item>
-              <CarouselWrapper photos={SERVICES[item.id].PorfoliioPagePhotos} photo1={SERVICES[item.id].PorfoliioPagePhotos.photo1} photo2={SERVICES[item.id].PorfoliioPagePhotos.photo2} photo3={SERVICES[item.id].PorfoliioPagePhotos.photo3} />
-            </Grid>
-            <Grid xs={12} item>
-              <Comment service={SERVICES[item.id].service} id={item.id} mobile='false'/>
-            </Grid>
-          </Grid>
-      </>
-    )
-  })
-
   return (
     <>
       <Navbar page={'Portfolio'}/>
+      <Box className={classes.pageMarginTop}></Box>
 
-      {/*PORFOLIO SECTION - EACH ITEM IN THE GRID REFERS TO A SERVICE*/}
-      <Grid container direction="row" justify="flex-start" className={classes.sectionStyling}>
-        {SlideWithJSON}
-      </Grid>
+      {/*PORFOLIOS SECTION - EACH ITEM IN THE GRID REFERS TO A PORTFOLIO OF A SERVICE*/}
+      {
+        SERVICES.map((item) => {
+          return (
+            <>
+              <Box id={String(item.id)} className={classes.idStyling}></Box>
+              <Typography variant="h2" color="primary" style={{'padding': '30px'}}>
+                {item.service}
+              </Typography>
+              <Grid container>
+                <Grid xs={12} item>
+                  <CarouselWrapper photo1={SERVICES[item.id].PorfoliioPagePhotos.photo1} photo2={SERVICES[item.id].PorfoliioPagePhotos.photo2} photo3={SERVICES[item.id].PorfoliioPagePhotos.photo3} />
+                </Grid>
+                <Grid xs={12} item>
+                  <Comment service={SERVICES[item.id].service} id={item.id}/>
+                </Grid>
+              </Grid>
+            </>
+          )
+        })
+      }
 
       {/*OUTRO*/}
       <Outro/>
