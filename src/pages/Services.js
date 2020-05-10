@@ -1,60 +1,50 @@
 import React from 'react';
-import { Component } from 'react';
-import Hidden from '@material-ui/core/Hidden';
-import Grid from '@material-ui/core/Grid';
-import { withStyles } from '@material-ui/styles';
-import 'typeface-roboto';
+import { makeStyles } from '@material-ui/core/styles';
+import { Grid, Box } from '@material-ui/core';
 import Navbar from '../components/Navbar';
 import ServicesCard from '../components/ServicesCard';
 import Outro from '../components/Outro.js';
 import {SERVICES} from '../shared/services';
-import ScrollAnimation from 'react-animate-on-scroll';
-import "animate.css/animate.min.css";
 import { fade } from 'react-animations';
 
-const styles = theme => ({
+const useStyles = makeStyles((theme) => ({
   CardGridStyle: {
     margin: "auto",
     padding: "10px",
     textAlign: 'center'
   },
-  });
 
-class Services extends Component {
+  pageMarginTop: {
+    marginTop: '140px',
+    [theme.breakpoints.down('md')]: {
+      marginTop: '64px'
+    }
+  },
+}))
 
-  constructor(props) {
-    super(props);
-       this.state = {
-    };
-  }
+export default function Services() {
+  const classes = useStyles();
+    return (
+    <>
+      <Navbar page={'Services'}/>
+      <Box className={classes.pageMarginTop}></Box>
 
+      {/*EVERY ITEM IN THE GRID BELOW IS A CARD DETAILING A SERVICE THAT IS PROVIDED*/}
+      <Grid container direction="row" justify="space-around" >
+        {
+          SERVICES.map((item) => {
+            return (
+              <Grid item xs={6} md={4} className={classes.CardGridStyle}>
+                <ServicesCard cardService={item}/>
+              </Grid>
 
-  render() {
+            )
+          })
+        }
+      </Grid>
 
-    const { classes } = this.props;
-
-    const CardWithJSON = SERVICES.map((item) => {
-      return (
-        <Grid item xs={6} sm={6} md={4} lg={4} className={classes.CardGridStyle}>
-          <ServicesCard cardService={item}/>
-        </Grid>
-
-      )
-    })
-
-    return(
-        <>
-            <Navbar page={'Services'}/>
-
-            <Grid container style={{'direction':'row', 'justify':"space-around", 'height':'100%', 'width':'100%', 'marginTop':'140px', 'padding': '0px'}} >
-              {CardWithJSON}
-            </Grid>
-
-            {/*OUTRO*/}
-            <Outro/>
-        </>
-      )
-  }
+      {/*OUTRO*/}
+      <Outro/>
+    </>
+  )
 }
-
-export default withStyles(styles)(Services);
