@@ -7,7 +7,7 @@ import Outro from '../components/Outro.js';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { makeStyles } from '@material-ui/core/styles';
 import { contactInformation } from '../shared/contactInformation';
-import ImgModal from '../components/imgModalWrapper'
+import ImgModal from '../components/imgModalWrapper';
 
 const useStyles = makeStyles((theme) => ({
 

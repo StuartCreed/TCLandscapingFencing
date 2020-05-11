@@ -1,5 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
+import CloseIcon from '@material-ui/icons/Close';
 
 class ImgModal extends Component {
 
@@ -39,7 +40,12 @@ class ImgModal extends Component {
         return (
           <>
             <img src={this.props.src} onDoubleClick={this.handleClick} style={{'width':'100%'}}/>
-            <img src={this.props.src} onDoubleClick={this.handleClose} style={{'width':'90%', 'position': 'fixed', 'top': '0px', 'left': '0px'}}/>
+            <div style={{'position': 'fixed', 'top': '0px', 'left': '0px', 'backgroundColor':'rgba(0,0,0,0.9)', 'width':'100%', 'height':'100%'}}>
+              <div style={{'margin':'auto', 'width':'80%'}}>
+                <img src={this.props.src} onDoubleClick={this.handleClose} style={{'width':'100%'}}/>
+                <CloseIcon onClick={this.handleClose} style={{'float': 'right', 'color':'#aaaaaa'}}/>
+              </div>
+            </div>
           </>
         )
       }
