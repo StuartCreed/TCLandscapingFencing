@@ -7,6 +7,7 @@ import Outro from '../components/Outro.js';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { makeStyles } from '@material-ui/core/styles';
 import { contactInformation } from '../shared/contactInformation';
+import ImgModal from '../components/imgModalWrapper'
 
 const useStyles = makeStyles((theme) => ({
 
@@ -71,7 +72,7 @@ export default function Home() {
 
         {/*WHAT WE DO IMAGE*/}
         <Grid item md={6}>
-          <img src="./Photos/Home/1.jpg" alt="Worker" className={classes.imageStyling}/>
+          <ImgModal src='./Photos/Home/1.jpg' className={classes.imageStyling}/>
         </Grid>
 
       </Grid>
