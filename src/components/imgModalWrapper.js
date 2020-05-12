@@ -20,7 +20,7 @@ const styles = theme => ({
       maxWidth:'100%',
     },
     [theme.breakpoints.down('md')]: {
-      maxWidth:'100%'
+      width:'100%'
     }
   }
 });
