@@ -3,6 +3,7 @@ import { Component } from 'react';
 import CloseIcon from '@material-ui/icons/Close';
 import { Grid } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
+import $ from "jquery";
 
 const styles = theme => ({
   pageMarginTop: {
@@ -46,18 +47,24 @@ class ImgModal extends Component {
         )
       }
       else {
-        console.log("modal open")
-        return (
-          <>
-            <img src={this.props.src} onDoubleClick={this.handleClick} style={{'width':'100%'}}/>
-            <div style={{'position': 'fixed', 'top': '0px', 'left': '0px', 'backgroundColor':'rgba(0,0,0,0.9)', 'width':'100%', 'height':'100%', 'display':'flex', 'alignItems':'center'}}>
-              <div style={{'marginLeft':'auto', 'marginRight':'auto', 'display':'flex', 'justifyContent':'center'}} className={classes.pageMarginTop}>
-                <img src={this.props.src} onDoubleClick={this.handleClose}/>
-                <CloseIcon onClick={this.handleClose} style={{'color':'white', 'fontSize':'40px', 'position':'absolute', 'alignSelf':'flex-end', 'marginTop':'50px'}}/>
+        if ($(window).width() > 768) {
+          return (
+            <>
+              <img src={this.props.src} onDoubleClick={this.handleClick} style={{'width':'100%'}}/>
+              <div style={{'position': 'fixed', 'top': '0px', 'left': '0px', 'backgroundColor':'rgba(0,0,0,0.9)', 'width':'100%', 'height':'100%', 'display':'flex', 'alignItems':'center'}}>
+                <div style={{'marginLeft':'auto', 'marginRight':'auto', 'display':'flex', 'justifyContent':'center'}} className={classes.pageMarginTop}>
+                  <img src={this.props.src} onDoubleClick={this.handleClose}/>
+                  <CloseIcon onClick={this.handleClose} style={{'color':'white', 'fontSize':'40px', 'position':'absolute', 'alignSelf':'flex-end', 'marginTop':'50px'}}/>
+                </div>
               </div>
-            </div>
-          </>
-        )
+            </>
+          )
+        }
+        else {
+          return (
+            <img src={this.props.src} onDoubleClick={this.handleClick} style={{'width':'100%'}}/>
+          )
+        }
       }
     }
 
