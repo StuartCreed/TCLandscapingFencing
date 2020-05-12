@@ -95,7 +95,7 @@ export default function Home() {
 
         {/*CONTACT US IMAGE*/}
         <Grid item md={6}>
-          <img src="./Photos/Home/2.jpg" alt='Worker' className={classes.imageStyling}/>
+          <ImgModal src='./Photos/Home/2.jpg' className={classes.imageStyling}/>
         </Grid>
 
       </Grid>

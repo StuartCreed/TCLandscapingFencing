@@ -1,6 +1,19 @@
 import React from 'react';
 import { Component } from 'react';
 import CloseIcon from '@material-ui/icons/Close';
+import { Grid } from '@material-ui/core';
+import { withStyles } from '@material-ui/styles';
+
+const styles = theme => ({
+  pageMarginTop: {
+    marginTop: '140px',
+    width:'80%',
+    [theme.breakpoints.down('md')]: {
+      marginTop: '64px',
+      width:'100%'
+    }
+  },
+});
 
 class ImgModal extends Component {
 
@@ -12,25 +25,23 @@ class ImgModal extends Component {
   }
 
   handleClick = () => {
-    console.log("IMG has been double clicked")
     this.setState({
       modalOpen: true
     })
   }
 
   handleClose = () => {
-    console.log("IMG has been attempted to be closed")
     this.setState({
       modalOpen: false
     })
   }
 
-
   render() {
+
+    const { classes } = this.props;
 
     const Image = () => {
       if (this.state.modalOpen === false) {
-        console.log("modal closed")
         return (
           <img src={this.props.src} onDoubleClick={this.handleClick} style={{'width':'100%'}}/>
         )
@@ -40,10 +51,10 @@ class ImgModal extends Component {
         return (
           <>
             <img src={this.props.src} onDoubleClick={this.handleClick} style={{'width':'100%'}}/>
-            <div style={{'position': 'fixed', 'top': '0px', 'left': '0px', 'backgroundColor':'rgba(0,0,0,0.9)', 'width':'100%', 'height':'100%'}}>
-              <div style={{'margin':'auto', 'width':'80%'}}>
-                <img src={this.props.src} onDoubleClick={this.handleClose} style={{'width':'100%'}}/>
-                <CloseIcon onClick={this.handleClose} style={{'float': 'right', 'color':'#aaaaaa'}}/>
+            <div style={{'position': 'fixed', 'top': '0px', 'left': '0px', 'backgroundColor':'rgba(0,0,0,0.9)', 'width':'100%', 'height':'100%', 'display':'flex', 'alignItems':'center'}}>
+              <div style={{'marginLeft':'auto', 'marginRight':'auto', 'display':'flex', 'justifyContent':'center', 'position': 'relative'}} className={classes.pageMarginTop}>
+                <img src={this.props.src} onDoubleClick={this.handleClose} style={{'maxWidth':'100%', 'maxHeight':'100%'}}/>
+                <CloseIcon onClick={this.handleClose} style={{'color':'white', 'fontSize':'40px', 'position':'absolute', 'alignSelf':'flex-end', 'marginTop':'50px'}}/>
               </div>
             </div>
           </>
@@ -57,4 +68,4 @@ class ImgModal extends Component {
   }
 }
 
-export default ImgModal
+export default withStyles(styles)(ImgModal);
