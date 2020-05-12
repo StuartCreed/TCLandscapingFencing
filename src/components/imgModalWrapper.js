@@ -20,7 +20,7 @@ const styles = theme => ({
       maxWidth:'100%',
     },
     [theme.breakpoints.down('md')]: {
-      width:'100%'
+      maxWidth:'100%'
     }
   }
 });
@@ -63,7 +63,7 @@ class ImgModal extends Component {
             <img src={this.props.src} onDoubleClick={this.handleClick} style={{'width':'100%'}}/>
             <div style={{'position': 'fixed', 'top': '0px', 'left': '0px', 'backgroundColor':'rgba(0,0,0,0.9)', 'width':'100%', 'height':'100%', 'display':'flex', 'alignItems':'center'}}>
               <div style={{'marginLeft':'auto', 'marginRight':'auto', 'display':'flex', 'justifyContent':'center', 'position': 'relative'}} className={classes.pageMarginTop}>
-                <img src={this.props.src} onDoubleClick={this.handleClose} style={{'maxWidth':'100%', 'maxHeight':'100%'}} className={classes.imgStyling}/>
+                <img src={this.props.src} onDoubleClick={this.handleClose} className={classes.imgStyling}/>
                 <CloseIcon onClick={this.handleClose} style={{'color':'white', 'fontSize':'40px', 'position':'absolute', 'alignSelf':'flex-end', 'marginTop':'50px'}}/>
               </div>
             </div>
