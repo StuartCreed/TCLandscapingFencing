@@ -11,13 +11,13 @@ const styles = theme => ({
     [theme.breakpoints.down('md')]: {
       marginTop: '64px',
       width:'100%'
+
     }
   },
 
   imgStyling: {
     [theme.breakpoints.up('sm')]: {
       maxWidth:'100%',
-      maxHeight:'100%'
     },
     [theme.breakpoints.down('md')]: {
       width:'100%'
