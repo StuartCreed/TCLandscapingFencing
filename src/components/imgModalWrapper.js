@@ -10,7 +10,6 @@ const styles = theme => ({
     width:'80%',
     [theme.breakpoints.down('md')]: {
       marginTop: '64px',
-      width:'100%'
     }
   },
 });
