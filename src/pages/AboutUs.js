@@ -8,6 +8,7 @@ import Outro from '../components/Outro.js';
 
 const useStyles = makeStyles((theme) => ({
 
+    /*THIS STYLES THE "CARD" SECTIONS THAT HAVE A HEADER AND INNER TEXT*/
     cardOuterStyling: {
       padding: '40px 40px 40px 40px',
     },

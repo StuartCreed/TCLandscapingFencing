@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Component } from 'react';
-import { AppBar, Toolbar, IconButton, Button, Box } from '@material-ui/core';
+import { AppBar, Toolbar, IconButton, Button } from '@material-ui/core';
 import SwipeableTemporaryDrawer from './SwipeableTemporaryDrawer';
 import ColourTheme from '../ColourTheme';
 import Fonts from '../Fonts';

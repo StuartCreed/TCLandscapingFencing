@@ -6,8 +6,6 @@ import { withStyles } from '@material-ui/styles';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 import ColourTheme from '../ColourTheme';
-import ScrollAnimation from 'react-animate-on-scroll';
-import "animate.css/animate.min.css";
 
 const styles = theme => ({
   OutroContainerStyle: {

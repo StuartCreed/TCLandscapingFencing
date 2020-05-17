@@ -4,7 +4,6 @@ import { Grid, Box } from '@material-ui/core';
 import CarouselWrapper from '../components/CarouselWrapper';
 import Navbar from '../components/Navbar';
 import Outro from '../components/Outro.js';
-import ScrollAnimation from 'react-animate-on-scroll';
 import { makeStyles } from '@material-ui/core/styles';
 import { contactInformation } from '../shared/contactInformation';
 import ImgModal from '../components/imgModalWrapper';
@@ -19,12 +18,14 @@ const useStyles = makeStyles((theme) => ({
     }
   },
 
+  /*FOR LARGE SCREENS THIS PUTS AN EXTRA SPACE BETWEEN THE TOP CAROUSEL AND THE PAGE CONTENT*/
   sectionStyling: {
     [theme.breakpoints.up('lg')]: {
       marginTop:'40px',
     },
   },
 
+  /*THIS STYLES THE "CARD" SECTIONS THAT HAVE A HEADER AND INNER TEXT*/
   cardOuterStyling: {
     padding: '40px 40px 40px 40px',
   },
@@ -32,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '20px'
   },
 
+  /*THIS STYLING IS TO ENSURE THAT ALL IMAGES ON THE PAGE OCCUPY THE MAXIMUM WIDTH THAT THEY CAN*/
   imageStyling: {
     width:'100%'
   }
@@ -39,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home() {
   const classes = useStyles();
-  
+
   return (
     <>
       <Navbar page={'Home'}/>

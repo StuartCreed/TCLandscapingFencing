@@ -1,7 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
 import CloseIcon from '@material-ui/icons/Close';
-import { Grid } from '@material-ui/core';
 import { withStyles } from '@material-ui/styles';
 import $ from "jquery";
 
