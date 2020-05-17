@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid, Box } from '@material-ui/core';
 import Navbar from '../components/Navbar';
-import ServicesCard from '../components/ServicesCard';
 import Outro from '../components/Outro.js';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -10,7 +9,6 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import {SERVICES} from '../shared/services';
-import ColourTheme from '../ColourTheme';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { HashLink as Link } from 'react-router-hash-link';
@@ -35,9 +33,6 @@ const useStyles = makeStyles((theme) => ({
   media: {
     height: 140,
   },
-  TextColour: {
-    color: ColourTheme.FirstColour,
-  }
 }))
 
 export default function Services() {
@@ -62,18 +57,18 @@ export default function Services() {
                       title={item.service}
                     />
                     <CardContent>
-                      <Typography variant="h5" component="h2" className={classes.TextColour}>
+                      <Typography variant="h5" component="h2" color="Primary">
                         {item.service}
                       </Typography>
-                      <Typography variant="body2" color="textSecondary" component="p">
+                      <Typography variant="body2" color="Primart" component="p">
                         {item.ServicePageText}
                       </Typography>
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
                     <Link to={pathString} style={{"textDecoration": "none", 'margin':'auto'}}>
-                        <Button size="small" color="primary" style={{'margin':'auto'}}>
-                          <span style={{'color': ColourTheme.SecondColour}}>Portfolio</span>
+                        <Button size="small" style={{'margin':'auto'}}>
+                          <Typography variant="body2" color="textSecondary">Portfolio</Typography>
                         </Button>
                     </Link>
                   </CardActions>
