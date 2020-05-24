@@ -14,24 +14,11 @@ import Button from '@material-ui/core/Button';
 import { HashLink as Link } from 'react-router-hash-link';
 
 const useStyles = makeStyles((theme) => ({
-  CardGridStyle: {
-    margin: "auto",
-    padding: "10px",
-    textAlign: 'center'
-  },
-
   pageMarginTop: {
     marginTop: '140px',
     [theme.breakpoints.down('md')]: {
-      marginTop: '64px'
+      marginTop: '75px'
     }
-  },
-  root: {
-    maxWidth: 345,
-    margin: "auto"
-  },
-  media: {
-    height: 140,
   },
 }))
 
@@ -48,26 +35,26 @@ export default function Services() {
           SERVICES.map((item) => {
             const pathString = String('/portfolio#') + String(item.id);
             return (
-              <Grid item xs={6} md={4} className={classes.CardGridStyle}>
-                <Card className={classes.root}>
+              <Grid item xs={6} md={4} style={{"padding":"2%"}}>
+                <Card>
                   <CardActionArea>
                     <CardMedia
-                      className={classes.media}
+                      style={{"height":"200px"}}
                       image={item.servicePagePhoto}
                       title={item.service}
                     />
                     <CardContent>
-                      <Typography variant="h5" component="h2" color="Primary">
+                      <Typography variant="h5" align="center" component="h2" color="Primary">
                         {item.service}
                       </Typography>
-                      <Typography variant="body2" color="Primart" component="p">
+                      <Typography variant="body2" align="center" color="Primary" component="p">
                         {item.ServicePageText}
                       </Typography>
                     </CardContent>
                   </CardActionArea>
                   <CardActions>
                     <Link to={pathString} style={{"textDecoration": "none", 'margin':'auto'}}>
-                        <Button size="small" style={{'margin':'auto'}}>
+                        <Button size="small">
                           <Typography variant="body2" color="textSecondary">Portfolio</Typography>
                         </Button>
                     </Link>

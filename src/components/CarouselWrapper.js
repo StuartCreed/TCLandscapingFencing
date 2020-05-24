@@ -37,7 +37,7 @@ export default class CarouselWrapper extends Component {
 
       window.addEventListener('resize', this.slidesPerPageHandler);
 
-      const CarouselBigScreenComponent = () => {
+      const CarouselComponent = () => {
 
         const Image1 = () => {
           if (this.state.imgOneloaded === 'false') {
@@ -107,7 +107,7 @@ export default class CarouselWrapper extends Component {
 
       return (
         <>
-            <CarouselBigScreenComponent />
+            <CarouselComponent />
         </>
       )
 

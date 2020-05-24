@@ -13,7 +13,7 @@ const useStyles = makeStyles((theme) => ({
   pageMarginTop: {
     marginTop: '140px',
     [theme.breakpoints.down('md')]: {
-      marginTop: '64px'
+      marginTop: '75px'
     }
   },
 
@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'absolute',
     margin:'-140px',
     [theme.breakpoints.down('md')]: {
-      margin: '-64px'
+      margin: '-75px'
     }
   }
 }))
