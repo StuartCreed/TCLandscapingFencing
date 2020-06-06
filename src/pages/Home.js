@@ -1,12 +1,13 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { Grid, Box } from '@material-ui/core';
+import { Grid, Box, IconButton } from '@material-ui/core';
 import CarouselWrapper from '../components/CarouselWrapper';
 import Navbar from '../components/Navbar';
 import Outro from '../components/Outro.js';
 import { makeStyles } from '@material-ui/core/styles';
 import { contactInformation } from '../shared/contactInformation';
 import ImgModal from '../components/imgModalWrapper';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 const useStyles = makeStyles((theme) => ({
 
@@ -33,10 +34,6 @@ const useStyles = makeStyles((theme) => ({
     marginTop: '20px'
   },
 
-  /*THIS STYLING IS TO ENSURE THAT ALL IMAGES ON THE PAGE OCCUPY THE MAXIMUM WIDTH THAT THEY CAN*/
-  imageStyling: {
-    width:'100%'
-  }
 }))
 
 export default function Home() {
@@ -54,7 +51,7 @@ export default function Home() {
       <Grid container className={classes.sectionStyling} alignItems="center">
 
         {/*WHAT WE DO CARD*/}
-        <Grid item md={6} className={classes.cardOuterStyling}>
+        <Grid item lg={6} xs={12} className={classes.cardOuterStyling}>
           <Typography variant="h2" color='primary'>
             What We Do
           </Typography>
@@ -74,8 +71,8 @@ export default function Home() {
         </Grid>
 
         {/*WHAT WE DO IMAGE*/}
-        <Grid item md={6}>
-          <ImgModal src='./Photos/Home/1.jpg' className={classes.imageStyling}/>
+        <Grid item lg={6} xs={12} style={{'padding':'40px'}}>
+          <img src='./Photos/Home/1.jpg' style={{'width':'100%', 'borderRadius':'20px'}}/>
         </Grid>
 
       </Grid>
@@ -84,7 +81,11 @@ export default function Home() {
       <Grid container direction="row-reverse" alignItems="center" className={classes.sectionStyling}>
 
         {/*CONTACT US CARD*/}
-        <Grid item md={6} className={classes.cardOuterStyling}>
+        <Grid item lg={3} xs={12} style={{'textAlign':'center', 'padding':'20px'}}>
+          <IconButton href={contactInformation.FacebookLink}><FacebookIcon edge color="Primary" style={{'fontSize':'150px'}}/></IconButton>
+        </Grid>
+
+        <Grid item lg={3} xs={12} className={classes.cardOuterStyling} style={{'textAlign':'center'}}>
           <Typography variant='h2' color='primary' >
             Contact Us
           </Typography>
@@ -92,13 +93,13 @@ export default function Home() {
             <div><b>Andy Creed's Phone Number: </b>{contactInformation.AndyPhoneNumber}</div>
             <div><b>Richard Salewski's Phone Number: </b>{contactInformation.RichardPhoneNumber}</div>
             <div><b>Email: </b>{contactInformation.Email}</div>
-            <div><b>Facebook: </b><a href={contactInformation.FacebookLink}>Link</a></div>
           </Typography>
         </Grid>
 
         {/*CONTACT US IMAGE*/}
-        <Grid item md={6}>
-          <ImgModal src='./Photos/Home/2.jpg' className={classes.imageStyling}/>
+        <Grid item lg={6} xs={12}>
+          <img src='./Photos/Home/2.jpg' style={{'width':'40%', 'borderRadius':'40%', 'padding':'5%'}}/>
+          <img src='./Photos/Home/3.jpg' style={{'width':'40%', 'borderRadius':'40%', 'padding':'5%'}}/>
         </Grid>
 
       </Grid>

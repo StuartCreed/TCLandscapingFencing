@@ -42,7 +42,7 @@ export default class CarouselWrapper extends Component {
 
       const CarouselComponent = () => {
 
-        /*NEW SECTION START - IN PROGRESS*/
+        /*NEW SECTION START - IN PROGRESS - WILL HAVE TO USE MAP*/
         const Images = () => {
           for (let i = 1; i < this.state.numberOfPictures + 1; i++) {
             let imageLoadedName = 'img' + i.toString() + 'loaded';
@@ -76,7 +76,7 @@ export default class CarouselWrapper extends Component {
           }
           else {
             return (
-              <img src={this.props.photo1} alt="1" style={{'width':'100%'}}/>
+              <img src={this.props.photo1} alt="1" style={{'width':'100%','maxHeight':'475px'}}/>
             )
           }
         }
@@ -92,7 +92,7 @@ export default class CarouselWrapper extends Component {
           }
           else {
             return (
-              <img src={this.props.photo2} alt="2" style={{'width':'100%'}}/>
+              <img src={this.props.photo2} alt="2" style={{'width':'100%','maxHeight':'475px'}}/>
             )
           }
         }
@@ -108,7 +108,7 @@ export default class CarouselWrapper extends Component {
           }
           else {
             return (
-              <img src={this.props.photo3} alt="3" style={{'width':'100%'}}/>
+              <img src={this.props.photo3} alt="3" style={{'width':'100%','maxHeight':'475px'}}/>
             )
           }
         }
