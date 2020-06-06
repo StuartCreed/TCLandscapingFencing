@@ -51,22 +51,24 @@ export default function Home() {
       <Grid container className={classes.sectionStyling} alignItems="center">
 
         {/*WHAT WE DO CARD*/}
-        <Grid item lg={6} xs={12} className={classes.cardOuterStyling}>
+        <Grid item lg={6} xs={12} className={classes.cardOuterStyling} style={{'textAlign':'center'}}>
           <Typography variant="h2" color='primary'>
             What We Do
           </Typography>
           <Typography variant='subtitle1' color='primary' className={classes.cardInnerTextStyling}>
-            <div>Town and Country Landscaping and Fencing are known for high quality, value for money work.</div>
-            <div>From small town gardens to large country estates our services include: </div>
-            <ul>
-              <li>Paving</li>
-              <li>Patios</li>
-              <li>Drives</li>
-              <li>Fencing</li>
-              <li>Gates</li>
-              <li>Gardening</li>
-            </ul>
-            <div>If you are looking for landscaping experts for Buckinghamshire and Hertfordshire, contact us now, for your NO OBLIGATION FREE QUOTATION. We would be happy to hear from you. </div>
+            <div style={{'padding':'10px'}}>
+              <div>Town and Country Landscaping and Fencing are known for high quality, value for money work.</div>
+              <div>From small town gardens to large country estates our services include: </div>
+            </div>
+            <div>
+              <div style={{'padding':'10px'}}><b>Paving</b></div>
+              <div style={{'padding':'10px'}}><b>Patios</b></div>
+              <div style={{'padding':'10px'}}><b>Drives</b></div>
+              <div style={{'padding':'10px'}}><b>Fencing</b></div>
+              <div style={{'padding':'10px'}}><b>Gates</b></div>
+              <div style={{'padding':'10px'}}><b>Gardening</b></div>
+            </div>
+            <div style={{'padding':'10px'}}>If you are looking for landscaping experts for Buckinghamshire and Hertfordshire, contact us now, for your NO OBLIGATION FREE QUOTATION. We would be happy to hear from you. </div>
           </Typography>
         </Grid>
 
