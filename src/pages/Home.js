@@ -1,6 +1,6 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import { Grid, Box, IconButton } from '@material-ui/core';
+import { Grid, Box, IconButton, Link } from '@material-ui/core';
 import CarouselWrapper from '../components/CarouselWrapper';
 import Navbar from '../components/Navbar';
 import Outro from '../components/Outro.js';
@@ -56,10 +56,8 @@ export default function Home() {
             What We Do
           </Typography>
           <Typography variant='subtitle1' color='primary' className={classes.cardInnerTextStyling}>
-            <div style={{'padding':'10px'}}>
-              <div>Town and Country Landscaping and Fencing are known for high quality, value for money work.</div>
-              <div>From small town gardens to large country estates our services include: </div>
-            </div>
+            <div style={{'padding':'10px'}}>Town and Country Landscaping and Fencing are known for high quality, value for money work.</div>
+            <div style={{'padding':'10px'}}>From small town gardens to large country estates our services include: </div>
             <div>
               <div style={{'padding':'10px'}}><b>Paving</b></div>
               <div style={{'padding':'10px'}}><b>Patios</b></div>
@@ -92,9 +90,9 @@ export default function Home() {
             Contact Us
           </Typography>
           <Typography variant='subtitle1' color='primary' className={classes.cardInnerTextStyling}>
-            <div><b>Andy Creed's Phone Number: </b>{contactInformation.AndyPhoneNumber}</div>
-            <div><b>Richard Salewski's Phone Number: </b>{contactInformation.RichardPhoneNumber}</div>
-            <div><b>Email: </b>{contactInformation.Email}</div>
+            <Link href={contactInformation.AndyPhoneNumberlink}><div><b>Andy Creed's Phone Number: </b>{contactInformation.AndyPhoneNumber}</div></Link>
+            <Link href={contactInformation.RichardPhonelink}><div><b>Richard Salewski's Phone Number: </b>{contactInformation.RichardPhoneNumber}</div></Link>
+            <Link href={contactInformation.Emaillink}><div><b>Email: </b>{contactInformation.Email}</div></Link>
           </Typography>
         </Grid>
 
