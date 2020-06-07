@@ -28,12 +28,6 @@ export default class CarouselWrapper extends Component {
 
     componentWillMount() {
       this.slidesPerPageHandler();
-      const numberOfPictures = 3;
-      this.setState({numberOfPictures: 3})
-      for (let i = 1; i < numberOfPictures + 1; i++) {
-        let imageLoadedName = 'img' + i.toString() + 'loaded';
-        this.setState({imageLoadedName: 'false'})
-      }
     }
 
     render() {
@@ -42,76 +36,6 @@ export default class CarouselWrapper extends Component {
 
       const CarouselComponent = () => {
 
-        /*NEW SECTION START - IN PROGRESS - WILL HAVE TO USE MAP*/
-        const Images = () => {
-          for (let i = 1; i < this.state.numberOfPictures + 1; i++) {
-            let imageLoadedName = 'img' + i.toString() + 'loaded';
-            let imageNumber = 'photo' + i.toString();
-            console.log(imageNumber);
-            if (this.state.imageLoadedName === 'false') {
-              return (
-                <>
-                  <Skeleton animation="wave" width={"100%"} height={500} alt={"other"}/>
-                  <img src={this.props.imageNumber} alt={"other"} style={{'width':'100%', 'display':'none'}} onLoad={this.setState({imageLoadedName: 'true'})}/>
-                </>
-              )
-            }
-            else {
-              return (
-                <img src={this.props.photo1} alt={"other"} style={{'width':'100%'}}/>
-              )
-            }
-          }
-        }
-        /*NEW SECTION END*/
-
-        const Image1 = () => {
-          if (this.state.img1loaded === 'false') {
-            return (
-              <>
-                <Skeleton animation="wave" width={"100%"} height={500} alt="1"/>
-                <img src={this.props.photo1} alt="1" style={{'width':'100%', 'display':'none'}} onLoad={this.setState({img1loaded: 'true'})}/>
-              </>
-            )
-          }
-          else {
-            return (
-              <img src={this.props.photo1} alt="1" style={{'width':'100%','maxHeight':'475px'}}/>
-            )
-          }
-        }
-
-        const Image2 = () => {
-          if (this.state.img2loaded === 'false') {
-            return (
-              <>
-                <Skeleton animation="wave" width={"100%"} height={500} alt="2"/>
-                <img src={this.props.photo2} alt="2" style={{'width':'100%', 'display':'none'}} onLoad={this.setState({img2loaded: 'true'})}/>
-              </>
-            )
-          }
-          else {
-            return (
-              <img src={this.props.photo2} alt="2" style={{'width':'100%','maxHeight':'475px'}}/>
-            )
-          }
-        }
-
-        const Image3 = () => {
-          if (this.state.img3loaded === 'false') {
-            return (
-              <>
-                <Skeleton animation="wave" width={"100%"} height={500} alt="3"/>
-                <img src={this.props.photo3} alt="3" style={{'width':'100%', 'display':'none'}} onLoad={this.setState({img3loaded: 'true'})}/>
-              </>
-            )
-          }
-          else {
-            return (
-              <img src={this.props.photo3} alt="3" style={{'width':'100%','maxHeight':'475px'}}/>
-            )
-          }
-        }
 
         return (
           <>
@@ -122,9 +46,15 @@ export default class CarouselWrapper extends Component {
             slidesPerPage={this.state.slidesPerPage}
             dots
             >
-              <Image1 />
-              <Image2 />
-              <Image3 />
+              {
+                this.props.PorfolioPagePhotosArray.map((item) => {
+                  console.log("this is the item number", item)
+                  return (
+                    <img src={item} alt={item} style={{'width':'100%'}}/>
+                  )
+                })
+              }
+
             </Carousel>
           </>
         )

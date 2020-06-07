@@ -45,7 +45,7 @@ export default function Home() {
       <Box className={classes.pageMarginTop}></Box>
 
       {/*CAROUSEL AT THE TOP OF THE PAGE*/}
-      <CarouselWrapper photo1="./Photos/Home/Promotion Pictures/1.jpg" photo2="./Photos/Home/Promotion Pictures/2.jpg" photo3="./Photos/Home/Promotion Pictures/3.jpg"/>
+      <CarouselWrapper PorfolioPagePhotosArray={["./Photos/Home/Promotion Pictures/1.jpg", "./Photos/Home/Promotion Pictures/2.jpg", "./Photos/Home/Promotion Pictures/3.jpg"]} />
 
       {/*WHAT WE DO SECTION*/}
       <Grid container className={classes.sectionStyling} alignItems="center">

@@ -47,7 +47,7 @@ export default function Portfolio() {
               </Typography>
               <Grid container>
                 <Grid xs={12} item>
-                  <CarouselWrapper photo1={SERVICES[item.id].PorfoliioPagePhotos.photo1} photo2={SERVICES[item.id].PorfoliioPagePhotos.photo2} photo3={SERVICES[item.id].PorfoliioPagePhotos.photo3} />
+                  <CarouselWrapper PorfolioPagePhotosArray={SERVICES[item.id].PorfolioPagePhotosArray.photosArray}/>
                 </Grid>
                 <Grid xs={12} item>
                   <Comment service={SERVICES[item.id].service} id={item.id}/>
