@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 
   /*THIS STYLES THE "CARD" SECTIONS THAT HAVE A HEADER AND INNER TEXT*/
   cardOuterStyling: {
-    padding: '40px 40px 40px 40px',
+    padding: '40px 40px 0px 40px',
   },
   cardInnerTextStyling: {
     marginTop: '20px'
@@ -48,7 +48,7 @@ export default function Home() {
       <CarouselWrapper PorfolioPagePhotosArray={["./Photos/Home/Promotion Pictures/1.jpg", "./Photos/Home/Promotion Pictures/2.jpg", "./Photos/Home/Promotion Pictures/3.jpg"]} />
 
       {/*WHAT WE DO SECTION*/}
-      <Grid container className={classes.sectionStyling} alignItems="center">
+      <Grid container direction="row-reverse" className={classes.sectionStyling} alignItems="center">
 
         {/*WHAT WE DO CARD*/}
         <Grid item lg={6} xs={12} className={classes.cardOuterStyling} style={{'textAlign':'center'}}>
@@ -70,20 +70,24 @@ export default function Home() {
           </Typography>
         </Grid>
 
-        {/*WHAT WE DO IMAGE*/}
-        <Grid item lg={6} xs={12} style={{'padding':'40px'}}>
-          <img src='./Photos/Home/1.jpg' style={{'width':'100%', 'borderRadius':'20px'}}/>
+
+        <Grid item lg={6} xs={12} style={{'textAlign':'center'}}>
+          {/*MEDAL*/}
+          <div style={{'padding':'30px', "width":"100px", 'height':'100px', 'borderRadius':'100px', 'backgroundColor':'#D4AF37', 'margin':'50px auto 50px auto'}}>
+            <Typography align='center' style={{'fontSize':'19px', 'color':'white'}}>FOUNDED OVER 25 YEARS AGO</Typography>
+          </div>
+          {/*WHAT WE DO IMAGE*/}
+          <div style={{'padding':'0px 60px 0px 60px'}}>
+            <img src='./Photos/Home/1.jpg' style={{'width':'100%', 'borderRadius':'20px'}}/>
+          </div>
         </Grid>
 
       </Grid>
 
       {/*CONTACT US SECTION*/}
-      <Grid container direction="row-reverse" alignItems="center" className={classes.sectionStyling}>
+      <Grid container alignItems="center" className={classes.sectionStyling}>
 
         {/*CONTACT US CARD*/}
-        <Grid item lg={3} xs={12} style={{'textAlign':'center', 'padding':'20px'}}>
-          <IconButton href={contactInformation.FacebookLink}><FacebookIcon edge color="Primary" style={{'fontSize':'150px'}}/></IconButton>
-        </Grid>
 
         <Grid item lg={3} xs={12} className={classes.cardOuterStyling} style={{'textAlign':'center'}}>
           <Typography variant='h2' color='primary' >
@@ -96,7 +100,11 @@ export default function Home() {
           </Typography>
         </Grid>
 
-        {/*CONTACT US IMAGE*/}
+        <Grid item lg={3} xs={12} style={{'textAlign':'center', 'padding':'20px'}}>
+          <IconButton href={contactInformation.FacebookLink}><FacebookIcon edge color="Primary" style={{'fontSize':'150px'}}/></IconButton>
+        </Grid>
+
+        {/*CONTACT US IMAGES*/}
         <Grid item lg={6} xs={12}>
           <img src='./Photos/Home/2.jpg' style={{'width':'40%', 'borderRadius':'40%', 'padding':'5%'}}/>
           <img src='./Photos/Home/3.jpg' style={{'width':'40%', 'borderRadius':'40%', 'padding':'5%'}}/>
