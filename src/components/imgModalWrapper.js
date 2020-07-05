@@ -8,7 +8,7 @@ const styles = theme => ({
   pageMarginTop: {
     marginTop: '140px',
     width:'80%',
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('lg')]: {
       marginTop: '64px',
     }
   },

@@ -6,7 +6,7 @@ export const SERVICES =
     ServicePageText: "Paving is our speciality. Ability to do all types of paving including block paving and patios.",
     servicePagePhoto: "./Photos/Paving and Patios/1.jpg",
     PorfolioPagePhotosArray: {
-      photosArray: ["./Photos/Paving and Patios/1.jpg","./Photos/Paving and Patios/2.jpg","./Photos/Paving and Patios/3.jpg", "./Photos/Paving and Patios/4.jpg", "./Photos/Paving and Patios/5.jpg", "./Photos/Paving and Patios/6.jpg", "./Photos/Paving and Patios/7.jpg"]
+      photosArray: ["./Photos/Paving and Patios/1.jpg","./Photos/Paving and Patios/2.jpg","./Photos/Paving and Patios/3.jpg", "./Photos/Paving and Patios/4.jpg", "./Photos/Paving and Patios/5.jpg", "./Photos/Paving and Patios/6.jpg", "./Photos/Paving and Patios/7.jpg", "./Photos/Paving and Patios/8.jpg", "./Photos/Paving and Patios/9.jpg", "./Photos/Paving and Patios/10.jpg", "./Photos/Paving and Patios/11.jpg","./Photos/Paving and Patios/12.jpg", "./Photos/Paving and Patios/13.jpg"]
     }
   },
   {

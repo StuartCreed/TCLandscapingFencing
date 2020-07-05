@@ -3,6 +3,9 @@ import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import Skeleton from '@material-ui/lab/Skeleton';
 import $ from "jquery";
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
+import ColourTheme from '../ColourTheme';
 
 export default class CarouselWrapper extends Component {
 
@@ -45,6 +48,10 @@ export default class CarouselWrapper extends Component {
             keepDirectionWhenDragging
             slidesPerPage={this.state.slidesPerPage}
             dots
+            arrowLeft={<ChevronLeftIcon style={{'fontSize':'40px', 'backgroundColor': ColourTheme.FirstColour, 'color':ColourTheme.ThirdColour}}/>}
+            arrowRight={<ChevronRightIcon style={{'fontSize':'40px', 'backgroundColor': ColourTheme.FirstColour, 'color':ColourTheme.ThirdColour}}/>}
+            addArrowClickHandler
+            clickToChange
             >
               {
                 this.props.PorfolioPagePhotosArray.map((item) => {
