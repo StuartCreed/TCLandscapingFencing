@@ -72,10 +72,6 @@ export default function Home() {
 
 
         <Grid item lg={6} xs={12} style={{'textAlign':'center'}}>
-          {/*MEDAL*/}
-          <div style={{'padding':'30px', "width":"100px", 'height':'100px', 'borderRadius':'100px', 'backgroundColor':'#D4AF37', 'margin':'50px auto 50px auto'}}>
-            <Typography align='center' style={{'fontSize':'19px', 'color':'white'}}>FOUNDED OVER 25 YEARS AGO</Typography>
-          </div>
           {/*WHAT WE DO IMAGE*/}
           <div style={{'padding':'0px 60px 0px 60px'}}>
             <img src='./Photos/Home/1.jpg' style={{'width':'100%', 'borderRadius':'20px'}}/>
