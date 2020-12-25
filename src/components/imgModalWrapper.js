@@ -42,17 +42,17 @@ class ImgModal extends Component {
     const Image = () => {
       if (this.state.modalOpen === false) {
         return (
-          <img src={this.props.src} onDoubleClick={this.handleClick} style={{'width':'100%'}}/>
+          <img src={this.props.src} alt='img' onDoubleClick={this.handleClick} style={{'width':'100%'}}/>
         )
       }
       else {
         if ($(window).width() > 768) {
           return (
             <>
-              <img src={this.props.src} onDoubleClick={this.handleClick} style={{'width':'100%'}}/>
+              <img src={this.props.src} alt='img' onDoubleClick={this.handleClick} style={{'width':'100%'}}/>
               <div style={{'position': 'fixed', 'top': '0px', 'left': '0px', 'backgroundColor':'rgba(0,0,0,0.9)', 'width':'100%', 'height':'100%', 'display':'flex', 'alignItems':'center'}}>
                 <div style={{'marginLeft':'auto', 'marginRight':'auto', 'display':'flex', 'justifyContent':'center'}} className={classes.pageMarginTop}>
-                  <img src={this.props.src} onDoubleClick={this.handleClose}/>
+                  <img src={this.props.src} alt='img' onDoubleClick={this.handleClose}/>
                   <CloseIcon onClick={this.handleClose} style={{'color':'white', 'fontSize':'40px', 'position':'absolute', 'alignSelf':'flex-end', 'marginTop':'50px'}}/>
                 </div>
               </div>

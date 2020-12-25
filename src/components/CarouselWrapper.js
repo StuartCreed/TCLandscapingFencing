@@ -55,7 +55,6 @@ export default class CarouselWrapper extends Component {
             >
               {
                 this.props.PorfolioPagePhotosArray.map((item) => {
-                  console.log("this is the item number", item)
                   return (
                     <img src={item} alt={item} style={{'width':'100%'}}/>
                   )

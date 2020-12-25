@@ -20,7 +20,8 @@ const useStyles = makeStyles(theme => ({
     border: '3px solid',
     borderColor: ColourTheme.ThirdColour,
     padding: "20px",
-    borderRadius: '10px'
+    borderRadius: '10px',
+    outline: 'none'
   },
   MenuItemTypography: {
     color: ColourTheme.ThirdColour,
