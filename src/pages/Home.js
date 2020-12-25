@@ -28,10 +28,11 @@ const useStyles = makeStyles((theme) => ({
 
   /*THIS STYLES THE "CARD" SECTIONS THAT HAVE A HEADER AND INNER TEXT*/
   cardOuterStyling: {
-    padding: '40px 40px 0px 40px',
+    padding: '0px 40px 0px 40px',
+    justifyContent: 'center'
   },
   cardInnerTextStyling: {
-    marginTop: '20px'
+    marginTop: '20px',
   }
 
 }))
@@ -70,9 +71,9 @@ export default function Home() {
         </Grid>
 
 
-        <Grid item lg={6} xs={12} style={{'textAlign':'center'}}>
+        <Grid item lg={6} xs={12} style={{'textAlign':'center', 'paddingLeft': '40px'}}>
           {/*WHAT WE DO IMAGE*/}
-          <div style={{'padding':'0px 60px 0px 60px'}}>
+          <div>
             <img src='./Photos/Home/1.jpg' style={{'width':'100%', 'borderRadius':'20px'}}/>
           </div>
         </Grid>
@@ -84,13 +85,13 @@ export default function Home() {
 
         {/*CONTACT US CARD*/}
 
-        <Grid item lg={6} xs={12} className={classes.cardOuterStyling} style={{'textAlign':'center'}}>
+        <Grid item lg={6} xs={12} className={classes.cardOuterStyling} >
           <Typography variant='h2' color='primary' >
             Contact Us
           </Typography>
           <Typography variant='subtitle1' color='primary' className={classes.cardInnerTextStyling}>
-            <Link href={contactInformation.AndyPhoneNumberlink} style={{'textDecoration':'none'}}><div><b>Andy Creed's Phone Number: </b>{contactInformation.AndyPhoneNumber}</div></Link>
-            <Link href={contactInformation.RichardPhonelink} style={{'textDecoration':'none'}}><div><b>Richard Salewski's Phone Number: </b>{contactInformation.RichardPhoneNumber}</div></Link>
+            <Link href={contactInformation.AndyPhoneNumberlink} style={{'textDecoration':'none'}}><div><b>Andy Creed's Number: </b>{contactInformation.AndyPhoneNumber}</div></Link>
+            <Link href={contactInformation.RichardPhonelink} style={{'textDecoration':'none'}}><div><b>Richard Salewski's Number: </b>{contactInformation.RichardPhoneNumber}</div></Link>
             <Link href={contactInformation.Emaillink} style={{'textDecoration':'none'}}><div><b>Email: </b>{contactInformation.Email}</div></Link>
           </Typography>
         </Grid>
@@ -100,7 +101,7 @@ export default function Home() {
         {/*</Grid>*/}
 
         {/*CONTACT US IMAGES*/}
-        <Grid item lg={6} xs={12}>
+        <Grid item lg={6} xs={12} style={{'alignItems':'center'}}>
           <img src='./Photos/Home/2.jpg' style={{'width':'40%', 'borderRadius':'40%', 'padding':'5%'}}/>
           <img src='./Photos/Home/3.jpg' style={{'width':'40%', 'borderRadius':'40%', 'padding':'5%'}}/>
         </Grid>
