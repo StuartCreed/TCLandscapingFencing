@@ -71,12 +71,12 @@ export default function Home() {
         </Grid>
 
 
-        <Grid item lg={6} xs={12} style={{'textAlign':'center', 'paddingLeft': '40px'}}>
-          {/*WHAT WE DO IMAGE*/}
-          <div>
-            <img src='./Photos/Home/1.jpg' style={{'width':'100%', 'borderRadius':'20px'}}/>
-          </div>
-        </Grid>
+          <Grid item lg={6} xs={0} style={{'textAlign':'center', 'padding': '20px 40px 20px 40px'}}>
+            {/*WHAT WE DO IMAGE*/}
+            <div>
+              <img src='./Photos/Home/1.jpg' style={{'width':'100%', 'borderRadius':'20px'}}/>
+            </div>
+          </Grid>
 
       </Grid>
 
