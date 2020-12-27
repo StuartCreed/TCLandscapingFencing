@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   pageMarginTop: {
     marginTop: '140px',
     [theme.breakpoints.down('md')]: {
-      marginTop: '75px'
+      marginTop: '64px'
     }
   },
 
