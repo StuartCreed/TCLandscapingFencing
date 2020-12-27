@@ -47,7 +47,7 @@ export default function Home() {
       <Box className={classes.pageMarginTop}></Box>
 
       {/*CAROUSEL AT THE TOP OF THE PAGE*/}
-      <CarouselWrapper PorfolioPagePhotosArray={["./Photos/Home/Promotion Pictures/1.jpg", "./Photos/Home/Promotion Pictures/2.jpg", "./Photos/Home/Promotion Pictures/3.jpg"]} />
+      <CarouselWrapper PorfolioPagePhotosArray={["/Photos/Home/Promotion Pictures/1.jpg", "/Photos/Home/Promotion Pictures/2.jpg", "/Photos/Home/Promotion Pictures/3.jpg"]} />
 
       {/*WHAT WE DO SECTION*/}
       <Grid container direction="row-reverse" className={classes.sectionStyling} alignItems="center">
@@ -75,7 +75,7 @@ export default function Home() {
           <Grid item lg={6} xs={0} style={{'textAlign':'center', 'padding': '20px 40px 20px 40px', marginTop: '20px',}}>
             {/*WHAT WE DO IMAGE*/}
             <div>
-              <img src='./Photos/Home/1.jpg' style={{'width':'100%', 'borderRadius':'20px'}}/>
+              <img src='/Photos/Home/1.jpg' style={{'width':'100%', 'borderRadius':'20px'}}/>
             </div>
           </Grid>
 
@@ -103,8 +103,8 @@ export default function Home() {
 
         {/*CONTACT US IMAGES*/}
         <Grid item lg={6} xs={12} style={{'alignItems':'center', marginTop: '20px',}}>
-          <img src='./Photos/Home/2.jpg' style={{'width':'40%', 'borderRadius':'40%', 'padding':'5%'}}/>
-          <img src='./Photos/Home/3.jpg' style={{'width':'40%', 'borderRadius':'40%', 'padding':'5%'}}/>
+          <img src='/Photos/Home/2.jpg' style={{'width':'40%', 'borderRadius':'40%', 'padding':'5%'}}/>
+          <img src='/Photos/Home/3.jpg' style={{'width':'40%', 'borderRadius':'40%', 'padding':'5%'}}/>
         </Grid>
 
       </Grid>
