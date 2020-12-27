@@ -35,7 +35,7 @@ export default class CarouselWrapper extends Component {
 
     render() {
 
-      window.addEventListener('resize', this.slidesPerPageHandler);
+      // window.addEventListener('resize', this.slidesPerPageHandler);
 
       const CarouselComponent = () => {
 
