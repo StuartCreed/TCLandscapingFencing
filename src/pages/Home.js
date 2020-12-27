@@ -58,7 +58,7 @@ export default function Home() {
             What We Do
           </Typography>
           <Typography variant='subtitle1' color='primary' className={classes.cardInnerTextStyling}>
-            <div style={{'padding':'10px'}}>Founded over 25 years ago, we are known for high quality, value for money work. From small town gardens to large country estates our services include: </div>
+            <div style={{'padding':'10px'}}>Founded over 25 years ago, <b style={{'color':'darkred'}}>Town and Country Landscaping and Fencing</b> are known for high quality, value for money work. From small town gardens to large country estates our services include: </div>
             <ul>
               <li style={{'padding':'10px'}}><b>Paving</b></li>
               <li style={{'padding':'10px'}}><b>Patios</b></li>
