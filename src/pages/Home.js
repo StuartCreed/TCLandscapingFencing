@@ -29,7 +29,8 @@ const useStyles = makeStyles((theme) => ({
   /*THIS STYLES THE "CARD" SECTIONS THAT HAVE A HEADER AND INNER TEXT*/
   cardOuterStyling: {
     padding: '0px 40px 0px 40px',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginTop: '20px',
   },
   cardInnerTextStyling: {
     marginTop: '20px',
@@ -71,7 +72,7 @@ export default function Home() {
         </Grid>
 
 
-          <Grid item lg={6} xs={0} style={{'textAlign':'center', 'padding': '20px 40px 20px 40px'}}>
+          <Grid item lg={6} xs={0} style={{'textAlign':'center', 'padding': '20px 40px 20px 40px', marginTop: '20px',}}>
             {/*WHAT WE DO IMAGE*/}
             <div>
               <img src='./Photos/Home/1.jpg' style={{'width':'100%', 'borderRadius':'20px'}}/>
@@ -101,7 +102,7 @@ export default function Home() {
         {/*</Grid>*/}
 
         {/*CONTACT US IMAGES*/}
-        <Grid item lg={6} xs={12} style={{'alignItems':'center'}}>
+        <Grid item lg={6} xs={12} style={{'alignItems':'center', marginTop: '20px',}}>
           <img src='./Photos/Home/2.jpg' style={{'width':'40%', 'borderRadius':'40%', 'padding':'5%'}}/>
           <img src='./Photos/Home/3.jpg' style={{'width':'40%', 'borderRadius':'40%', 'padding':'5%'}}/>
         </Grid>

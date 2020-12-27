@@ -38,8 +38,12 @@ const styles = theme => ({
     textAlign:'center',
   },
   rightToolbar: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    alignItems: 'center',
+    justifyContent: 'center',
     marginLeft: 'auto',
-    marginRight: -12,
+    paddingLeft: '12px'
   },
   imageIcon: {
     height: '100%'
