@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar';
 import Outro from '../components/Outro.js';
 import { makeStyles } from '@material-ui/core/styles';
 import { contactInformation } from '../shared/contactInformation';
+import ColourTheme from '../ColourTheme';
 import ImgModal from '../components/imgModalWrapper';
 import FacebookIcon from '@material-ui/icons/Facebook';
 
@@ -34,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
   },
   cardInnerTextStyling: {
     marginTop: '20px',
+  },
+  colorRed: {
+    color: ColourTheme.SecondColour
   }
 
 }))
@@ -58,7 +62,7 @@ export default function Home() {
             What We Do
           </Typography>
           <Typography variant='subtitle1' color='primary' className={classes.cardInnerTextStyling}>
-            <div style={{'padding':'10px'}}>Founded over 25 years ago, <b style={{'color':'darkred'}}>Town and Country Landscaping and Fencing</b> are known for high quality, value for money work. From small town gardens to large country estates our services include: </div>
+            <div style={{'padding':'10px'}}>Founded over 25 years ago, <b className={classes.colorRed}>Town and Country Landscaping and Fencing</b> are known for high quality, value for money work. From small town gardens to large country estates our services include: </div>
             <ul>
               <li style={{'padding':'10px'}}><b>Paving</b></li>
               <li style={{'padding':'10px'}}><b>Patios</b></li>
@@ -67,7 +71,7 @@ export default function Home() {
               <li style={{'padding':'10px'}}><b>Gates</b></li>
               <li style={{'padding':'10px'}}><b>Gardening</b></li>
             </ul>
-            <div style={{'padding':'10px'}}>If you are looking for landscaping experts for Buckinghamshire and Hertfordshire, contact us now, for your <b style={{'color':'darkred'}}>No Obligation Free Quotation</b>. We would be happy to hear from you. </div>
+            <div style={{'padding':'10px'}}>If you are looking for landscaping experts for Buckinghamshire and Hertfordshire, contact us now, for your <b className={classes.colorRed}>No Obligation Free Quotation</b>. We would be happy to hear from you. </div>
           </Typography>
         </Grid>
 
