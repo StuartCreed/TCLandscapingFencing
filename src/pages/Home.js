@@ -90,7 +90,7 @@ export default function Home() {
 
         {/*CONTACT US CARD*/}
 
-        <Grid item lg={6} xs={12} className={classes.cardOuterStyling} >
+        <Grid item lg={6} xs={12} className={classes.cardOuterStyling} style={{'textAlign':'center'}}>
           <Typography variant='h2' color='primary' >
             Contact Us
           </Typography>

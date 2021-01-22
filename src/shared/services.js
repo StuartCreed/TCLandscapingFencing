@@ -6,7 +6,7 @@ export const SERVICES =
     ServicePageText: "Paving is our speciality. Ability to do all types of paving including block paving and patios.",
     servicePagePhoto: "./Photos/Paving and Patios/1.jpg",
     PorfolioPagePhotosArray: {
-      photosArray: ["/Photos/Paving and Patios/1.jpg","./Photos/Paving and Patios/2.jpg","./Photos/Paving and Patios/3.jpg", "./Photos/Paving and Patios/4.jpg", "./Photos/Paving and Patios/5.jpg", "./Photos/Paving and Patios/6.jpg", "./Photos/Paving and Patios/7.jpg", "./Photos/Paving and Patios/8.jpg", "./Photos/Paving and Patios/9.jpg", "./Photos/Paving and Patios/10.jpg", "./Photos/Paving and Patios/11.jpg","./Photos/Paving and Patios/12.jpg", "./Photos/Paving and Patios/13.jpg"]
+      photosArray: ["/Photos/Paving and Patios/1.jpg","./Photos/Paving and Patios/2.jpg","./Photos/Paving and Patios/3.jpg", "./Photos/Paving and Patios/4.jpg", "./Photos/Paving and Patios/5.jpg", "./Photos/Paving and Patios/6.jpg", "./Photos/Paving and Patios/7.jpg", "./Photos/Paving and Patios/8.jpg", "./Photos/Paving and Patios/9.jpg", "./Photos/Paving and Patios/10.jpg", "./Photos/Paving and Patios/11.jpg","./Photos/Paving and Patios/12.jpg", "./Photos/Paving and Patios/13.jpg", "/Photos/Paving and Patios/14.jpg","./Photos/Paving and Patios/15.jpg","./Photos/Paving and Patios/16.jpg", "./Photos/Paving and Patios/17.jpg", "./Photos/Paving and Patios/18.jpg", "./Photos/Paving and Patios/19.jpg", "./Photos/Paving and Patios/20.jpg", "./Photos/Paving and Patios/21.jpg", "./Photos/Paving and Patios/22.jpg", "./Photos/Paving and Patios/23.jpg", "./Photos/Paving and Patios/24.jpg","./Photos/Paving and Patios/25.jpg", "./Photos/Paving and Patios/26.jpg", "./Photos/Paving and Patios/27.jpg"]
     }
   },
   {
@@ -33,7 +33,7 @@ export const SERVICES =
     ServicePageText: "Ponds and water feature installation. We also do Bespoke Pergola design.",
     servicePagePhoto: "./Photos/Ponds and Pergolas/1.jpg",
     PorfolioPagePhotosArray: {
-      photosArray: ["/Photos/Ponds and Pergolas/1.jpg","./Photos/Ponds and Pergolas/2.jpg","./Photos/Ponds and Pergolas/3.jpg", "./Photos/Ponds and Pergolas/4.jpg"]
+      photosArray: ["/Photos/Ponds and Pergolas/1.jpg","./Photos/Ponds and Pergolas/2.jpg","./Photos/Ponds and Pergolas/3.jpg", "./Photos/Ponds and Pergolas/4.jpg", "./Photos/Ponds and Pergolas/5.jpg", "./Photos/Ponds and Pergolas/6.jpg", ]
     }
   },
   {
@@ -43,6 +43,15 @@ export const SERVICES =
     servicePagePhoto: "./Photos/Lawns and Decking/1.jpg",
     PorfolioPagePhotosArray: {
       photosArray: ["/Photos/Lawns and Decking/1.jpg","./Photos/Lawns and Decking/2.jpg","./Photos/Lawns and Decking/3.jpg", "./Photos/Lawns and Decking/4.jpg"]
+    }
+  },
+  {
+    id: 5,
+    service: "Walls",
+    ServicePageText: "We install most types of walls such as stone or brick, big or small",
+    servicePagePhoto: "./Photos/Walls/1.jpg",
+    PorfolioPagePhotosArray: {
+      photosArray: ["/Photos/Walls/1.jpg","/Photos/Walls/2.jpg"]
     }
   },
 ]
