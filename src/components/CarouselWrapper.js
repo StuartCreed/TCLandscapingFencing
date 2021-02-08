@@ -47,7 +47,6 @@ export default class CarouselWrapper extends Component {
             infinite
             keepDirectionWhenDragging
             slidesPerPage={this.state.slidesPerPage}
-            dots
             arrowLeft={<ChevronLeftIcon style={{'fontSize':'40px', 'backgroundColor': ColourTheme.FirstColour, 'color':ColourTheme.ThirdColour}}/>}
             arrowRight={<ChevronRightIcon style={{'fontSize':'40px', 'backgroundColor': ColourTheme.FirstColour, 'color':ColourTheme.ThirdColour}}/>}
             addArrowClickHandler
