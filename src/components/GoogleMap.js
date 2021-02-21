@@ -31,7 +31,7 @@ class GoogleMapWrapper extends Component {
     const Map = ({latlng, zoom}) =>(
       <div className={this.props.mobile === "true"? classes.MapStylesMobile : classes.MapStyles}>
         <GoogleMap
-          bootstrapURLKeys={{ key: 'AIzaSyAiOPSvsBYhY28VmvJhQr6i-onTs7edJ-o' }}
+          bootstrapURLKeys={{ key: 'AIzaSyCJ7_cz07idL-891ftGoK2tg2sHZchlXUo' }}
           defaultZoom={window.innerWidth > 792? zoom :10}
           defaultCenter={latlng}
           yesIWantToUseGoogleMapApiInternals={true}
