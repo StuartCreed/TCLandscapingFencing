@@ -3,8 +3,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import { Grid, Box } from '@material-ui/core';
 import Navbar from '../components/Navbar';
-import GoogleMap from '../components/GoogleMap';
 import Outro from '../components/Outro.js';
+import BingMap from '../components/BingMap.js';
 
 const useStyles = makeStyles((theme) => ({
 
@@ -56,9 +56,9 @@ export default function AboutUs() {
         </Typography>
       </Grid>
 
-      {/*AN INTERACTIVE GOOGLE MAP SHOWING THE SERVICE AREA*/}
+      {/*AN INTERACTIVE BING MAP SHOWING THE SERVICE AREA*/}
       <Grid item xs={12}>
-        <GoogleMap mobile={"false"}/>
+        <BingMap mobile={"false"}/>
       </Grid>
 
     </Grid>

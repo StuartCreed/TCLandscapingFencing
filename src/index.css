@@ -1,3 +1,14 @@
 body {
   margin: 0;
 }
+
+.ol-control button {
+  background-color: white;
+  height: 40px;
+  width: 40px;
+  margin: 10px 5px 0px 10px;
+  border-radius: 30px;
+  outline: none;
+  background-color: #005847;
+  color: #fbf579
+}
