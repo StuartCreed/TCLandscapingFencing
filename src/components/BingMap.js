@@ -7,7 +7,7 @@ import {Vector as VectorSource} from 'ol/source';
 import {Fill, Stroke, Style} from 'ol/style';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer';
 import BingMaps from 'ol/source/BingMaps'
-import { defaults as defaultControls} from 'ol/control';
+import { Attribution, defaults as defaultControls} from 'ol/control';
 import { withStyles } from '@material-ui/styles';
 
 const mapHeightComputer = JSON.stringify(window.innerHeight - 140)+'px';
@@ -29,6 +29,10 @@ class PublicMap extends Component {
         this.circleFeature = new Feature ({
             geometry: new Circle(this.centerCoords, 24000)
         })
+        this.attribution = new Attribution({
+            collapseLabel: "Microsoft product screen shot(s) reprinted with permission from Microsoft Corporation. Source Bing Maps",
+            collapseClassName: 'attr-text'
+        });
         this.olmap = new Map({
             target: null, // Set on mount
             layers: [
@@ -62,7 +66,7 @@ class PublicMap extends Component {
                 center: [-80178.788831, 6764581.456953],
                 zoom: 10.9,
             }),
-            controls: defaultControls({attribution: false, rotate: false})
+            controls: defaultControls({rotate: false, attribution: false}).extend([this.attribution])
         });
     }
 

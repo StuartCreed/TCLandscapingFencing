@@ -12,3 +12,16 @@ body {
   background-color: #005847;
   color: #fbf579
 }
+
+.attr-text {
+  color: black;
+  font-weight: bold;
+  width: 300px
+}
+
+.ol-attribution ul {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0px;
+}
