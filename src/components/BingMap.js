@@ -6,7 +6,7 @@ import Feature from 'ol/Feature';
 import {Vector as VectorSource} from 'ol/source';
 import {Fill, Stroke, Style} from 'ol/style';
 import {Tile as TileLayer, Vector as VectorLayer} from 'ol/layer';
-import BingMaps from 'ol/source/BingMaps'
+import OSM from 'ol/source/OSM';
 import { Attribution, defaults as defaultControls} from 'ol/control';
 import { withStyles } from '@material-ui/styles';
 
@@ -30,22 +30,13 @@ class PublicMap extends Component {
             geometry: new Circle(this.centerCoords, 24000)
         })
         this.attribution = new Attribution({
-            collapseLabel: "Microsoft product screen shot(s) reprinted with permission from Microsoft Corporation. Source Bing Maps",
             collapseClassName: 'attr-text'
         });
         this.olmap = new Map({
             target: null, // Set on mount
             layers: [
                 new TileLayer({
-                    visible: true,
-                    preload: Infinity,
-                    source: new BingMaps({
-                        key: 'Av-UuI83-AWLi_7UqqAmXHJkgifiuQRTttmbP1oBUP6KzDdUMe0M26ersalGrgIE',
-                        imagerySet: 'RoadOnDemand',
-                        // use maxZoom 19 to see stretched tiles instead of the BingMaps
-                        // "no photos at this zoom level" tiles
-                        // maxZoom: 19
-                    }),
+                    source: new OSM(),
                 }),
                 new VectorLayer({
                     source: new VectorSource({

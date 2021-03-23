@@ -13,10 +13,8 @@ body {
   color: #fbf579
 }
 
-.attr-text {
-  color: black;
-  font-weight: bold;
-  width: 300px
+button[title="Attributions"] {
+  display: none
 }
 
 .ol-attribution ul {
