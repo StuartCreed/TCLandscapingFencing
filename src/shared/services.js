@@ -6,7 +6,7 @@ export const SERVICES =
     ServicePageText: "Paving is our speciality. Ability to do all types of paving including block paving and patios.",
     servicePagePhoto: "./Photos/Paving and Patios/1.jpg",
     PorfolioPagePhotosArray: {
-      photosArray: ["/Photos/Paving and Patios/1.jpg","./Photos/Paving and Patios/2.jpg","./Photos/Paving and Patios/3.jpg", "./Photos/Paving and Patios/4.jpg", "./Photos/Paving and Patios/5.jpg", "./Photos/Paving and Patios/6.jpg", "./Photos/Paving and Patios/7.jpg", "./Photos/Paving and Patios/8.jpg", "./Photos/Paving and Patios/9.jpg", "./Photos/Paving and Patios/10.jpg", "./Photos/Paving and Patios/11.jpg","./Photos/Paving and Patios/12.jpg", "./Photos/Paving and Patios/13.jpg", "/Photos/Paving and Patios/14.jpg","./Photos/Paving and Patios/15.jpg","./Photos/Paving and Patios/16.jpg", "./Photos/Paving and Patios/17.jpg", "./Photos/Paving and Patios/18.jpg", "./Photos/Paving and Patios/19.jpg", "./Photos/Paving and Patios/20.jpg", "./Photos/Paving and Patios/21.jpg", "./Photos/Paving and Patios/22.jpg", "./Photos/Paving and Patios/23.jpg", "./Photos/Paving and Patios/24.jpg","./Photos/Paving and Patios/25.jpg", "./Photos/Paving and Patios/26.jpg", "./Photos/Paving and Patios/27.jpg"]
+      photosArray: ["./Photos/Paving and Patios/39.jpg", "./Photos/Paving and Patios/38.jpg", "./Photos/Paving and Patios/37.jpg", "./Photos/Paving and Patios/36.jpg", "./Photos/Paving and Patios/35.jpg", "./Photos/Paving and Patios/34.jpg", "./Photos/Paving and Patios/33.jpg","./Photos/Paving and Patios/32.jpg", "./Photos/Paving and Patios/31.jpg", "./Photos/Paving and Patios/30.jpg", "/Photos/Paving and Patios/1.jpg","./Photos/Paving and Patios/2.jpg","./Photos/Paving and Patios/3.jpg", "./Photos/Paving and Patios/4.jpg", "./Photos/Paving and Patios/5.jpg", "./Photos/Paving and Patios/6.jpg", "./Photos/Paving and Patios/7.jpg", "./Photos/Paving and Patios/8.jpg", "./Photos/Paving and Patios/9.jpg", "./Photos/Paving and Patios/10.jpg", "./Photos/Paving and Patios/11.jpg","./Photos/Paving and Patios/12.jpg", "./Photos/Paving and Patios/13.jpg", "/Photos/Paving and Patios/14.jpg","./Photos/Paving and Patios/15.jpg","./Photos/Paving and Patios/16.jpg", "./Photos/Paving and Patios/17.jpg", "./Photos/Paving and Patios/18.jpg", "./Photos/Paving and Patios/19.jpg", "./Photos/Paving and Patios/20.jpg", "./Photos/Paving and Patios/21.jpg", "./Photos/Paving and Patios/22.jpg", "./Photos/Paving and Patios/23.jpg", "./Photos/Paving and Patios/24.jpg","./Photos/Paving and Patios/25.jpg", "./Photos/Paving and Patios/26.jpg", "./Photos/Paving and Patios/27.jpg"]
     }
   },
   {
@@ -42,7 +42,7 @@ export const SERVICES =
     ServicePageText: "We install all types of decking including composite and hardwood. We also provide services for Lawn turfing, levelling and irrigation.",
     servicePagePhoto: "./Photos/Lawns and Decking/1.jpg",
     PorfolioPagePhotosArray: {
-      photosArray: ["/Photos/Lawns and Decking/1.jpg","./Photos/Lawns and Decking/2.jpg","./Photos/Lawns and Decking/3.jpg", "./Photos/Lawns and Decking/4.jpg"]
+      photosArray: ["/Photos/Lawns and Decking/13.jpg","./Photos/Lawns and Decking/12.jpg","./Photos/Lawns and Decking/11.jpg","/Photos/Lawns and Decking/10.jpg","./Photos/Lawns and Decking/9.jpg","./Photos/Lawns and Decking/8.jpg","/Photos/Lawns and Decking/7.jpg","./Photos/Lawns and Decking/6.jpg","./Photos/Lawns and Decking/5.jpg","/Photos/Lawns and Decking/1.jpg","./Photos/Lawns and Decking/2.jpg","./Photos/Lawns and Decking/3.jpg", "./Photos/Lawns and Decking/4.jpg"]
     }
   },
   {
