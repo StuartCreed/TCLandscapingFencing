@@ -152,7 +152,7 @@ class Navbar extends Component {
                   {/*</Button>*/}
                   <section className={classes.rightToolbar}>
                       <IconButton href={contactInformation.FacebookLink}><FacebookIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
-                      <IconButton href="mailto:tcland-enquiries@hotmail.co.uk"><MailIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
+                      <IconButton href="mailto:tcland.enquiries@gmail.com"><MailIcon edge style={{"color": ColourTheme.ThirdColour}} /></IconButton>
                       <PhoneNumberModal/>
                   </section>
                 </Toolbar>
